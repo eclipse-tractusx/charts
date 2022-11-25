@@ -63,7 +63,7 @@ func main() {
 
 		if response.StatusCode == 200 {
 			fmt.Println(i, *gitRepo.Name)
-			gitRepoHelmIndex = downloadProductHelmRepoIndex(ctx, client, gitOwner, *gitRepo.Name)
+			gitRepoHelmIndex = downloadProductHelmRepoIndex(gitOwner, *gitRepo.Name)
 			buildHelmRepoIndex(indexFile, gitRepoHelmIndex)
 		}
 	}
@@ -99,18 +99,15 @@ func initHelmRepoIndex(fileName string) error {
 	return nil
 }
 
-func downloadProductHelmRepoIndex(ctx context.Context, client *github.Client, gitOwner string, gitRepo string) string {
-	pageInfo, _, _ := client.Repositories.GetPagesInfo(ctx, gitOwner, gitRepo)
-	fullURLFile := *pageInfo.HTMLURL + "index.yaml"
+func downloadProductHelmRepoIndex(gitOwner string, gitRepo string) string {
 	fileName := gitRepo + "-index.yaml"
-
 	file, err := os.Create(fileName)
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	response, _ := http.Get(fullURLFile)
-	// todo: CARSLEN: investigate on error handling for http.Get
+	response, _ := http.Get(fmt.Sprintf("https://raw.githubusercontent.com/%v/%v/gh-pages/index.yaml", gitOwner, gitRepo))
+
 	if response.StatusCode == 200 {
 		_, _ = io.Copy(file, response.Body)
 
@@ -126,6 +123,8 @@ func downloadProductHelmRepoIndex(ctx context.Context, client *github.Client, gi
 			log.Fatal(err)
 		}
 	}
+
+	err = file.Close()
 	return fileName
 }
 
