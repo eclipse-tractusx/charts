@@ -10,15 +10,17 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ### Added
 
 - Add this `CHANGELOG.md` file
+
 ### Changed
 
 - remove obsolete check for existing `gh-pages` branch in `func main`
-- remove check _StatusCode == 200_ from previous branch check
-- Refactor `func downloadProductHelmRepoIndex` and error handling
+- remove check `StatusCode == 200` from previous branch check
+- Refactor func `downloadProductHelmRepoIndex` and error handling
 
 ## [0.0.3] - 2022-11-28
 
 ### Fixed
+
 - Use correct argument names for binary
 - Path to workflow artefact (`git add ...`)
 
@@ -33,10 +35,10 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ### Added
 
 - `DEPENDENCIES.md` file
-- Basic Helm repository web page, by .
-- GitHub Workflow to build Helm repository, by .
-- GitHub Workflow to build Go binary, by .
-- initial `helmRepoIndex` Golang code, by .
+- Basic Helm repository web page
+- GitHub Workflow to build Helm repository
+- GitHub Workflow to build Go binary
+- initial `helmRepoIndex` Golang code
 - `Authors.md` file
 - `CODE_OF_CONDICT.md` file
 - `CONTRIBUTING.md` file
@@ -45,6 +47,7 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - `Security.md` file
 
 ### Changed
+
 - `README.md` file
 
 [unreleased]: https://github.com/eclipse-tractusx/charts/compare/v0.0.3...HEAD
