@@ -9,7 +9,9 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Added
 
-- Add this `CHANGELOG.md` file
+- This `CHANGELOG.md` file
+- GitHub Workflow - PullRequest linting
+- GitHub Workflow - Release Drafter
 
 ### Changed
 
