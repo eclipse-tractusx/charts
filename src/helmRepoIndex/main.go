@@ -146,7 +146,7 @@ func buildHelmRepoIndex(indexFile string, mergeIndexFile string, gitRepo string)
 			log.Fatal(err)
 		}
 		repoFile.Merge(newIndex)
-		log.Printf("✅  %v - index.yaml merged into Helm repository", gitRepo)
+		log.Printf("✅  %v - index.yaml merged into Helm repository DEV", gitRepo)
 		repoFile.Generated = time.Now()
 		err = repoFile.WriteFile(indexFile, 0644)
 
