@@ -99,33 +99,39 @@ func initHelmRepoIndex(fileName string) error {
 	return nil
 }
 
-func downloadProductHelmRepoIndex(gitOwner string, gitRepo string) string {
-	fileName := gitRepo + "-index.yaml"
-	file, err := os.Create(fileName)
-	if err != nil {
-		log.Fatal(err)
-	}
-
+func downloadProductHelmRepoIndex(gitOwner string, gitRepo string) (string, error) {
 	response, _ := http.Get(fmt.Sprintf("https://raw.githubusercontent.com/%v/%v/gh-pages/index.yaml", gitOwner, gitRepo))
+	defer func(Body io.ReadCloser) {
+		err := Body.Close()
+		if err != nil {
+			log.Fatal(err)
+		}
+	}(response.Body)
 
 	if response.StatusCode == 200 {
-		_, _ = io.Copy(file, response.Body)
-
-		// Close response body
-		err := response.Body.Close()
+		log.Printf("✅  %v - index.yaml download completed", gitRepo)
+		fileName := gitRepo + "-index.yaml"
+		file, err := os.Create(fileName)
 		if err != nil {
 			log.Fatal(err)
 		}
 
-		// Close file
-		err = file.Close()
+		defer func(file *os.File) {
+			err := file.Close()
+			if err != nil {
+				log.Fatal(err)
+			}
+		}(file)
+
+		_, err = io.Copy(file, response.Body)
 		if err != nil {
 			log.Fatal(err)
 		}
+		return fileName, nil
+	} else {
+		dt := time.Now()
+		return "", fmt.Errorf("%v ❌  %v - no index.yaml found", dt.Format("01/02/2006 15:04:05"), gitRepo)
 	}
-
-	err = file.Close()
-	return fileName
 }
 
 func buildHelmRepoIndex(indexFile string, mergeIndexFile string) {
