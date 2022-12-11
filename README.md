@@ -56,3 +56,7 @@ tractusx/portal-backend 0.8.0           0.8.0           Helm chart for Catena-X 
 $ helm install tractusx/portal
 [...]
 ```
+
+## New feature LalaLand
+
+more to come
