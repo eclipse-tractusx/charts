@@ -128,7 +128,7 @@ func downloadProductHelmRepoIndex(gitOwner string, gitRepo string) (string, erro
 		return fileName, nil
 	} else {
 		dt := time.Now()
-		return "", fmt.Errorf("%v ❌  %v - no index.yaml found", dt.Format("01/02/2006 15:04:05"), gitRepo)
+		return "", fmt.Errorf("%v ❌  %v - no index.yaml found", dt.Format("2006/01/02 15:04:05"), gitRepo)
 	}
 }
 
