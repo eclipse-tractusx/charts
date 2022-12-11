@@ -55,17 +55,15 @@ func main() {
 		log.Fatal(err)
 	}
 
-	for i, gitRepo := range repos {
+	for _, gitRepo := range repos {
 		var gitRepoHelmIndex string
 
-		//check gh pages configured for repo
-		_, response, _ := client.Repositories.GetBranch(ctx, gitOwner, *gitRepo.Name, "gh-pages", false)
-
-		if response.StatusCode == 200 {
-			fmt.Println(i, *gitRepo.Name)
-			gitRepoHelmIndex = downloadProductHelmRepoIndex(gitOwner, *gitRepo.Name)
-			buildHelmRepoIndex(indexFile, gitRepoHelmIndex)
+		gitRepoHelmIndex, err = downloadProductHelmRepoIndex(gitOwner, *gitRepo.Name)
+		if err != nil {
+			fmt.Println(err)
+			continue
 		}
+		buildHelmRepoIndex(indexFile, gitRepoHelmIndex, *gitRepo.Name)
 	}
 }
 
