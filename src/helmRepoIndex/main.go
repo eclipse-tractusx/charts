@@ -70,6 +70,7 @@ func main() {
 }
 
 func sayHelloTo(input string) {
+	// some comment
 	fmt.Printf("Hello %v", input)
 }
 
