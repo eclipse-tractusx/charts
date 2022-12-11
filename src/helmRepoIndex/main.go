@@ -69,6 +69,10 @@ func main() {
 	}
 }
 
+func sayHelloTo(input string) {
+	fmt.Printf("Hello %v", input)
+}
+
 func getAuthenticatedClient(ctx context.Context, gitToken string) *github.Client {
 	ts := oauth2.StaticTokenSource(
 		&oauth2.Token{AccessToken: gitToken},
