@@ -55,17 +55,15 @@ func main() {
 		log.Fatal(err)
 	}
 
-	for i, gitRepo := range repos {
+	for _, gitRepo := range repos {
 		var gitRepoHelmIndex string
 
-		//check gh pages configured for repo
-		_, response, _ := client.Repositories.GetBranch(ctx, gitOwner, *gitRepo.Name, "gh-pages", false)
-
-		if response.StatusCode == 200 {
-			fmt.Println(i, *gitRepo.Name)
-			gitRepoHelmIndex = downloadProductHelmRepoIndex(gitOwner, *gitRepo.Name)
-			buildHelmRepoIndex(indexFile, gitRepoHelmIndex)
+		gitRepoHelmIndex, err = downloadProductHelmRepoIndex(gitOwner, *gitRepo.Name)
+		if err != nil {
+			fmt.Println(err)
+			continue
 		}
+		buildHelmRepoIndex(indexFile, gitRepoHelmIndex, *gitRepo.Name)
 	}
 }
 
@@ -99,36 +97,42 @@ func initHelmRepoIndex(fileName string) error {
 	return nil
 }
 
-func downloadProductHelmRepoIndex(gitOwner string, gitRepo string) string {
-	fileName := gitRepo + "-index.yaml"
-	file, err := os.Create(fileName)
-	if err != nil {
-		log.Fatal(err)
-	}
-
+func downloadProductHelmRepoIndex(gitOwner string, gitRepo string) (string, error) {
 	response, _ := http.Get(fmt.Sprintf("https://raw.githubusercontent.com/%v/%v/gh-pages/index.yaml", gitOwner, gitRepo))
+	defer func(Body io.ReadCloser) {
+		err := Body.Close()
+		if err != nil {
+			log.Fatal(err)
+		}
+	}(response.Body)
 
 	if response.StatusCode == 200 {
-		_, _ = io.Copy(file, response.Body)
-
-		// Close response body
-		err := response.Body.Close()
+		log.Printf("✅  %v - index.yaml download completed", gitRepo)
+		fileName := gitRepo + "-index.yaml"
+		file, err := os.Create(fileName)
 		if err != nil {
 			log.Fatal(err)
 		}
 
-		// Close file
-		err = file.Close()
+		defer func(file *os.File) {
+			err := file.Close()
+			if err != nil {
+				log.Fatal(err)
+			}
+		}(file)
+
+		_, err = io.Copy(file, response.Body)
 		if err != nil {
 			log.Fatal(err)
 		}
+		return fileName, nil
+	} else {
+		dt := time.Now()
+		return "", fmt.Errorf("%v ❌  %v - no index.yaml found", dt.Format("2006/01/02 15:04:05"), gitRepo)
 	}
-
-	err = file.Close()
-	return fileName
 }
 
-func buildHelmRepoIndex(indexFile string, mergeIndexFile string) {
+func buildHelmRepoIndex(indexFile string, mergeIndexFile string, gitRepo string) {
 	repoFile, err := repo.LoadIndexFile(indexFile)
 	if err != nil {
 		log.Fatal(err)
@@ -142,6 +146,7 @@ func buildHelmRepoIndex(indexFile string, mergeIndexFile string) {
 			log.Fatal(err)
 		}
 		repoFile.Merge(newIndex)
+		log.Printf("✅  %v - index.yaml merged into Helm repository DEV", gitRepo)
 		repoFile.Generated = time.Now()
 		err = repoFile.WriteFile(indexFile, 0644)
 

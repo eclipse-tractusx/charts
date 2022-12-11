@@ -11,13 +11,15 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 - This `CHANGELOG.md` file
 - GitHub Workflow - PullRequest linting
-- GitHub Workflow - Release Drafter
 
 ### Changed
 
+#### helmRepoIndex Go Code
+
 - remove obsolete check for existing `gh-pages` branch in `func main`
 - remove check `StatusCode == 200` from previous branch check
-- Refactor func `downloadProductHelmRepoIndex` and error handling
+- func `downloadProductHelmRepoIndex`: Download `index.yaml` via GH RAW URL, error handling, add log output
+- func `buildHelmRepoIndex` add log output
 
 ## [0.0.4] - 2022-11-28
 
