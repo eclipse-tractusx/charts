@@ -32,5 +32,8 @@ jobs:
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          files: .github/bin/helmRepoIndex
+          files: |
+            .github/bin/helmRepoIndex
+            CHANGELOG.mg
+            LICENSE
           generate_release_notes: true
