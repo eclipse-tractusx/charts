@@ -134,7 +134,7 @@ func downloadProductHelmRepoIndex(gitOwner string, gitRepo string) (string, erro
 	}
 }
 
-func buildHelmRepoIndex(indexFile string, mergeIndexFile string) {
+func buildHelmRepoIndex(indexFile string, mergeIndexFile string, gitRepo string) {
 	repoFile, err := repo.LoadIndexFile(indexFile)
 	if err != nil {
 		log.Fatal(err)
@@ -148,6 +148,7 @@ func buildHelmRepoIndex(indexFile string, mergeIndexFile string) {
 			log.Fatal(err)
 		}
 		repoFile.Merge(newIndex)
+		log.Printf("✅  %v - index.yaml merged into Helm repository", gitRepo)
 		repoFile.Generated = time.Now()
 		err = repoFile.WriteFile(indexFile, 0644)
 
