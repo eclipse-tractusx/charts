@@ -75,6 +75,17 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/daps-helm-chart/releases/download/daps-server-1.7.2/daps-server-1.7.2.tgz
     version: 1.7.2
+  dft-frontend:
+  - apiVersion: v2
+    appVersion: 1.7.0
+    created: "2022-12-13T13:36:34.1237624Z"
+    description: A Helm chart for Kubernetes
+    digest: 280f88d58c03fc2c0ad4a1cbe766c4569b6d7dc72a5f5be1be4f2c16f007e315
+    name: dft-frontend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/dft-frontend/releases/download/dft-frontend-1.7.0/dft-frontend-1.7.0.tgz
+    version: 1.7.0
   irs:
   - apiVersion: v2
     appVersion: 1.1.0
@@ -288,4 +299,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/sldt-semantic-hub/releases/download/semantic-hub-0.1.3/semantic-hub-0.1.3.tgz
     version: 0.1.3
-generated: "2022-12-13T13:26:04.117169198Z"
+generated: "2022-12-13T13:37:35.727138983Z"
