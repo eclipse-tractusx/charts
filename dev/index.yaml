@@ -64,6 +64,17 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/bpdm/releases/download/bpdm-gate-2.0.0/bpdm-gate-2.0.0.tgz
     version: 2.0.0
+  daps-reg-service:
+  - apiVersion: v2
+    appVersion: 1.0.4
+    created: "2022-12-14T10:38:54.121814124Z"
+    description: A Helm chart for Kubernetes
+    digest: c8d05da06770ffc06fa09d697b99530b7f69d852f46c72de071fbaa0c0706539
+    name: daps-reg-service
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/daps-registration-service/releases/download/daps-reg-service-1.0.5/daps-reg-service-1.0.5.tgz
+    version: 1.0.5
   daps-server:
   - apiVersion: v2
     appVersion: 1.7.1
@@ -321,4 +332,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/sldt-semantic-hub/releases/download/semantic-hub-0.1.3/semantic-hub-0.1.3.tgz
     version: 0.1.3
-generated: "2022-12-14T03:37:40.40675218Z"
+generated: "2022-12-14T10:54:02.720776982Z"
