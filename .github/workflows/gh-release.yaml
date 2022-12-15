@@ -24,7 +24,33 @@ on:
       - "v*.*.*"
 
 jobs:
-  build:
+  go-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Go
+        uses: actions/setup-go@v3
+        with:
+          go-version-file: 'src/helmRepoIndex/go.mod'
+
+      - name: Create .github/bin
+        run: "[ ! -d .github/bin ] && mkdir .github/bin || echo '.github/bin already exists'"
+
+      - name: Run
+        run: go build -ldflags "-s -w" -o $GITHUB_WORKSPACE/.github/bin/
+        working-directory: src/helmRepoIndex
+
+      - name: Publish changes
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .github/bin/helmRepoIndex
+          git commit -m "chore: update dev helm repo index ($GITHUB_REF)"
+          git push
+
+  release:
+    needs: go-build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
