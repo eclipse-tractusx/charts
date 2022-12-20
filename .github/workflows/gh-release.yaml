@@ -60,6 +60,6 @@ jobs:
         with:
           files: |
             .github/bin/helmRepoIndex
-            CHANGELOG.mg
+            CHANGELOG.md
             LICENSE
           generate_release_notes: true
