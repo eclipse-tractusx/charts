@@ -10,7 +10,7 @@ The Stable Helm Repository hasn't been initialized yet. Command output below is 
 
 ```shell
 $ helm repo add tractusx https://eclipse-tractusx.github.io/charts/stable
-$ $ helm search repo tractusx
+$ helm search repo tractusx
 NAME                         	CHART VERSION	APP VERSION           	DESCRIPTION
 tractusx/bpdm            	2.0.0        	2.0.0                 	A Helm chart for deploying the BPDM service
 tractusx/bpdm-gate       	2.0.0        	2.0.0                 	A Helm chart for deploying the BPDM gate service
