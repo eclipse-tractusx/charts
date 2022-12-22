@@ -34,7 +34,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-
+        with:
+          fetch-depth: 0
       - name: Set up Go
         uses: actions/setup-go@v3
         with:
@@ -53,7 +54,7 @@ jobs:
           git config user.email github-actions@github.com
           git add .github/bin/helmRepoIndex
           git commit -m "chore: update dev helm repo index ($GITHUB_REF)"
-          git push origin HEAD:main
+          git push
 
   release:
     needs: go-build
