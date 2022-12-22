@@ -7,7 +7,7 @@ to [documentation](../README.md#availability).
 
 ```shell
 $ helm repo add tractusx-dev https://eclipse-tractusx.github.io/charts/dev
-$ $ helm search repo tractusx-dev
+$ helm search repo tractusx-dev
 NAME                         	CHART VERSION	APP VERSION           	DESCRIPTION
 tractusx-dev/autosetup       	1.0.1        	0.0.2                 	A Helm chart for Kubernetes
 tractusx-dev/bpdm            	2.0.0        	2.0.0                 	A Helm chart for deploying the BPDM service

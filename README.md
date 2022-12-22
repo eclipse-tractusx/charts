@@ -37,7 +37,7 @@ The Stable Helm repository will be updated when a new Tractus-X release or a pat
 
 ```shell
 $ helm repo add tractusx-dev https://eclipse-tractusx.github.io/charts/dev
-$ $ helm search repo tractusx-dev
+$ helm search repo tractusx-dev
 NAME                         	CHART VERSION	APP VERSION           	DESCRIPTION
 tractusx-dev/autosetup       	1.0.1        	0.0.2                 	A Helm chart for Kubernetes
 tractusx-dev/bpdm            	2.0.0        	2.0.0                 	A Helm chart for deploying the BPDM service
@@ -60,7 +60,7 @@ $ helm install tractusx-dev/portal
 
 ```shell
 $ helm repo add tractusx https://eclipse-tractusx.github.io/charts/dev
-$ $ helm search repo tractusx
+$ helm search repo tractusx
 NAME                         	CHART VERSION	APP VERSION           	DESCRIPTION
 tractusx/bpdm            	2.0.0        	2.0.0                 	A Helm chart for deploying the BPDM service
 tractusx/bpdm-gate       	2.0.0        	2.0.0                 	A Helm chart for deploying the BPDM gate service
