@@ -48,9 +48,12 @@ func main() {
 
 	ctx := context.Background()
 	client := getAuthenticatedClient(ctx, gitToken)
-	repos, _, _ := getOrgRepos(ctx, gitOwner, client)
+	repos, err := getOrgRepos(ctx, gitOwner, client)
+	if err != nil {
+		log.Fatal(err)
+	}
 
-	err := initHelmRepoIndex(indexFile)
+	err = initHelmRepoIndex(indexFile)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -76,13 +79,26 @@ func getAuthenticatedClient(ctx context.Context, gitToken string) *github.Client
 	return github.NewClient(tc)
 }
 
-func getOrgRepos(ctx context.Context, gitOwner string, client *github.Client) ([]*github.Repository, *github.Response, error) {
+func getOrgRepos(ctx context.Context, gitOwner string, client *github.Client) ([]*github.Repository, error) {
 	opt := &github.RepositoryListByOrgOptions{
-		Type: "all",
+		ListOptions: github.ListOptions{},
 	}
-	repos, response, err := client.Repositories.ListByOrg(ctx, gitOwner, opt)
 
-	return repos, response, err
+	var allRepos []*github.Repository
+
+	for {
+		repos, response, err := client.Repositories.ListByOrg(ctx, gitOwner, opt)
+		if err != nil {
+			return nil, err
+		}
+		allRepos = append(allRepos, repos...)
+		if response.NextPage == 0 {
+			break
+		}
+		opt.Page = response.NextPage
+	}
+
+	return allRepos, nil
 }
 
 func initHelmRepoIndex(fileName string) error {
