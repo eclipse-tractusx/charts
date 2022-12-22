@@ -7,9 +7,11 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
-### Added
+## v0.1.1 - 2022-12-22
 
-### Changed
+### Fixed
+
+- func `getOrgRepos` only returned the first 30 repositories due to missing pagination
 
 ## v0.1.0 - 2022-12-11
 
