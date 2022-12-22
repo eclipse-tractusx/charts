@@ -22,6 +22,12 @@ on:
   push:
     tags:
       - "v*.*.*"
+  workflow_dispatch:
+    inputs:
+      tags:
+        description: 'Release tag'
+        required: true 
+        type: string
 
 jobs:
   go-build:
@@ -47,7 +53,7 @@ jobs:
           git config user.email github-actions@github.com
           git add .github/bin/helmRepoIndex
           git commit -m "chore: update dev helm repo index ($GITHUB_REF)"
-          git push
+          git push origin HEAD:main
 
   release:
     needs: go-build
