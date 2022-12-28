@@ -43,7 +43,7 @@ jobs:
           echo "bool=$(echo $?)\n" >> $GITHUB_OUTPUT
 
       - name: Publish changes
-        if: ${{ steps.compare.bool == 1 }}"
+        if: steps.compare.outputs.bool == 1
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
