@@ -29,21 +29,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Save current index.yaml
-        run: head -n -1 dev/index.yaml > dev/index.old
-
       - name: Rebuild Helm Repository
         run: .github/bin/helmRepoIndex -owner ${{ github.repository_owner }} -token ${{ secrets.GITHUB_TOKEN }} -indexFile "dev/index.yaml"
 
-      - name: Compare index.yaml with previous
-        id: compare
-        run: |
-          head -n -1 dev/index.yaml > dev/index.new
-          diff dev/index.old dev/index.new
-          echo "bool=$(echo $?)\n" >> $GITHUB_OUTPUT
-
       - name: Publish changes
-        if: steps.compare.outputs.bool == 1
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
