@@ -1,0 +1,22 @@
+apiVersion: v2
+name: cx-decentral-dtr-setup
+description: A Helm chart that allows to easily set up a decentral registry behind an EDC
+
+type: application
+
+version: 0.1.0
+
+appVersion: "1.16.0"
+
+
+dependencies:
+  - name: registry
+    repository: https://www.eclipse.org/tractusx/charts/
+    version: 0.2.2
+  - name: all-in-one
+    version: 0.1.0
+    repository: "file://product-edc/edc-tests/src/main/resources/deployment/helm/all-in-one"
+  - name: api-wrapper
+    condition: api-wrapper.enabled
+    version: 0.1.0
+    repository: file://catenax-at-home/deployment/helm/api-wrapper
