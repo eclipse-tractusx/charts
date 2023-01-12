@@ -108,6 +108,16 @@ entries:
     version: 2.0.0
   bpdm-gate:
   - apiVersion: v2
+    appVersion: 3.0.0
+    created: "2023-01-11T09:34:53.763114121Z"
+    description: A Helm chart for deploying the BPDM gate service
+    digest: 02cbf96aa5fdc372c0fcc9cfaa2dea47a78d851852ff658baa23a12a9fac4611
+    name: bpdm-gate
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/bpdm/releases/download/bpdm-gate-3.0.1/bpdm-gate-3.0.1.tgz
+    version: 3.0.1
+  - apiVersion: v2
     appVersion: 2.0.0
     created: "2022-12-06T10:11:57.501867851Z"
     description: A Helm chart for deploying the BPDM gate service
@@ -306,6 +316,32 @@ entries:
     version: 1.0.1
   irs-helm:
   - apiVersion: v2
+    appVersion: 2.1.0
+    created: "2023-01-11T12:03:51.729551693Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      version: 1.x.x
+    - condition: minio.enabled
+      name: minio
+      repository: https://charts.min.io/
+      version: 5.0.1
+    - condition: prometheus.enabled
+      name: prometheus
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 17.0.1
+    - condition: grafana.enabled
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.44.8
+    description: IRS Helm chart for Kubernetes
+    digest: be4b8670127c536fd282553764dc07ee1dedb5629d9fbba6a978b89b345c1f07
+    name: irs-helm
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/item-relationship-service/releases/download/irs-helm-4.1.0/irs-helm-4.1.0.tgz
+    version: 4.1.0
+  - apiVersion: v2
     appVersion: 2.0.0
     created: "2022-12-11T10:35:55.660709277Z"
     dependencies:
@@ -460,6 +496,21 @@ entries:
     version: 0.6.0
   registry:
   - apiVersion: v2
+    appVersion: 0.3.0-M1
+    created: "2023-01-11T11:41:46.08987248Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.1.7
+    description: Tractus-X Digital Twin Registry Helm Chart
+    digest: ee8dec10b8b31d54352b1979fa0cd763f57bb24e3cd691b2de8df00b2d5431d7
+    name: registry
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-digital-twin-registry/releases/download/registry-0.3.0/registry-0.3.0.tgz
+    version: 0.3.0
+  - apiVersion: v2
     appVersion: 0.2.0-M4-multi-tenancy
     created: "2022-12-02T15:30:01.544529872Z"
     dependencies:
@@ -506,4 +557,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/sldt-semantic-hub/releases/download/semantic-hub-0.1.3/semantic-hub-0.1.3.tgz
     version: 0.1.3
-generated: "2023-01-11T03:34:28.360713812Z"
+generated: "2023-01-12T03:34:31.296457964Z"
