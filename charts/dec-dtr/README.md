@@ -1,6 +1,6 @@
 # Decentralized Digital Twin Registry Setup
 This document contains instructions how to setup the `dec-dtr` [Helm](https://helm.sh/) chart.
-The chart contains deployments for two EDC instances, a DAPS instance, one registry and an API-Wrapper. It relies on the EDC [all-in-one](https://github.com/catenax-ng/product-edc/tree/develop/edc-tests/src/main/resources/deployment/helm/all-in-one) Helm chart.
+The chart contains deployments for two EDC instances, a DAPS instance and one registry. It relies on the EDC [tractusx-connector](https://github.com/catenax-ng/product-edc/tree/develop/charts/tractusx-connector) Helm chart.
 
 Please be aware, that you need a Kubernetes cluster to deploy the setup using Helm. You can use [minikube](https://minikube.sigs.k8s.io/docs/start/), [K3s](https://k3s.io/), or [MicroK8s](https://microk8s.io/) to deploy a Kubernetes cluster on your local machine.
 
@@ -14,15 +14,15 @@ Please be aware, that you need a Kubernetes cluster to deploy the setup using He
                                    └─────────┬─────────┘
                                              │
                                              │
-                                   ┌─────────┴─────────┐
-                                   │                   │
-                                ┌──┤    API Wrapper    ├──┐
-                                │  │                   │  │
-                                │  └───────────────────┘  │
-                                │                         │
-                                │                         │
-                                │                         │
-                     ┌──────────┴───────┐       ┌─────────┴────────┐
+                                             │
+                              ┌──────────────┴────────────┐
+                              │                           │
+                              │                           │
+                              │                           │
+                              │                           │
+                     ┌────────┴─────────┐                 │
+                     │     Adapter      │                 │
+                     ├──────────────────┤       ┌─────────┴────────┐
                      │                  │       │                  │
         ┌────────────┤ EDC Controlplane ├───────┤   EDC Dataplane  │
         │            │    (Consumer)    │       │    (Consumer)    │
@@ -47,12 +47,7 @@ Please be aware, that you need a Kubernetes cluster to deploy the setup using He
 ```
 
 ## Setup
-To set up the deployment, first run
-```
-sh ./setup.sh
-```
-
-Now, start the deployment by executing
+To start the deployment run:
 ```
 helm install decentral-registry-setup -n dec-reg . --create-namespace
 ```
@@ -64,7 +59,7 @@ In the next step we want to create a new asset in the provider EDC controlplane.
 curl -0 -v -X POST 'http://<your-k8s-host>/data/assets' \
 -H "Expect:" \
 -H 'Content-Type: application/json; charset=utf-8' \
--H 'X-Api-Key: password' \
+-H 'X-Api-Key: <password>' \
 --data-binary @- << EOF
 {
     "asset": {
@@ -91,7 +86,7 @@ In the next step, create a policy for you data offering:
 curl -0 -v -X POST 'http://<your-k8s-host>/data/policydefinitions' \
 -H "Expect:" \
 -H 'Content-Type: application/json; charset=utf-8' \
--H 'X-Api-Key: password' \
+-H 'X-Api-Key: <password>' \
 --data-binary @- << EOF
 {
     "id": "registry-id-policy",
@@ -116,7 +111,7 @@ Finally, we need to create a contract definition:
 ```
 curl -0 -v -X POST 'http://<your-k8s-host>/data/contractdefinitions' \
 -H 'Content-Type: application/json; charset=utf-8' \
--H 'X-Api-Key: password' \
+-H 'X-Api-Key: <password>' \
 --data-binary @- << EOF
 {
     "id": "registry-id-contract",
@@ -133,8 +128,22 @@ curl -0 -v -X POST 'http://<your-k8s-host>/data/contractdefinitions' \
 EOF
 ```
 
-With that, we can now make a call to the registry behind the EDC (please check the diagram above, for how all components work together).
-The API-Wrapper in front of our consumer EDC handles all communication with the EDC and is the direct link for a consumer backend application to the outside (again, make sure that the API-Wrapper default port is available on you host machine).
+With that, we now need to make two calls to receive actual data from the registry. First of all we need to acquire an EDC token that later allows us to fetch data using the EDC dataplane, which functions as a proxy.
+The token request to the EDC controlplane looks like the following:
+```
+curl -0 -v -X GET 'http://<your-k8s-host>/data/adapter/asset/sync/<asset-id>?providerUrl=<provider-url>' \
+-H 'Content-Type: application/json; charset=utf-8' \
+-H 'X-Api-Key: <password>'
+```
+
+The response constist of a JSON payload which contains the token we need for the next step. Copy the token from the `authCode` field and save it for the next request.
+To access the registry send the next request to the EDC consumer dataplane:
+```
+curl -0 -v -X GET 'http://<your-k8s-host>api/public/registry/shell-descriptors>' \
+-H 'Content-Type: application/json; charset=utf-8' \
+-H 'Authorization: <authCode-from-previous-step>'
+```
+
 
 Execute the following request to fetch the registry:
 ```
