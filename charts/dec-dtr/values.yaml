@@ -164,41 +164,20 @@ vault:
         }
 
 daps:
-  enabled: false
-  # persistence:
-  #   enabled: false
-  #   storageClass: local-path
+  enabled: true
   fullnameOverride: "ids-daps"
-  connectors:
-    - id: &providerDapsClientId 99:83:A7:17:86:FF:98:93:CE:A0:DD:A1:F1:36:FA:F6:0F:75:0A:23:keyid:99:83:A7:17:86:FF:98:93:CE:A0:DD:A1:F1:36:FA:F6:0F:75:0A:23
-      name: provider
-      attributes:
-        referringConnector: http://provider-edc-controlplane/BPNPROVIDER
-      certificate: |-
-        -----BEGIN CERTIFICATE-----
-        MIID7TCCAtWgAwIBAgIUJ0bwxUc7n3YK89mOyGXrLx2KO0YwDQYJKoZIhvcNAQEL
-        BQAwgYUxCzAJBgNVBAYTAkRFMQ8wDQYDVQQIDAZCZXJsaW4xDzANBgNVBAcMBkJl
-        cmxpbjEMMAoGA1UECgwDQk1XMSAwHgYDVQQLDBdlZGMtcGxheWdyb3VuZC1wYXJ0
-        bmVyMjEkMCIGA1UEAwwbcGxhdG8tZWRjLmRlbW8uY2F0ZW5hLXgubmV0MB4XDTIy
-        MDQyNTEwMjgwMloXDTIzMDQyNTEwMjgwMlowgYUxCzAJBgNVBAYTAkRFMQ8wDQYD
-        VQQIDAZCZXJsaW4xDzANBgNVBAcMBkJlcmxpbjEMMAoGA1UECgwDQk1XMSAwHgYD
-        VQQLDBdlZGMtcGxheWdyb3VuZC1wYXJ0bmVyMjEkMCIGA1UEAwwbcGxhdG8tZWRj
-        LmRlbW8uY2F0ZW5hLXgubmV0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKC
-        AQEAm1/UvHXuRU1peEGHULZBP8j8gorXAQvUz8Znb1iVNtldI29GCSXkTHxph66x
-        TcegdF8aeaoU1mPf3LzMQUU1koZHUq6sRC+50uFcZJ2AjF5IXKQlDPNWR5tPXP56
-        RZyqXxjPFHeuTA+YsYyrzEVhzEieOiNaxJDM3uV5pv+FTRHz+xMOgNBonR1QyMh6
-        tcwB+EQagoeFl0DjEXAel9WG4hOG/rDiXArTMaVjnTG/ycmF0HeSnbRC+3/+fh/C
-        hzQJyEbviX67ymyYRJTyynt/Mtrqg5/ssdISexjw3ZmiFNemZIOhIdepoSwnJHFM
-        4Jj8B5lq0a1jY5Rc9lDj710RXQIDAQABo1MwUTAdBgNVHQ4EFgQUmYOnF4b/mJPO
-        oN2h8Tb69g91CiMwHwYDVR0jBBgwFoAUmYOnF4b/mJPOoN2h8Tb69g91CiMwDwYD
-        VR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOCAQEAKxv/MTIEKNkzReOqrzpt
-        LM00X6JsDdfxa3rZ0Uq17PjO0R63IPsqzexhfZUML0e/Dwpe97xpvftCOEuICMBA
-        wOHhQc77MgwyF4dqgRgfJysxw37ACZxU6GI/K2JpKXQLgEhP14oHUIWOzCAbgDhR
-        jwOx3ZP176Vjxx90pW3hOphRVnq/BRqqEDtFwRzKtGnGvP8ecmC2iY4dXEA3QEp1
-        gzg03eglvZSoedEPY5o5y/4n6TplaDmaeoo0QrvAiWik1gY85Lg21aBWVsP45wVS
-        tFn3m1FCCV8XYIj/EEUAh8VEhphLVEViE6m9Mm4deFDavXcGBb63BCiOQtnjd3eY
-        zQ==
-        -----END CERTIFICATE-----
+  daps:
+    secret:
+      clientId: clientId
+      clientSecret: clientSecret
+  ingress:
+    enabled: true
+    host: daps-host
+    tls:
+      enabled: true
+      certMgr:
+        enabled: true
+        issuer: letsencrypt-prod
 
 provider:
   enabled: true
@@ -245,9 +224,8 @@ provider:
     username: edcprovider
     password: oqerhf8734hewrin
   daps:
-    clientId: *providerDapsClientId
-    url: https://daps1.int.demo.catena-x.net
-    # url: http://ids-daps:4567
+    clientId: 99:83:A7:17:86:FF:98:93:CE:A0:DD:A1:F1:36:FA:F6:0F:75:0A:23:keyid:99:83:A7:17:86:FF:98:93:CE:A0:DD:A1:F1:36:FA:F6:0F:75:0A:23
+    url: http://ids-daps:4567
   vault:
     hashicorp:
       enabled: true
@@ -307,9 +285,8 @@ consumer:
     username: edcconsumer
     password: oqerhf8734hewrin
   daps:
-    clientId: *providerDapsClientId
-    url: https://daps1.int.demo.catena-x.net
-    # url: http://ids-daps:4567
+    clientId: 99:83:A7:17:86:FF:98:93:CE:A0:DD:A1:F1:36:FA:F6:0F:75:0A:23:keyid:99:83:A7:17:86:FF:98:93:CE:A0:DD:A1:F1:36:FA:F6:0F:75:0A:23
+    url: http://ids-daps:4567
   vault:
     hashicorp:
       enabled: true

@@ -143,11 +143,3 @@ curl -0 -v -X GET 'http://<your-k8s-host>api/public/registry/shell-descriptors>'
 -H 'Content-Type: application/json; charset=utf-8' \
 -H 'Authorization: <authCode-from-previous-step>'
 ```
-
-
-Execute the following request to fetch the registry:
-```
-curl -u someuser:somepassword -0 -v -X GET 'http://<your-k8s-host>/api/service/registry-id/registry/shell-descriptors?provider-connector-url=http://plato-edc-controlplane:8282' \
--H 'Content-Type: application/json; charset=utf-8'
-```
-
