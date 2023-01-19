@@ -1,6 +1,0 @@
-[submodule "charts/dec-dtr/catenax-at-home"]
-	path = charts/dec-dtr/catenax-at-home
-	url = git@github.com:catenax-ng/catenax-at-home.git
-[submodule "charts/dec-dtr/product-edc"]
-	path = charts/dec-dtr/product-edc
-	url = git@github.com:catenax-ng/product-edc.git
