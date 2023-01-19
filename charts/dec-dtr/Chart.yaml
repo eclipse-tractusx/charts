@@ -11,12 +11,27 @@ appVersion: "1.16.0"
 
 dependencies:
   - name: registry
-    repository: https://www.eclipse.org/tractusx/charts/
-    version: 0.2.2
-  - name: all-in-one
-    version: 0.1.0
-    repository: "file://product-edc/edc-tests/src/main/resources/deployment/helm/all-in-one"
-  - name: api-wrapper
-    condition: api-wrapper.enabled
-    version: 0.1.0
-    repository: file://catenax-at-home/deployment/helm/api-wrapper
+    repository: https://eclipse-tractusx.github.io/sldt-digital-twin-registry
+    version: 0.3.0
+  - name: tractusx-connector
+    alias: provider
+    condition: provider.enabled
+    repository: https://catenax-ng.github.io/product-edc
+    version: 0.2.0
+  - name: tractusx-connector
+    alias: consumer
+    condition: consumer.enabled
+    repository: https://catenax-ng.github.io/product-edc
+    version: 0.2.0
+  - name: postgresql
+    repository: https://charts.bitnami.com/bitnami
+    version: 12.1.5
+  - name: vault
+    repository: https://helm.releases.hashicorp.com
+    version: 0.23.0
+    condition: vault.enabled
+  - name: omejdn-server
+    alias: daps
+    repository: https://catenax-ng.github.io/product-DAPS/
+    version: 1.7.1
+    condition: daps.enabled
