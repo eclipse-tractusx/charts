@@ -137,6 +137,16 @@ entries:
   bpdm-gate:
   - apiVersion: v2
     appVersion: 3.0.1
+    created: "2023-01-30T12:01:52.225375297Z"
+    description: A Helm chart for deploying the BPDM gate service
+    digest: 75e85113497ee31a91f003f1acbd1f4e0f7614a6d7853524c42bca9c4eacedec
+    name: bpdm-gate
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/bpdm/releases/download/bpdm-gate-3.0.5-alpha.1/bpdm-gate-3.0.5-alpha.1.tgz
+    version: 3.0.5-alpha.1
+  - apiVersion: v2
+    appVersion: 3.0.1
     created: "2023-01-27T14:47:35.135590567Z"
     description: A Helm chart for deploying the BPDM gate service
     digest: 299c573e9774f92690cf095f57ffbf6a34dfbd344c482d86145d37e0cf0f0867
@@ -207,6 +217,27 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/bpdm/releases/download/bpdm-pool-4.0.4/bpdm-pool-4.0.4.tgz
     version: 4.0.4
+  - apiVersion: v2
+    appVersion: 3.0.1
+    created: "2023-01-30T12:01:52.430629262Z"
+    dependencies:
+    - alias: opensearch
+      condition: opensearch.enabled
+      name: opensearch
+      repository: https://opensearch-project.github.io/helm-charts/
+      version: 2.4.0
+    - alias: postgres
+      condition: postgres.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.9.1
+    description: A Helm chart for deploying the BPDM pool service
+    digest: 4c895f0d94f1f885bfbbc42f8a059f89a0fdbbfbb8f15a5b707f7d0f0328ddee
+    name: bpdm-pool
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/bpdm/releases/download/bpdm-pool-4.0.4-alpha.1/bpdm-pool-4.0.4-alpha.1.tgz
+    version: 4.0.4-alpha.1
   - apiVersion: v2
     appVersion: 3.0.1
     created: "2023-01-24T17:06:13.401025689Z"
@@ -690,6 +721,27 @@ entries:
     version: 2.0.0
   managed-identity-wallets:
   - apiVersion: v2
+    appVersion: 3.0.0
+    created: "2023-01-30T10:30:09.180719156Z"
+    dependencies:
+    - alias: acapypostgresql
+      condition: acapypostgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.x.x
+    - alias: postgresql
+      condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.x.x
+    description: Managed Identity Wallets Service
+    digest: 8afb09eb2f6a4f41e36bd76f40b101312f9f6237ea6c33152b31347b79c4ecf9
+    name: managed-identity-wallets
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/managed-identity-wallets/releases/download/managed-identity-wallets-0.6.3/managed-identity-wallets-0.6.3.tgz
+    version: 0.6.3
+  - apiVersion: v2
     appVersion: 2.1.0
     created: "2022-12-20T16:13:58.518828075Z"
     dependencies:
@@ -830,4 +882,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/sldt-semantic-hub/releases/download/semantic-hub-0.1.3/semantic-hub-0.1.3.tgz
     version: 0.1.3
-generated: "2023-01-30T03:34:51.815229007Z"
+generated: "2023-01-31T03:34:47.893887975Z"
