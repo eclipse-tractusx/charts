@@ -830,6 +830,21 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/sldt-digital-twin-registry/releases/download/registry-0.2.4/registry-0.2.4.tgz
     version: 0.2.4
+  - apiVersion: v2
+    appVersion: 0.2.0-M3-multi-tenancy
+    created: "2022-12-02T15:30:01.544529872Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.1.9
+    description: Tractus-X Digital Twin Registry Helm Chart
+    digest: cf42921167bea4b41cf6575e47d5b8ed9b3c8118e178efd7cdf7d59df5316c0f
+    name: registry
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-digital-twin-registry/releases/download/v0.2.0-M3-multi-tenancy/registry-0.2.3.tgz
+    version: 0.2.3
   sdfactory:
   - apiVersion: v2
     appVersion: 1.1.0
@@ -873,6 +888,16 @@ entries:
     version: 1.0.8
   semantic-hub:
   - apiVersion: v2
+    appVersion: 0.1.0-M3
+    created: "2023-01-31T13:14:07.119245574Z"
+    description: Helm Chart for the Catena-X Semantic Hub Application
+    digest: d371dcf80a82f4611313085168c8f0a2cdecaaa30d670965050cfdc0d9ddb8e3
+    name: semantic-hub
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-semantic-hub/releases/download/semantic-hub-0.1.4/semantic-hub-0.1.4.tgz
+    version: 0.1.4
+  - apiVersion: v2
     appVersion: 0.1.0-M2
     created: "2022-12-07T10:16:20.065344697Z"
     description: Helm Chart for the Catena-X Semantic Hub Application
@@ -882,4 +907,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/sldt-semantic-hub/releases/download/semantic-hub-0.1.3/semantic-hub-0.1.3.tgz
     version: 0.1.3
-generated: "2023-01-31T03:34:47.893887975Z"
+generated: "2023-02-01T03:40:41.331805096Z"
