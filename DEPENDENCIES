@@ -420,7 +420,7 @@ go/golang/golang.org%2Fx/sys/v0.0.0-20220114195835-da31bd327af9, Apache-2.0 AND 
 go/golang/golang.org%2Fx/sys/v0.2.0, BSD-3-Clause, approved, #6379
 go/golang/golang.org%2Fx/term/v0.0.0-20201126162022-7de9c90e9dd1, BSD-3-Clause, approved, #5720
 go/golang/golang.org%2Fx/term/v0.2.0, BSD-3-Clause, approved, #6385
-go/golang/golang.org%2Fx/text/v0.0.0-20170915032832-14c0d48ead0c, BSD-3-Clause AND OTHER, restricted, clearlydefined
+go/golang/golang.org%2Fx/text/v0.0.0-20170915032832-14c0d48ead0c, BSD-3-Clause AND (BSD-3-Clause AND CC-BY-SA-1.0 AND CC-BY-SA-2.5 AND CC-BY-SA-3.0) AND (BSD-3-Clause AND CC-BY-SA-1.0 AND CC-BY-SA-2.0 AND CC-BY-SA-2.5 AND CC-BY-SA-3.0), restricted, #6912
 go/golang/golang.org%2Fx/text/v0.3.0, BSD-3-Clause AND CC-BY-SA-1.0 AND CC-BY-SA-2.0 AND CC-BY-SA-2.5 AND CC-BY-SA-3.0, approved, #6122
 go/golang/golang.org%2Fx/text/v0.3.1-0.20180807135948-17ff2d5776d2, BSD-3-Clause AND CC-BY-SA-1.0 AND CC-BY-SA-2.0 AND CC-BY-SA-2.5 AND CC-BY-SA-3.0, approved, #6122
 go/golang/golang.org%2Fx/text/v0.3.2, BSD-3-Clause AND CC-BY-SA-1.0 AND CC-BY-SA-2.0 AND CC-BY-SA-2.5 AND CC-BY-SA-3.0, approved, #6120
