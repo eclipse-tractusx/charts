@@ -721,6 +721,27 @@ entries:
     version: 2.0.0
   managed-identity-wallets:
   - apiVersion: v2
+    appVersion: 3.1.0
+    created: "2023-02-02T14:42:35.024089292Z"
+    dependencies:
+    - alias: acapypostgresql
+      condition: acapypostgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.x.x
+    - alias: postgresql
+      condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.x.x
+    description: Managed Identity Wallets Service
+    digest: 0e0172dbcb383199a7fbc1166a1cd03ef7b67ff22ba132f745a696202ab2113e
+    name: managed-identity-wallets
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/managed-identity-wallets/releases/download/managed-identity-wallets-0.6.6/managed-identity-wallets-0.6.6.tgz
+    version: 0.6.6
+  - apiVersion: v2
     appVersion: 3.0.0
     created: "2023-01-30T10:30:09.180719156Z"
     dependencies:
@@ -907,4 +928,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/sldt-semantic-hub/releases/download/semantic-hub-0.1.3/semantic-hub-0.1.3.tgz
     version: 0.1.3
-generated: "2023-02-02T03:34:29.592964939Z"
+generated: "2023-02-03T03:36:49.196845863Z"
