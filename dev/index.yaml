@@ -949,6 +949,17 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/sldt-semantic-hub/releases/download/semantic-hub-0.1.3/semantic-hub-0.1.3.tgz
     version: 0.1.3
+  tx-traceability-foss-frontend:
+  - apiVersion: v2
+    appVersion: 1.1.0
+    created: "2023-02-06T15:26:44.50065487Z"
+    description: A Helm chart for Traceability frontend application
+    digest: 87d9db34e6b61c632b0ef8df4487fcafc0749930578828438d2d47d990958f6e
+    name: tx-traceability-foss-frontend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/traceability-foss-frontend/releases/download/tx-traceability-foss-frontend-1.1.0/tx-traceability-foss-frontend-1.1.0.tgz
+    version: 1.1.0
   vas:
   - apiVersion: v2
     appVersion: 1.0.0
@@ -981,4 +992,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-02-06T03:34:30.996906071Z"
+generated: "2023-02-07T03:34:37.184906517Z"
