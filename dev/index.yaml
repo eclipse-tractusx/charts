@@ -632,6 +632,32 @@ entries:
     version: 4.3.0
   - apiVersion: v2
     appVersion: 2.2.0
+    created: "2023-01-26T10:29:06.419819484Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      version: 1.x.x
+    - condition: minio.enabled
+      name: minio
+      repository: https://charts.min.io/
+      version: 5.0.1
+    - condition: prometheus.enabled
+      name: prometheus
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 17.0.1
+    - condition: grafana.enabled
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.44.8
+    description: IRS Helm chart for Kubernetes
+    digest: aeae1cc6b1bc5b7785f04eb368b31b719629329319dc02c34b712197baa16e9c
+    name: irs-helm
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/item-relationship-service/releases/download/irs-helm-4.2.1/irs-helm-4.2.1.tgz
+    version: 4.2.1
+  - apiVersion: v2
+    appVersion: 2.2.0
     created: "2023-01-20T13:25:17.460419573Z"
     dependencies:
     - name: common
@@ -919,6 +945,34 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/portal-cd/releases/download/portal-0.6.0/portal-0.6.0.tgz
     version: 0.6.0
+  product-traceability-foss-backend:
+  - apiVersion: v2
+    appVersion: 1.1.0
+    created: "2023-02-08T15:11:06.66944994Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.x.x
+    - condition: pgadmin4.enabled
+      name: pgadmin4
+      repository: https://helm.runix.net
+      version: 1.13.6
+    - condition: irs-helm.enabled
+      name: irs-helm
+      repository: https://catenax-ng.github.io/tx-item-relationship-service
+      version: 4.2.1
+    - condition: irs-edc-consumer.enabled
+      name: irs-edc-consumer
+      repository: https://catenax-ng.github.io/tx-item-relationship-service
+      version: 1.0.2
+    description: A Helm chart for Traceability backend application
+    digest: 796f4c0ad0b3474c833f5aeebd8fce2c4d5373dddddf17c217532ad5e21f2a44
+    name: product-traceability-foss-backend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/traceability-foss-backend/releases/download/helm-charts-1.1.1/product-traceability-foss-backend-1.1.1.tgz
+    version: 1.1.1
   registry:
   - apiVersion: v2
     appVersion: 0.3.0-M1
@@ -1070,4 +1124,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-02-08T03:36:48.871834791Z"
+generated: "2023-02-09T03:36:50.597475912Z"
