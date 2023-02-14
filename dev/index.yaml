@@ -384,6 +384,27 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/bpdm/releases/download/bpdm-pool-4.0.0/bpdm-pool-4.0.0.tgz
     version: 4.0.0
+  country-risk-backend:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2023-02-13T08:11:03.047165222Z"
+    dependencies:
+    - alias: postgres
+      condition: postgres.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.*.*
+    - condition: pgadmin4.enabled
+      name: pgadmin4
+      repository: https://helm.runix.net
+      version: 1.x.x
+    description: A Helm chart for deploying the Country Risk service
+    digest: 477792c812df26c7c2d27a75b185e7460f579a8ff67855d65f7498e4e6edf378
+    name: country-risk-backend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/vas-country-risk-backend/releases/download/country-risk-backend-2.0.7/country-risk-backend-2.0.7.tgz
+    version: 2.0.7
   country-risk-frontend:
   - apiVersion: v2
     appVersion: 1.0.0
@@ -846,6 +867,27 @@ entries:
     version: 2.0.0
   managed-identity-wallets:
   - apiVersion: v2
+    appVersion: 3.2.0
+    created: "2023-02-13T15:13:09.509181833Z"
+    dependencies:
+    - alias: acapypostgresql
+      condition: acapypostgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.x.x
+    - alias: postgresql
+      condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.x.x
+    description: Managed Identity Wallets Service
+    digest: d1a0877969aa1d48b742d10fe7a0907d81ba1ec88fc5d45bdfb9f9058638472e
+    name: managed-identity-wallets
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/managed-identity-wallets/releases/download/managed-identity-wallets-0.6.9/managed-identity-wallets-0.6.9.tgz
+    version: 0.6.9
+  - apiVersion: v2
     appVersion: 3.1.2
     created: "2023-02-07T12:28:50.83629114Z"
     dependencies:
@@ -1166,4 +1208,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-02-13T03:38:30.596633394Z"
+generated: "2023-02-14T03:37:21.116994603Z"
