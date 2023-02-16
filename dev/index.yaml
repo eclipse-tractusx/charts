@@ -136,6 +136,35 @@ entries:
     version: 2.0.0
   bpdm-gate:
   - apiVersion: v2
+    appVersion: 3.0.2-alpha.2
+    created: "2023-02-15T13:21:24.480634623Z"
+    description: A Helm chart for deploying the BPDM gate service
+    digest: b0467acbc8746eafa8ae366397b7eaa2652d45a0e899d39a6f02c6816a3b4358
+    home: https://eclipse-tractusx.github.io/docs/kits/Business%20Partner%20Kit/Adoption%20View
+    maintainers:
+    - name: Nico Koprowski
+    - name: Patrick Zeller
+    name: bpdm-gate
+    sources:
+    - https://github.com/eclipse-tractusx/bpdm
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/bpdm/releases/download/bpdm-gate-3.0.5-alpha.5/bpdm-gate-3.0.5-alpha.5.tgz
+    version: 3.0.5-alpha.5
+  - apiVersion: v2
+    appVersion: 3.0.2-alpha.2
+    created: "2023-02-15T10:19:37.594490249Z"
+    description: A Helm chart for deploying the BPDM gate service
+    digest: 6c986693c7a5c5a0d9b15e293c8de245ec5faa5b12c31c542af90d88f8e2d545
+    maintainers:
+    - name: Nico Koprowski
+    - name: Patrick Zeller
+    name: bpdm-gate
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/bpdm/releases/download/bpdm-gate-3.0.5-alpha.4/bpdm-gate-3.0.5-alpha.4.tgz
+    version: 3.0.5-alpha.4
+  - apiVersion: v2
     appVersion: 3.0.2-alpha.1
     created: "2023-02-09T14:57:58.275018292Z"
     description: A Helm chart for deploying the BPDM gate service
@@ -216,6 +245,57 @@ entries:
     - https://github.com/eclipse-tractusx/bpdm/releases/download/bpdm-gate-2.0.0/bpdm-gate-2.0.0.tgz
     version: 2.0.0
   bpdm-pool:
+  - apiVersion: v2
+    appVersion: 3.0.2-alpha.2
+    created: "2023-02-15T13:21:24.624684962Z"
+    dependencies:
+    - alias: opensearch
+      condition: opensearch.enabled
+      name: opensearch
+      repository: https://opensearch-project.github.io/helm-charts/
+      version: 2.4.0
+    - alias: postgres
+      condition: postgres.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.9.1
+    description: A Helm chart for deploying the BPDM pool service
+    digest: 463e27cb0a76a6d287b577c57e5a7fadcb5672e1ad7b8e45bb5d14f0af759e05
+    home: https://eclipse-tractusx.github.io/docs/kits/Business%20Partner%20Kit/Adoption%20View
+    maintainers:
+    - name: Nico Koprowski
+    - name: Patrick Zeller
+    name: bpdm-pool
+    sources:
+    - https://github.com/eclipse-tractusx/bpdm
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/bpdm/releases/download/bpdm-pool-4.0.5-alpha.4/bpdm-pool-4.0.5-alpha.4.tgz
+    version: 4.0.5-alpha.4
+  - apiVersion: v2
+    appVersion: 3.0.2-alpha.2
+    created: "2023-02-15T10:19:37.833999921Z"
+    dependencies:
+    - alias: opensearch
+      condition: opensearch.enabled
+      name: opensearch
+      repository: https://opensearch-project.github.io/helm-charts/
+      version: 2.4.0
+    - alias: postgres
+      condition: postgres.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.9.1
+    description: A Helm chart for deploying the BPDM pool service
+    digest: c8c9b1263ef87781aad03312dbee729427c5134189300c13b791458641104a5d
+    maintainers:
+    - name: Nico Koprowski
+    - name: Patrick Zeller
+    name: bpdm-pool
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/bpdm/releases/download/bpdm-pool-4.0.5-alpha.3/bpdm-pool-4.0.5-alpha.3.tgz
+    version: 4.0.5-alpha.3
   - apiVersion: v2
     appVersion: 3.0.2-alpha.1
     created: "2023-02-09T14:57:58.511773124Z"
@@ -384,6 +464,28 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/bpdm/releases/download/bpdm-pool-4.0.0/bpdm-pool-4.0.0.tgz
     version: 4.0.0
+  consumer-backend:
+  - apiVersion: v2
+    appVersion: 0.4.2
+    created: "2023-02-15T14:43:15.763320396Z"
+    description: Consumer Backend Helm Deployment for the Product Passport Application
+    digest: 3db3a16bd3709702d2626ae0f13326d5d1033d60ae1b27b2b136ef807554e4d2
+    name: consumer-backend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/consumer-backend-0.2.0/consumer-backend-0.2.0.tgz
+    version: 0.2.0
+  consumer-ui:
+  - apiVersion: v2
+    appVersion: 0.4.2
+    created: "2023-02-15T14:43:15.906147083Z"
+    description: Consumer Frontend Helm Deployment for the Product Passport Application
+    digest: c2fd30b0ffeece4c4094ac7e60860aae03c05907e2d8a5ef4b530d5df3c4ea1f
+    name: consumer-ui
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/consumer-ui-0.2.0/consumer-ui-0.2.0.tgz
+    version: 0.2.0
   country-risk-backend:
   - apiVersion: v2
     appVersion: 1.0.0
@@ -1250,4 +1352,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-02-15T03:37:52.161205909Z"
+generated: "2023-02-16T03:36:30.471876297Z"
