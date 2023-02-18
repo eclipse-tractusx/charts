@@ -518,6 +518,16 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/consumer-backend-0.2.0/consumer-backend-0.2.0.tgz
     version: 0.2.0
+  - apiVersion: v2
+    appVersion: 0.4.2
+    created: "2023-02-17T13:52:33.161988581Z"
+    description: Consumer Backend Helm Deployment for the Product Passport Application
+    digest: cf2f6be8b7ba97723c9b5b2a58fbeea7a6103f3dff50679822f5ce802b69c898
+    name: consumer-backend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/consumer-backend-0.2.1/consumer-backend-0.2.1.tgz
+    version: 0.2.1
   consumer-ui:
   - apiVersion: v2
     appVersion: 0.4.2
@@ -529,6 +539,16 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/consumer-ui-0.2.0/consumer-ui-0.2.0.tgz
     version: 0.2.0
+  - apiVersion: v2
+    appVersion: 0.4.2
+    created: "2023-02-17T13:52:33.308001756Z"
+    description: Consumer Frontend Helm Deployment for the Product Passport Application
+    digest: f68e62186ad0ed9c8707901f26bd6fad30c5e9e07961cfe8341edbf175497491
+    name: consumer-ui
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/consumer-ui-0.2.1/consumer-ui-0.2.1.tgz
+    version: 0.2.1
   country-risk-backend:
   - apiVersion: v2
     appVersion: 1.0.0
@@ -1395,4 +1415,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-02-17T03:38:23.348387282Z"
+generated: "2023-02-18T03:34:04.478741017Z"
