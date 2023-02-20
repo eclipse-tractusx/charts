@@ -68,6 +68,21 @@ entries:
     version: 1.0.0-RC4
   autosetup:
   - apiVersion: v2
+    appVersion: 1.1.4
+    created: "2023-02-20T11:45:51.65650823Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.x.x
+    description: A Helm chart for Kubernetes
+    digest: 31f30dfcab47c6a905522d96508d0c810995504b9cebe76bdf428b735298c7b6
+    name: autosetup
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/autosetup-backend/releases/download/autosetup-1.1.4/autosetup-1.1.4.tgz
+    version: 1.1.4
+  - apiVersion: v2
     appVersion: 1.1.0
     created: "2023-01-26T07:58:47.639048173Z"
     dependencies:
@@ -550,6 +565,26 @@ entries:
     - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/consumer-ui-0.2.0/consumer-ui-0.2.0.tgz
     version: 0.2.0
   country-risk-backend:
+  - apiVersion: v2
+    appVersion: 1.0.1
+    created: "2023-02-20T15:54:17.162549964Z"
+    dependencies:
+    - alias: postgres
+      condition: postgres.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.*.*
+    - condition: pgadmin4.enabled
+      name: pgadmin4
+      repository: https://helm.runix.net
+      version: 1.x.x
+    description: A Helm chart for deploying the Country Risk service
+    digest: c338db2e264c7cfacc8905d267a35f05a4e829f19a0e8de7e437de0b0cd399d6
+    name: country-risk-backend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/vas-country-risk-backend/releases/download/country-risk-backend-2.0.8/country-risk-backend-2.0.8.tgz
+    version: 2.0.8
   - apiVersion: v2
     appVersion: 1.0.0
     created: "2023-02-13T08:11:03.047165222Z"
@@ -1428,4 +1463,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-02-20T08:42:30.097033953Z"
+generated: "2023-02-20T15:59:59.591816018Z"
