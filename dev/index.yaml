@@ -561,6 +561,21 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/bpdm/releases/download/bpdm-pool-4.0.0/bpdm-pool-4.0.0.tgz
     version: 4.0.0
+  centralidp:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2023-02-22T17:20:47.288966225Z"
+    dependencies:
+    - name: keycloak
+      repository: https://raw.githubusercontent.com/bitnami/charts/archive-full-index/bitnami
+      version: 7.1.18
+    description: Helm chart for Catena-X Central Keycloak Instance
+    digest: adc51c3392857e2fb78b667846089eaca3337e6c48613514f6ce53f912e2b4f4
+    name: centralidp
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/portal-iam/releases/download/centralidp-1.0.0/centralidp-1.0.0.tgz
+    version: 1.0.0
   consumer-backend:
   - apiVersion: v2
     appVersion: 0.4.2
@@ -604,6 +619,26 @@ entries:
     - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/consumer-ui-0.2.0/consumer-ui-0.2.0.tgz
     version: 0.2.0
   country-risk-backend:
+  - apiVersion: v2
+    appVersion: 1.0.3
+    created: "2023-02-22T15:48:00.931976905Z"
+    dependencies:
+    - alias: postgres
+      condition: postgres.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.*.*
+    - condition: pgadmin4.enabled
+      name: pgadmin4
+      repository: https://helm.runix.net
+      version: 1.x.x
+    description: A Helm chart for deploying the Country Risk service
+    digest: 92262dd5d89b48a9681bb353d7c0bcddd7a3ab45ae73c6bb6fe836f5472b3863
+    name: country-risk-backend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/vas-country-risk-backend/releases/download/country-risk-backend-2.1.0/country-risk-backend-2.1.0.tgz
+    version: 2.1.0
   - apiVersion: v2
     appVersion: 1.0.2
     created: "2023-02-21T10:47:41.943714334Z"
@@ -1508,6 +1543,21 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/sldt-semantic-hub/releases/download/semantic-hub-0.1.3/semantic-hub-0.1.3.tgz
     version: 0.1.3
+  sharedidp:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2023-02-22T17:20:47.488828395Z"
+    dependencies:
+    - name: keycloak
+      repository: https://raw.githubusercontent.com/bitnami/charts/archive-full-index/bitnami
+      version: 7.1.18
+    description: Helm chart for Catena-X Shared Keycloak Instance
+    digest: 6020374b61f85fa106a46cbd49027980ebb3cb46abd2635fc53f602b5ac88c4c
+    name: sharedidp
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/portal-iam/releases/download/sharedidp-1.0.0/sharedidp-1.0.0.tgz
+    version: 1.0.0
   traceability-foss-backend:
   - apiVersion: v2
     appVersion: 1.1.0
@@ -1590,4 +1640,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-02-22T03:37:27.482047976Z"
+generated: "2023-02-23T03:35:34.283239562Z"
