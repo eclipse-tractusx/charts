@@ -1201,6 +1201,27 @@ entries:
     version: 2.0.0
   managed-identity-wallets:
   - apiVersion: v2
+    appVersion: 3.3.1
+    created: "2023-02-23T10:54:35.368606096Z"
+    dependencies:
+    - alias: acapypostgresql
+      condition: acapypostgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.x.x
+    - alias: postgresql
+      condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.x.x
+    description: Managed Identity Wallets Service
+    digest: b4653d3f645c6479e42f13b9b2375770002a2501267e900b3507ae7b0031e93f
+    name: managed-identity-wallets
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/managed-identity-wallets/releases/download/managed-identity-wallets-0.7.1/managed-identity-wallets-0.7.1.tgz
+    version: 0.7.1
+  - apiVersion: v2
     appVersion: 3.3.0
     created: "2023-02-14T14:41:57.077553492Z"
     dependencies:
@@ -1369,6 +1390,21 @@ entries:
     - https://github.com/eclipse-tractusx/managed-identity-wallets/releases/download/managed-identity-wallets-0.5.18/managed-identity-wallets-0.5.18.tgz
     version: 0.5.18
   portal:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2023-02-23T14:01:41.305475705Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.9.13
+    description: Helm chart for Catena-X Portal
+    digest: 1af906bbc8095348d40f9c06850355dbc30c9ebd5ef55790892ee6b3e18075b4
+    name: portal
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/portal-cd/releases/download/portal-1.0.0/portal-1.0.0.tgz
+    version: 1.0.0
   - apiVersion: v2
     appVersion: 0.6.0
     created: "2022-12-02T14:32:46.798347033Z"
@@ -1640,4 +1676,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-02-23T03:35:34.283239562Z"
+generated: "2023-02-24T03:37:04.713291608Z"
