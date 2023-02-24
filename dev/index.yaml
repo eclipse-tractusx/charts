@@ -190,6 +190,22 @@ entries:
     version: 2.0.0
   bpdm-gate:
   - apiVersion: v2
+    appVersion: 3.0.3
+    created: "2023-02-24T10:19:58.367205645Z"
+    description: A Helm chart for deploying the BPDM gate service
+    digest: 69017e268a0a2985da68ae05cf98017d3ae4b5223d7fdfb05d3828b9302e661e
+    home: https://eclipse-tractusx.github.io/docs/kits/Business%20Partner%20Kit/Adoption%20View
+    maintainers:
+    - name: Nico Koprowski
+    - name: Patrick Zeller
+    name: bpdm-gate
+    sources:
+    - https://github.com/eclipse-tractusx/bpdm
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/bpdm/releases/download/bpdm-gate-3.0.6/bpdm-gate-3.0.6.tgz
+    version: 3.0.6
+  - apiVersion: v2
     appVersion: 3.0.2
     created: "2023-02-16T16:44:05.311491419Z"
     description: A Helm chart for deploying the BPDM gate service
@@ -315,6 +331,33 @@ entries:
     - https://github.com/eclipse-tractusx/bpdm/releases/download/bpdm-gate-2.0.0/bpdm-gate-2.0.0.tgz
     version: 2.0.0
   bpdm-pool:
+  - apiVersion: v2
+    appVersion: 3.0.3
+    created: "2023-02-24T10:19:58.515159169Z"
+    dependencies:
+    - alias: opensearch
+      condition: opensearch.enabled
+      name: opensearch
+      repository: https://opensearch-project.github.io/helm-charts/
+      version: 2.4.0
+    - alias: postgres
+      condition: postgres.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.9.1
+    description: A Helm chart for deploying the BPDM pool service
+    digest: a0d74c1a32f9ed8b7ffd464cfe6751a52c3e950451881879b3f6c5abbd56b61e
+    home: https://eclipse-tractusx.github.io/docs/kits/Business%20Partner%20Kit/Adoption%20View
+    maintainers:
+    - name: Nico Koprowski
+    - name: Patrick Zeller
+    name: bpdm-pool
+    sources:
+    - https://github.com/eclipse-tractusx/bpdm
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/bpdm/releases/download/bpdm-pool-4.0.6/bpdm-pool-4.0.6.tgz
+    version: 4.0.6
   - apiVersion: v2
     appVersion: 3.0.2
     created: "2023-02-16T16:44:05.575963108Z"
@@ -578,6 +621,16 @@ entries:
     version: 1.0.0
   consumer-backend:
   - apiVersion: v2
+    appVersion: 0.4.3
+    created: "2023-02-24T07:25:08.748085766Z"
+    description: Consumer Backend Helm Deployment for the Product Passport Application
+    digest: 8d4c8646c4e17a685a4b764f1b7a5afbc61cbda8e0eafbdaef49fe2e324da223
+    name: consumer-backend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/consumer-backend-0.2.2/consumer-backend-0.2.2.tgz
+    version: 0.2.2
+  - apiVersion: v2
     appVersion: 0.4.2
     created: "2023-02-17T13:52:33.161988581Z"
     description: Consumer Backend Helm Deployment for the Product Passport Application
@@ -597,17 +650,17 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/consumer-backend-0.2.0/consumer-backend-0.2.0.tgz
     version: 0.2.0
+  consumer-ui:
   - apiVersion: v2
     appVersion: 0.4.3
-    created: "2023-02-24T07:25:08.748085766Z"
-    description: Consumer Backend Helm Deployment for the Product Passport Application
-    digest: 8d4c8646c4e17a685a4b764f1b7a5afbc61cbda8e0eafbdaef49fe2e324da223
-    name: consumer-backend
+    created: "2023-02-24T07:25:08.908021246Z"
+    description: Consumer Frontend Helm Deployment for the Product Passport Application
+    digest: 7f5fe444e70879241c8275a7674812f839acf62271aea5e15f8c941694c915fa
+    name: consumer-ui
     type: application
     urls:
-    - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/consumer-backend-0.2.2/consumer-backend-0.2.2.tgz
+    - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/consumer-ui-0.2.2/consumer-ui-0.2.2.tgz
     version: 0.2.2
-  consumer-ui:
   - apiVersion: v2
     appVersion: 0.4.2
     created: "2023-02-17T13:52:33.308001756Z"
@@ -628,16 +681,6 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/consumer-ui-0.2.0/consumer-ui-0.2.0.tgz
     version: 0.2.0
-  - apiVersion: v2
-    appVersion: 0.4.3
-    created: "2023-02-24T07:25:08.908021246Z"
-    description: Consumer Frontend Helm Deployment for the Product Passport Application
-    digest: 7f5fe444e70879241c8275a7674812f839acf62271aea5e15f8c941694c915fa
-    name: consumer-ui
-    type: application
-    urls:
-    - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/consumer-ui-0.2.2/consumer-ui-0.2.2.tgz
-    version: 0.2.2
   country-risk-backend:
   - apiVersion: v2
     appVersion: 1.0.3
@@ -1526,6 +1569,19 @@ entries:
     version: 0.2.3
   sdfactory:
   - apiVersion: v2
+    appVersion: 2.0.0
+    created: "2023-02-24T09:50:53.116136866Z"
+    description: Helm Charts for SD Factory application. Self-Description Factory
+      component is responsible for the creation of Self Descriptions.
+    digest: 6d1a2777c63dda44a0a0249f74373f75181c256c00f42532b40abb04015c6b28
+    name: sdfactory
+    sources:
+    - https://github.com/eclipse-tractusx/sd-factory
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sd-factory/releases/download/sdfactory-2.0.1/sdfactory-2.0.1.tgz
+    version: 2.0.1
+  - apiVersion: v2
     appVersion: 1.2.0
     created: "2023-02-20T08:38:31.330283874Z"
     description: Helm Charts for SD Factory application. Self-Description Factory
@@ -1706,4 +1762,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-02-24T07:33:28.557510646Z"
+generated: "2023-02-24T11:13:23.452546103Z"
