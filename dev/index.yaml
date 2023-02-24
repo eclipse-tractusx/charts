@@ -1274,6 +1274,27 @@ entries:
     version: 2.0.0
   managed-identity-wallets:
   - apiVersion: v2
+    appVersion: 3.3.2
+    created: "2023-02-24T15:00:13.300665592Z"
+    dependencies:
+    - alias: acapypostgresql
+      condition: acapypostgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.x.x
+    - alias: postgresql
+      condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.x.x
+    description: Managed Identity Wallets Service
+    digest: 43f0557e56b2e7073ff9d90607455330a6beec0ab1fd2731dac67e2e3271b772
+    name: managed-identity-wallets
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/managed-identity-wallets/releases/download/managed-identity-wallets-0.7.2/managed-identity-wallets-0.7.2.tgz
+    version: 0.7.2
+  - apiVersion: v2
     appVersion: 3.3.1
     created: "2023-02-23T10:54:35.368606096Z"
     dependencies:
@@ -1762,4 +1783,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-02-24T13:17:38.020635488Z"
+generated: "2023-02-24T15:04:09.342923491Z"
