@@ -597,6 +597,16 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/consumer-backend-0.2.0/consumer-backend-0.2.0.tgz
     version: 0.2.0
+  - apiVersion: v2
+    appVersion: 0.4.3
+    created: "2023-02-24T07:25:08.748085766Z"
+    description: Consumer Backend Helm Deployment for the Product Passport Application
+    digest: 8d4c8646c4e17a685a4b764f1b7a5afbc61cbda8e0eafbdaef49fe2e324da223
+    name: consumer-backend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/consumer-backend-0.2.2/consumer-backend-0.2.2.tgz
+    version: 0.2.2
   consumer-ui:
   - apiVersion: v2
     appVersion: 0.4.2
@@ -618,6 +628,16 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/consumer-ui-0.2.0/consumer-ui-0.2.0.tgz
     version: 0.2.0
+  - apiVersion: v2
+    appVersion: 0.4.3
+    created: "2023-02-24T07:25:08.908021246Z"
+    description: Consumer Frontend Helm Deployment for the Product Passport Application
+    digest: 7f5fe444e70879241c8275a7674812f839acf62271aea5e15f8c941694c915fa
+    name: consumer-ui
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/consumer-ui-0.2.2/consumer-ui-0.2.2.tgz
+    version: 0.2.2
   country-risk-backend:
   - apiVersion: v2
     appVersion: 1.0.3
@@ -700,6 +720,16 @@ entries:
     - https://github.com/eclipse-tractusx/vas-country-risk-backend/releases/download/country-risk-backend-2.0.7/country-risk-backend-2.0.7.tgz
     version: 2.0.7
   country-risk-frontend:
+  - apiVersion: v2
+    appVersion: 1.1.0
+    created: "2023-02-24T07:29:19.8088316Z"
+    description: A Helm chart for deploying the Country Risk service
+    digest: b2aa552c5acb768514e47577dc023f6c80822a2f889bc28e72527a4c4b9d8f8a
+    name: country-risk-frontend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/country-risk-frontend-2.0.8/country-risk-frontend-2.0.8.tgz
+    version: 2.0.8
   - apiVersion: v2
     appVersion: 1.0.0
     created: "2023-02-10T11:02:10.272018874Z"
@@ -1676,4 +1706,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-02-24T03:37:04.713291608Z"
+generated: "2023-02-24T07:33:28.557510646Z"
