@@ -869,6 +869,18 @@ entries:
   daps-server:
   - apiVersion: v2
     appVersion: 1.7.1
+    created: "2023-02-28T08:38:12.589231069Z"
+    description: DAPS server helm-chart
+    digest: 6f4f8ba9a8d763a2b9d46e4045b626ef29f242a5363259c9c1881829681888a6
+    name: daps-server
+    sources:
+    - https://github.com/eclipse-tractusx/daps-helm-chart
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/daps-helm-chart/releases/download/daps-server-1.7.4/daps-server-1.7.4.tgz
+    version: 1.7.4
+  - apiVersion: v2
+    appVersion: 1.7.1
     created: "2023-02-27T10:15:26.949613421Z"
     description: DAPS server helm-chart
     digest: 59a98e2a712c1806012b099f88de023ba3d37c5c0574d93fba4f28abfdc085c2
@@ -1915,4 +1927,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-02-28T08:34:54.663770081Z"
+generated: "2023-02-28T08:39:11.46621363Z"
