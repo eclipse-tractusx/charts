@@ -681,6 +681,16 @@ entries:
     version: 1.0.0
   consumer-backend:
   - apiVersion: v2
+    appVersion: 0.4.4
+    created: "2023-02-28T08:49:59.753816914Z"
+    description: Consumer Backend Helm Deployment for the Product Passport Application
+    digest: 970e7e52a29c762b435224d1b0e1e393acb49ebe06855115b418292edbeaf058
+    name: consumer-backend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/consumer-backend-0.2.3/consumer-backend-0.2.3.tgz
+    version: 0.2.3
+  - apiVersion: v2
     appVersion: 0.4.3
     created: "2023-02-24T07:25:08.748085766Z"
     description: Consumer Backend Helm Deployment for the Product Passport Application
@@ -711,16 +721,26 @@ entries:
     - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/consumer-backend-0.2.0/consumer-backend-0.2.0.tgz
     version: 0.2.0
   - apiVersion: v2
-    appVersion: 0.4.4
-    created: "2023-02-28T08:49:59.753816914Z"
+    appVersion: 0.4.5
+    created: "2023-02-28T10:23:09.502231414Z"
     description: Consumer Backend Helm Deployment for the Product Passport Application
-    digest: 970e7e52a29c762b435224d1b0e1e393acb49ebe06855115b418292edbeaf058
+    digest: 96e2e57054e8ac373f91b6f205f41b4013b53a0dcf0d3cd2da141c95409e0c14
     name: consumer-backend
     type: application
     urls:
-    - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/consumer-backend-0.2.3/consumer-backend-0.2.3.tgz
-    version: 0.2.3
+    - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/consumer-backend-0.2.4/consumer-backend-0.2.4.tgz
+    version: 0.2.4
   consumer-ui:
+  - apiVersion: v2
+    appVersion: 0.4.4
+    created: "2023-02-28T08:49:59.971006425Z"
+    description: Consumer Frontend Helm Deployment for the Product Passport Application
+    digest: 0e8d6dfa6df7571e51f994a21d6fa927806f108fbf186149d8971a50d2dd42bc
+    name: consumer-ui
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/consumer-ui-0.2.3/consumer-ui-0.2.3.tgz
+    version: 0.2.3
   - apiVersion: v2
     appVersion: 0.4.3
     created: "2023-02-24T07:25:08.908021246Z"
@@ -752,15 +772,15 @@ entries:
     - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/consumer-ui-0.2.0/consumer-ui-0.2.0.tgz
     version: 0.2.0
   - apiVersion: v2
-    appVersion: 0.4.4
-    created: "2023-02-28T08:49:59.971006425Z"
+    appVersion: 0.4.5
+    created: "2023-02-28T10:23:09.951959057Z"
     description: Consumer Frontend Helm Deployment for the Product Passport Application
-    digest: 0e8d6dfa6df7571e51f994a21d6fa927806f108fbf186149d8971a50d2dd42bc
+    digest: a88eaa91f934247c38f5bc42bf83baed0051cc9c1a8e455ae3351b8a1eba32ec
     name: consumer-ui
     type: application
     urls:
-    - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/consumer-ui-0.2.3/consumer-ui-0.2.3.tgz
-    version: 0.2.3
+    - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/consumer-ui-0.2.4/consumer-ui-0.2.4.tgz
+    version: 0.2.4
   country-risk-backend:
   - apiVersion: v2
     appVersion: 1.0.3
@@ -1136,6 +1156,20 @@ entries:
     version: 0.1.0
   irs-edc-consumer:
   - apiVersion: v2
+    appVersion: 0.1.6
+    created: "2023-02-28T12:20:05.887297759Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      version: 1.x.x
+    description: IRS Helm chart for the EDC consumer
+    digest: 41805fdf1e157079b7935bd050f7a87fdb2076d5bf4412f9e4977cc67411c19b
+    name: irs-edc-consumer
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/item-relationship-service/releases/download/irs-edc-consumer-1.0.4/irs-edc-consumer-1.0.4.tgz
+    version: 1.0.4
+  - apiVersion: v2
     appVersion: 0.2.0
     created: "2023-02-21T15:46:48.063281474Z"
     dependencies:
@@ -1164,6 +1198,32 @@ entries:
     - https://github.com/eclipse-tractusx/item-relationship-service/releases/download/irs-edc-consumer-1.0.1/irs-edc-consumer-1.0.1.tgz
     version: 1.0.1
   irs-helm:
+  - apiVersion: v2
+    appVersion: 2.3.0
+    created: "2023-02-28T12:20:06.184240609Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      version: 1.x.x
+    - condition: minio.enabled
+      name: minio
+      repository: https://charts.min.io/
+      version: 5.0.1
+    - condition: prometheus.enabled
+      name: prometheus
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 17.0.1
+    - condition: grafana.enabled
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.44.8
+    description: IRS Helm chart for Kubernetes
+    digest: 9cd8ce0dd820e77ed25aed3f482063bc46402beb1146fcc4f33e7f3d4a669753
+    name: irs-helm
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/item-relationship-service/releases/download/irs-helm-5.0.2/irs-helm-5.0.2.tgz
+    version: 5.0.2
   - apiVersion: v2
     appVersion: 2.3.0
     created: "2023-02-21T15:46:48.494447538Z"
@@ -1389,6 +1449,27 @@ entries:
     - https://github.com/catenax-ng/product-item-relationship-service/releases/download/irs-helm-2.0.0/irs-helm-2.0.0.tgz
     version: 2.0.0
   managed-identity-wallets:
+  - apiVersion: v2
+    appVersion: 3.3.2
+    created: "2023-02-28T12:27:16.902581729Z"
+    dependencies:
+    - alias: acapypostgresql
+      condition: acapypostgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.x.x
+    - alias: postgresql
+      condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.x.x
+    description: Managed Identity Wallets Service
+    digest: cd722b7d3b6b9c9e09a53259d92077a8359754cbadc3c35abade957e00eaa035
+    name: managed-identity-wallets
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/managed-identity-wallets/releases/download/managed-identity-wallets-0.7.5/managed-identity-wallets-0.7.5.tgz
+    version: 0.7.5
   - apiVersion: v2
     appVersion: 3.3.2
     created: "2023-02-24T15:00:13.300665592Z"
@@ -1957,4 +2038,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-02-28T09:55:47.777561532Z"
+generated: "2023-02-28T12:27:57.694045655Z"
