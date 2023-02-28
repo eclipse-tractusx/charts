@@ -710,6 +710,16 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/consumer-backend-0.2.0/consumer-backend-0.2.0.tgz
     version: 0.2.0
+  - apiVersion: v2
+    appVersion: 0.4.4
+    created: "2023-02-28T08:49:59.753816914Z"
+    description: Consumer Backend Helm Deployment for the Product Passport Application
+    digest: 970e7e52a29c762b435224d1b0e1e393acb49ebe06855115b418292edbeaf058
+    name: consumer-backend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/consumer-backend-0.2.3/consumer-backend-0.2.3.tgz
+    version: 0.2.3
   consumer-ui:
   - apiVersion: v2
     appVersion: 0.4.3
@@ -741,6 +751,16 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/consumer-ui-0.2.0/consumer-ui-0.2.0.tgz
     version: 0.2.0
+  - apiVersion: v2
+    appVersion: 0.4.4
+    created: "2023-02-28T08:49:59.971006425Z"
+    description: Consumer Frontend Helm Deployment for the Product Passport Application
+    digest: 0e8d6dfa6df7571e51f994a21d6fa927806f108fbf186149d8971a50d2dd42bc
+    name: consumer-ui
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/consumer-ui-0.2.3/consumer-ui-0.2.3.tgz
+    version: 0.2.3
   country-risk-backend:
   - apiVersion: v2
     appVersion: 1.0.3
@@ -1785,6 +1805,16 @@ entries:
   semantic-hub:
   - apiVersion: v2
     appVersion: 0.1.0-M3
+    created: "2023-02-28T09:54:05.746485489Z"
+    description: Helm Chart for the Catena-X Semantic Hub Application
+    digest: 8969c613164562aed973444a47e492cf61e5d5bd8a7a8de1c157602d157a9ae7
+    name: semantic-hub
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-semantic-hub/releases/download/semantic-hub-0.1.6/semantic-hub-0.1.6.tgz
+    version: 0.1.6
+  - apiVersion: v2
+    appVersion: 0.1.0-M3
     created: "2023-02-27T12:08:47.335205629Z"
     description: Helm Chart for the Catena-X Semantic Hub Application
     digest: 4d7a4cad05c91a6b4dd2b5bc44633095835df811b85691079c04f6d918d9d9af
@@ -1927,4 +1957,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-02-28T08:39:11.46621363Z"
+generated: "2023-02-28T09:55:47.777561532Z"
