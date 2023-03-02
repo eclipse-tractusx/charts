@@ -730,6 +730,16 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/consumer-backend-0.2.0/consumer-backend-0.2.0.tgz
     version: 0.2.0
+  - apiVersion: v2
+    appVersion: 0.4.6
+    created: "2023-03-01T13:32:07.407617035Z"
+    description: Consumer Backend Helm Deployment for the Product Passport Application
+    digest: 4c1de3c2d903d5efcf7f70f741a5817cc6133a5253a4716c318515ee93ad3eb8
+    name: consumer-backend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/consumer-backend-0.2.5/consumer-backend-0.2.5.tgz
+    version: 0.2.5
   consumer-ui:
   - apiVersion: v2
     appVersion: 0.4.5
@@ -781,6 +791,16 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/consumer-ui-0.2.0/consumer-ui-0.2.0.tgz
     version: 0.2.0
+  - apiVersion: v2
+    appVersion: 0.4.6
+    created: "2023-03-01T13:32:07.673142827Z"
+    description: Consumer Frontend Helm Deployment for the Product Passport Application
+    digest: a81a3f57b62e4f1cdb558a194195caa5e6b5578b25f7cc237be342919e123081
+    name: consumer-ui
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/consumer-ui-0.2.5/consumer-ui-0.2.5.tgz
+    version: 0.2.5
   country-risk-backend:
   - apiVersion: v2
     appVersion: 1.0.3
@@ -1229,6 +1249,32 @@ entries:
   irs-helm:
   - apiVersion: v2
     appVersion: 2.3.0
+    created: "2023-03-01T12:38:37.133087975Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      version: 1.x.x
+    - condition: minio.enabled
+      name: minio
+      repository: https://charts.min.io/
+      version: 5.0.1
+    - condition: prometheus.enabled
+      name: prometheus
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 17.0.1
+    - condition: grafana.enabled
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.44.8
+    description: IRS Helm chart for Kubernetes
+    digest: 0f74ddedb08927b861a78492092422897cba1f95031df82c9014da047e9ce405
+    name: irs-helm
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/item-relationship-service/releases/download/irs-helm-5.0.3/irs-helm-5.0.3.tgz
+    version: 5.0.3
+  - apiVersion: v2
+    appVersion: 2.3.0
     created: "2023-02-28T12:20:06.184240609Z"
     dependencies:
     - name: common
@@ -1279,6 +1325,32 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/item-relationship-service/releases/download/irs-helm-5.0.1/irs-helm-5.0.1.tgz
     version: 5.0.1
+  - apiVersion: v2
+    appVersion: 2.2.0
+    created: "2023-03-01T12:55:51.141058611Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      version: 1.x.x
+    - condition: minio.enabled
+      name: minio
+      repository: https://charts.min.io/
+      version: 5.0.1
+    - condition: prometheus.enabled
+      name: prometheus
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 17.0.1
+    - condition: grafana.enabled
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.44.8
+    description: IRS Helm chart for Kubernetes
+    digest: 3e4c64ea20ad968ffa7f65f47294f7c3088527696ab66997463da316d61dc622
+    name: irs-helm
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/item-relationship-service/releases/download/irs-helm-4.3.1/irs-helm-4.3.1.tgz
+    version: 4.3.1
   - apiVersion: v2
     appVersion: 2.2.0
     created: "2023-02-07T14:04:09.081376836Z"
@@ -1998,6 +2070,33 @@ entries:
   traceability-foss-backend:
   - apiVersion: v2
     appVersion: 1.1.0
+    created: "2023-03-01T12:58:43.13326398Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.x.x
+    - condition: pgadmin4.enabled
+      name: pgadmin4
+      repository: https://helm.runix.net
+      version: 1.13.6
+    - condition: irs-helm.enabled
+      name: irs-helm
+      repository: https://eclipse-tractusx.github.io/item-relationship-service
+      version: 4.2.1
+    - condition: irs-edc-consumer.enabled
+      name: irs-edc-consumer
+      repository: https://catenax-ng.github.io/tx-item-relationship-service
+      version: 1.0.2
+    description: A Helm chart for Traceability backend application
+    digest: 33abe745a69bbb1ad9b84dde21b5b5077d5c03830892aa90a7f7d49b65b6296e
+    name: traceability-foss-backend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/traceability-foss-backend/releases/download/helm-charts-1.1.2/traceability-foss-backend-1.1.2.tgz
+    version: 1.1.2
+  - apiVersion: v2
+    appVersion: 1.1.0
     created: "2023-02-21T16:47:22.213034145Z"
     dependencies:
     - condition: postgresql.enabled
@@ -2024,6 +2123,16 @@ entries:
     - https://github.com/eclipse-tractusx/traceability-foss-backend/releases/download/helm-charts-1.1.1/traceability-foss-backend-1.1.1.tgz
     version: 1.1.1
   traceability-foss-frontend:
+  - apiVersion: v2
+    appVersion: 1.1.2
+    created: "2023-03-01T07:34:41.610464577Z"
+    description: A Helm chart for Traceability frontend application
+    digest: e9fda84ae54be5e31d9992dba2d3035af1b1688b89f3029f0e1913b1aebbb6b0
+    name: traceability-foss-frontend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/traceability-foss-frontend/releases/download/traceability-foss-frontend-1.1.2/traceability-foss-frontend-1.1.2.tgz
+    version: 1.1.2
   - apiVersion: v2
     appVersion: 1.1.0
     created: "2023-02-14T08:54:26.235797863Z"
@@ -2077,4 +2186,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-03-01T03:44:00.799108255Z"
+generated: "2023-03-02T03:40:37.631282657Z"
