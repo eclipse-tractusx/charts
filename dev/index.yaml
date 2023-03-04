@@ -107,6 +107,23 @@ entries:
     version: 1.0.0-RC4
   autosetup:
   - apiVersion: v2
+    appVersion: 1.1.5
+    created: "2023-03-03T09:18:50.303460728Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.x.x
+    description: A Helm chart for Kubernetes
+    digest: e8b63e952ae5f7f08f11254172671fc4096117c5c4e2d1b50899ffe94b47fe15
+    name: autosetup
+    sources:
+    - https://github.com/eclipse-tractusx/autosetup-backend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/autosetup-backend/releases/download/autosetup-1.1.5/autosetup-1.1.5.tgz
+    version: 1.1.5
+  - apiVersion: v2
     appVersion: 1.1.4
     created: "2023-02-20T11:45:51.65650823Z"
     dependencies:
@@ -904,6 +921,18 @@ entries:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/country-risk-frontend-2.0.7/country-risk-frontend-2.0.7.tgz
     version: 2.0.7
   daps-reg-service:
+  - apiVersion: v2
+    appVersion: 1.0.5
+    created: "2023-03-03T15:59:30.049183594Z"
+    description: A Helm chart for Kubernetes
+    digest: 46ebe1585527bd8085bf7252f62558e110496578ac8cd10727b9e93dec02ec93
+    name: daps-reg-service
+    sources:
+    - https://github.com/eclipse-tractusx/daps-registration-service
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/daps-registration-service/releases/download/daps-reg-service-1.0.7/daps-reg-service-1.0.7.tgz
+    version: 1.0.7
   - apiVersion: v2
     appVersion: 1.0.4
     created: "2023-02-28T07:35:01.326589403Z"
@@ -1878,6 +1907,36 @@ entries:
     - https://github.com/eclipse-tractusx/sldt-digital-twin-registry/releases/download/registry-0.3.0/registry-0.3.0.tgz
     version: 0.3.0
   - apiVersion: v2
+    appVersion: 0.2.0-M5-multi-tenancy
+    created: "2023-03-03T14:49:32.51254961Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.1.7
+    description: Tractus-X Digital Twin Registry Helm Chart
+    digest: ba6cf7859588d0b225e8cfca8af14a7f292944977d19effe15870324ed182525
+    name: registry
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-digital-twin-registry/releases/download/registry-0.2.6/registry-0.2.6.tgz
+    version: 0.2.6
+  - apiVersion: v2
+    appVersion: 0.2.0-M4-multi-tenancy
+    created: "2023-03-03T14:22:57.126726927Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.1.7
+    description: Tractus-X Digital Twin Registry Helm Chart
+    digest: df047d1b83c0055215e13b48b8db9530a7852dec4a02a0a28749e7ba7653c411
+    name: registry
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-digital-twin-registry/releases/download/registry-0.2.5/registry-0.2.5.tgz
+    version: 0.2.5
+  - apiVersion: v2
     appVersion: 0.2.0-M4-multi-tenancy
     created: "2022-12-02T15:30:01.544529872Z"
     dependencies:
@@ -2186,4 +2245,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-03-03T04:36:03.356259436Z"
+generated: "2023-03-04T03:35:01.811840861Z"
