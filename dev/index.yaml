@@ -995,6 +995,19 @@ entries:
     version: 2.0.7
   daps-reg-service:
   - apiVersion: v2
+    appVersion: 2.0.0
+    created: "2023-03-09T11:44:11.105582409Z"
+    description: Daps regisgter service is used to register the EDC connector into
+      DAPS
+    digest: 96bdbfccd94b8af08e633067ab59b7c0058e7702d1b5a84f63cec9098f0dcff4
+    name: daps-reg-service
+    sources:
+    - https://github.com/eclipse-tractusx/daps-registration-service
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/daps-registration-service/releases/download/daps-reg-service-2.0.0/daps-reg-service-2.0.0.tgz
+    version: 2.0.0
+  - apiVersion: v2
     appVersion: 1.0.5
     created: "2023-03-03T15:59:30.049183594Z"
     description: A Helm chart for Kubernetes
@@ -1029,6 +1042,18 @@ entries:
     - https://github.com/eclipse-tractusx/daps-registration-service/releases/download/daps-reg-service-1.0.5/daps-reg-service-1.0.5.tgz
     version: 1.0.5
   daps-server:
+  - apiVersion: v2
+    appVersion: 1.7.1
+    created: "2023-03-09T12:27:42.599952752Z"
+    description: DAPS server helm-chart
+    digest: dcd69b21aff5568d32983ce678516aa637d324245d7ee17dc739f5e6dd39a46c
+    name: daps-server
+    sources:
+    - https://github.com/eclipse-tractusx/daps-helm-chart
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/daps-helm-chart/releases/download/daps-server-1.7.5/daps-server-1.7.5.tgz
+    version: 1.7.5
   - apiVersion: v2
     appVersion: 1.7.1
     created: "2023-02-28T08:38:12.589231069Z"
@@ -2381,4 +2406,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-03-09T03:39:52.820175945Z"
+generated: "2023-03-09T12:28:52.010234312Z"
