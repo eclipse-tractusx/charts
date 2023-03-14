@@ -107,6 +107,24 @@ entries:
     version: 1.0.0-RC4
   autosetup:
   - apiVersion: v2
+    appVersion: 1.2.0
+    created: "2023-03-13T15:28:43.748922247Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.x.x
+    description: This service will help service provider to set up DFT/SDE with EDC
+      and EDC as service in service provider environment.
+    digest: 1b9617219e952ab1c551a64866617a5aaf350de89ee469a12f549981ced1303f
+    name: autosetup
+    sources:
+    - https://github.com/eclipse-tractusx/autosetup-backend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/autosetup-backend/releases/download/autosetup-1.2.0/autosetup-1.2.0.tgz
+    version: 1.2.0
+  - apiVersion: v2
     appVersion: 1.1.5
     created: "2023-03-03T09:18:50.303460728Z"
     dependencies:
@@ -2427,4 +2445,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-03-13T03:34:00.327762939Z"
+generated: "2023-03-14T03:34:45.471132106Z"
