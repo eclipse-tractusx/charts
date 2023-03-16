@@ -226,6 +226,21 @@ entries:
   bpdm-gate:
   - apiVersion: v2
     appVersion: 3.1.0
+    created: "2023-03-16T09:12:19.112253562Z"
+    description: A Helm chart for deploying the BPDM gate service
+    digest: ce69165012ac52e9643c49146116a0ae67fa0336aa2d989a234efba9bbb53854
+    home: https://eclipse-tractusx.github.io/docs/kits/Business%20Partner%20Kit/Adoption%20View
+    maintainers:
+    - name: Nico Koprowski
+    name: bpdm-gate
+    sources:
+    - https://github.com/eclipse-tractusx/bpdm
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/bpdm/releases/download/bpdm-gate-3.2.0/bpdm-gate-3.2.0.tgz
+    version: 3.2.0
+  - apiVersion: v2
+    appVersion: 3.1.0
     created: "2023-03-08T14:24:48.248595255Z"
     description: A Helm chart for deploying the BPDM gate service
     digest: 8e84f523b7e0823cadd3eaf7698a0bf4c4f7b689bad6077edae3d1f7f5977997
@@ -398,6 +413,32 @@ entries:
     - https://github.com/eclipse-tractusx/bpdm/releases/download/bpdm-gate-2.0.0/bpdm-gate-2.0.0.tgz
     version: 2.0.0
   bpdm-pool:
+  - apiVersion: v2
+    appVersion: 3.1.0
+    created: "2023-03-16T09:12:19.265711888Z"
+    dependencies:
+    - alias: opensearch
+      condition: opensearch.enabled
+      name: opensearch
+      repository: https://opensearch-project.github.io/helm-charts/
+      version: 2.4.0
+    - alias: postgres
+      condition: postgres.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.9.1
+    description: A Helm chart for deploying the BPDM pool service
+    digest: 7a900f672c04dfc758f09ee06304775ad479a7c99d8f502a873a71e4e460b1b4
+    home: https://eclipse-tractusx.github.io/docs/kits/Business%20Partner%20Kit/Adoption%20View
+    maintainers:
+    - name: Nico Koprowski
+    name: bpdm-pool
+    sources:
+    - https://github.com/eclipse-tractusx/bpdm
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/bpdm/releases/download/bpdm-pool-4.2.0/bpdm-pool-4.2.0.tgz
+    version: 4.2.0
   - apiVersion: v2
     appVersion: 3.1.0
     created: "2023-03-08T14:24:48.467821423Z"
@@ -1255,6 +1296,18 @@ entries:
     - https://github.com/eclipse-tractusx/autosetup-backend/releases/download/dftbackend-1.4.6/dftbackend-1.4.6.tgz
     version: 1.4.6
   dftfrontend:
+  - apiVersion: v2
+    appVersion: 1.9.0
+    created: "2023-03-16T11:03:11.304287798Z"
+    description: A Helm chart for Kubernetes
+    digest: 944a32492b27177af99bb27df324be6c70b2c34ee200af20792ff667d4cde73d
+    name: dftfrontend
+    sources:
+    - https://github.com/eclipse-tractusx/dft-frontend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/dft-frontend/releases/download/dftfrontend-1.9.0/dftfrontend-1.9.0.tgz
+    version: 1.9.0
   - apiVersion: v2
     appVersion: 1.4.7
     created: "2023-01-26T07:58:48.060498151Z"
@@ -2483,4 +2536,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-03-16T03:34:05.736627337Z"
+generated: "2023-03-16T11:09:54.14405328Z"
