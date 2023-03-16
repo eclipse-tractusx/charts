@@ -1286,6 +1286,18 @@ entries:
     version: 1.7.0
   dftbackend:
   - apiVersion: v2
+    appVersion: 1.9.0
+    created: "2023-03-16T12:20:15.563730292Z"
+    description: A Helm chart for Kubernetes
+    digest: befcfef61b2df7201ab14a6cc5520571daed28a5ebcf308d06c6d06d1d93e6d1
+    name: dftbackend
+    sources:
+    - https://github.com/eclipse-tractusx/dft-backend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/dft-backend/releases/download/dftbackend-1.9.0/dftbackend-1.9.0.tgz
+    version: 1.9.0
+  - apiVersion: v2
     appVersion: 1.4.6
     created: "2023-01-26T07:58:47.868580559Z"
     description: A Helm chart for Kubernetes
@@ -2536,4 +2548,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-03-16T12:13:08.231634302Z"
+generated: "2023-03-16T12:21:13.005229977Z"
