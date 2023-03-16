@@ -1108,6 +1108,18 @@ entries:
     version: 1.7.2
   dft-backend:
   - apiVersion: v2
+    appVersion: 1.9.0
+    created: "2023-03-15T16:23:44.465393941Z"
+    description: A Helm chart for Kubernetes
+    digest: aeb9f77eb4501bdb14f3880f019d18264e9992e630552c0cd01b52565b451dc4
+    name: dft-backend
+    sources:
+    - https://github.com/eclipse-tractusx/dft-backend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/dft-backend/releases/download/dft-backend-1.9.0/dft-backend-1.9.0.tgz
+    version: 1.9.0
+  - apiVersion: v2
     appVersion: 1.8.1
     created: "2023-01-25T14:22:44.379139457Z"
     dependencies:
@@ -1496,6 +1508,32 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/item-relationship-service/releases/download/irs-helm-5.0.1/irs-helm-5.0.1.tgz
     version: 5.0.1
+  - apiVersion: v2
+    appVersion: 2.2.1
+    created: "2023-03-15T12:50:01.502687217Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      version: 1.x.x
+    - condition: minio.enabled
+      name: minio
+      repository: https://charts.min.io/
+      version: 5.0.1
+    - condition: prometheus.enabled
+      name: prometheus
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 17.0.1
+    - condition: grafana.enabled
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.44.8
+    description: IRS Helm chart for Kubernetes
+    digest: 6262d348f6de96a7426ebb6603d21371417af4125b241f148a86f00076bdc4ae
+    name: irs-helm
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/item-relationship-service/releases/download/irs-helm-4.3.2/irs-helm-4.3.2.tgz
+    version: 4.3.2
   - apiVersion: v2
     appVersion: 2.2.0
     created: "2023-03-01T12:55:51.141058611Z"
@@ -2445,4 +2483,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-03-15T03:33:47.896193603Z"
+generated: "2023-03-16T03:34:05.736627337Z"
