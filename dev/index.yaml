@@ -107,6 +107,24 @@ entries:
     version: 1.0.0-RC4
   autosetup:
   - apiVersion: v2
+    appVersion: 1.2.1
+    created: "2023-03-28T09:36:06.895098441Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.x.x
+    description: This service will help service provider to set up DFT/SDE with EDC
+      and EDC as service in service provider environment.
+    digest: 168f745482e6b958b922bda07c7a6b54cd65c6bd60d0e68e17fe9834b44439df
+    name: autosetup
+    sources:
+    - https://github.com/eclipse-tractusx/autosetup-backend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/autosetup-backend/releases/download/autosetup-1.2.1/autosetup-1.2.1.tgz
+    version: 1.2.1
+  - apiVersion: v2
     appVersion: 1.2.0
     created: "2023-03-13T15:28:43.748922247Z"
     dependencies:
@@ -2196,6 +2214,27 @@ entries:
     version: 0.5.18
   portal:
   - apiVersion: v2
+    appVersion: 1.2.0
+    created: "2023-03-28T08:45:25.278280948Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.9.13
+    description: Helm chart for Catena-X Portal
+    digest: af199c7bdefdac4cba8db2db1049d04e5a25247bd44322be12019356f4c052eb
+    home: https://github.com/eclipse-tractusx/portal-cd
+    name: portal
+    sources:
+    - https://github.com/eclipse-tractusx/portal-frontend
+    - https://github.com/eclipse-tractusx/portal-frontend-registration
+    - https://github.com/eclipse-tractusx/portal-assets
+    - https://github.com/eclipse-tractusx/portal-backend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/portal-cd/releases/download/portal-1.2.0/portal-1.2.0.tgz
+    version: 1.2.0
+  - apiVersion: v2
     appVersion: 1.1.0
     created: "2023-03-10T11:24:16.810850317Z"
     dependencies:
@@ -2312,6 +2351,21 @@ entries:
     - https://github.com/eclipse-tractusx/sldt-digital-twin-registry/releases/download/registry-0.3.0/registry-0.3.0.tgz
     version: 0.3.0
   - apiVersion: v2
+    appVersion: 0.2.0-M6-multi-tenancy
+    created: "2023-03-28T12:47:25.436837506Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.1.7
+    description: Tractus-X Digital Twin Registry Helm Chart
+    digest: ef6771b6346ef4266bd3afab5f526c622fa1bd70cea18f9a84572511c9d27547
+    name: registry
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-digital-twin-registry/releases/download/registry-0.2.7/registry-0.2.7.tgz
+    version: 0.2.7
+  - apiVersion: v2
     appVersion: 0.2.0-M5-multi-tenancy
     created: "2023-03-03T14:49:32.51254961Z"
     dependencies:
@@ -2372,6 +2426,19 @@ entries:
     - https://github.com/eclipse-tractusx/sldt-digital-twin-registry/releases/download/v0.2.0-M3-multi-tenancy/registry-0.2.3.tgz
     version: 0.2.3
   sdfactory:
+  - apiVersion: v2
+    appVersion: 2.0.2
+    created: "2023-03-28T09:23:02.922131678Z"
+    description: Helm Charts for SD Factory application. Self-Description Factory
+      component is responsible for the creation of Self Descriptions.
+    digest: 3fe13b5d939bab5e8f50cceae221b1134fc5e850c6a4169cd3d63e9273b14eff
+    name: sdfactory
+    sources:
+    - https://github.com/eclipse-tractusx/sd-factory
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sd-factory/releases/download/sdfactory-2.0.2/sdfactory-2.0.2.tgz
+    version: 2.0.2
   - apiVersion: v2
     appVersion: 2.0.0
     created: "2023-02-24T09:50:53.116136866Z"
@@ -2531,6 +2598,30 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/portal-iam/releases/download/sharedidp-1.0.0/sharedidp-1.0.0.tgz
     version: 1.0.0
+  traceability-foss:
+  - apiVersion: v2
+    appVersion: 3.0.0
+    created: "2023-03-28T14:46:16.157751804Z"
+    dependencies:
+    - name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.x.x
+    - name: pgadmin4
+      repository: https://helm.runix.net
+      version: 1.13.6
+    - name: irs-helm
+      repository: https://eclipse-tractusx.github.io/item-relationship-service
+      version: 4.2.1
+    - name: irs-edc-consumer
+      repository: https://catenax-ng.github.io/tx-item-relationship-service
+      version: 1.0.2
+    description: An umbrella Helm chart for eclipse-tractusx/traceability-foss project
+    digest: d2962d02505c0dfa3a909ee0842f5d78301d15b307e4498d3205eded4f3fc90e
+    name: traceability-foss
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/traceability-foss/releases/download/helm-charts-1.1.0/traceability-foss-1.2.5.tgz
+    version: 1.2.5
   traceability-foss-backend:
   - apiVersion: v2
     appVersion: 2.0.0
@@ -2697,4 +2788,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-03-28T03:33:45.297742804Z"
+generated: "2023-03-29T03:34:06.064962171Z"
