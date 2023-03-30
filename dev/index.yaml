@@ -2215,6 +2215,27 @@ entries:
   portal:
   - apiVersion: v2
     appVersion: 1.2.0
+    created: "2023-03-29T11:06:59.610249084Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.9.13
+    description: Helm chart for Catena-X Portal
+    digest: 80112b2bbb06b1602aefbc8c0e866cd757054c70d6152f76646a254db179ffe7
+    home: https://github.com/eclipse-tractusx/portal-cd
+    name: portal
+    sources:
+    - https://github.com/eclipse-tractusx/portal-frontend
+    - https://github.com/eclipse-tractusx/portal-frontend-registration
+    - https://github.com/eclipse-tractusx/portal-assets
+    - https://github.com/eclipse-tractusx/portal-backend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/portal-cd/releases/download/portal-1.2.1/portal-1.2.1.tgz
+    version: 1.2.1
+  - apiVersion: v2
+    appVersion: 1.2.0
     created: "2023-03-28T08:45:25.278280948Z"
     dependencies:
     - condition: postgresql.enabled
@@ -2236,6 +2257,27 @@ entries:
     version: 1.2.0
   - apiVersion: v2
     appVersion: 1.1.0
+    created: "2023-03-29T09:35:41.553754902Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.9.13
+    description: Helm chart for Catena-X Portal
+    digest: 7bb1e0d34d180239a09e7d9b3707916374410864aa0c534fa2946238083f2385
+    home: https://github.com/eclipse-tractusx/portal-cd
+    name: portal
+    sources:
+    - https://github.com/eclipse-tractusx/portal-frontend
+    - https://github.com/eclipse-tractusx/portal-frontend-registration
+    - https://github.com/eclipse-tractusx/portal-assets
+    - https://github.com/eclipse-tractusx/portal-backend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/portal-cd/releases/download/portal-1.1.1/portal-1.1.1.tgz
+    version: 1.1.1
+  - apiVersion: v2
+    appVersion: 1.1.0
     created: "2023-03-10T11:24:16.810850317Z"
     dependencies:
     - condition: postgresql.enabled
@@ -2255,6 +2297,27 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/portal-cd/releases/download/portal-1.1.0/portal-1.1.0.tgz
     version: 1.1.0
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2023-03-29T09:15:06.714563185Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.9.13
+    description: Helm chart for Catena-X Portal
+    digest: 2b34068f58f1b6096b853b600794dfa85442d0de2ba10b7ce284a1f90fa9c04e
+    home: https://github.com/eclipse-tractusx/portal-cd
+    name: portal
+    sources:
+    - https://github.com/eclipse-tractusx/portal-frontend
+    - https://github.com/eclipse-tractusx/portal-frontend-registration
+    - https://github.com/eclipse-tractusx/portal-assets
+    - https://github.com/eclipse-tractusx/portal-backend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/portal-cd/releases/download/portal-1.0.2/portal-1.0.2.tgz
+    version: 1.0.2
   - apiVersion: v2
     appVersion: 1.0.0
     created: "2023-02-27T07:43:19.146282372Z"
@@ -2516,6 +2579,16 @@ entries:
     - https://github.com/eclipse-tractusx/sd-factory/releases/download/sdfactory-1.0.8/sdfactory-1.0.8.tgz
     version: 1.0.8
   semantic-hub:
+  - apiVersion: v2
+    appVersion: 0.2.0-M1
+    created: "2023-03-29T12:16:19.927843703Z"
+    description: Helm Chart for the Catena-X Semantic Hub Application
+    digest: 73baa8b88f09fe5d157ca4b0e9c1085fb202834d5548358e2fc6c6aff21087ec
+    name: semantic-hub
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-semantic-hub/releases/download/semantic-hub-0.1.8/semantic-hub-0.1.8.tgz
+    version: 0.1.8
   - apiVersion: v2
     appVersion: 0.1.0-M3
     created: "2023-02-28T14:23:50.880666993Z"
@@ -2788,4 +2861,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-03-29T03:34:06.064962171Z"
+generated: "2023-03-30T03:34:00.523515562Z"
