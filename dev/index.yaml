@@ -2,6 +2,32 @@ apiVersion: v1
 entries:
   app-dashboard:
   - apiVersion: v2
+    appVersion: 1.0.4
+    created: "2023-03-30T08:18:09.128887957Z"
+    description: A Helm chart for Kubernetes
+    digest: edcd403599c4e3d6d97d9b8c4ab5effaa199b925895544171cdbbce688d7723f
+    maintainers:
+    - name: The System Team of Catena-X / Eclipse Tractus-X
+      url: https://projects.eclipse.org/projects/automotive.tractusx
+    name: app-dashboard
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/app-dashboard/releases/download/app-dashboard-1.0.5/app-dashboard-1.0.5.tgz
+    version: 1.0.5
+  - apiVersion: v2
+    appVersion: 1.0.3
+    created: "2023-03-30T08:02:51.196063143Z"
+    description: A Helm chart for Kubernetes
+    digest: b41c041855c7b14d8d68e49bf23bd174f9575764e8c2d966bd1d8b7e72ce6988
+    maintainers:
+    - name: The System Team of Catena-X / Eclipse Tractus-X
+      url: https://projects.eclipse.org/projects/automotive.tractusx
+    name: app-dashboard
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/app-dashboard/releases/download/app-dashboard-1.0.4/app-dashboard-1.0.4.tgz
+    version: 1.0.4
+  - apiVersion: v2
     appVersion: 1.0.2
     created: "2023-02-21T10:24:51.851957136Z"
     description: A Helm chart for Kubernetes
@@ -1216,6 +1242,18 @@ entries:
   daps-server:
   - apiVersion: v2
     appVersion: 1.7.1
+    created: "2023-03-30T06:24:10.076074483Z"
+    description: DAPS server helm-chart
+    digest: 0d36cc47e50ca45039ad08b927095f76a36c8796c6826fca725f1455be69d0c2
+    name: daps-server
+    sources:
+    - https://github.com/eclipse-tractusx/daps-helm-chart
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/daps-helm-chart/releases/download/daps-server-1.7.6/daps-server-1.7.6.tgz
+    version: 1.7.6
+  - apiVersion: v2
+    appVersion: 1.7.1
     created: "2023-03-09T12:27:42.599952752Z"
     description: DAPS server helm-chart
     digest: dcd69b21aff5568d32983ce678516aa637d324245d7ee17dc739f5e6dd39a46c
@@ -1558,6 +1596,20 @@ entries:
     version: 0.1.0
   irs-edc-consumer:
   - apiVersion: v2
+    appVersion: 0.3.0
+    created: "2023-03-30T10:42:57.418737904Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      version: 1.x.x
+    description: IRS Helm chart for the EDC consumer
+    digest: 0b4bd7b6f249adb1a21e4734453c88725cef10ab3094600eb583c0a3f5776473
+    name: irs-edc-consumer
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/item-relationship-service/releases/download/irs-edc-consumer-1.1.2/irs-edc-consumer-1.1.2.tgz
+    version: 1.1.2
+  - apiVersion: v2
     appVersion: 0.1.6
     created: "2023-02-28T12:20:05.887297759Z"
     dependencies:
@@ -1600,6 +1652,35 @@ entries:
     - https://github.com/eclipse-tractusx/item-relationship-service/releases/download/irs-edc-consumer-1.0.1/irs-edc-consumer-1.0.1.tgz
     version: 1.0.1
   irs-helm:
+  - apiVersion: v2
+    appVersion: 2.4.0
+    created: "2023-03-30T10:42:57.60958686Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      version: 1.x.x
+    - condition: minio.enabled
+      name: minio
+      repository: https://charts.min.io/
+      version: 5.0.1
+    - condition: prometheus.enabled
+      name: prometheus
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 17.0.1
+    - condition: grafana.enabled
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.44.8
+    description: IRS Helm chart for Kubernetes
+    digest: cabd7135d8aad8a38c9ce6ee5f976d03a1a79272535f6c2f9a0e99231b6d82b6
+    home: https://eclipse-tractusx.github.io/
+    name: irs-helm
+    sources:
+    - https://github.com/eclipse-tractusx/item-relationship-service
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/item-relationship-service/releases/download/irs-helm-5.0.9/irs-helm-5.0.9.tgz
+    version: 5.0.9
   - apiVersion: v2
     appVersion: 2.3.2
     created: "2023-03-21T11:39:26.574951043Z"
@@ -2581,6 +2662,16 @@ entries:
   semantic-hub:
   - apiVersion: v2
     appVersion: 0.2.0-M1
+    created: "2023-03-30T09:28:55.799999325Z"
+    description: Helm Chart for the Catena-X Semantic Hub Application
+    digest: 38e4ea950748cce4db9e2428101a20fd0eccddaa0e6993463999faa106e9f3f6
+    name: semantic-hub
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-semantic-hub/releases/download/semantic-hub-0.1.9/semantic-hub-0.1.9.tgz
+    version: 0.1.9
+  - apiVersion: v2
+    appVersion: 0.2.0-M1
     created: "2023-03-29T12:16:19.927843703Z"
     description: Helm Chart for the Catena-X Semantic Hub Application
     digest: 73baa8b88f09fe5d157ca4b0e9c1085fb202834d5548358e2fc6c6aff21087ec
@@ -2861,4 +2952,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-03-30T03:34:00.523515562Z"
+generated: "2023-03-31T03:33:41.665104429Z"
