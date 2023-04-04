@@ -133,6 +133,24 @@ entries:
     version: 1.0.0-RC4
   autosetup:
   - apiVersion: v2
+    appVersion: 1.2.2
+    created: "2023-04-03T09:55:08.157134349Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.x.x
+    description: This service will help service provider to set up DFT/SDE with EDC
+      and EDC as service in service provider environment.
+    digest: 3c0a1c05f56902a8c5db8a428ee2137984e0512d576f443397d7ec201a00e4f8
+    name: autosetup
+    sources:
+    - https://github.com/eclipse-tractusx/autosetup-backend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/autosetup-backend/releases/download/autosetup-1.2.2/autosetup-1.2.2.tgz
+    version: 1.2.2
+  - apiVersion: v2
     appVersion: 1.2.1
     created: "2023-03-28T09:36:06.895098441Z"
     dependencies:
@@ -985,6 +1003,16 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/consumer-backend-0.2.0/consumer-backend-0.2.0.tgz
     version: 0.2.0
+  - apiVersion: v2
+    appVersion: 0.5.0
+    created: "2023-04-03T07:29:19.748234756Z"
+    description: Consumer Backend Helm Deployment for the Product Passport Application
+    digest: 9ea1ace013bbab70d57a9b6da7ba584b9c411561a05c15696951b6b6a9c10c50
+    name: consumer-backend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/consumer-backend-0.2.6/consumer-backend-0.2.6.tgz
+    version: 0.2.6
   consumer-ui:
   - apiVersion: v2
     appVersion: 0.4.6
@@ -1046,6 +1074,16 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/consumer-ui-0.2.0/consumer-ui-0.2.0.tgz
     version: 0.2.0
+  - apiVersion: v2
+    appVersion: 0.5.0
+    created: "2023-04-03T07:29:19.883116978Z"
+    description: Consumer Frontend Helm Deployment for the Product Passport Application
+    digest: 34ca1672193236dc8eb1a3f0ed9c6aca36dad1829b617c1b0261b9037282eda0
+    name: consumer-ui
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/consumer-ui-0.2.6/consumer-ui-0.2.6.tgz
+    version: 0.2.6
   country-risk-backend:
   - apiVersion: v2
     appVersion: 1.0.4
@@ -2785,6 +2823,29 @@ entries:
     version: 1.0.0
   traceability-foss:
   - apiVersion: v2
+    appVersion: 3.1.0
+    created: "2023-04-03T15:57:11.55910255Z"
+    dependencies:
+    - name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.x.x
+    - name: pgadmin4
+      repository: https://helm.runix.net
+      version: 1.13.6
+    - name: irs-helm
+      repository: https://eclipse-tractusx.github.io/item-relationship-service
+      version: 5.0.9
+    - name: irs-edc-consumer
+      repository: https://eclipse-tractusx.github.io/item-relationship-service
+      version: 1.1.2
+    description: An umbrella Helm chart for eclipse-tractusx/traceability-foss project
+    digest: 93932dc365297f817ed4d6cee2e755953077d7847e4f52a2a2b17b6daef3d5b5
+    name: traceability-foss
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/traceability-foss/releases/download/helm-charts-1.3.2/traceability-foss-1.3.2.tgz
+    version: 1.3.2
+  - apiVersion: v2
     appVersion: 3.0.0
     created: "2023-03-28T14:46:16.157751804Z"
     dependencies:
@@ -2973,4 +3034,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-04-03T03:33:47.110055626Z"
+generated: "2023-04-04T03:34:03.158412318Z"
