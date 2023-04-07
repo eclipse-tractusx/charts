@@ -1553,6 +1553,36 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/sldt-discovery-finder/releases/download/discoveryfinder-0.1.0/discoveryfinder-0.1.0.tgz
     version: 0.1.0
+  - apiVersion: v2
+    appVersion: 0.1.0-M1
+    created: "2023-04-06T09:45:02.016148575Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.2.3
+    description: Tractus-X Discovery Finder Helm Chart
+    digest: 535cf733042d84787953f7c8c875495ed49127ab7a438ef038285f7ffd72e5e0
+    name: discoveryfinder
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-discovery-finder/releases/download/discoveryfinder-0.1.2/discoveryfinder-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: 0.1.0-M1
+    created: "2023-04-06T09:15:04.947982195Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.2.3
+    description: Tractus-X Discovery Finder Helm Chart
+    digest: 2aa239c6eb170c5447baba2322c24046640fc8a58edafcca7299bea856dd8a6a
+    name: discoveryfinder
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-discovery-finder/releases/download/discoveryfinder-0.1.1/discoveryfinder-0.1.1.tgz
+    version: 0.1.1
   edc-controlplane:
   - apiVersion: v2
     appVersion: 0.1.6
@@ -2570,6 +2600,21 @@ entries:
     - https://github.com/eclipse-tractusx/sldt-digital-twin-registry/releases/download/registry-0.3.0/registry-0.3.0.tgz
     version: 0.3.0
   - apiVersion: v2
+    appVersion: 0.2.0-M7-multi-tenancy
+    created: "2023-04-06T08:46:54.079674451Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.1.7
+    description: Tractus-X Digital Twin Registry Helm Chart
+    digest: d0fc01c12adc84bee550bc4e118ec7db2c1de808aa47fc8d88c895fb4fcad125
+    name: registry
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-digital-twin-registry/releases/download/registry-0.2.8/registry-0.2.8.tgz
+    version: 0.2.8
+  - apiVersion: v2
     appVersion: 0.2.0-M6-multi-tenancy
     created: "2023-03-28T12:47:25.436837506Z"
     dependencies:
@@ -2735,6 +2780,16 @@ entries:
     - https://github.com/eclipse-tractusx/sd-factory/releases/download/sdfactory-1.0.8/sdfactory-1.0.8.tgz
     version: 1.0.8
   semantic-hub:
+  - apiVersion: v2
+    appVersion: 0.2.1-M1
+    created: "2023-04-06T08:50:17.651346218Z"
+    description: Helm Chart for the Catena-X Semantic Hub Application
+    digest: b1d5f38d3de0df455ccdc2047313dc87ec80c15754db2cbf147a1ff29360b245
+    name: semantic-hub
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-semantic-hub/releases/download/semantic-hub-0.1.10/semantic-hub-0.1.10.tgz
+    version: 0.1.10
   - apiVersion: v2
     appVersion: 0.2.0-M1
     created: "2023-03-30T09:28:55.799999325Z"
@@ -3050,4 +3105,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-04-06T03:34:02.821605071Z"
+generated: "2023-04-07T03:33:45.668339538Z"
