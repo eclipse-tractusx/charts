@@ -1540,21 +1540,6 @@ entries:
   discoveryfinder:
   - apiVersion: v2
     appVersion: 0.1.0-M1
-    created: "2023-04-05T14:17:48.71421153Z"
-    dependencies:
-    - condition: enablePostgres
-      name: postgresql
-      repository: https://charts.bitnami.com/bitnami
-      version: 12.2.3
-    description: Tractus-X Discovery Finder Helm Chart
-    digest: cbe48ad7be223f1fe05834f22a38c346a109b60be07b6609c6a5f2ca72dd6430
-    name: discoveryfinder
-    type: application
-    urls:
-    - https://github.com/eclipse-tractusx/sldt-discovery-finder/releases/download/discoveryfinder-0.1.0/discoveryfinder-0.1.0.tgz
-    version: 0.1.0
-  - apiVersion: v2
-    appVersion: 0.1.0-M1
     created: "2023-04-06T09:45:02.016148575Z"
     dependencies:
     - condition: enablePostgres
@@ -1583,6 +1568,21 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/sldt-discovery-finder/releases/download/discoveryfinder-0.1.1/discoveryfinder-0.1.1.tgz
     version: 0.1.1
+  - apiVersion: v2
+    appVersion: 0.1.0-M1
+    created: "2023-04-05T14:17:48.71421153Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.2.3
+    description: Tractus-X Discovery Finder Helm Chart
+    digest: cbe48ad7be223f1fe05834f22a38c346a109b60be07b6609c6a5f2ca72dd6430
+    name: discoveryfinder
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-discovery-finder/releases/download/discoveryfinder-0.1.0/discoveryfinder-0.1.0.tgz
+    version: 0.1.0
   edc-controlplane:
   - apiVersion: v2
     appVersion: 0.1.6
@@ -3105,4 +3105,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-04-07T03:33:45.668339538Z"
+generated: "2023-04-08T03:33:44.648910292Z"
