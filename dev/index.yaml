@@ -944,6 +944,16 @@ entries:
     version: 1.0.0
   consumer-backend:
   - apiVersion: v2
+    appVersion: 0.5.1
+    created: "2023-04-11T09:42:37.033617454Z"
+    description: Consumer Backend Helm Deployment for the Product Passport Application
+    digest: ccdf90c6aa0e7a8a3072f608759f5fa007dad71bb22253c5a2373006cb7ab883
+    name: consumer-backend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/consumer-backend-0.2.7/consumer-backend-0.2.7.tgz
+    version: 0.2.7
+  - apiVersion: v2
     appVersion: 0.5.0
     created: "2023-04-03T07:29:19.748234756Z"
     description: Consumer Backend Helm Deployment for the Product Passport Application
@@ -1014,6 +1024,16 @@ entries:
     - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/consumer-backend-0.2.0/consumer-backend-0.2.0.tgz
     version: 0.2.0
   consumer-ui:
+  - apiVersion: v2
+    appVersion: 0.5.1
+    created: "2023-04-11T09:42:37.236972402Z"
+    description: Consumer Application Helm Deployment for the Product Passport Application
+    digest: ce0e6a78740ea8cede8ac07c763a64acc08211ba4e0dc3fe3c0b2ca7ddfac80d
+    name: consumer-ui
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/consumer-ui-0.2.7/consumer-ui-0.2.7.tgz
+    version: 0.2.7
   - apiVersion: v2
     appVersion: 0.5.0
     created: "2023-04-03T07:29:19.883116978Z"
@@ -1217,6 +1237,19 @@ entries:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/country-risk-frontend-2.0.7/country-risk-frontend-2.0.7.tgz
     version: 2.0.7
   daps-reg-service:
+  - apiVersion: v2
+    appVersion: 2.0.2
+    created: "2023-04-11T12:51:22.50537268Z"
+    description: Daps regisgter service is used to register the EDC connector into
+      DAPS
+    digest: b2c0decdf631b35d1b174234e1c32e3b94a91ceecdb7b159e02d6c3a05f18d9d
+    name: daps-reg-service
+    sources:
+    - https://github.com/eclipse-tractusx/daps-registration-service
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/daps-registration-service/releases/download/daps-reg-service-2.0.2/daps-reg-service-2.0.2.tgz
+    version: 2.0.2
   - apiVersion: v2
     appVersion: 2.0.1
     created: "2023-03-23T08:12:06.939495675Z"
@@ -2379,6 +2412,27 @@ entries:
     version: 0.5.18
   portal:
   - apiVersion: v2
+    appVersion: 1.3.0-RC2
+    created: "2023-04-11T12:55:34.787019608Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.9.13
+    description: Helm chart for Catena-X Portal
+    digest: 6207dd858461db29a6efbcb15ef683d9a9ddcf09750919236d65c6941bb04a63
+    home: https://github.com/eclipse-tractusx/portal-cd
+    name: portal
+    sources:
+    - https://github.com/eclipse-tractusx/portal-frontend
+    - https://github.com/eclipse-tractusx/portal-frontend-registration
+    - https://github.com/eclipse-tractusx/portal-assets
+    - https://github.com/eclipse-tractusx/portal-backend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/portal-cd/releases/download/portal-1.3.0-RC2/portal-1.3.0-RC2.tgz
+    version: 1.3.0-RC2
+  - apiVersion: v2
     appVersion: 1.3.0-RC1
     created: "2023-03-31T12:19:49.821882032Z"
     dependencies:
@@ -2690,6 +2744,19 @@ entries:
     - https://github.com/eclipse-tractusx/sldt-digital-twin-registry/releases/download/v0.2.0-M3-multi-tenancy/registry-0.2.3.tgz
     version: 0.2.3
   sdfactory:
+  - apiVersion: v2
+    appVersion: 2.0.3
+    created: "2023-04-11T12:51:57.805919184Z"
+    description: Helm Charts for SD Factory application. Self-Description Factory
+      component is responsible for the creation of Self Descriptions.
+    digest: 48c868c1e03d1ea97e5144f7c7e70427f2dc9e299decbfe3565e55fd71985870
+    name: sdfactory
+    sources:
+    - https://github.com/eclipse-tractusx/sd-factory
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sd-factory/releases/download/sdfactory-2.0.3/sdfactory-2.0.3.tgz
+    version: 2.0.3
   - apiVersion: v2
     appVersion: 2.0.2
     created: "2023-03-28T09:23:02.922131678Z"
@@ -3105,4 +3172,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-04-11T03:33:48.622592797Z"
+generated: "2023-04-12T03:33:52.451475389Z"
