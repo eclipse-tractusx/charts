@@ -910,6 +910,22 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/bpdm/releases/download/bpdm-pool-4.0.0/bpdm-pool-4.0.0.tgz
     version: 4.0.0
+  bpndiscovery:
+  - apiVersion: v2
+    appVersion: 0.1.0-M1
+    created: "2023-04-12T13:40:02.479017359Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.2.3
+    description: Tractus-X BPN Discovery Helm Chart
+    digest: 3daf908666176e80a07e06067ebf008ed57eb4d70fcc026ea0710bba44c7c94b
+    name: bpndiscovery
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-bpn-discovery/releases/download/bpndiscovery-0.1.0/bpndiscovery-0.1.0.tgz
+    version: 0.1.0
   centralidp:
   - apiVersion: v2
     appVersion: 1.0.0
@@ -2655,6 +2671,25 @@ entries:
     version: 0.3.0
   - apiVersion: v2
     appVersion: 0.2.0-M7-multi-tenancy
+    created: "2023-04-12T14:16:24.849747469Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.1.7
+    - condition: enableKeycloak
+      name: keycloak
+      repository: https://charts.bitnami.com/bitnami
+      version: 13.3.0
+    description: Tractus-X Digital Twin Registry Helm Chart
+    digest: 98a1bd2be6e1824437827da6964f9c795f71eb0962d2a54db87053b15f9f92b0
+    name: registry
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-digital-twin-registry/releases/download/registry-0.2.9/registry-0.2.9.tgz
+    version: 0.2.9
+  - apiVersion: v2
+    appVersion: 0.2.0-M7-multi-tenancy
     created: "2023-04-06T08:46:54.079674451Z"
     dependencies:
     - condition: enablePostgres
@@ -3172,4 +3207,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-04-12T03:33:52.451475389Z"
+generated: "2023-04-13T03:33:53.906694565Z"
