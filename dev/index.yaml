@@ -133,6 +133,24 @@ entries:
     version: 1.0.0-RC4
   autosetup:
   - apiVersion: v2
+    appVersion: 1.2.3
+    created: "2023-04-13T12:45:33.316190175Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.x.x
+    description: This service will help service provider to set up DFT/SDE with EDC
+      and EDC as service in service provider environment.
+    digest: 7e995f239d7b344f00bd7b99b7e9ff52175ff5ff40ef88918a9980dac5ed4408
+    name: autosetup
+    sources:
+    - https://github.com/eclipse-tractusx/autosetup-backend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/autosetup-backend/releases/download/autosetup-1.2.3/autosetup-1.2.3.tgz
+    version: 1.2.3
+  - apiVersion: v2
     appVersion: 1.2.2
     created: "2023-04-03T09:55:08.157134349Z"
     dependencies:
@@ -960,6 +978,16 @@ entries:
     version: 1.0.0
   consumer-backend:
   - apiVersion: v2
+    appVersion: 0.5.2
+    created: "2023-04-13T12:46:24.858996858Z"
+    description: Consumer Backend Helm Deployment for the Product Passport Application
+    digest: c63e38e5437de1656e909d2294bec17846b45fbc9686cd79ba3850e69ef6d3ea
+    name: consumer-backend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/consumer-backend-0.2.8/consumer-backend-0.2.8.tgz
+    version: 0.2.8
+  - apiVersion: v2
     appVersion: 0.5.1
     created: "2023-04-11T09:42:37.033617454Z"
     description: Consumer Backend Helm Deployment for the Product Passport Application
@@ -1040,6 +1068,16 @@ entries:
     - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/consumer-backend-0.2.0/consumer-backend-0.2.0.tgz
     version: 0.2.0
   consumer-ui:
+  - apiVersion: v2
+    appVersion: 0.5.2
+    created: "2023-04-13T12:46:25.010252722Z"
+    description: Consumer Application Helm Deployment for the Product Passport Application
+    digest: 00d5357c0f64ff02b1f5c09fce8d6c4b208a0bf480f0f564b3b8105a2bb0cb45
+    name: consumer-ui
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/consumer-ui-0.2.8/consumer-ui-0.2.8.tgz
+    version: 0.2.8
   - apiVersion: v2
     appVersion: 0.5.1
     created: "2023-04-11T09:42:37.236972402Z"
@@ -3207,4 +3245,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-04-13T03:33:53.906694565Z"
+generated: "2023-04-14T03:33:56.596229233Z"
