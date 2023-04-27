@@ -133,6 +133,24 @@ entries:
     version: 1.0.0-RC4
   autosetup:
   - apiVersion: v2
+    appVersion: 1.2.4
+    created: "2023-04-26T08:07:35.858094998Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.x.x
+    description: This service will help service provider to set up DFT/SDE with EDC
+      and EDC as service in service provider environment.
+    digest: 33f6bbff207d469692b9d0662ebfa195231881427bef973c01e43894d0247842
+    name: autosetup
+    sources:
+    - https://github.com/eclipse-tractusx/autosetup-backend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/autosetup-backend/releases/download/autosetup-1.2.4/autosetup-1.2.4.tgz
+    version: 1.2.4
+  - apiVersion: v2
     appVersion: 1.2.3
     created: "2023-04-13T12:45:33.316190175Z"
     dependencies:
@@ -1308,6 +1326,19 @@ entries:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/country-risk-frontend-2.0.7/country-risk-frontend-2.0.7.tgz
     version: 2.0.7
   daps-reg-service:
+  - apiVersion: v2
+    appVersion: 2.0.4
+    created: "2023-04-26T08:08:08.223653548Z"
+    description: Daps regisgter service is used to register the EDC connector into
+      DAPS
+    digest: 592b6dcea7cad1975d5898189d3de4d4115441154c054a24be1fac615791e9a7
+    name: daps-reg-service
+    sources:
+    - https://github.com/eclipse-tractusx/daps-registration-service
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/daps-registration-service/releases/download/daps-reg-service-2.0.4/daps-reg-service-2.0.4.tgz
+    version: 2.0.4
   - apiVersion: v2
     appVersion: 2.0.3
     created: "2023-04-21T07:25:15.732187775Z"
@@ -3712,4 +3743,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-04-26T03:33:52.382032872Z"
+generated: "2023-04-27T03:33:35.070309215Z"
