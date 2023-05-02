@@ -13,9 +13,6 @@ tractusx-dev/app-dashboard                    	1.0.5        	1.0.4      	A Helm 
 tractusx-dev/autosetup                        	1.2.4        	1.2.4      	This service will help service provider to set ...
 tractusx-dev/bpdm                             	2.0.0        	2.0.0      	A Helm chart for deploying the BPDM service
 tractusx-dev/bpdm-gate                        	3.3.0        	3.2.0      	A Helm chart for deploying the BPDM gate service
-tractusx-dev/bpdm-pool                        	4.3.0        	3.2.0      	A Helm chart for deploying the BPDM pool service
-tractusx-dev/bpndiscovery                     	0.1.0        	0.1.0-M1   	Tractus-X BPN Discovery Helm Chart
-tractusx-dev/centralidp                       	1.1.0        	1.1.0      	Helm chart for Catena-X Central Keycloak Instance
 ...
 ```
 
