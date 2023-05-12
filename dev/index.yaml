@@ -342,6 +342,21 @@ entries:
   bpdm-gate:
   - apiVersion: v2
     appVersion: 4.0.0-alpha.1
+    created: "2023-05-12T10:31:14.959587644Z"
+    description: A Helm chart for deploying the BPDM gate service
+    digest: a9b5a1d09d94ae2f061a06689335d1cdcbc87152efb4efedc9445e1a6f79f1c6
+    home: https://eclipse-tractusx.github.io/docs/kits/Business%20Partner%20Kit/Adoption%20View
+    maintainers:
+    - name: Nico Koprowski
+    name: bpdm-gate
+    sources:
+    - https://github.com/eclipse-tractusx/bpdm
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/bpdm/releases/download/bpdm-gate-4.0.0-alpha.3/bpdm-gate-4.0.0-alpha.3.tgz
+    version: 4.0.0-alpha.3
+  - apiVersion: v2
+    appVersion: 4.0.0-alpha.1
     created: "2023-05-10T07:12:37.537283016Z"
     description: A Helm chart for deploying the BPDM gate service
     digest: 2cf369c45e811b9f3371702a823bb1f559ed7f05325e77ae4c6f31255c8c4a7c
@@ -589,6 +604,32 @@ entries:
     - https://github.com/eclipse-tractusx/bpdm/releases/download/bpdm-gate-2.0.0/bpdm-gate-2.0.0.tgz
     version: 2.0.0
   bpdm-pool:
+  - apiVersion: v2
+    appVersion: 4.0.0-alpha.1
+    created: "2023-05-12T10:31:15.104095468Z"
+    dependencies:
+    - alias: opensearch
+      condition: opensearch.enabled
+      name: opensearch
+      repository: https://opensearch-project.github.io/helm-charts/
+      version: 2.4.0
+    - alias: postgres
+      condition: postgres.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.9.1
+    description: A Helm chart for deploying the BPDM pool service
+    digest: 845f264dce9f1bc9283e278348fa61d842f9eac151077702fc4b2f73d064b817
+    home: https://eclipse-tractusx.github.io/docs/kits/Business%20Partner%20Kit/Adoption%20View
+    maintainers:
+    - name: Nico Koprowski
+    name: bpdm-pool
+    sources:
+    - https://github.com/eclipse-tractusx/bpdm
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/bpdm/releases/download/bpdm-pool-5.0.0-alpha.3/bpdm-pool-5.0.0-alpha.3.tgz
+    version: 5.0.0-alpha.3
   - apiVersion: v2
     appVersion: 4.0.0-alpha.1
     created: "2023-05-10T07:12:37.8021191Z"
@@ -1487,6 +1528,19 @@ entries:
     version: 2.0.7
   daps-reg-service:
   - apiVersion: v2
+    appVersion: 2.0.7
+    created: "2023-05-12T09:46:36.759655677Z"
+    description: Daps regisgter service is used to register the EDC connector into
+      DAPS
+    digest: 67068403edf244ffebcbabd936fe9c5a30395926aeac6e831b28a0e8ad69542d
+    name: daps-reg-service
+    sources:
+    - https://github.com/eclipse-tractusx/daps-registration-service
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/daps-registration-service/releases/download/daps-reg-service-2.0.7/daps-reg-service-2.0.7.tgz
+    version: 2.0.7
+  - apiVersion: v2
     appVersion: 2.0.6
     created: "2023-05-09T17:05:37.043937671Z"
     description: Daps regisgter service is used to register the EDC connector into
@@ -1612,6 +1666,18 @@ entries:
     - https://github.com/eclipse-tractusx/daps-registration-service/releases/download/daps-reg-service-1.0.5/daps-reg-service-1.0.5.tgz
     version: 1.0.5
   daps-server:
+  - apiVersion: v2
+    appVersion: 1.7.1
+    created: "2023-05-12T06:29:48.614318291Z"
+    description: DAPS server helm-chart
+    digest: e7cc218e578ac01f1197017f964fc8489d42bf9d0847673b18a83d782663ea8a
+    name: daps-server
+    sources:
+    - https://github.com/eclipse-tractusx/daps-helm-chart
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/daps-helm-chart/releases/download/daps-server-1.7.7/daps-server-1.7.7.tgz
+    version: 1.7.7
   - apiVersion: v2
     appVersion: 1.7.1
     created: "2023-03-30T06:24:10.076074483Z"
@@ -4231,4 +4297,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-05-12T03:33:37.321253369Z"
+generated: "2023-05-12T10:42:32.996155626Z"
