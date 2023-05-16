@@ -133,6 +133,24 @@ entries:
     version: 1.0.0-RC4
   autosetup:
   - apiVersion: v2
+    appVersion: 1.2.7
+    created: "2023-05-16T13:47:22.525866281Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.x.x
+    description: This service will help service provider to set up DFT/SDE with EDC
+      and EDC as service in service provider environment.
+    digest: 41ad8846b67a5664b70eaf4c64c1f30d8d8e9b24e8057293fbfd0d62057fd55b
+    name: autosetup
+    sources:
+    - https://github.com/eclipse-tractusx/autosetup-backend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/autosetup-backend/releases/download/autosetup-1.2.7/autosetup-1.2.7.tgz
+    version: 1.2.7
+  - apiVersion: v2
     appVersion: 1.2.6
     created: "2023-05-15T12:05:41.571826725Z"
     dependencies:
@@ -1216,6 +1234,21 @@ entries:
     version: 4.0.0
   bpndiscovery:
   - apiVersion: v2
+    appVersion: 0.2.0-M1
+    created: "2023-05-15T08:07:01.93603264Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.2.3
+    description: Tractus-X BPN Discovery Helm Chart
+    digest: 19c3338991b62504da043fc7f151eec884973856018276ddd8db81aaeabf0111
+    name: bpndiscovery
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-bpn-discovery/releases/download/bpndiscovery-0.1.1/bpndiscovery-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
     appVersion: 0.1.0-M1
     created: "2023-04-12T13:40:02.479017359Z"
     dependencies:
@@ -1232,19 +1265,19 @@ entries:
     version: 0.1.0
   - apiVersion: v2
     appVersion: 0.2.0-M1
-    created: "2023-05-15T08:07:01.93603264Z"
+    created: "2023-05-16T07:34:24.02613748Z"
     dependencies:
     - condition: enablePostgres
       name: postgresql
       repository: https://charts.bitnami.com/bitnami
       version: 12.2.3
     description: Tractus-X BPN Discovery Helm Chart
-    digest: 19c3338991b62504da043fc7f151eec884973856018276ddd8db81aaeabf0111
+    digest: 358c638dcbc157b047312d7eddd3f8f7df7b44031a47ef37f6873379e429af71
     name: bpndiscovery
     type: application
     urls:
-    - https://github.com/eclipse-tractusx/sldt-bpn-discovery/releases/download/bpndiscovery-0.1.1/bpndiscovery-0.1.1.tgz
-    version: 0.1.1
+    - https://github.com/eclipse-tractusx/sldt-bpn-discovery/releases/download/bpndiscovery-0.1.2/bpndiscovery-0.1.2.tgz
+    version: 0.1.2
   centralidp:
   - apiVersion: v2
     appVersion: 1.1.0
@@ -2017,6 +2050,24 @@ entries:
     version: 1.7.0
   dftbackend:
   - apiVersion: v2
+    appVersion: 2.0.0
+    created: "2023-05-16T13:10:35.441039819Z"
+    dependencies:
+    - alias: dftpostgresql
+      condition: dftpostgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.x.x
+    description: A Helm chart for Kubernetes
+    digest: 1e6b452983a608f92c6fd60afb51eba98fe8df91f5867990d6f979b57f306603
+    name: dftbackend
+    sources:
+    - https://github.com/eclipse-tractusx/dft-backend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/dft-backend/releases/download/dftbackend-2.0.0/dftbackend-2.0.0.tgz
+    version: 2.0.0
+  - apiVersion: v2
     appVersion: 1.9.1
     created: "2023-03-24T09:02:33.989804885Z"
     dependencies:
@@ -2057,6 +2108,18 @@ entries:
     - https://github.com/eclipse-tractusx/autosetup-backend/releases/download/dftbackend-1.4.6/dftbackend-1.4.6.tgz
     version: 1.4.6
   dftfrontend:
+  - apiVersion: v2
+    appVersion: 2.0.0
+    created: "2023-05-16T13:07:41.920126114Z"
+    description: A Helm chart for Kubernetes
+    digest: 0c65cbd4780d5a1aa36bf343c605842eedea24dd40b3da2195e1e165159341b4
+    name: dftfrontend
+    sources:
+    - https://github.com/eclipse-tractusx/dft-frontend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/dft-frontend/releases/download/dftfrontend-2.0.0/dftfrontend-2.0.0.tgz
+    version: 2.0.0
   - apiVersion: v2
     appVersion: 1.9.0
     created: "2023-03-16T11:03:11.304287798Z"
@@ -3645,6 +3708,19 @@ entries:
   sdfactory:
   - apiVersion: v2
     appVersion: 2.0.7
+    created: "2023-05-16T14:03:18.807848596Z"
+    description: Helm Charts for SD Factory application. Self-Description Factory
+      component is responsible for the creation of Self Descriptions.
+    digest: ff72c32f373e06dbff3a2fb824947eef0333a3fc401454984270700565de8a25
+    name: sdfactory
+    sources:
+    - https://github.com/eclipse-tractusx/sd-factory
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sd-factory/releases/download/sdfactory-2.0.8/sdfactory-2.0.8.tgz
+    version: 2.0.8
+  - apiVersion: v2
+    appVersion: 2.0.7
     created: "2023-05-10T12:20:09.418117903Z"
     description: Helm Charts for SD Factory application. Self-Description Factory
       component is responsible for the creation of Self Descriptions.
@@ -4439,4 +4515,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-05-16T03:33:50.315345504Z"
+generated: "2023-05-16T14:18:47.189381628Z"
