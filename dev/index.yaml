@@ -1235,6 +1235,21 @@ entries:
   bpndiscovery:
   - apiVersion: v2
     appVersion: 0.2.0-M1
+    created: "2023-05-16T07:34:24.02613748Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.2.3
+    description: Tractus-X BPN Discovery Helm Chart
+    digest: 358c638dcbc157b047312d7eddd3f8f7df7b44031a47ef37f6873379e429af71
+    name: bpndiscovery
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-bpn-discovery/releases/download/bpndiscovery-0.1.2/bpndiscovery-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: 0.2.0-M1
     created: "2023-05-15T08:07:01.93603264Z"
     dependencies:
     - condition: enablePostgres
@@ -1263,21 +1278,6 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/sldt-bpn-discovery/releases/download/bpndiscovery-0.1.0/bpndiscovery-0.1.0.tgz
     version: 0.1.0
-  - apiVersion: v2
-    appVersion: 0.2.0-M1
-    created: "2023-05-16T07:34:24.02613748Z"
-    dependencies:
-    - condition: enablePostgres
-      name: postgresql
-      repository: https://charts.bitnami.com/bitnami
-      version: 12.2.3
-    description: Tractus-X BPN Discovery Helm Chart
-    digest: 358c638dcbc157b047312d7eddd3f8f7df7b44031a47ef37f6873379e429af71
-    name: bpndiscovery
-    type: application
-    urls:
-    - https://github.com/eclipse-tractusx/sldt-bpn-discovery/releases/download/bpndiscovery-0.1.2/bpndiscovery-0.1.2.tgz
-    version: 0.1.2
   centralidp:
   - apiVersion: v2
     appVersion: 1.1.0
@@ -4515,4 +4515,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-05-16T14:18:47.189381628Z"
+generated: "2023-05-16T14:33:15.28907759Z"
