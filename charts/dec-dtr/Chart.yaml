@@ -28,21 +28,20 @@ version: 0.1.0
 
 appVersion: "1.16.0"
 
-
 dependencies:
   - name: registry
     repository: https://eclipse-tractusx.github.io/sldt-digital-twin-registry
-    version: 0.3.0
+    version: 0.2.17
   - name: tractusx-connector
     alias: provider
     condition: provider.enabled
-    repository: https://catenax-ng.github.io/product-edc
-    version: 0.2.0
+    repository: https://eclipse-tractusx.github.io/tractusx-edc
+    version: 0.4.0
   - name: tractusx-connector
     alias: consumer
     condition: consumer.enabled
-    repository: https://catenax-ng.github.io/product-edc
-    version: 0.2.0
+    repository: https://eclipse-tractusx.github.io/tractusx-edc
+    version: 0.4.0
   - name: postgresql
     repository: https://charts.bitnami.com/bitnami
     version: 12.1.5

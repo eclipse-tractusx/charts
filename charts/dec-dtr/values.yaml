@@ -19,9 +19,12 @@
 ###############################################################
 
 registry:
+  keycloak:
+    type: NodePort
+    args: [ "kc.sh import --file /opt/keycloak/data/import/default-realm-import.json; kc.sh start-dev --hostname-strict=false --proxy=edge" ]
+
   enablePostgres: false
   registry:
-    image: ghcr.io/catenax-ng/registry:0.3.0-M1
     replicaCount: 1
     imagePullPolicy: Never
     imagePullSecrets:
@@ -29,9 +32,9 @@ registry:
     containerPort: 4243
     host: localhost
     ## If 'authentication' is set to false, no OAuth authentication is enforced
-    authentication: false
-    idpIssuerUri: https://centralidp.dev.demo.catena-x.net/auth/realms/CX-Central
-    idpClientId: Cl4-CX-DigitalTwin
+    authentication: true
+    idpIssuerUri: http://registry-keycloak/realms/default-realm
+    idpClientId: default-client
     tenantId: demo-tenant
     service:
       port: 8080
@@ -195,26 +198,14 @@ provider:
         { 
           "publicApiUrl": "http://provider-edc-dataplane:8081/api/public"
         }
-    image:
-      repository: edc-controlplane-postgresql-hashicorp-vault
-      tag: 0.1.3
     endpoints:
       default:
         port: "8080"
         path: /api
-      data:
+      management:
         port: "8181"
-        path: /data
+        path: /management
         authKey: password
-      validation:
-        port: "8082"
-        path: /validation
-      control:
-        port: "9999"
-        path: /api/controlplane/control
-      ids:
-        port: "8282"
-        path: /api/v1/ids
       metrics:
         port: "9090"
         path: /metrics    
@@ -256,26 +247,14 @@ consumer:
         { 
           "publicApiUrl": "http://consumer-edc-dataplane:8081/api/public"
         }
-    image:
-      repository: edc-controlplane-postgresql-hashicorp-vault
-      tag: 0.1.3
     endpoints:
       default:
         port: "8080"
         path: /api
-      data:
+      management:
         port: "8181"
-        path: /data
+        path: /management
         authKey: password
-      validation:
-        port: "8082"
-        path: /validation
-      control:
-        port: "9999"
-        path: /api/controlplane/control
-      ids:
-        port: "8282"
-        path: /api/v1/ids
       metrics:
         port: "9090"
         path: /metrics
