@@ -1977,6 +1977,18 @@ entries:
   daps-server:
   - apiVersion: v2
     appVersion: 1.7.1
+    created: "2023-06-07T09:51:32.368052909Z"
+    description: DAPS server helm-chart
+    digest: 42e5c33339a5f83e39709f8f3c98a0796e2cc6cc99c39ec7f5b152f5dfcb5c1a
+    name: daps-server
+    sources:
+    - https://github.com/eclipse-tractusx/daps-helm-chart
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/daps-helm-chart/releases/download/daps-server-1.7.10/daps-server-1.7.10.tgz
+    version: 1.7.10
+  - apiVersion: v2
+    appVersion: 1.7.1
     created: "2023-05-17T11:51:32.138652635Z"
     description: DAPS server helm-chart
     digest: 27e69d9cdb7a520ddd561478359855a1d8514211c2ce341a69794aa43fb2f065
@@ -4005,6 +4017,19 @@ entries:
     version: 0.2.3
   sdfactory:
   - apiVersion: v2
+    appVersion: 2.0.9
+    created: "2023-06-07T13:28:51.091662132Z"
+    description: Helm Charts for SD Factory application. Self-Description Factory
+      component is responsible for the creation of Self Descriptions.
+    digest: 6f6d285caa2cd7a986882ababb9336eb2249385d611a8875992d1f209ed6f667
+    name: sdfactory
+    sources:
+    - https://github.com/eclipse-tractusx/sd-factory
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sd-factory/releases/download/sdfactory-2.0.9/sdfactory-2.0.9.tgz
+    version: 2.0.9
+  - apiVersion: v2
     appVersion: 2.0.7
     created: "2023-05-16T14:03:18.807848596Z"
     description: Helm Charts for SD Factory application. Self-Description Factory
@@ -5070,4 +5095,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-06-07T03:33:19.151815282Z"
+generated: "2023-06-07T15:27:55.93123013Z"
