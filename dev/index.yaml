@@ -355,6 +355,45 @@ entries:
     version: 0.0.2
   bpdm:
   - apiVersion: v2
+    appVersion: 4.0.0-alpha.5
+    created: "2023-06-09T16:34:32.040640211Z"
+    dependencies:
+    - alias: bpdm-gate
+      condition: bpdm-gate.enabled
+      name: bpdm-gate
+      repository: ""
+      version: 4.0.0-alpha.6
+    - alias: bpdm-pool
+      condition: bpdm-pool.enabled
+      name: bpdm-pool
+      repository: ""
+      version: 5.0.0-alpha.5
+    - alias: bpdm-bridge-dummy
+      condition: bpdm-bridge-dummy.enabled
+      name: bpdm-bridge-dummy
+      repository: ""
+      version: 1.0.1-alpha.1
+    - alias: opensearch
+      condition: opensearch.enabled
+      name: opensearch
+      repository: https://opensearch-project.github.io/helm-charts/
+      version: 2.12.2
+    - alias: postgres
+      condition: postgres.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.9.13
+    description: A Helm chart for Kubernetes that deploys the gate and pool applications
+    digest: 7f987b96cd9d1b09234f8c5f4b6dd830459c6dff8013b743a9fb981a31806284
+    home: https://github.com/eclipse-tractusx/bpdm
+    name: bpdm
+    sources:
+    - https://github.com/eclipse-tractusx/bpdm
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/bpdm/releases/download/bpdm-3.0.2-alpha.1/bpdm-3.0.2-alpha.1.tgz
+    version: 3.0.2-alpha.1
+  - apiVersion: v2
     appVersion: 1.0.0
     created: "2023-06-01T14:31:20.333252981Z"
     dependencies:
@@ -2313,6 +2352,16 @@ entries:
     - https://github.com/eclipse-tractusx/autosetup-backend/releases/download/dftfrontend-1.4.7/dftfrontend-1.4.7.tgz
     version: 1.4.7
   digital-product-pass:
+  - apiVersion: v2
+    appVersion: 0.8.1
+    created: "2023-06-09T10:37:05.750735101Z"
+    description: A Helm chart for Kubernetes
+    digest: 8f8c4ebd428562341a22a1b2b6656c0c62fe41aeeebac9efa5ce28c37c69fc3d
+    name: digital-product-pass
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/digital-product-pass-0.3.4/digital-product-pass-0.3.4.tgz
+    version: 0.3.4
   - apiVersion: v2
     appVersion: 0.8.0
     created: "2023-05-19T12:43:19.841498054Z"
@@ -5095,4 +5144,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-06-09T03:35:10.554971457Z"
+generated: "2023-06-09T16:44:06.100633727Z"
