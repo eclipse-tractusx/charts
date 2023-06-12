@@ -167,6 +167,8 @@ vault:
         }
 
 daps:
+  persistence:
+    storageClass: ""
   enabled: true
   fullnameOverride: "ids-daps"
   daps:
@@ -185,6 +187,12 @@ daps:
 provider:
   enabled: true
   fullnameOverride: "provider-edc"
+  install:
+    daps: false
+    postgresql: false
+    vault: false
+  participant:
+    id: "PROVIDER"
   backendService:
     httpProxyTokenReceiverUrl: http://localhost
   # dataplane:
@@ -210,14 +218,20 @@ provider:
         port: "9090"
         path: /metrics    
   postgresql:
+    fullnameOverride: "provider-postgresql"
     enabled: true
     jdbcUrl: jdbc:postgresql://postgresql:5432/provider
+    auth:
+      database: "provider"
+      username: "edcprovider"
+      password: "oqerhf8734hewrin"
     username: edcprovider
     password: oqerhf8734hewrin
   daps:
     clientId: 99:83:A7:17:86:FF:98:93:CE:A0:DD:A1:F1:36:FA:F6:0F:75:0A:23:keyid:99:83:A7:17:86:FF:98:93:CE:A0:DD:A1:F1:36:FA:F6:0F:75:0A:23
     url: http://ids-daps:4567
   vault:
+    fullnameOverride: "provider-vault"
     hashicorp:
       enabled: true
       token: root
@@ -232,6 +246,12 @@ provider:
 
 consumer:
   enabled: true
+  install:
+    daps: false
+    postgresql: false
+    vault: false
+  participant:
+    id: "CONSUMER"
   fullnameOverride: "consumer-edc"
   backendService:
     httpProxyTokenReceiverUrl: http://localhost
@@ -259,14 +279,20 @@ consumer:
         port: "9090"
         path: /metrics
   postgresql:
+    fullnameOverride: "consumer-postgresql"
     enabled: true
     jdbcUrl: jdbc:postgresql://postgresql:5432/consumer
+    auth:
+      database: "consumer"
+      username: "edcconsumer"
+      password: "oqerhf8734hewrin"
     username: edcconsumer
     password: oqerhf8734hewrin
   daps:
     clientId: 99:83:A7:17:86:FF:98:93:CE:A0:DD:A1:F1:36:FA:F6:0F:75:0A:23:keyid:99:83:A7:17:86:FF:98:93:CE:A0:DD:A1:F1:36:FA:F6:0F:75:0A:23
     url: http://ids-daps:4567
   vault:
+    fullnameOverride: "consumer-vault"
     hashicorp:
       enabled: true
       token: root

@@ -19,8 +19,8 @@
 -->
 
 # Decentralized Digital Twin Registry Setup
-This document contains instructions how to setup the `dec-dtr` [Helm](https://helm.sh/) chart.
-The chart contains deployments for two EDC instances, a DAPS instance and one registry. It relies on the EDC [tractusx-connector](https://github.com/catenax-ng/product-edc/tree/develop/charts/tractusx-connector) Helm chart.
+This document contains instructions how to set up the `dec-dtr` [Helm](https://helm.sh/) chart.
+The chart contains deployments for two EDC instances, a DAPS instance, a keycloak and one registry. It relies on the EDC [tractusx-connector](https://github.com/eclipse-tractusx/tractusx-edc) Helm chart.
 
 Please be aware, that you need a Kubernetes cluster to deploy the setup using Helm. You can use [minikube](https://minikube.sigs.k8s.io/docs/start/), [K3s](https://k3s.io/), or [MicroK8s](https://microk8s.io/) to deploy a Kubernetes cluster on your local machine.
 
@@ -64,6 +64,7 @@ Please be aware, that you need a Kubernetes cluster to deploy the setup using He
                                   │     Registry      ├───┘
                                   │                   │
                                   └───────────────────┘
+                                  
 ```
 
 ## Setup
@@ -156,7 +157,7 @@ curl -0 -v -X GET 'http://<your-k8s-host>/data/adapter/asset/sync/<asset-id>?pro
 -H 'X-Api-Key: <password>'
 ```
 
-The response constist of a JSON payload which contains the token we need for the next step. Copy the token from the `authCode` field and save it for the next request.
+The response consist of a JSON payload which contains the token we need for the next step. Copy the token from the `authCode` field and save it for the next request.
 To access the registry send the next request to the EDC consumer dataplane:
 ```
 curl -0 -v -X GET 'http://<your-k8s-host>/api/public/registry/shell-descriptors' \
