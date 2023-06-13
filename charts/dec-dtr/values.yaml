@@ -214,7 +214,34 @@ provider:
         authKey: password
       metrics:
         port: "9090"
-        path: /metrics    
+        path: /metrics
+    ingresses:
+      - enabled: false
+        hostname:
+        annotations: { }
+        certManager:
+          clusterIssuer: letsencrypt-prod
+        endpoints:
+          - ids
+          - management
+          - protocol
+          - default
+        className: nginx
+        tls:
+          enabled: false
+  dataplane:
+    ingresses:
+      - enabled: false
+        hostname:
+        annotations: { }
+        certManager:
+          clusterIssuer: letsencrypt-prod
+        endpoints:
+          - public
+          - proxy
+        className: nginx
+        tls:
+          enabled: false
   postgresql:
     fullnameOverride: "provider-postgresql"
     enabled: true
@@ -276,6 +303,33 @@ consumer:
       metrics:
         port: "9090"
         path: /metrics
+    ingresses:
+      - enabled: false
+        hostname:
+        annotations: { }
+        certManager:
+          clusterIssuer: letsencrypt-prod
+        endpoints:
+          - ids
+          - management
+          - protocol
+          - default
+        className: nginx
+        tls:
+          enabled: false
+  dataplane:
+    ingresses:
+      - enabled: false
+        hostname:
+        annotations: { }
+        certManager:
+          clusterIssuer: letsencrypt-prod
+        endpoints:
+          - public
+          - proxy
+        className: nginx
+        tls:
+          enabled: false
   postgresql:
     fullnameOverride: "consumer-postgresql"
     enabled: true

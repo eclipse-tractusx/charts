@@ -27,140 +27,50 @@ Please be aware, that you need a Kubernetes cluster to deploy the setup using He
 ## Architecture
 
 ```
-                                   ┌───────────────────┐
-                                   │                   │
-                                   │    Backend App    │
-                                   │                   │
-                                   └─────────┬─────────┘
-                                             │
-                                             │
-                                             │
-                              ┌──────────────┴────────────┐
-                              │                           │
-                              │                           │
-                              │                           │
-                              │                           │
-                     ┌────────┴─────────┐                 │
-                     │     Adapter      │                 │
-                     ├──────────────────┤       ┌─────────┴────────┐
-                     │                  │       │                  │
-        ┌────────────┤ EDC Controlplane ├───────┤   EDC Dataplane  │
-        │            │    (Consumer)    │       │    (Consumer)    │
-┌───────┴───────┐    │                  │       │                  │
-│               │    └──────────┬───────┘       └─────────┬────────┘
-│     DAPS      │               │                         │
-│               │               │                         │
-└───────┬───────┘    ┌──────────┴───────┐       ┌─────────┴────────┐
-        │            │                  │       │                  │
-        └────────────┤ EDC Controlplane ├───────┤   EDC Dataplane  │
-                     │    (Provider)    │       │    (Provider)    │
-                     │                  │       │                  │
-                     └──────────────────┘       └─────────┬────────┘
-                                                          │
-                                                          │
-                                                          │
-                                  ┌───────────────────┐   │
-                                  │                   │   │
-                                  │     Registry      ├───┘
-                                  │                   │
-                                  └───────────────────┘
-                                  
+                  ┌────────────────┐     ┌────────────────┐
+                  │                │     │                │
+                  │EDC Controlplane│     │  EDC Dataplane │
+     ┌────────────┤ (Consumer)     ├─────┤   (Consumer)   │
+     │            │                │     │                │
+┌────┴──────┐     │                │     │                │
+│           │     └───────┬────────┘     └────────┬───────┘
+│ DAPS      │             │                       │
+│           │             │                       │
+│           │             │                       │
+└────┬──────┘     ┌───────┴────────┐     ┌────────┴───────┐
+     │            │                │     │                │
+     │            │EDC Controlplane│     │  EDC Datplane  │
+     └────────────┤ (Provider)     ├─────┤   (Provider    ├──────┐
+                  │                │     │                │      │
+                  │                │     │                │      │
+                  └────────────────┘     └─────────┬──────┘      │
+                                                   │             │
+                                                   │             │
+                          ┌──────────────┐         │    ┌────────┴────┐
+                          │              │         │    │             │
+                          │              ├─────────┘    │             │
+                          │     DDTR     │              │  Keycloak   │
+                          │              ├──────────────┤             │
+                          │              │              │             │
+                          └──────────────┘              └─────────────┘                                 
 ```
 
 ## Setup
-To start the deployment run:
+1. To start the deployment run:
 ```
 helm install decentral-registry-setup -n dec-reg . --create-namespace
 ```
-
 This will install all necessary modules (as described above) on you cluster in the namespace `decentral-registry-setup`.
 
-In the next step we want to create a new asset in the provider EDC controlplane. Make sure that you can access the `plato-edc-controlplane` service from outside you cluster (depending on your K8s provider you need to forward a port). Run the following curl request:
+2. Add the public key which is located in `/config/defaultKeys/daps.crt` to DAPS. Therefore following the steps:
+* Open `config/registry_test.sh` and update the DAPS parameter (DAPS_URL, DAPS_ADMIN, DAPS_ADMIN_SECRET)
+* to upload public key for consumer run:
 ```
-curl -0 -v -X POST 'http://<your-k8s-host>/data/assets' \
--H "Expect:" \
--H 'Content-Type: application/json; charset=utf-8' \
--H 'X-Api-Key: <password>' \
---data-binary @- << EOF
-{
-    "asset": {
-        "properties": {
-            "asset:prop:id": "registry-id",
-            "asset:prop:description": "Digital Twin Registry 5"
-        }
-    },
-    "dataAddress": {
-        "properties": {
-            "type": "HttpData",
-            "baseUrl": "http://cx-registry-setup-registry-svc:8080",
-            "proxyPath": true,
-            "proxyBody": true,
-            "proxyMethod": true
-        }
-    }
-}
-EOF
+./config/register_test.sh consumer http://consumer-edc-controlplane/consumer "idsc:BASE_SECURITY_PROFILE" "config/defaultKeys/daps.crt"
+```
+* to upload public key for provider run:
+```
+./config/register_test.sh provider http://provider-edc-controlplane/provider "idsc:BASE_SECURITY_PROFILE" "config/defaultKeys/daps.crt"
 ```
 
-In the next step, create a policy for you data offering:
-```
-curl -0 -v -X POST 'http://<your-k8s-host>/data/policydefinitions' \
--H "Expect:" \
--H 'Content-Type: application/json; charset=utf-8' \
--H 'X-Api-Key: <password>' \
---data-binary @- << EOF
-{
-    "id": "registry-id-policy",
-    "policy": {
-        "prohibitions": [],
-        "obligations": [],
-        "permissions": [
-            {
-                "edctype": "dataspaceconnector:permission",
-                "action": {
-                    "type": "USE"
-                },
-                "constraints": []
-            }
-        ]
-    }
-}
-EOF
-```
-
-Finally, we need to create a contract definition:
-```
-curl -0 -v -X POST 'http://<your-k8s-host>/data/contractdefinitions' \
--H 'Content-Type: application/json; charset=utf-8' \
--H 'X-Api-Key: <password>' \
---data-binary @- << EOF
-{
-    "id": "registry-id-contract",
-    "criteria": [
-        {
-            "operandLeft": "asset:prop:id",
-            "operator": "=",
-            "operandRight": "registry-id"
-        }
-    ],
-    "accessPolicyId": "registry-id-policy",
-    "contractPolicyId": "registry-id-policy"
-}
-EOF
-```
-
-With that, we now need to make two calls to receive actual data from the registry. First of all we need to acquire an EDC token that later allows us to fetch data using the EDC dataplane, which functions as a proxy.
-The token request to the EDC controlplane looks like the following:
-```
-curl -0 -v -X GET 'http://<your-k8s-host>/data/adapter/asset/sync/<asset-id>?providerUrl=<provider-url>' \
--H 'Content-Type: application/json; charset=utf-8' \
--H 'X-Api-Key: <password>'
-```
-
-The response consist of a JSON payload which contains the token we need for the next step. Copy the token from the `authCode` field and save it for the next request.
-To access the registry send the next request to the EDC consumer dataplane:
-```
-curl -0 -v -X GET 'http://<your-k8s-host>/api/public/registry/shell-descriptors' \
--H 'Content-Type: application/json; charset=utf-8' \
--H 'Authorization: <authCode-from-previous-step>'
-```
+3. After all components running, download the postman collection from [EDC Postman Collection](https://github.com/eclipse-tractusx/tractusx-edc/tree/main/docs/development/postman) and start to create edc-assets, policies and contracts.
