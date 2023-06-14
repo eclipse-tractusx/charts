@@ -107,64 +107,122 @@ vault:
 
         /bin/vault kv put secret/data-encryption-aes-keys content=H7j47H6vVQQOv/hbdAYz+w==
 
-        cat << EOF | /bin/vault kv put secret/daps-private-key content=-
+        cat << EOF | /bin/vault kv put secret/consumer-private-key content=-
         -----BEGIN PRIVATE KEY-----
-        MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQChsB/ec/OGTiz7
-        ZACi5VttsY9ycowLRXL3QV79UXPEY7IiBnVsd+3XYvfBRFLepWvzrvbqygYJL8m9
-        12csky1pAJA62YAaphR7YVOV8JECdvXbKx5qYg8X13N/cdNE0KKej6fex/beecfn
-        LqZlpll3lAXGXL6rXJrQTnkEP9Zc31u9u3ns4GbLaPqZHfVCC8Syqfh26r98YsDr
-        TqatcZD2lJ14rDC/KjSjtrnwRedC7LJV6UOoJSApv2kZ5GyZu4KF7eBPGA7Ah0To
-        sA31geDnCze7+yHU9q3JiXW4HFuIePocrIdMYtZOx7Lw1J9jivqvEcrExSU/zdag
-        RDfn4Iv3AgMBAAECggEAG9iwdGh13YCjQJyFe4iSyX6WHPjbY6mPVkQc7vXTQVSG
-        PlPsb0TsYnb6AoAY4Z2NzQcqIV+v0G85iIeLjmK+pGHjdS82X+CQkHs/oQgwgUMp
-        rphrgZjnzoxdqOpan3RrPXGyUK0RuFky837WS5VtvSlyISqh7/Nf+lY5g2DXM2FC
-        TX3W9RUdk00+4d7o9xjjshSg1CRu1mk+zFS/1j6MMZ8DAVKBdOqJ6EuLTVvC1UYA
-        4+zPT6/TCO/63w+rfOgtQZcQljhINJU39WGZaLyNR29ngWwe4rkz/jdFemM0ypbB
-        pZ72slOMOJi9fMXX5sxU0PaGFXGQhAa0hjTWSVIwSQKBgQDVAVd+cqHFDsHmfRNs
-        49b2yd5rKAS9DwMpN686SSFvghVBnXyX50IldPBVuNbekC1/UpUa3Q8Zv5nqYRFh
-        inWekliJw4XxPSgTWfZU+YO/HsfAaKu8BdGq+0sCMsF0nOeQqS/xtXbPDpBPfpAy
-        FVsWfPmTuHzJ3fDeK/neCVfcfQKBgQDCUw6UDdnG/gXy5ueEWnHMUobDP6xyFtIs
-        C3Qk8mxV+vffCQkFkPu0fD4twwLLzI+/OnNFs0SYatlnm/ByrQbVaxUBU41AfYKz
-        HshEDm7mvnj4ytMZWuzhy5th0JhRaXUlZlFese3xnCSm7uoSyzjQUgtalvwU8cqh
-        vzhal2sYgwKBgQDOLTpPfw3u/FXbkH3ZDMDqqIPOHTJY/csFfozyUg83LCb/GD2d
-        m49/Si3IC96QF+ayM3F4SzlupvOI1uRIEgm/r9BbqRJha9z6vj2eCtbnjBe1uptg
-        qBFG+26jdhWjlqzebaWmxQt3aJVvHQbeM6WzoszBm/XOQDICG3cE4O5W0QKBgFyx
-        O6n5tWDLONE1vUeP0Opyjx/BVqORKS2jRQJ+tJiKvwOfjrMeBkKAZTR06feGmybP
-        Xb7olRbTGOLoKli5GiJhEsLwNNeHRvnj/AkijVn5j0C1lt5oVcga1AJjetSSpjNx
-        y+yMmQB/x6ftHLBcSbxs9kd+772Z3FstGFd2FLq7AoGASI9MvZOTRlfsXqss0mDd
-        vFmxy/2Kqr3rrusFHnelLvQa3v12S7s/4E6ksKWOFBvCSfhsRY82YJuow06momw2
-        YM24Tzw1VFGGifFEznW8F0hK3Ij3vzvhO6Oh2ZjZlHsmbvqekn0BQPZSRrLTQTVl
-        MIMoELklHXjss+vJvKD7qr4=
+        MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDKeVxg97SNOuOE
+        EKn+J7cUoQQfohbJS5RWXhLUpr7qMo6hTRwyS56xdSqnCjyHN0noe6uLauiXUnmN
+        s4uQj73IDMPwYOxKhw0v2T1VsPklhnVrbq5m/a7qaK6WncuDjTi5J5MfFJb6TaIA
+        96pUcLYDbrajAWxQho0Oun/uMwBjnmYCcbYYIqRcKJON9nsiDg5xkI1AEEZH5Gd3
+        glBrWbig0XEy2ppH2g6Gouk7ZUWh1Gi3MnBL2nZvMctbTNCPiy004WYeqqs+51xb
+        rnq88Icz/VpEiNLljSkAIYbqt98sKQYkjwXQUtiSq64DiSL/s+xJVLJOhIE8oREQ
+        rjYrpwjJAgMBAAECggEBAL5GFn45yj7+nFi7oETr5a1JM6rWlDtO/3O6rE+S8876
+        +/axlFHfpp510UNw5zjayGXl8mvuZ+3s37Y+iGWt71dUR75aFzRifg39RRqGWVze
+        YvI27UZ0GDDJd2irmVljGW9GtYd7vfYzho8KL9NyqFnJbXD6IWP7TgwNT7P10ePK
+        hOJb9DLqXOH0obx4Yew5OeYN3U9nSicKJUNcqV8UuBkdKWe0Ta8xfRHdo6jHKcN0
+        TG45tW7uddt/+CyKHHgqa4/rsNMSfRd0nIoWp0dI9c291AMzjzCscnXnCu89kJEK
+        6p+Nkx6nH+viTGfAp/R3GxPo6G+6qVYmHqCKoL53lVECgYEA/lGoZG6uS+hs7hM/
+        /NXoHinNQXcGHRpYRJIyGYWe/8DZMoIbqc2l62rCulQSDEmrm6XTyJ5UUlJ1jdG0
+        6kvtvfRzsb/F3kxZM75cXuPV715l/vUcIy8jHPHqU4A+UJNqWK12lgO30s8TzWsr
+        xMz/zmCaZT4YYnAwkXz+g1nrG4sCgYEAy8/5dYN8OjT6VHyMs2I7XIoJnNW06OPG
+        HLARIUiqajTtLX6xUP84U3H1ApEnfEWx/Nvffv1mEKalP0O4BJTj9z9mmhbR+oNQ
+        8IFO6Sl+GU+qVkSiusSub5setNP3+FCBHFI7wdWCEmeFwMvrYImqKM255oqyvujX
+        CA3A85vQB3sCgYEAnK9AmQfb2KaNHiy7+pDrXlIQxGmJWbrWcQDFXxYE/Lsa1dR1
+        KKurspvm9xc+u1VUJiQHlA2AE+v7wvFVjhhTk/mcogFt7eSJ/Kgmjsu+DajSHD91
+        I3QyJO4imWlkew4nshTE/+2wfm/YWnHR2IEYhVTdKs0UBunp8mjZAaIPiLsCgYA0
+        JLZe4U/kGG+/M8pPjp8/UrWY4XgSaUvjRQxs5olq+LWBgTteTJ2dg7c6e+aNPcuG
+        tL4eYDg/pFL8t5eZ3HniZN8cJyB7piMMFRkaQBpZ4W7j+VVk0TMLrLUTcHOtnPMb
+        StKtCbHogYHPzJwgq7fUDqY0HGIUw79X+STXbpKvhwKBgFlDgJjWl1CTY7DUs/x6
+        B9MpyeuFR+7s/CQuMG7Cx5lpZGWXKW3rEL7g9A4tprTIBNZ5gq07B3j+pOJgI+fM
+        LkHJW38rTgtTeWXBmITYOSCQYa/wxdafwuXF33HlUai+SFZYY5kheCa7hxHZ+YtR
+        wmxI48kz4Jb+w/60TBK9dR3S
+        -----END PRIVATE KEY-----  
+        EOF
+        
+        cat << EOF | /bin/vault kv put secret/consumer-public-key content=-
+        -----BEGIN CERTIFICATE-----
+        MIIDqzCCApOgAwIBAgIJAI+/JLhlc3hjMA0GCSqGSIb3DQEBCwUAME8xCzAJBgNV
+        BAYTAkRFMQ8wDQYDVQQHDAZCZXJsaW4xFTATBgNVBAoMDEV4YW1wbGUsIExMQzEY
+        MBYGA1UEAwwPRXhhbXBsZSBDb21wYW55MB4XDTIzMDYwNjA3MDAwMVoXDTMzMDYw
+        MzA3MDAwMVowTzELMAkGA1UEBhMCREUxDzANBgNVBAcMBkJlcmxpbjEVMBMGA1UE
+        CgwMRXhhbXBsZSwgTExDMRgwFgYDVQQDDA9FeGFtcGxlIENvbXBhbnkwggEiMA0G
+        CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDKeVxg97SNOuOEEKn+J7cUoQQfohbJ
+        S5RWXhLUpr7qMo6hTRwyS56xdSqnCjyHN0noe6uLauiXUnmNs4uQj73IDMPwYOxK
+        hw0v2T1VsPklhnVrbq5m/a7qaK6WncuDjTi5J5MfFJb6TaIA96pUcLYDbrajAWxQ
+        ho0Oun/uMwBjnmYCcbYYIqRcKJON9nsiDg5xkI1AEEZH5Gd3glBrWbig0XEy2ppH
+        2g6Gouk7ZUWh1Gi3MnBL2nZvMctbTNCPiy004WYeqqs+51xbrnq88Icz/VpEiNLl
+        jSkAIYbqt98sKQYkjwXQUtiSq64DiSL/s+xJVLJOhIE8oREQrjYrpwjJAgMBAAGj
+        gYkwgYYwHQYDVR0OBBYEFG/hWiZ6Q9ORJGvTVshs18k9XZVgMB8GA1UdIwQYMBaA
+        FG/hWiZ6Q9ORJGvTVshs18k9XZVgMAkGA1UdEwQCMAAwCwYDVR0PBAQDAgWgMCwG
+        CWCGSAGG+EIBDQQfFh1PcGVuU1NMIEdlbmVyYXRlZCBDZXJ0aWZpY2F0ZTANBgkq
+        hkiG9w0BAQsFAAOCAQEAxofEIbN4y1f7+tUSoMl7KC1kqlDul7fh/FZwZo5RDZDx
+        QvgzalJ5ied5WnJKVRYJVOA1z53L5yCT//edATg9BbC3qxZnvEkzDq6pCkhaJQjA
+        kM2SexI16vdqzV5rQP2LJNTaMJ/QSORxtdcqz/4BC76t7dU+2vDN6GYiKzeDFyAP
+        i1g1CV8Vy88ulBWpfjNcTGvJ3B6swKZ2REY208AUMihqyYhtTOmb6vR9IBSPJOkk
+        QiXsQPkZDundPGWZJzsEF/xGKt0taPTuIxtPgfZdC7sYIcAclEWnWVpDaKp/rO1X
+        ntBHluM3GcA5DIIFIl6CxewN27HKBqzWjHxi/WJNPg==
+        -----END CERTIFICATE-----
+        EOF
+        
+        cat << EOF | /bin/vault kv put secret/provider-private-key content=-
+        -----BEGIN PRIVATE KEY-----
+        MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDX+jQ4HDBH0lgT
+        GlBhP0XC/nuibbEdTMGcUYj+fh6KxD+H0nTjATDal+Tkirdcfvzz9Sc/QbWpMOf+
+        oKqHO93tiRFdaA39WMmIQ9xtJAKjfq+BA1OjXe3iprs/rV51yb2Qz0cBAcPWbJnz
+        EVPvG0xBLkHkK+cbKHveKVDGGCBlBjXFA7sV07E8Gtl1B8nBIxl+bt2/fjzVw+1L
+        n+V46J7xNQvX9D4oAGmLFfLIEEJdZ+ttw7bYRBIj4a62vph2TH1fcCl7cIDztjYj
+        V77xWMyoYDHMN2uhEDObesK1Neg06AmUY2/mSJsFnkdwCrZAkLpU6sl8g6pQDcrG
+        cXZpOx0JAgMBAAECggEBAM7oe5h5oONdp1T9s53GoQ2zATzV+4UHYMBh+G1e4+Gr
+        KvXy8Fn9bREtzXIJVqq9WZZZ+XSHfgKNwOPWhigyeWU0GDe1FRnuMnxiDs1cX07E
+        clyVlE4BEYI+m0rgy4rqb7pIaUyUpUpKFp6frhp2u3ICX8u5J5mECk8Go8Rznq1I
+        KDVQy/jqRvcAyhlQ1VBNhmcY0+Y6mFoNWyBz8CIfZ4AkkEw0quEMi6prn9yGX31u
+        ss8tJHzGaJ/WRzB07qnrgn2abHuyUA9XcGTQsLERKXEWKmQfIvaekxhrH67rpXWE
+        V6xKjSDmnbIr78WeQM6VjX9uIfbYsARa06kLXYqd/wECgYEA7KYj7a0rBUjHaV/O
+        EWLQzBDSDlfzHhzJPTqQQOSx7Igb5b/qyZqN9Fl5oz/LWDCati0971hFVqHJ977n
+        JfNX+7fT7FQBMfqk82ZsZjXWn2HqV93QqfAkhxZaIG2WIkOL6hZNFTL4jB+on3FN
+        qqYlRJYDCJytCRzTawGG18EthGECgYEA6aNWQQM8hvBQUGnLlTEtVn90Ty6Yqre7
+        lcfHERUkpdRaqrdxfGP1L0hfojWTCKJPy00W3wGudXtWNo4rx6LcL+gFfiKbpKQB
+        sK4dKYy4ifIOONgOF9G0cD1bJwYO3VzeocNaeEF245StkFb7Sg645dFBT+KrZs2l
+        8bZdNn/JWakCgYAlSjzJHAt2ZrR9h0o6dR6/uTrQZc16hkCztEG86AydYAk9V9OQ
+        dxk9UsgXEFtjhy0p3dEvoPI0J4Ri1KMp2MGZeascR1R04rERZadZJ8ytCsnZlKtn
+        y96FpuEG0R3iQlCOz3rQB1shAXAZx8ncRRgESbsqpT2i/PbXmsL7xoX8oQKBgQDK
+        pOQsMW1vMMLIbGqqtWO4kYXFJApAkGoAiK2tsGP//UbCqaeiF2TTJPflzogARh/l
+        mrCKrn+t4FMvsHJijmxilOEmvUe4LpRUtUAQCMEKzMrvHN5kZHwXmfAU0dlUwLdN
+        IQ64HTfMPumntvnwCwLuOmhmrJiz6wzSsLT6jy2KOQKBgGamXMYzRVHjtLx3b4RH
+        XsU3Ty6uDWIYTp8ldn9EnDVyo3lU3Ul0fFafqz98eTZCFUeiTyVavzQnBFbCB+cV
+        eJRsTOme22JmSOQvVl91GwjIuo7qJEP1nmqZX1MRWMPS3QJfI6xLw+mzTAFI9M4u
+        xsRyw312ytnRBKC/3aynGc6Y
         -----END PRIVATE KEY-----
         EOF
         
-        cat << EOF | /bin/vault kv put secret/daps-public-key content=-
+        cat << EOF | /bin/vault kv put secret/provider-public-key content=-
         -----BEGIN CERTIFICATE-----
-        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
+        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
-        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
+        MBYGA1UEAwwPRXhhbXBsZSBDb21wYW55MB4XDTIzMDYwNjA3MDAxNFoXDTMzMDYw
+        MzA3MDAxNFowTzELMAkGA1UEBhMCREUxDzANBgNVBAcMBkJlcmxpbjEVMBMGA1UE
         CgwMRXhhbXBsZSwgTExDMRgwFgYDVQQDDA9FeGFtcGxlIENvbXBhbnkwggEiMA0G
-        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
+        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
-        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
+        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
         -----END CERTIFICATE-----
         EOF
         }
 
 daps:
+  image:
+    repository: ghcr.io/fraunhofer-aisec/omejdn-server
   persistence:
     storageClass: ""
   enabled: true
@@ -190,7 +248,7 @@ provider:
     postgresql: false
     vault: false
   participant:
-    id: "PROVIDER"
+    id: "provider"
   backendService:
     httpProxyTokenReceiverUrl: http://localhost
   # dataplane:
@@ -253,7 +311,7 @@ provider:
     username: edcprovider
     password: oqerhf8734hewrin
   daps:
-    clientId: 44:42:F8:1D:A0:86:33:57:6D:8A:C5:F9:16:AD:9A:B4:19:7A:F8:26:keyid:44:42:F8:1D:A0:86:33:57:6D:8A:C5:F9:16:AD:9A:B4:19:7A:F8:26
+    clientId: 8F:2C:FB:96:16:17:A6:83:54:E5:0C:E9:37:4D:8C:8F:F7:20:EA:E3:keyid:8F:2C:FB:96:16:17:A6:83:54:E5:0C:E9:37:4D:8C:8F:F7:20:EA:E3
     url: http://ids-daps:4567
   vault:
     fullnameOverride: "provider-vault"
@@ -263,11 +321,11 @@ provider:
       url: http://edc-vault:8200
       secret: /v1/secret
     secretNames:
-      transferProxyTokenSignerPrivateKey: daps-private-key
-      transferProxyTokenSignerPublicKey: daps-public-key
+      transferProxyTokenSignerPrivateKey: provider-private-key
+      transferProxyTokenSignerPublicKey: provider-public-key
       transferProxyTokenEncryptionAesKey: data-encryption-aes-keys
-      dapsPrivateKey: daps-private-key
-      dapsPublicKey: daps-public-key
+      dapsPrivateKey: provider-private-key
+      dapsPublicKey: provider-public-key
 
 consumer:
   enabled: true
@@ -276,7 +334,7 @@ consumer:
     postgresql: false
     vault: false
   participant:
-    id: "CONSUMER"
+    id: "consumer"
   fullnameOverride: "consumer-edc"
   backendService:
     httpProxyTokenReceiverUrl: http://localhost
@@ -341,7 +399,7 @@ consumer:
     username: edcconsumer
     password: oqerhf8734hewrin
   daps:
-    clientId: 44:42:F8:1D:A0:86:33:57:6D:8A:C5:F9:16:AD:9A:B4:19:7A:F8:26:keyid:44:42:F8:1D:A0:86:33:57:6D:8A:C5:F9:16:AD:9A:B4:19:7A:F8:26
+    clientId: 6F:E1:5A:26:7A:43:D3:91:24:6B:D3:56:C8:6C:D7:C9:3D:5D:95:60:keyid:6F:E1:5A:26:7A:43:D3:91:24:6B:D3:56:C8:6C:D7:C9:3D:5D:95:60
     url: http://ids-daps:4567
   vault:
     fullnameOverride: "consumer-vault"
@@ -351,8 +409,8 @@ consumer:
       url: http://edc-vault:8200
       secret: /v1/secret
     secretNames:
-      transferProxyTokenSignerPrivateKey: daps-private-key
-      transferProxyTokenSignerPublicKey: daps-public-key
+      transferProxyTokenSignerPrivateKey: consumer-private-key
+      transferProxyTokenSignerPublicKey: consumer-public-key
       transferProxyTokenEncryptionAesKey: data-encryption-aes-keys
-      dapsPrivateKey: daps-private-key
-      dapsPublicKey: daps-public-key
+      dapsPrivateKey: consumer-private-key
+      dapsPublicKey: consumer-public-key

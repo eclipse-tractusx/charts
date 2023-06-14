@@ -1,6 +1,6 @@
 #!/bin/sh
 
-DAPS_URL=http://127.0.0.1:58464
+DAPS_URL=http://127.0.0.1:50816
 DAPS_TOKEN_URL=$DAPS_URL/token
 DAPS_ADMIN_API_URL=$DAPS_URL/api/v1
 DAPS_ADMIN=clientId

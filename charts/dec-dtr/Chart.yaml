@@ -49,8 +49,8 @@ dependencies:
     repository: https://helm.releases.hashicorp.com
     version: 0.23.0
     condition: vault.enabled
-  - name: omejdn-server
+  - name: daps-server
     alias: daps
-    repository: https://catenax-ng.github.io/product-DAPS/
-    version: 1.7.1
+    repository: https://eclipse-tractusx.github.io/charts/dev
+    version: 1.7.10
     condition: daps.enabled
