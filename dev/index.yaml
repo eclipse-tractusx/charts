@@ -2357,6 +2357,24 @@ entries:
     version: 1.7.0
   dftbackend:
   - apiVersion: v2
+    appVersion: 2.0.2
+    created: "2023-06-22T08:21:58.616996Z"
+    dependencies:
+    - alias: dftpostgresql
+      condition: dftpostgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.x.x
+    description: A Helm chart for Kubernetes
+    digest: 6656122031f6ca99690dede25db029d6e85cddeb90e5e805361539f20d36a96a
+    name: dftbackend
+    sources:
+    - https://github.com/eclipse-tractusx/dft-backend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/managed-simple-data-exchanger-backend/releases/download/dftbackend-2.0.2/dftbackend-2.0.2.tgz
+    version: 2.0.2
+  - apiVersion: v2
     appVersion: 2.0.1
     created: "2023-06-20T14:42:41.218934718Z"
     dependencies:
@@ -2433,6 +2451,18 @@ entries:
     - https://github.com/eclipse-tractusx/autosetup-backend/releases/download/dftbackend-1.4.6/dftbackend-1.4.6.tgz
     version: 1.4.6
   dftfrontend:
+  - apiVersion: v2
+    appVersion: 2.0.1
+    created: "2023-06-22T08:30:31.679567705Z"
+    description: A Helm chart for Kubernetes
+    digest: ba3a54d4f2778dcd1c95dbe445a3bfd68c3f4486da3f510a0e45a2e82e3e1a5e
+    name: dftfrontend
+    sources:
+    - https://github.com/eclipse-tractusx/dft-frontend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/managed-simple-data-exchanger-frontend/releases/download/dftfrontend-2.0.1/dftfrontend-2.0.1.tgz
+    version: 2.0.1
   - apiVersion: v2
     appVersion: 2.0.0
     created: "2023-05-16T13:07:41.920126114Z"
@@ -4304,6 +4334,19 @@ entries:
     version: 0.2.3
   sdfactory:
   - apiVersion: v2
+    appVersion: 2.1.0
+    created: "2023-06-22T08:18:09.053457842Z"
+    description: Helm Charts for SD Factory application. Self-Description Factory
+      component is responsible for the creation of Self Descriptions.
+    digest: f65ac15203cc3b8759646bc4da4c61eb9b7a2005dbae0665bb22d32c1fe6cf88
+    name: sdfactory
+    sources:
+    - https://github.com/eclipse-tractusx/sd-factory
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sd-factory/releases/download/sdfactory-2.1.0/sdfactory-2.1.0.tgz
+    version: 2.1.0
+  - apiVersion: v2
     appVersion: 2.0.9
     created: "2023-06-07T13:28:51.091662132Z"
     description: Helm Charts for SD Factory application. Self-Description Factory
@@ -5519,4 +5562,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-06-22T03:33:59.755642065Z"
+generated: "2023-06-23T03:43:09.352446283Z"
