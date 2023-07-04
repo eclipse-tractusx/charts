@@ -133,6 +133,24 @@ entries:
     version: 1.0.0-RC4
   autosetup:
   - apiVersion: v2
+    appVersion: 1.3.2
+    created: "2023-07-03T08:23:37.918832369Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.x.x
+    description: This service will help service provider to set up DFT/SDE with EDC
+      and EDC as service in service provider environment.
+    digest: 9da651593aa151782a9fd3d7ba65884808f86b59f9bb0ff7c758d09a78bd3ee2
+    name: autosetup
+    sources:
+    - https://github.com/eclipse-tractusx/managed-service-orchestrator
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/managed-service-orchestrator/releases/download/autosetup-1.3.2/autosetup-1.3.2.tgz
+    version: 1.3.2
+  - apiVersion: v2
     appVersion: 1.3.1
     created: "2023-06-30T11:45:11.85387951Z"
     dependencies:
@@ -2620,6 +2638,26 @@ entries:
     version: 1.4.7
   digital-product-pass:
   - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2023-07-03T15:31:41.346769218Z"
+    description: A Helm chart for Kubernetes
+    digest: 071ab73e65dbb8da47bc89734dcf268ec0d9a55bb3e138e18f2266ce5f86cef5
+    name: digital-product-pass
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/digital-product-pass-1.0.0/digital-product-pass-1.0.0.tgz
+    version: 1.0.0
+  - apiVersion: v2
+    appVersion: 0.9.0
+    created: "2023-07-03T15:18:25.174164075Z"
+    description: A Helm chart for Kubernetes
+    digest: cafbc167e9a12e9b8afbddedd3d0068d0a7c78e1770d86bc120973dbb02e6d76
+    name: digital-product-pass
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/digital-product-pass-0.3.6/digital-product-pass-0.3.6.tgz
+    version: 0.3.6
+  - apiVersion: v2
     appVersion: 0.9.0
     created: "2023-06-20T12:16:47.771171329Z"
     description: A Helm chart for Kubernetes
@@ -4760,6 +4798,21 @@ entries:
     version: 1.0.8
   semantic-hub:
   - apiVersion: v2
+    appVersion: 0.2.8-M1
+    created: "2023-07-03T13:57:25.239604358Z"
+    dependencies:
+    - condition: enableKeycloak
+      name: keycloak
+      repository: https://charts.bitnami.com/bitnami
+      version: 13.3.0
+    description: Helm Chart for the Catena-X Semantic Hub Application
+    digest: bc25b980df17efbc79771ba04ca652a66f3e06b2005e7ff83a1cc9e5664895d0
+    name: semantic-hub
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-semantic-hub/releases/download/semantic-hub-0.1.21/semantic-hub-0.1.21.tgz
+    version: 0.1.21
+  - apiVersion: v2
     appVersion: 0.2.7-M1
     created: "2023-06-23T07:49:43.631948861Z"
     dependencies:
@@ -6048,4 +6101,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-07-03T03:40:02.034834328Z"
+generated: "2023-07-04T03:42:11.51212488Z"
