@@ -5484,6 +5484,34 @@ entries:
     version: 1.1.0
   tractusx-connector:
   - apiVersion: v2
+    appVersion: 0.5.0-rc4
+    created: "2023-07-04T18:32:59.399387009Z"
+    dependencies:
+    - alias: vault
+      condition: install.vault
+      name: vault
+      repository: https://helm.releases.hashicorp.com
+      version: 0.20.0
+    - alias: postgresql
+      condition: install.postgresql
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.1.6
+    description: 'A Helm chart for Tractus-X Eclipse Data Space Connector. The connector
+      deployment consists of two runtime consists of a Control Plane and a Data Plane.
+      Note that _no_ external dependencies such as a PostgreSQL database and HashiCorp
+      Vault are included.  This chart is intended for use with an _existing_ PostgreSQL
+      database and an _existing_ HashiCorp Vault. '
+    digest: 10ac05eaa9f66092178ffd044f5b921f9e4cab85b2ab65b6a93f5acb09b2316e
+    home: https://github.com/eclipse-tractusx/tractusx-edc/tree/main/charts/tractusx-connector
+    name: tractusx-connector
+    sources:
+    - https://github.com/eclipse-tractusx/tractusx-edc/tree/main/charts/tractusx-connector
+    type: application
+    urls:
+    - https://eclipse-tractusx.github.io/tractusx-edc/helm-charts/tractusx-connector-0.5.0-rc4.tgz
+    version: 0.5.0-rc4
+  - apiVersion: v2
     appVersion: 0.5.0-rc3
     created: "2023-06-30T07:17:53.354828944Z"
     dependencies:
@@ -5662,6 +5690,29 @@ entries:
     version: 0.3.2
   tractusx-connector-azure-vault:
   - apiVersion: v2
+    appVersion: 0.5.0-rc4
+    created: "2023-07-04T18:32:59.452800681Z"
+    dependencies:
+    - alias: postgresql
+      condition: install.postgresql
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.1.6
+    description: 'A Helm chart for Tractus-X Eclipse Data Space Connector. The connector
+      deployment consists of two runtime consists of a Control Plane and a Data Plane.
+      Note that _no_ external dependencies such as a PostgreSQL database and Azure
+      KeyVault are included.  This chart is intended for use with an _existing_ PostgreSQL
+      database and an _existing_ Azure KeyVault. '
+    digest: bcc2c93b52702d2f267daba2111aec015b60dd90bc462ef8fd7580c9670a0441
+    home: https://github.com/eclipse-tractusx/tractusx-edc/tree/main/charts/tractusx-connector
+    name: tractusx-connector-azure-vault
+    sources:
+    - https://github.com/eclipse-tractusx/tractusx-edc/tree/main/charts/tractusx-connector
+    type: application
+    urls:
+    - https://eclipse-tractusx.github.io/tractusx-edc/helm-charts/tractusx-connector-azure-vault-0.5.0-rc4.tgz
+    version: 0.5.0-rc4
+  - apiVersion: v2
     appVersion: 0.5.0-rc3
     created: "2023-06-30T07:17:53.397976098Z"
     dependencies:
@@ -5794,6 +5845,43 @@ entries:
     version: 0.3.4
   tractusx-connector-legacy:
   - apiVersion: v2
+    appVersion: 0.5.0-rc4
+    created: "2023-07-04T18:32:59.506054843Z"
+    dependencies:
+    - alias: daps
+      condition: install.daps
+      name: daps
+      repository: file://./subcharts/omejdn
+      version: 0.0.1
+    - alias: vault
+      condition: install.vault
+      name: vault
+      repository: https://helm.releases.hashicorp.com
+      version: 0.20.0
+    - alias: postgresql
+      condition: install.postgresql
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.1.6
+    deprecated: true
+    description: 'A Helm chart for Tractus-X Eclipse Data Space Connector. The connector
+      deployment consists of two runtime consists of a Control Plane and a Data Plane.
+      Note that _no_ external dependencies such as a PostgreSQL database and HashiCorp
+      Vault are included.  This chart is intended for use with an _existing_ PostgreSQL
+      database and an _existing_ HashiCorp Vault.  Deprecation notice: this chart
+      uses DAPS, which was replaced with an SSI solution in v0.5.0 of Tractus-X EDC
+      and is thus deprecated. It will not be maintained, supported or tested anymore
+      and it will be removed in future versions. '
+    digest: f4d363b1243e00ca17386f7c80eed07a840dd06eb8fa9f375d804b4ad76780a3
+    home: https://github.com/eclipse-tractusx/tractusx-edc/tree/main/charts/tractusx-connector-legacy
+    name: tractusx-connector-legacy
+    sources:
+    - https://github.com/eclipse-tractusx/tractusx-edc/tree/main/charts/tractusx-connector-legacy
+    type: application
+    urls:
+    - https://eclipse-tractusx.github.io/tractusx-edc/helm-charts/tractusx-connector-legacy-0.5.0-rc4.tgz
+    version: 0.5.0-rc4
+  - apiVersion: v2
     appVersion: 0.5.0-rc3
     created: "2023-06-30T07:17:53.443292684Z"
     dependencies:
@@ -5905,6 +5993,21 @@ entries:
     - https://eclipse-tractusx.github.io/tractusx-edc/helm-charts/tractusx-connector-legacy-0.5.0-rc1.tgz
     version: 0.5.0-rc1
   tractusx-connector-memory:
+  - apiVersion: v2
+    appVersion: 0.5.0-rc4
+    created: "2023-07-04T18:32:59.521187198Z"
+    description: A Helm chart for Tractus-X Eclipse Data Space Connector based on
+      memory. Please only use this for development or testing purposes, never in production
+      workloads!
+    digest: fa02a96572cdbcd6814ce24f75fd9dbb5f3650cb482513d3ccd25b0efd5107e6
+    home: https://github.com/eclipse-tractusx/tractusx-edc/tree/main/charts/tractusx-connector-memory
+    name: tractusx-connector-memory
+    sources:
+    - https://github.com/eclipse-tractusx/tractusx-edc/tree/main/charts/tractusx-connector-memory
+    type: application
+    urls:
+    - https://eclipse-tractusx.github.io/tractusx-edc/helm-charts/tractusx-connector-memory-0.5.0-rc4.tgz
+    version: 0.5.0-rc4
   - apiVersion: v2
     appVersion: 0.5.0-rc3
     created: "2023-06-30T07:17:53.458545315Z"
@@ -6101,4 +6204,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-07-04T03:42:11.51212488Z"
+generated: "2023-07-05T03:42:35.637431234Z"
