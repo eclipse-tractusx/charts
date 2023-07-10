@@ -445,6 +445,45 @@ entries:
     version: 0.0.2
   bpdm:
   - apiVersion: v2
+    appVersion: 4.0.0-alpha.8
+    created: "2023-07-10T12:59:29.812668431Z"
+    dependencies:
+    - alias: bpdm-gate
+      condition: bpdm-gate.enabled
+      name: bpdm-gate
+      repository: ""
+      version: 4.0.0-alpha.9
+    - alias: bpdm-pool
+      condition: bpdm-pool.enabled
+      name: bpdm-pool
+      repository: ""
+      version: 5.0.0-alpha.8
+    - alias: bpdm-bridge-dummy
+      condition: bpdm-bridge-dummy.enabled
+      name: bpdm-bridge-dummy
+      repository: ""
+      version: 1.0.1-alpha.4
+    - alias: opensearch
+      condition: opensearch.enabled
+      name: opensearch
+      repository: https://opensearch-project.github.io/helm-charts/
+      version: 2.12.2
+    - alias: postgres
+      condition: postgres.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.9.13
+    description: A Helm chart for Kubernetes that deploys the gate and pool applications
+    digest: 54213c4948bec9153efef3e78c0259dc5163906493c3951f87f6c54c809016fc
+    home: https://github.com/eclipse-tractusx/bpdm
+    name: bpdm
+    sources:
+    - https://github.com/eclipse-tractusx/bpdm
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/bpdm/releases/download/bpdm-3.0.2-alpha.4/bpdm-3.0.2-alpha.4.tgz
+    version: 3.0.2-alpha.4
+  - apiVersion: v2
     appVersion: 4.0.0-alpha.7
     created: "2023-06-28T12:18:27.279700864Z"
     dependencies:
@@ -2357,6 +2396,19 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/daps-helm-chart/releases/download/daps-server-1.7.2/daps-server-1.7.2.tgz
     version: 1.7.2
+  data-exchange:
+  - apiVersion: v2
+    appVersion: 1.0.4
+    created: "2023-07-10T08:05:19.224011433Z"
+    description: Data exchange service is used to exchange the data between connectors
+    digest: 2e5b3b43713ee9a0722d2225319b0cd76b9c8c9b6cc518a635de311ded37e260
+    name: data-exchange
+    sources:
+    - https://github.com/eclipse-tractusx/data-exchange-test-service
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/data-exchange-test-service/releases/download/data-exchange-1.0.4/data-exchange-1.0.4.tgz
+    version: 1.0.4
   dft-backend:
   - apiVersion: v2
     appVersion: 1.9.0
@@ -5160,6 +5212,44 @@ entries:
     version: 1.0.0
   traceability-foss:
   - apiVersion: v2
+    appVersion: 5.0.0
+    created: "2023-07-10T13:51:04.241341743Z"
+    dependencies:
+    - name: frontend
+      repository: file://charts/frontend
+      version: 1.3.10
+    - name: backend
+      repository: file://charts/backend
+      version: 1.3.10
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.x.x
+    - condition: pgadmin4.enabled
+      name: pgadmin4
+      repository: https://helm.runix.net
+      version: 1.13.6
+    - condition: irs-helm.enabled
+      name: irs-helm
+      repository: https://eclipse-tractusx.github.io/item-relationship-service
+      version: 6.1.0
+    - condition: tractusx-connector.enabled
+      name: tractusx-connector
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 0.4.1
+    - alias: edc-postgresql
+      condition: edc-postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.1.6
+    description: An umbrella Helm chart for eclipse-tractusx/traceability-foss project
+    digest: 870de33540116fb99175ab60dc6db94c91bccba3c9b738f2d6c6c61d9fbf1561
+    name: traceability-foss
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/traceability-foss/releases/download/helm-charts-1.3.10/traceability-foss-1.3.10.tgz
+    version: 1.3.10
+  - apiVersion: v2
     appVersion: 4.1.0
     created: "2023-06-26T13:59:26.270050007Z"
     dependencies:
@@ -6374,4 +6464,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-07-10T03:41:45.701631333Z"
+generated: "2023-07-10T14:14:32.956515027Z"
