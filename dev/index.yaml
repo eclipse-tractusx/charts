@@ -2416,6 +2416,18 @@ entries:
     version: 1.7.2
   data-exchange:
   - apiVersion: v2
+    appVersion: 1.0.5
+    created: "2023-07-11T12:59:13.826240351Z"
+    description: Data exchange service is used to exchange the data between connectors
+    digest: 3477d68f1232c42d36b7c5f184510bd765c270323874363cb9f77c5cad58a463
+    name: data-exchange
+    sources:
+    - https://github.com/eclipse-tractusx/data-exchange-test-service
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/data-exchange-test-service/releases/download/data-exchange-1.0.5/data-exchange-1.0.5.tgz
+    version: 1.0.5
+  - apiVersion: v2
     appVersion: 1.0.4
     created: "2023-07-10T08:05:19.224011433Z"
     description: Data exchange service is used to exchange the data between connectors
@@ -6585,4 +6597,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-07-11T12:48:30.533980853Z"
+generated: "2023-07-12T03:39:14.291492621Z"
