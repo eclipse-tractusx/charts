@@ -133,6 +133,24 @@ entries:
     version: 1.0.0-RC4
   autosetup:
   - apiVersion: v2
+    appVersion: 1.3.4
+    created: "2023-07-12T06:58:57.206940128Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.x.x
+    description: This service will help service provider to set up DFT/SDE with EDC
+      and EDC as service in service provider environment.
+    digest: 9d2bf23915c60f102c9a610eacf1625dbf1b46e888978f49f157987d36bf3c13
+    name: autosetup
+    sources:
+    - https://github.com/eclipse-tractusx/managed-service-orchestrator
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/managed-service-orchestrator/releases/download/autosetup-1.3.4/autosetup-1.3.4.tgz
+    version: 1.3.4
+  - apiVersion: v2
     appVersion: 1.3.3
     created: "2023-07-11T07:28:16.94613443Z"
     dependencies:
@@ -2673,6 +2691,18 @@ entries:
     version: 1.4.6
   dftfrontend:
   - apiVersion: v2
+    appVersion: 2.0.2
+    created: "2023-07-12T09:21:36.32978307Z"
+    description: A Helm chart for Kubernetes
+    digest: a9876f473bec51a82749ef5de76284ac70d1d3a3b950f69f249d8ed1edfbb113
+    name: dftfrontend
+    sources:
+    - https://github.com/eclipse-tractusx/dft-frontend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/managed-simple-data-exchanger-frontend/releases/download/dftfrontend-2.0.2/dftfrontend-2.0.2.tgz
+    version: 2.0.2
+  - apiVersion: v2
     appVersion: 2.0.1
     created: "2023-06-22T08:30:31.679567705Z"
     description: A Helm chart for Kubernetes
@@ -4477,6 +4507,25 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/sldt-digital-twin-registry/releases/download/registry-0.3.0/registry-0.3.0.tgz
     version: 0.3.0
+  - apiVersion: v2
+    appVersion: 0.2.0-M13-multi-tenancy
+    created: "2023-07-12T08:02:08.626760792Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.1.7
+    - condition: enableKeycloak
+      name: keycloak
+      repository: https://charts.bitnami.com/bitnami
+      version: 13.3.0
+    description: Tractus-X Digital Twin Registry Helm Chart
+    digest: 5226ee0a60fd80bdd761ea9a05412b7535066ef868d35d3aab44d47332815de8
+    name: registry
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-digital-twin-registry/releases/download/registry-0.2.18/registry-0.2.18.tgz
+    version: 0.2.18
   - apiVersion: v2
     appVersion: 0.2.0-M12-multi-tenancy
     created: "2023-05-10T13:02:32.20524421Z"
@@ -6597,4 +6646,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-07-12T03:39:14.291492621Z"
+generated: "2023-07-13T03:41:09.510249532Z"
