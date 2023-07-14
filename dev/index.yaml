@@ -1670,6 +1670,23 @@ entries:
     version: 0.1.0
   centralidp:
   - apiVersion: v2
+    appVersion: 1.2.0-RC1
+    created: "2023-07-13T15:18:47.518328774Z"
+    dependencies:
+    - name: keycloak
+      repository: https://raw.githubusercontent.com/bitnami/charts/archive-full-index/bitnami
+      version: 7.1.18
+    description: Helm chart for Catena-X Central Keycloak Instance
+    digest: d4f2b3257624a9b0ed23bca280e2f3889f27cb0e66d2bb28d227a14efd09f913
+    home: https://github.com/eclipse-tractusx/portal-iam
+    name: centralidp
+    sources:
+    - https://github.com/eclipse-tractusx/portal-iam
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/portal-iam/releases/download/centralidp-1.2.0-RC1/centralidp-1.2.0-RC1.tgz
+    version: 1.2.0-RC1
+  - apiVersion: v2
     appVersion: 1.1.0
     created: "2023-04-21T07:22:48.995922123Z"
     dependencies:
@@ -2810,6 +2827,21 @@ entries:
     - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/digital-product-pass-0.3.2/digital-product-pass-0.3.2.tgz
     version: 0.3.2
   discoveryfinder:
+  - apiVersion: v2
+    appVersion: 0.2.1-M1
+    created: "2023-07-13T11:21:10.532915144Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.2.3
+    description: Tractus-X Discovery Finder Helm Chart
+    digest: 097a09999f37e25638c27f96fbd5d2885c2612b50968a802fb8182df9c21f0f6
+    name: discoveryfinder
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-discovery-finder/releases/download/discoveryfinder-0.1.4/discoveryfinder-0.1.4.tgz
+    version: 0.1.4
   - apiVersion: v2
     appVersion: 0.2.0-M1
     created: "2023-06-20T11:45:39.171996025Z"
@@ -4341,6 +4373,25 @@ entries:
     version: 1.1.1
   registry:
   - apiVersion: v2
+    appVersion: 0.3.8-M1
+    created: "2023-07-13T08:53:53.611939926Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.1.7
+    - condition: enableKeycloak
+      name: keycloak
+      repository: https://charts.bitnami.com/bitnami
+      version: 13.3.0
+    description: Tractus-X Digital Twin Registry Helm Chart
+    digest: 10181de9fffecd7cfbae0f35ed6a10fa5c0a567d1d40ddf9a6cb421271222115
+    name: registry
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-digital-twin-registry/releases/download/registry-0.3.9/registry-0.3.9.tgz
+    version: 0.3.9
+  - apiVersion: v2
     appVersion: 0.3.7-M1
     created: "2023-07-05T15:37:07.6264559Z"
     dependencies:
@@ -5241,6 +5292,23 @@ entries:
     - https://github.com/eclipse-tractusx/sldt-semantic-hub/releases/download/semantic-hub-0.1.3/semantic-hub-0.1.3.tgz
     version: 0.1.3
   sharedidp:
+  - apiVersion: v2
+    appVersion: 1.2.0-RC1
+    created: "2023-07-13T15:18:47.674021916Z"
+    dependencies:
+    - name: keycloak
+      repository: https://raw.githubusercontent.com/bitnami/charts/archive-full-index/bitnami
+      version: 7.1.18
+    description: Helm chart for Catena-X Shared Keycloak Instance
+    digest: e936e8e454aa1168b8b99af06d5ab8839d81a5fa90354196761aef98db9284ff
+    home: https://github.com/eclipse-tractusx/portal-iam
+    name: sharedidp
+    sources:
+    - https://github.com/eclipse-tractusx/portal-iam
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/portal-iam/releases/download/sharedidp-1.2.0-RC1/sharedidp-1.2.0-RC1.tgz
+    version: 1.2.0-RC1
   - apiVersion: v2
     appVersion: 1.1.0
     created: "2023-04-21T07:22:49.200097649Z"
@@ -6646,4 +6714,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-07-13T03:41:09.510249532Z"
+generated: "2023-07-14T03:40:21.748682195Z"
