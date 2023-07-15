@@ -482,6 +482,45 @@ entries:
   bpdm:
   - apiVersion: v2
     appVersion: 4.0.0-alpha.8
+    created: "2023-07-14T11:38:47.567399752Z"
+    dependencies:
+    - alias: bpdm-gate
+      condition: bpdm-gate.enabled
+      name: bpdm-gate
+      repository: ""
+      version: 4.0.0-alpha.10
+    - alias: bpdm-pool
+      condition: bpdm-pool.enabled
+      name: bpdm-pool
+      repository: ""
+      version: 5.0.0-alpha.9
+    - alias: bpdm-bridge-dummy
+      condition: bpdm-bridge-dummy.enabled
+      name: bpdm-bridge-dummy
+      repository: ""
+      version: 1.0.1-alpha.5
+    - alias: opensearch
+      condition: opensearch.enabled
+      name: opensearch
+      repository: https://opensearch-project.github.io/helm-charts/
+      version: 2.12.2
+    - alias: postgres
+      condition: postgres.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.9.13
+    description: A Helm chart for Kubernetes that deploys the gate and pool applications
+    digest: be59cec3475c006b1d14b5b1e27e7cfd3bffdaee51b1cb280e76632fec66a404
+    home: https://github.com/eclipse-tractusx/bpdm
+    name: bpdm
+    sources:
+    - https://github.com/eclipse-tractusx/bpdm
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/bpdm/releases/download/bpdm-3.0.2-alpha.5/bpdm-3.0.2-alpha.5.tgz
+    version: 3.0.2-alpha.5
+  - apiVersion: v2
+    appVersion: 4.0.0-alpha.8
     created: "2023-07-10T12:59:29.812668431Z"
     dependencies:
     - alias: bpdm-gate
@@ -3075,6 +3114,35 @@ entries:
     version: 1.0.1
   irs-helm:
   - apiVersion: v2
+    appVersion: 3.2.0
+    created: "2023-07-14T15:14:48.489452728Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      version: 1.x.x
+    - condition: minio.enabled
+      name: minio
+      repository: https://charts.min.io/
+      version: 5.0.1
+    - condition: prometheus.enabled
+      name: prometheus
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 17.0.1
+    - condition: grafana.enabled
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.44.8
+    description: IRS Helm chart for Kubernetes
+    digest: 2bf6d5bf60609f8f364e8b88da29b22d2d8dbe1b552f0c8a7e25e56c23b2fde4
+    home: https://eclipse-tractusx.github.io/
+    name: irs-helm
+    sources:
+    - https://github.com/eclipse-tractusx/item-relationship-service
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/item-relationship-service/releases/download/irs-helm-6.2.0/irs-helm-6.2.0.tgz
+    version: 6.2.0
+  - apiVersion: v2
     appVersion: 3.1.0
     created: "2023-07-07T14:35:43.901153962Z"
     dependencies:
@@ -3999,6 +4067,27 @@ entries:
     version: 0.5.18
   portal:
   - apiVersion: v2
+    appVersion: 1.6.0-RC1
+    created: "2023-07-14T09:54:38.881609483Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.9.13
+    description: Helm chart for Catena-X Portal
+    digest: b93b4b0063a7ec7221c67af8330eb676cb1b25ae33aa66aad434b9f02d4197bb
+    home: https://github.com/eclipse-tractusx/portal-cd
+    name: portal
+    sources:
+    - https://github.com/eclipse-tractusx/portal-frontend
+    - https://github.com/eclipse-tractusx/portal-frontend-registration
+    - https://github.com/eclipse-tractusx/portal-assets
+    - https://github.com/eclipse-tractusx/portal-backend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/portal-cd/releases/download/portal-1.6.0-RC1/portal-1.6.0-RC1.tgz
+    version: 1.6.0-RC1
+  - apiVersion: v2
     appVersion: 1.5.1
     created: "2023-06-23T13:44:20.222757557Z"
     dependencies:
@@ -4372,6 +4461,25 @@ entries:
     - https://github.com/eclipse-tractusx/traceability-foss-backend/releases/download/helm-charts-1.1.1/product-traceability-foss-backend-1.1.1.tgz
     version: 1.1.1
   registry:
+  - apiVersion: v2
+    appVersion: 0.3.9-M1
+    created: "2023-07-14T09:57:57.257177339Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.1.7
+    - condition: enableKeycloak
+      name: keycloak
+      repository: https://charts.bitnami.com/bitnami
+      version: 13.3.0
+    description: Tractus-X Digital Twin Registry Helm Chart
+    digest: 62d432c8e42633f11d50653267113706578481612327031fe99ef028e5334c18
+    name: registry
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-digital-twin-registry/releases/download/registry-0.3.10/registry-0.3.10.tgz
+    version: 0.3.10
   - apiVersion: v2
     appVersion: 0.3.8-M1
     created: "2023-07-13T08:53:53.611939926Z"
@@ -6714,4 +6822,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-07-14T03:40:21.748682195Z"
+generated: "2023-07-15T03:41:04.503032316Z"
