@@ -517,6 +517,45 @@ entries:
     version: 0.0.2
   bpdm:
   - apiVersion: v2
+    appVersion: 4.0.0-alpha.9
+    created: "2023-07-24T11:14:50.174114854Z"
+    dependencies:
+    - alias: bpdm-gate
+      condition: bpdm-gate.enabled
+      name: bpdm-gate
+      repository: ""
+      version: 4.0.0-alpha.11
+    - alias: bpdm-pool
+      condition: bpdm-pool.enabled
+      name: bpdm-pool
+      repository: ""
+      version: 5.0.0-alpha.10
+    - alias: bpdm-bridge-dummy
+      condition: bpdm-bridge-dummy.enabled
+      name: bpdm-bridge-dummy
+      repository: ""
+      version: 1.0.1-alpha.6
+    - alias: opensearch
+      condition: opensearch.enabled
+      name: opensearch
+      repository: https://opensearch-project.github.io/helm-charts/
+      version: 2.12.2
+    - alias: postgres
+      condition: postgres.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.9.13
+    description: A Helm chart for Kubernetes that deploys the gate and pool applications
+    digest: 204d6b1d6aa3aa366592cdeed4c5c1edfd74a7d0682f87e1e3ae197887932d5b
+    home: https://github.com/eclipse-tractusx/bpdm
+    name: bpdm
+    sources:
+    - https://github.com/eclipse-tractusx/bpdm
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/bpdm/releases/download/bpdm-3.0.2-alpha.6/bpdm-3.0.2-alpha.6.tgz
+    version: 3.0.2-alpha.6
+  - apiVersion: v2
     appVersion: 4.0.0-alpha.8
     created: "2023-07-14T11:38:47.567399752Z"
     dependencies:
@@ -3149,6 +3188,35 @@ entries:
     - https://github.com/eclipse-tractusx/item-relationship-service/releases/download/irs-edc-consumer-1.0.1/irs-edc-consumer-1.0.1.tgz
     version: 1.0.1
   irs-helm:
+  - apiVersion: v2
+    appVersion: 3.3.1
+    created: "2023-07-24T07:21:30.55811894Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      version: 1.x.x
+    - condition: minio.enabled
+      name: minio
+      repository: https://charts.min.io/
+      version: 5.0.1
+    - condition: prometheus.enabled
+      name: prometheus
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 17.0.1
+    - condition: grafana.enabled
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.44.8
+    description: IRS Helm chart for Kubernetes
+    digest: 8250c10fdd8fb69f32025ba9b0adbd93ff1ede4607f4c2dda96ab3cf0e12d0ef
+    home: https://eclipse-tractusx.github.io/
+    name: irs-helm
+    sources:
+    - https://github.com/eclipse-tractusx/item-relationship-service
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/item-relationship-service/releases/download/irs-helm-6.3.1/irs-helm-6.3.1.tgz
+    version: 6.3.1
   - apiVersion: v2
     appVersion: 3.3.0
     created: "2023-07-20T09:25:05.611910547Z"
@@ -7031,4 +7099,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-07-24T03:33:54.896468118Z"
+generated: "2023-07-24T11:16:39.156651729Z"
