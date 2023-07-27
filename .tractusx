@@ -1,0 +1,6 @@
+product: "Eclipse-Tractusx Charts"
+leadingRepository: "https://github.com/eclipse-tractusx/charts"
+repositories:
+- name: "charts"
+  usage: "all Tractus-X sub-product as Helm Charts"
+  url: "https://github.com/eclipse-tractusx/charts"
