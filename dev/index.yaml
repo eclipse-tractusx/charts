@@ -1708,6 +1708,21 @@ entries:
     version: 4.0.0
   bpndiscovery:
   - apiVersion: v2
+    appVersion: 0.2.2-M1
+    created: "2023-07-27T13:13:14.662909548Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.2.3
+    description: Tractus-X BPN Discovery Helm Chart
+    digest: 6c7f44730d6b1e08adb51860275b654ac275fb8d4524d913e4032b9b0946e193
+    name: bpndiscovery
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-bpn-discovery/releases/download/bpndiscovery-0.1.5/bpndiscovery-0.1.5.tgz
+    version: 0.1.5
+  - apiVersion: v2
     appVersion: 0.2.1-M1
     created: "2023-06-20T11:46:17.076095409Z"
     dependencies:
@@ -2941,6 +2956,21 @@ entries:
     - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/digital-product-pass-0.3.2/digital-product-pass-0.3.2.tgz
     version: 0.3.2
   discoveryfinder:
+  - apiVersion: v2
+    appVersion: 0.2.2-M1
+    created: "2023-07-27T13:13:45.174671609Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.2.3
+    description: Tractus-X Discovery Finder Helm Chart
+    digest: 9bb3c9245c3e3d5ca562ffa67f211f27cbf1988f5ac75ef7228772c155b33925
+    name: discoveryfinder
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-discovery-finder/releases/download/discoveryfinder-0.1.5/discoveryfinder-0.1.5.tgz
+    version: 0.1.5
   - apiVersion: v2
     appVersion: 0.2.1-M1
     created: "2023-07-13T11:21:10.532915144Z"
@@ -4665,6 +4695,25 @@ entries:
     - https://github.com/eclipse-tractusx/traceability-foss-backend/releases/download/helm-charts-1.1.1/product-traceability-foss-backend-1.1.1.tgz
     version: 1.1.1
   registry:
+  - apiVersion: v2
+    appVersion: 0.3.12-M1
+    created: "2023-07-27T13:13:11.426507006Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.1.7
+    - condition: enableKeycloak
+      name: keycloak
+      repository: https://charts.bitnami.com/bitnami
+      version: 13.3.0
+    description: Tractus-X Digital Twin Registry Helm Chart
+    digest: 7bcbca8aecd2796cc81f55eff5c5ccbe9b1eb9ce35f0d3b78b42e6b5a02ad6fa
+    name: registry
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-digital-twin-registry/releases/download/registry-0.3.14/registry-0.3.14.tgz
+    version: 0.3.14
   - apiVersion: v2
     appVersion: 0.3.11-M1
     created: "2023-07-26T14:19:23.208563702Z"
@@ -7199,4 +7248,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-07-27T03:33:56.572519543Z"
+generated: "2023-07-28T03:33:46.893500179Z"
