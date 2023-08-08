@@ -4345,6 +4345,27 @@ entries:
     version: 0.5.18
   portal:
   - apiVersion: v2
+    appVersion: 1.6.0-RC5
+    created: "2023-08-07T12:48:09.205031358Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.9.13
+    description: Helm chart for Catena-X Portal
+    digest: 1b3defc9ca14cf5b7197081d72729d1951303d4d36a8ccd17c5a38467551900e
+    home: https://github.com/eclipse-tractusx/portal-cd
+    name: portal
+    sources:
+    - https://github.com/eclipse-tractusx/portal-frontend
+    - https://github.com/eclipse-tractusx/portal-frontend-registration
+    - https://github.com/eclipse-tractusx/portal-assets
+    - https://github.com/eclipse-tractusx/portal-backend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/portal-cd/releases/download/portal-1.6.0-RC5/portal-1.6.0-RC5.tgz
+    version: 1.6.0-RC5
+  - apiVersion: v2
     appVersion: 1.6.0-RC4
     created: "2023-07-31T13:39:38.661426649Z"
     dependencies:
@@ -5382,6 +5403,42 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/managed-simple-data-exchanger/releases/download/sde-0.0.4/sde-0.0.4.tgz
     version: 0.0.4
+  - apiVersion: v2
+    appVersion: 2.0.8
+    created: "2023-08-07T11:56:35.770017334Z"
+    dependencies:
+    - alias: sdepostgresql
+      condition: sdepostgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.x.x
+    description: A Helm chart for Kubernetes
+    digest: 09701c0f1d2168c452da24ad2e7278f21381e523d96c46d36a2fbb12b1fceece
+    name: sde
+    sources:
+    - https://github.com/eclipse-tractusx/managed-simple-data-exchanger
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/managed-simple-data-exchanger/releases/download/sde-0.0.6/sde-0.0.6.tgz
+    version: 0.0.6
+  - apiVersion: v2
+    appVersion: 2.0.2
+    created: "2023-08-07T11:44:14.480451588Z"
+    dependencies:
+    - alias: sdepostgresql
+      condition: sdepostgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.x.x
+    description: A Helm chart for Kubernetes
+    digest: b700c7e95de1e3fc325e483fc6b23acdf36c8272b8e5124df39f32c140636224
+    name: sde
+    sources:
+    - https://github.com/eclipse-tractusx/managed-simple-data-exchanger
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/managed-simple-data-exchanger/releases/download/sde-0.0.5/sde-0.0.5.tgz
+    version: 0.0.5
   sdfactory:
   - apiVersion: v2
     appVersion: 2.1.4
@@ -5629,6 +5686,21 @@ entries:
     - https://github.com/eclipse-tractusx/sd-factory/releases/download/sdfactory-1.0.8/sdfactory-1.0.8.tgz
     version: 1.0.8
   semantic-hub:
+  - apiVersion: v2
+    appVersion: 0.2.10-M1
+    created: "2023-08-07T13:11:57.045857856Z"
+    dependencies:
+    - condition: enableKeycloak
+      name: keycloak
+      repository: https://charts.bitnami.com/bitnami
+      version: 13.3.0
+    description: Helm Chart for the Catena-X Semantic Hub Application
+    digest: 151fa8028af953529524f1db0a7b8358996ed6afb78cca7c2618480cda7bf4fc
+    name: semantic-hub
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-semantic-hub/releases/download/semantic-hub-0.1.23/semantic-hub-0.1.23.tgz
+    version: 0.1.23
   - apiVersion: v2
     appVersion: 0.2.9-M1
     created: "2023-07-20T15:05:11.517847678Z"
@@ -7394,4 +7466,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-08-07T03:33:48.289695466Z"
+generated: "2023-08-08T03:33:59.748136735Z"
