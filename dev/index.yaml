@@ -5469,6 +5469,19 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/managed-simple-data-exchanger/releases/download/sde-0.0.4/sde-0.0.4.tgz
     version: 0.0.4
+  sdebackend:
+  - apiVersion: v2
+    appVersion: 2.0.8
+    created: "2023-08-10T10:05:41.263041276Z"
+    description: SDE Backend
+    digest: dd6b07ed4d4106678a7ed4885ea1dde5992f19efd5b5ccd61b69dbfa002ecec1
+    name: sdebackend
+    sources:
+    - https://github.com/eclipse-tractusx/managed-simple-data-exchanger-backend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/managed-simple-data-exchanger-backend/releases/download/sdebackend-2.0.8/sdebackend-2.0.8.tgz
+    version: 2.0.8
   sdfactory:
   - apiVersion: v2
     appVersion: 2.1.4
@@ -7496,4 +7509,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-08-10T03:34:11.869366485Z"
+generated: "2023-08-11T03:33:41.715339611Z"
