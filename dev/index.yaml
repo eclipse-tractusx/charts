@@ -2993,6 +2993,19 @@ entries:
     - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/digital-product-pass-1.0.0/digital-product-pass-1.0.0.tgz
     version: 1.0.0
   - apiVersion: v2
+    appVersion: 1.0.0-rc1
+    created: "2023-08-11T17:50:52.198388086Z"
+    description: A Helm chart for Tractus-X Digital Product Pass Kubernetes
+    digest: 42cb30ca2053b5016a27d1319cef61e96ecb88deae5e297b8df252c8ebb34b78
+    home: https://github.com/eclipse-tractusx/digital-product-pass/tree/main/charts/digital-product-pass
+    name: digital-product-pass
+    sources:
+    - https://github.com/eclipse-tractusx/digital-product-pass/tree/main/charts/digital-product-pass
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/digital-product-pass-1.0.0-rc1/digital-product-pass-1.0.0-rc1.tgz
+    version: 1.0.0-rc1
+  - apiVersion: v2
     appVersion: 0.9.0
     created: "2023-07-03T15:18:25.174164075Z"
     description: A Helm chart for Kubernetes
@@ -3305,6 +3318,35 @@ entries:
     - https://github.com/eclipse-tractusx/item-relationship-service/releases/download/irs-edc-consumer-1.0.1/irs-edc-consumer-1.0.1.tgz
     version: 1.0.1
   irs-helm:
+  - apiVersion: v2
+    appVersion: 3.3.3
+    created: "2023-08-11T11:06:23.068277572Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      version: 1.x.x
+    - condition: minio.enabled
+      name: minio
+      repository: https://charts.min.io/
+      version: 5.0.1
+    - condition: prometheus.enabled
+      name: prometheus
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 17.0.1
+    - condition: grafana.enabled
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.44.8
+    description: IRS Helm chart for Kubernetes
+    digest: 2a13cce3c8a8676922ee821f685717e451a6c00b59650583ba7d74712bcc20f8
+    home: https://eclipse-tractusx.github.io/
+    name: irs-helm
+    sources:
+    - https://github.com/eclipse-tractusx/item-relationship-service
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/item-relationship-service/releases/download/irs-helm-6.4.1/irs-helm-6.4.1.tgz
+    version: 6.4.1
   - apiVersion: v2
     appVersion: 3.3.2
     created: "2023-07-31T14:21:16.160463126Z"
@@ -4374,6 +4416,27 @@ entries:
     - https://github.com/eclipse-tractusx/managed-identity-wallets/releases/download/managed-identity-wallets-0.5.18/managed-identity-wallets-0.5.18.tgz
     version: 0.5.18
   portal:
+  - apiVersion: v2
+    appVersion: 1.6.0-RC6
+    created: "2023-08-11T13:26:54.992593222Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.9.13
+    description: Helm chart for Catena-X Portal
+    digest: abf9acd3fb349f42ea5f12159b9b22ff7f819bf2416ff42e13cee651465b3153
+    home: https://github.com/eclipse-tractusx/portal-cd
+    name: portal
+    sources:
+    - https://github.com/eclipse-tractusx/portal-frontend
+    - https://github.com/eclipse-tractusx/portal-frontend-registration
+    - https://github.com/eclipse-tractusx/portal-assets
+    - https://github.com/eclipse-tractusx/portal-backend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/portal-cd/releases/download/portal-1.6.0-RC6/portal-1.6.0-RC6.tgz
+    version: 1.6.0-RC6
   - apiVersion: v2
     appVersion: 1.6.0-RC5
     created: "2023-08-07T12:48:09.205031358Z"
@@ -5470,6 +5533,18 @@ entries:
     - https://github.com/eclipse-tractusx/managed-simple-data-exchanger/releases/download/sde-0.0.4/sde-0.0.4.tgz
     version: 0.0.4
   sdebackend:
+  - apiVersion: v2
+    appVersion: 2.0.9
+    created: "2023-08-11T12:55:13.458666877Z"
+    description: SDE Backend
+    digest: d031cafffea31908e4e884e75947ccc5947dfe949b6ab40545459d730efa1908
+    name: sdebackend
+    sources:
+    - https://github.com/eclipse-tractusx/managed-simple-data-exchanger-backend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/managed-simple-data-exchanger-backend/releases/download/sdebackend-2.0.9/sdebackend-2.0.9.tgz
+    version: 2.0.9
   - apiVersion: v2
     appVersion: 2.0.8
     created: "2023-08-10T10:05:41.263041276Z"
@@ -7509,4 +7584,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-08-11T03:33:41.715339611Z"
+generated: "2023-08-12T03:33:37.569573654Z"
