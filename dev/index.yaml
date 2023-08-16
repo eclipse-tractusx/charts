@@ -1783,6 +1783,21 @@ entries:
     version: 4.0.0
   bpndiscovery:
   - apiVersion: v2
+    appVersion: 0.2.3-M1
+    created: "2023-08-15T12:13:49.486692418Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.2.3
+    description: Tractus-X BPN Discovery Helm Chart
+    digest: 258ed4b7c2ef82e0cf84429785b4050887fc9a56e96fab5f4c5b458e9b943d24
+    name: bpndiscovery
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-bpn-discovery/releases/download/bpndiscovery-0.1.6/bpndiscovery-0.1.6.tgz
+    version: 0.1.6
+  - apiVersion: v2
     appVersion: 0.2.2-M1
     created: "2023-07-27T13:13:14.662909548Z"
     dependencies:
@@ -2993,6 +3008,19 @@ entries:
     - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/digital-product-pass-1.0.0/digital-product-pass-1.0.0.tgz
     version: 1.0.0
   - apiVersion: v2
+    appVersion: 1.0.0-rc3
+    created: "2023-08-15T14:09:59.418200932Z"
+    description: A Helm chart for Tractus-X Digital Product Pass Kubernetes
+    digest: 79d473b4e9183a204358906c76fd1df61acc46fa9344145d6c4e4054fee5fcc8
+    home: https://github.com/eclipse-tractusx/digital-product-pass/tree/main/charts/digital-product-pass
+    name: digital-product-pass
+    sources:
+    - https://github.com/eclipse-tractusx/digital-product-pass/tree/main/charts/digital-product-pass
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/digital-product-pass-1.0.0-rc3/digital-product-pass-1.0.0-rc3.tgz
+    version: 1.0.0-rc3
+  - apiVersion: v2
     appVersion: 1.0.0-rc2
     created: "2023-08-14T15:04:47.19062283Z"
     description: A Helm chart for Tractus-X Digital Product Pass Kubernetes
@@ -3069,6 +3097,39 @@ entries:
     - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/digital-product-pass-0.3.2/digital-product-pass-0.3.2.tgz
     version: 0.3.2
   discoveryfinder:
+  - apiVersion: v2
+    appVersion: 0.2.3-M1
+    created: "2023-08-15T14:33:47.900725196Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.2.3
+    description: Tractus-X Discovery Finder Helm Chart
+    digest: dafec9f2e83296e89270ca3b8583d91113a5a32be01606b2c2cdad5f347ec3c2
+    home: https://eclipse-tractusx.github.io/
+    name: discoveryfinder
+    sources:
+    - https://github.com/eclipse-tractusx/sldt-discovery-finder
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-discovery-finder/releases/download/discoveryfinder-0.1.7/discoveryfinder-0.1.7.tgz
+    version: 0.1.7
+  - apiVersion: v2
+    appVersion: 0.2.3-M1
+    created: "2023-08-15T12:05:47.014459326Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.2.3
+    description: Tractus-X Discovery Finder Helm Chart
+    digest: 84780f9e59ab5494780fb4e3858e595a2221793197778bde9a1f5797b78903a6
+    name: discoveryfinder
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-discovery-finder/releases/download/discoveryfinder-0.1.6/discoveryfinder-0.1.6.tgz
+    version: 0.1.6
   - apiVersion: v2
     appVersion: 0.2.2-M1
     created: "2023-07-27T13:13:45.174671609Z"
@@ -7597,4 +7658,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-08-15T03:33:41.621281442Z"
+generated: "2023-08-16T03:34:04.514207244Z"
