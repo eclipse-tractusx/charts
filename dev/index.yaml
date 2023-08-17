@@ -133,6 +133,24 @@ entries:
     version: 1.0.0-RC4
   autosetup:
   - apiVersion: v2
+    appVersion: 1.3.9
+    created: "2023-08-16T10:00:12.042307623Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.x.x
+    description: This service will help service provider to set up DFT/SDE with EDC
+      and EDC as service in service provider environment.
+    digest: 8b0ac652dcd6321bbe891c4ba1da363c584103154c93628b678d1ca0c3e28a44
+    name: autosetup
+    sources:
+    - https://github.com/eclipse-tractusx/managed-service-orchestrator
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/managed-service-orchestrator/releases/download/autosetup-1.3.9/autosetup-1.3.9.tgz
+    version: 1.3.9
+  - apiVersion: v2
     appVersion: 1.3.8
     created: "2023-08-08T07:51:21.449891207Z"
     dependencies:
@@ -2670,6 +2688,18 @@ entries:
     version: 1.7.2
   data-exchange:
   - apiVersion: v2
+    appVersion: 1.0.7
+    created: "2023-08-16T10:04:12.846279188Z"
+    description: Data exchange service is used to exchange the data between connectors
+    digest: 7930254869ecda60d4ae5d46f7c1d373a49860dd3fa6a3a40c274f769d31da8c
+    name: data-exchange
+    sources:
+    - https://github.com/eclipse-tractusx/data-exchange-test-service
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/data-exchange-test-service/releases/download/data-exchange-1.0.7/data-exchange-1.0.7.tgz
+    version: 1.0.7
+  - apiVersion: v2
     appVersion: 1.0.6
     created: "2023-08-09T08:54:17.247006195Z"
     description: Data exchange service is used to exchange the data between connectors
@@ -3007,6 +3037,19 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/digital-product-pass-1.0.0/digital-product-pass-1.0.0.tgz
     version: 1.0.0
+  - apiVersion: v2
+    appVersion: 1.0.0-rc4
+    created: "2023-08-16T13:26:52.354776303Z"
+    description: A Helm chart for Tractus-X Digital Product Pass Kubernetes
+    digest: b87c30941104b827636c3587641a38a721fd3becd2a84c043ce32c8786eff937
+    home: https://github.com/eclipse-tractusx/digital-product-pass/tree/main/charts/digital-product-pass
+    name: digital-product-pass
+    sources:
+    - https://github.com/eclipse-tractusx/digital-product-pass/tree/main/charts/digital-product-pass
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/digital-product-pass-1.0.0-rc4/digital-product-pass-1.0.0-rc4.tgz
+    version: 1.0.0-rc4
   - apiVersion: v2
     appVersion: 1.0.0-rc3
     created: "2023-08-15T14:09:59.418200932Z"
@@ -4992,6 +5035,28 @@ entries:
   registry:
   - apiVersion: v2
     appVersion: 0.3.12-M1
+    created: "2023-08-16T09:21:52.764177171Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.1.7
+    - condition: enableKeycloak
+      name: keycloak
+      repository: https://charts.bitnami.com/bitnami
+      version: 13.3.0
+    description: Tractus-X Digital Twin Registry Helm Chart
+    digest: f1a88a62b72b9979b092cd792fee75a7e16a516c4098881239f763b7a844c2e1
+    home: https://eclipse-tractusx.github.io/
+    name: registry
+    sources:
+    - https://github.com/eclipse-tractusx/sldt-digital-twin-registry
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-digital-twin-registry/releases/download/registry-0.3.15/registry-0.3.15.tgz
+    version: 0.3.15
+  - apiVersion: v2
+    appVersion: 0.3.12-M1
     created: "2023-07-27T13:13:11.426507006Z"
     dependencies:
     - condition: enablePostgres
@@ -5878,6 +5943,24 @@ entries:
     - https://github.com/eclipse-tractusx/sd-factory/releases/download/sdfactory-1.0.8/sdfactory-1.0.8.tgz
     version: 1.0.8
   semantic-hub:
+  - apiVersion: v2
+    appVersion: 0.2.10-M1
+    created: "2023-08-16T09:22:50.783324776Z"
+    dependencies:
+    - condition: enableKeycloak
+      name: keycloak
+      repository: https://charts.bitnami.com/bitnami
+      version: 13.3.0
+    description: Helm Chart for the Catena-X Semantic Hub Application
+    digest: 28e22bea4b5164a67009a294bf6e0207cccf096d7867520173a64308fb3e138a
+    home: https://eclipse-tractusx.github.io/
+    name: semantic-hub
+    sources:
+    - https://github.com/eclipse-tractusx/sldt-semantic-hub
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-semantic-hub/releases/download/semantic-hub-0.1.24/semantic-hub-0.1.24.tgz
+    version: 0.1.24
   - apiVersion: v2
     appVersion: 0.2.10-M1
     created: "2023-08-07T13:11:57.045857856Z"
@@ -7658,4 +7741,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-08-16T03:34:04.514207244Z"
+generated: "2023-08-17T03:33:34.724163082Z"
