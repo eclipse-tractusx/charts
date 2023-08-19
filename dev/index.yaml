@@ -589,6 +589,48 @@ entries:
     version: 0.0.2
   bpdm:
   - apiVersion: v2
+    appVersion: 4.0.0
+    created: "2023-08-18T14:36:58.839810856Z"
+    dependencies:
+    - alias: bpdm-gate
+      condition: bpdm-gate.enabled
+      name: bpdm-gate
+      repository: ""
+      version: 4.0.0
+    - alias: bpdm-pool
+      condition: bpdm-pool.enabled
+      name: bpdm-pool
+      repository: ""
+      version: 5.0.0
+    - alias: bpdm-bridge-dummy
+      condition: bpdm-bridge-dummy.enabled
+      name: bpdm-bridge-dummy
+      repository: ""
+      version: 1.0.1
+    - alias: opensearch
+      condition: opensearch.enabled
+      name: opensearch
+      repository: https://opensearch-project.github.io/helm-charts/
+      version: 2.12.2
+    - alias: postgres
+      condition: postgres.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.9.13
+    description: A Helm chart for Kubernetes that deploys the gate and pool applications
+    digest: 99a6a7d325950602190f2c446979d89640dd81ae8af1865bc34c74dfed85e8fa
+    home: https://github.com/eclipse-tractusx/bpdm
+    maintainers:
+    - name: Nico Koprowski
+    - name: Fabio D. Mota
+    name: bpdm
+    sources:
+    - https://github.com/eclipse-tractusx/bpdm
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/bpdm/releases/download/bpdm-3.0.2/bpdm-3.0.2.tgz
+    version: 3.0.2
+  - apiVersion: v2
     appVersion: 4.0.0-alpha.10
     created: "2023-08-04T14:18:52.461651524Z"
     dependencies:
@@ -1818,6 +1860,42 @@ entries:
     - https://github.com/eclipse-tractusx/bpdm/releases/download/bpdm-pool-4.0.0/bpdm-pool-4.0.0.tgz
     version: 4.0.0
   bpndiscovery:
+  - apiVersion: v2
+    appVersion: 0.2.4-M1
+    created: "2023-08-18T13:53:02.424924356Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.2.3
+    description: Tractus-X BPN Discovery Helm Chart
+    digest: 43820dadfb894afafeea08b173bab83b1e6a9bbba6b3268b5bf8bb1ec7040e62
+    home: https://eclipse-tractusx.github.io/
+    name: bpndiscovery
+    sources:
+    - https://github.com/eclipse-tractusx/sldt-bpn-discovery
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-bpn-discovery/releases/download/bpndiscovery-0.1.8/bpndiscovery-0.1.8.tgz
+    version: 0.1.8
+  - apiVersion: v2
+    appVersion: 0.2.4-M1
+    created: "2023-08-18T12:55:15.386518439Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.2.3
+    description: Tractus-X BPN Discovery Helm Chart
+    digest: f8006920a42d256db3138deceb08648725194334f19797188af27632459a1f28
+    home: https://eclipse-tractusx.github.io/
+    name: bpndiscovery
+    sources:
+    - https://github.com/eclipse-tractusx/sldt-bpn-discovery
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-bpn-discovery/releases/download/bpndiscovery-0.1.7/bpndiscovery-0.1.7.tgz
+    version: 0.1.7
   - apiVersion: v2
     appVersion: 0.2.3-M1
     created: "2023-08-15T12:13:49.486692418Z"
@@ -4569,6 +4647,27 @@ entries:
     - https://github.com/eclipse-tractusx/managed-identity-wallets/releases/download/managed-identity-wallets-0.5.18/managed-identity-wallets-0.5.18.tgz
     version: 0.5.18
   portal:
+  - apiVersion: v2
+    appVersion: 1.6.0-RC7
+    created: "2023-08-18T14:15:45.130953529Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.9.13
+    description: Helm chart for Catena-X Portal
+    digest: 416c0f357fddb9241d46507127e83d195d7bc7497a44da3e60d3e9b2dd877699
+    home: https://github.com/eclipse-tractusx/portal-cd
+    name: portal
+    sources:
+    - https://github.com/eclipse-tractusx/portal-frontend
+    - https://github.com/eclipse-tractusx/portal-frontend-registration
+    - https://github.com/eclipse-tractusx/portal-assets
+    - https://github.com/eclipse-tractusx/portal-backend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/portal-cd/releases/download/portal-1.6.0-RC7/portal-1.6.0-RC7.tgz
+    version: 1.6.0-RC7
   - apiVersion: v2
     appVersion: 1.6.0-RC6
     created: "2023-08-11T13:26:54.992593222Z"
@@ -7817,4 +7916,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-08-18T03:33:41.95137899Z"
+generated: "2023-08-19T03:33:22.107712564Z"
