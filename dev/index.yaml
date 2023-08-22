@@ -1862,6 +1862,24 @@ entries:
   bpndiscovery:
   - apiVersion: v2
     appVersion: 0.2.4-M1
+    created: "2023-08-21T12:18:22.926363174Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.2.3
+    description: Tractus-X BPN Discovery Helm Chart
+    digest: 0f7ce5c48f686c90f616a1854aae08bc032f538e730eec60ebe9c3cebad9c628
+    home: https://eclipse-tractusx.github.io/
+    name: bpndiscovery
+    sources:
+    - https://github.com/eclipse-tractusx/sldt-bpn-discovery
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-bpn-discovery/releases/download/bpndiscovery-0.1.9/bpndiscovery-0.1.9.tgz
+    version: 0.1.9
+  - apiVersion: v2
+    appVersion: 0.2.4-M1
     created: "2023-08-18T13:53:02.424924356Z"
     dependencies:
     - condition: enablePostgres
@@ -3236,6 +3254,42 @@ entries:
     - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/digital-product-pass-0.3.2/digital-product-pass-0.3.2.tgz
     version: 0.3.2
   discoveryfinder:
+  - apiVersion: v2
+    appVersion: 0.2.3-M1
+    created: "2023-08-21T12:24:50.120366909Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.2.3
+    description: Tractus-X Discovery Finder Helm Chart
+    digest: e34968d37cfd2bc12ad74327e3f82aec82c2d08ca8215a916656c75e7fe9267b
+    home: https://eclipse-tractusx.github.io/
+    name: discoveryfinder
+    sources:
+    - https://github.com/eclipse-tractusx/sldt-discovery-finder
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-discovery-finder/releases/download/discoveryfinder-0.1.10/discoveryfinder-0.1.10.tgz
+    version: 0.1.10
+  - apiVersion: v2
+    appVersion: 0.2.3-M1
+    created: "2023-08-21T11:55:01.076290597Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.2.3
+    description: Tractus-X Discovery Finder Helm Chart
+    digest: 769f70d2ebd1a473b2f3d0d2a9cbe43bd999033dcfd57bd1b46fe02d2ff2b706
+    home: https://eclipse-tractusx.github.io/
+    name: discoveryfinder
+    sources:
+    - https://github.com/eclipse-tractusx/sldt-discovery-finder
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-discovery-finder/releases/download/discoveryfinder-0.1.9/discoveryfinder-0.1.9.tgz
+    version: 0.1.9
   - apiVersion: v2
     appVersion: 0.2.3-M1
     created: "2023-08-17T08:42:32.749473836Z"
@@ -5170,6 +5224,28 @@ entries:
   registry:
   - apiVersion: v2
     appVersion: 0.3.12-M1
+    created: "2023-08-21T12:25:01.549128288Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.1.7
+    - condition: enableKeycloak
+      name: keycloak
+      repository: https://charts.bitnami.com/bitnami
+      version: 13.3.0
+    description: Tractus-X Digital Twin Registry Helm Chart
+    digest: 0cd1ac2212154ca1e089be645214636cf0dc35800c157e576f090f61e7d5f0bd
+    home: https://eclipse-tractusx.github.io/
+    name: registry
+    sources:
+    - https://github.com/eclipse-tractusx/sldt-digital-twin-registry
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-digital-twin-registry/releases/download/registry-0.3.17/registry-0.3.17.tgz
+    version: 0.3.17
+  - apiVersion: v2
+    appVersion: 0.3.12-M1
     created: "2023-08-17T08:43:53.079139264Z"
     dependencies:
     - condition: enablePostgres
@@ -5854,6 +5930,19 @@ entries:
     - https://github.com/eclipse-tractusx/managed-simple-data-exchanger-backend/releases/download/sdebackend-2.0.8/sdebackend-2.0.8.tgz
     version: 2.0.8
   sdfactory:
+  - apiVersion: v2
+    appVersion: 2.1.5
+    created: "2023-08-21T11:40:33.301567069Z"
+    description: Helm Charts for SD Factory application. Self-Description Factory
+      component is responsible for the creation of Self Descriptions.
+    digest: 133897caf9ab05b9803e1212a09ee06c8328cbda2de44b188fc9b6f3845979d8
+    name: sdfactory
+    sources:
+    - https://github.com/eclipse-tractusx/sd-factory
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sd-factory/releases/download/sdfactory-2.1.5/sdfactory-2.1.5.tgz
+    version: 2.1.5
   - apiVersion: v2
     appVersion: 2.1.4
     created: "2023-08-04T12:34:54.996151672Z"
@@ -7916,4 +8005,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-08-21T03:33:53.863815817Z"
+generated: "2023-08-22T03:33:44.303099467Z"
