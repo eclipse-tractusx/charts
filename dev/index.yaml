@@ -2891,6 +2891,18 @@ entries:
     version: 1.7.2
   data-exchange:
   - apiVersion: v2
+    appVersion: 1.0.8
+    created: "2023-08-23T11:32:52.781596563Z"
+    description: Data exchange service is used to exchange the data between connectors
+    digest: 85b359147ae868c3356a8cbfed9c5a37d118881c053878a1d0b03324a21eef4f
+    name: data-exchange
+    sources:
+    - https://github.com/eclipse-tractusx/data-exchange-test-service
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/data-exchange-test-service/releases/download/data-exchange-1.0.8/data-exchange-1.0.8.tgz
+    version: 1.0.8
+  - apiVersion: v2
     appVersion: 1.0.7
     created: "2023-08-16T10:04:12.846279188Z"
     description: Data exchange service is used to exchange the data between connectors
@@ -5351,6 +5363,50 @@ entries:
     version: 1.1.1
   registry:
   - apiVersion: v2
+    appVersion: 0.3.13-M1
+    created: "2023-08-23T14:57:25.14844273Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.1.7
+    - condition: enableKeycloak
+      name: keycloak
+      repository: https://charts.bitnami.com/bitnami
+      version: 13.3.0
+    description: Tractus-X Digital Twin Registry Helm Chart
+    digest: 7fa7d5ad8899885b8ea577a2229454dfa0d3a25b62611f32df1aa03f7b390614
+    home: https://eclipse-tractusx.github.io/
+    name: registry
+    sources:
+    - https://github.com/eclipse-tractusx/sldt-digital-twin-registry
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-digital-twin-registry/releases/download/registry-0.3.20/registry-0.3.20.tgz
+    version: 0.3.20
+  - apiVersion: v2
+    appVersion: 0.3.12-M1
+    created: "2023-08-23T14:09:24.617943267Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.1.7
+    - condition: enableKeycloak
+      name: keycloak
+      repository: https://charts.bitnami.com/bitnami
+      version: 13.3.0
+    description: Tractus-X Digital Twin Registry Helm Chart
+    digest: 4c2a2f55f97687c919a344a7498517cc5d17dabf8b67068432f008fa4ed897c4
+    home: https://eclipse-tractusx.github.io/
+    name: registry
+    sources:
+    - https://github.com/eclipse-tractusx/sldt-digital-twin-registry
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-digital-twin-registry/releases/download/registry-0.3.19/registry-0.3.19.tgz
+    version: 0.3.19
+  - apiVersion: v2
     appVersion: 0.3.12-M1
     created: "2023-08-22T06:34:15.19949373Z"
     dependencies:
@@ -6352,6 +6408,24 @@ entries:
     - https://github.com/eclipse-tractusx/sd-factory/releases/download/sdfactory-1.0.8/sdfactory-1.0.8.tgz
     version: 1.0.8
   semantic-hub:
+  - apiVersion: v2
+    appVersion: 0.2.10-M1
+    created: "2023-08-23T08:51:47.422597343Z"
+    dependencies:
+    - condition: enableKeycloak
+      name: keycloak
+      repository: https://charts.bitnami.com/bitnami
+      version: 13.3.0
+    description: Helm Chart for the Catena-X Semantic Hub Application
+    digest: 8b53e7d3510ed1f8d1e243bc9de57835e292759b4a1888983e3874790284d413
+    home: https://eclipse-tractusx.github.io/
+    name: semantic-hub
+    sources:
+    - https://github.com/eclipse-tractusx/sldt-semantic-hub
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-semantic-hub/releases/download/semantic-hub-0.1.27/semantic-hub-0.1.27.tgz
+    version: 0.1.27
   - apiVersion: v2
     appVersion: 0.2.10-M1
     created: "2023-08-22T06:33:00.989325945Z"
@@ -8269,4 +8343,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-08-23T07:52:58.298325962Z"
+generated: "2023-08-24T03:33:51.929531143Z"
