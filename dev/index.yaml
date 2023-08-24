@@ -1,5 +1,87 @@
 apiVersion: v1
 entries:
+  agent-connector:
+  - apiVersion: v2
+    appVersion: 1.9.5-SNAPSHOT
+    created: "2023-08-24T08:17:57.706729903Z"
+    dependencies:
+    - alias: vault
+      condition: install.vault
+      name: vault
+      repository: https://helm.releases.hashicorp.com
+      version: 0.20.0
+    - alias: postgresql
+      condition: install.postgresql
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.1.6
+    description: 'A Helm chart for an Agent-Enabled Tractus-X Eclipse Data Space Connector.
+      The connector deployment consists of two runtime consists of a Control Plane
+      and a Data Plane. Note that _no_ external dependencies such as a PostgreSQL
+      database and HashiCorp Vault are included.  This chart is intended for use with
+      an _existing_ PostgreSQL database and an _existing_ HashiCorp Vault. '
+    digest: 26bdec0eab7a43bb376a90dc3c3d72557f5eac7a6a63f2bfedc1e15d6238bdfa
+    home: https://github.com/eclipse-tractusx/knowledge-agents-edc/
+    maintainers:
+    - name: Tractus-X Knowledge Agents Team
+    name: agent-connector
+    sources:
+    - https://github.com/eclipse-tractusx/knowledge-agents-edc/tree/main/charts/agent-connector
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/knowledge-agents-edc/releases/download/agent-connector-1.9.6-SNAPSHOT/agent-connector-1.9.6-SNAPSHOT.tgz
+    version: 1.9.6-SNAPSHOT
+  agent-connector-azure-vault:
+  - apiVersion: v2
+    appVersion: 1.9.5-SNAPSHOT
+    created: "2023-08-24T08:17:57.877086179Z"
+    dependencies:
+    - alias: postgresql
+      condition: install.postgresql
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.1.6
+    description: 'A Helm chart for an Agent-Enabled Tractus-X Eclipse Data Space Connector.
+      The connector deployment consists of two runtime consists of a Control Plane
+      and a Data Plane. Note that _no_ external dependencies such as a PostgreSQL
+      database and Azure KeyVault are included.  This chart is intended for use with
+      an _existing_ PostgreSQL database and an _existing_ Azure KeyVault. '
+    digest: 26597cf0be230466be88f5b819e6e65006724cc7ec08097189d2478105399660
+    home: https://github.com/eclipse-tractusx/knowledge-agents-edc/
+    maintainers:
+    - name: Tractus-X Knowledge Agents Team
+    name: agent-connector-azure-vault
+    sources:
+    - https://github.com/eclipse-tractusx/knowledge-agents-edc/tree/main/charts/agent-connector
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/knowledge-agents-edc/releases/download/agent-connector-azure-vault-1.9.6-SNAPSHOT/agent-connector-azure-vault-1.9.6-SNAPSHOT.tgz
+    version: 1.9.6-SNAPSHOT
+  agent-connector-memory:
+  - apiVersion: v2
+    appVersion: 1.9.5-SNAPSHOT
+    created: "2023-08-24T08:17:58.071696394Z"
+    dependencies:
+    - alias: vault
+      condition: install.vault
+      name: vault
+      repository: https://helm.releases.hashicorp.com
+      version: 0.20.0
+    description: 'A Helm chart for an Agent-Enabled Tractus-X Eclipse Data Space Connector.
+      The connector deployment consists of two runtime consists of a Control Plane
+      and a Data Plane. Note that _no_ external dependencies such as HashiCorp Vault
+      are included.  This chart is intended for use with an _existing_ HashiCorp Vault. '
+    digest: 8689689dff9b6523f0525b904ae5199b7cd9e4fb481522183ef1b7093a89bb72
+    home: https://github.com/eclipse-tractusx/knowledge-agents-edc/
+    maintainers:
+    - name: Tractus-X Knowledge Agents Team
+    name: agent-connector-memory
+    sources:
+    - https://github.com/eclipse-tractusx/knowledge-agents-edc/tree/main/charts/agent-connector
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/knowledge-agents-edc/releases/download/agent-connector-memory-1.9.6-SNAPSHOT/agent-connector-memory-1.9.6-SNAPSHOT.tgz
+    version: 1.9.6-SNAPSHOT
   app-dashboard:
   - apiVersion: v2
     appVersion: 1.0.4
@@ -624,6 +706,48 @@ entries:
     - https://catenax-ng.github.io/tx-autosetup-backend/autosetup-0.0.2.tgz
     version: 0.0.2
   bpdm:
+  - apiVersion: v2
+    appVersion: 4.0.0
+    created: "2023-08-24T12:18:53.767999418Z"
+    dependencies:
+    - alias: bpdm-gate
+      condition: bpdm-gate.enabled
+      name: bpdm-gate
+      repository: ""
+      version: 4.0.0
+    - alias: bpdm-pool
+      condition: bpdm-pool.enabled
+      name: bpdm-pool
+      repository: ""
+      version: 5.0.0
+    - alias: bpdm-bridge-dummy
+      condition: bpdm-bridge-dummy.enabled
+      name: bpdm-bridge-dummy
+      repository: ""
+      version: 1.0.1
+    - alias: opensearch
+      condition: opensearch.enabled
+      name: opensearch
+      repository: https://opensearch-project.github.io/helm-charts/
+      version: 2.12.2
+    - alias: postgres
+      condition: postgres.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.9.13
+    description: A Helm chart for Kubernetes that deploys the gate and pool applications
+    digest: 9f42c62a1f1a76e32a43edfce75bd9e5335d24989a21efc99d8f01d16a242232
+    home: https://github.com/eclipse-tractusx/bpdm
+    maintainers:
+    - name: Nico Koprowski
+    - name: Fabio D. Mota
+    name: bpdm
+    sources:
+    - https://github.com/eclipse-tractusx/bpdm
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/bpdm/releases/download/bpdm-3.0.3/bpdm-3.0.3.tgz
+    version: 3.0.3
   - apiVersion: v2
     appVersion: 4.0.0
     created: "2023-08-18T14:36:58.839810856Z"
@@ -2174,6 +2298,24 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/portal-iam/releases/download/centralidp-1.0.0/centralidp-1.0.0.tgz
     version: 1.0.0
+  conforming-agent:
+  - apiVersion: v2
+    appVersion: 1.9.5-SNAPSHOT
+    created: "2023-08-24T08:15:20.289764325Z"
+    description: 'A Helm chart for the Tractus-X Conforming Agent which is a container
+      to assess the conformity of all other parts of the Agent-Enabled Dataspace.  This
+      chart has no prerequisites. '
+    digest: bded5bfc8f30d491c8ee7ea2ab6e6ec9414e39b88da3fb06c76a6cb1b91d307d
+    home: https://github.com/eclipse-tractusx/knowledge-agents/
+    maintainers:
+    - name: Tractus-X Knowledge Agents Team
+    name: conforming-agent
+    sources:
+    - https://github.com/eclipse-tractusx/knowledge-agents/tree/main/conforming
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/knowledge-agents/releases/download/conforming-agent-1.9.7-SNAPSHOT/conforming-agent-1.9.7-SNAPSHOT.tgz
+    version: 1.9.7-SNAPSHOT
   consumer-backend:
   - apiVersion: v2
     appVersion: 0.6.0
@@ -3723,6 +3865,35 @@ entries:
     version: 1.0.1
   irs-helm:
   - apiVersion: v2
+    appVersion: 3.3.4
+    created: "2023-08-24T09:17:33.439141074Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      version: 1.x.x
+    - condition: minio.enabled
+      name: minio
+      repository: https://charts.min.io/
+      version: 5.0.1
+    - condition: prometheus.enabled
+      name: prometheus
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 17.0.1
+    - condition: grafana.enabled
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.44.8
+    description: IRS Helm chart for Kubernetes
+    digest: 2fa3f3aa97e091242b895d758c54a387ab6a2833e6ef3f9c7e9717d0eab06c9b
+    home: https://eclipse-tractusx.github.io/
+    name: irs-helm
+    sources:
+    - https://github.com/eclipse-tractusx/item-relationship-service
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/item-relationship-service/releases/download/irs-helm-6.4.2/irs-helm-6.4.2.tgz
+    version: 6.4.2
+  - apiVersion: v2
     appVersion: 3.3.3
     created: "2023-08-11T11:06:23.068277572Z"
     dependencies:
@@ -4566,6 +4737,83 @@ entries:
     urls:
     - https://github.com/catenax-ng/product-item-relationship-service/releases/download/irs-helm-2.0.0/irs-helm-2.0.0.tgz
     version: 2.0.0
+  managed-identity-wallet:
+  - apiVersion: v2
+    appVersion: 0.0.1
+    created: "2023-08-24T08:24:46.785055176Z"
+    dependencies:
+    - condition: keycloak.enabled
+      name: keycloak
+      repository: https://charts.bitnami.com/bitnami
+      version: 15.1.6
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    - condition: postgresql.internal.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.9.13
+    description: 'Managed Identity Wallet is supposed to supply a secure data source
+      and data sink for Digital Identity Documents (DID), in order to enable Self-Sovereign
+      Identity founding on those DIDs. And at the same it shall support an uninterrupted
+      tracking and tracing and documenting the usage of those DIDs, e.g. within logistical
+      supply chains. '
+    digest: 9e8ad11e94e6bbcefbad3c07950c829ff9fd177bc9a76a0f0aa4f6cc46ae0602
+    home: https://github.com/eclipse-tractusx/managed-identity-wallet
+    keywords:
+    - Managed Identity Wallet
+    - eclipse-tractusx
+    maintainers:
+    - email: peter.motzko@volkswagen.de
+      name: Peter Motzko
+      url: https://github.com/pmoscode
+    name: managed-identity-wallet
+    sources:
+    - https://github.com/eclipse-tractusx/managed-identity-wallet
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/managed-identity-wallet/releases/download/managed-identity-wallet-1.1.0/managed-identity-wallet-1.1.0.tgz
+    version: 1.1.0
+  - apiVersion: v2
+    appVersion: 0.1.0-rc.2
+    created: "2023-08-24T09:21:07.541008971Z"
+    dependencies:
+    - condition: keycloak.enabled
+      name: keycloak
+      repository: https://charts.bitnami.com/bitnami
+      version: 15.1.6
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    - condition: postgresql.internal.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.9.13
+    description: 'Managed Identity Wallet is supposed to supply a secure data source
+      and data sink for Digital Identity Documents (DID), in order to enable Self-Sovereign
+      Identity founding on those DIDs. And at the same it shall support an uninterrupted
+      tracking and tracing and documenting the usage of those DIDs, e.g. within logistical
+      supply chains. '
+    digest: ed50e7758d8792887f49af3e4069388e266bb361a07941bd00b8c94615d2226f
+    home: https://github.com/eclipse-tractusx/managed-identity-wallet
+    keywords:
+    - Managed Identity Wallet
+    - eclipse-tractusx
+    maintainers:
+    - email: peter.motzko@volkswagen.de
+      name: Peter Motzko
+      url: https://github.com/pmoscode
+    name: managed-identity-wallet
+    sources:
+    - https://github.com/eclipse-tractusx/managed-identity-wallet
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/managed-identity-wallet/releases/download/managed-identity-wallet-0.1.0-rc.2/managed-identity-wallet-0.1.0-rc.2.tgz
+    version: 0.1.0-rc.2
   managed-identity-wallets:
   - apiVersion: v2
     appVersion: 3.3.3
@@ -4819,6 +5067,25 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/managed-identity-wallets/releases/download/managed-identity-wallets-0.5.18/managed-identity-wallets-0.5.18.tgz
     version: 0.5.18
+  managed-service-orchestrator:
+  - apiVersion: v2
+    appVersion: 1.4.2
+    created: "2023-08-24T11:02:59.863136514Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.x.x
+    description: This service will help service provider to set up DFT/SDE with EDC
+      and EDC as service in service provider environment.
+    digest: 16552ba111b84cef9ab813986d201b7c7a337db868f4d710725d352269089e61
+    name: managed-service-orchestrator
+    sources:
+    - https://github.com/eclipse-tractusx/managed-service-orchestrator
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/managed-service-orchestrator/releases/download/managed-service-orchestrator-1.4.3/managed-service-orchestrator-1.4.3.tgz
+    version: 1.4.3
   portal:
   - apiVersion: v2
     appVersion: 1.6.0-RC8
@@ -5361,6 +5628,24 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/traceability-foss-backend/releases/download/helm-charts-1.1.1/product-traceability-foss-backend-1.1.1.tgz
     version: 1.1.1
+  provisioning-agent:
+  - apiVersion: v2
+    appVersion: 1.9.5-SNAPSHOT
+    created: "2023-08-24T08:15:20.453202833Z"
+    description: 'A Helm chart for the Tractus-X Provisioning Agent which is a container
+      to Bridge Agent-Enabled Connector and Relational Data Sources.  This chart has
+      no prerequisites. '
+    digest: 109638c1e12483461323c1e5e477bea26cafab82a52273d116619bb41dc75ddc
+    home: https://github.com/eclipse-tractusx/knowledge-agents/
+    maintainers:
+    - name: Tractus-X Knowledge Agents Team
+    name: provisioning-agent
+    sources:
+    - https://github.com/eclipse-tractusx/knowledge-agents/tree/main/provisioning
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/knowledge-agents/releases/download/provisioning-agent-1.9.7-SNAPSHOT/provisioning-agent-1.9.7-SNAPSHOT.tgz
+    version: 1.9.7-SNAPSHOT
   registry:
   - apiVersion: v2
     appVersion: 0.3.13-M1
@@ -6055,6 +6340,23 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/sldt-digital-twin-registry/releases/download/v0.2.0-M3-multi-tenancy/registry-0.2.3.tgz
     version: 0.2.3
+  remoting-agent:
+  - apiVersion: v2
+    appVersion: 1.9.5-SNAPSHOT
+    created: "2023-08-24T08:15:20.618826414Z"
+    description: 'A Helm chart for the Tractus-X Remoting Agent which is a container
+      to Bridge Agent-Enabled Connector and REST APIs.  This chart has no prerequisites. '
+    digest: 14acbcedc0d573b4d4ca5a5113066fb291806a1c0bd481907291deead07b58e3
+    home: https://github.com/eclipse-tractusx/knowledge-agents/
+    maintainers:
+    - name: Tractus-X Knowledge Agents Team
+    name: remoting-agent
+    sources:
+    - https://github.com/eclipse-tractusx/knowledge-agents/tree/main/remoting
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/knowledge-agents/releases/download/remoting-agent-1.9.7-SNAPSHOT/remoting-agent-1.9.7-SNAPSHOT.tgz
+    version: 1.9.7-SNAPSHOT
   sde:
   - apiVersion: v2
     appVersion: 2.0.8
@@ -8343,4 +8645,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-08-24T03:33:51.929531143Z"
+generated: "2023-08-24T12:44:22.627183524Z"
