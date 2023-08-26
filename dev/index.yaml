@@ -2217,6 +2217,23 @@ entries:
     version: 0.1.0
   centralidp:
   - apiVersion: v2
+    appVersion: 1.2.0
+    created: "2023-08-25T15:33:48.482129665Z"
+    dependencies:
+    - name: keycloak
+      repository: https://raw.githubusercontent.com/bitnami/charts/archive-full-index/bitnami
+      version: 7.1.18
+    description: Helm chart for Catena-X Central Keycloak Instance
+    digest: 4fb69c62101fef5f660f05cef7aee045a5786a5e267b9ee7146f0d1ec7a09fd7
+    home: https://github.com/eclipse-tractusx/portal-iam
+    name: centralidp
+    sources:
+    - https://github.com/eclipse-tractusx/portal-iam
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/portal-iam/releases/download/centralidp-1.2.0/centralidp-1.2.0.tgz
+    version: 1.2.0
+  - apiVersion: v2
     appVersion: 1.2.0-RC2
     created: "2023-08-22T06:43:04.453920141Z"
     dependencies:
@@ -5088,6 +5105,27 @@ entries:
     version: 1.4.3
   portal:
   - apiVersion: v2
+    appVersion: 1.6.0
+    created: "2023-08-25T15:37:12.064359233Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.9.13
+    description: Helm chart for Catena-X Portal
+    digest: 4b52283dc3125605a8d750e1df18e902f0efdbe3e1fafcb654e1248000471382
+    home: https://github.com/eclipse-tractusx/portal-cd
+    name: portal
+    sources:
+    - https://github.com/eclipse-tractusx/portal-frontend
+    - https://github.com/eclipse-tractusx/portal-frontend-registration
+    - https://github.com/eclipse-tractusx/portal-assets
+    - https://github.com/eclipse-tractusx/portal-backend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/portal-cd/releases/download/portal-1.6.0/portal-1.6.0.tgz
+    version: 1.6.0
+  - apiVersion: v2
     appVersion: 1.6.0-RC8
     created: "2023-08-22T15:48:10.527621762Z"
     dependencies:
@@ -6712,6 +6750,24 @@ entries:
   semantic-hub:
   - apiVersion: v2
     appVersion: 0.2.10-M1
+    created: "2023-08-25T13:23:16.882403139Z"
+    dependencies:
+    - condition: enableKeycloak
+      name: keycloak
+      repository: https://charts.bitnami.com/bitnami
+      version: 13.3.0
+    description: Helm Chart for the Catena-X Semantic Hub Application
+    digest: 8ff3b790af94da34b11b2d58f599f4d9226ac92b9e211b119fdb4f8149e3a674
+    home: https://eclipse-tractusx.github.io/
+    name: semantic-hub
+    sources:
+    - https://github.com/eclipse-tractusx/sldt-semantic-hub
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-semantic-hub/releases/download/semantic-hub-0.1.28/semantic-hub-0.1.28.tgz
+    version: 0.1.28
+  - apiVersion: v2
+    appVersion: 0.2.10-M1
     created: "2023-08-23T08:51:47.422597343Z"
     dependencies:
     - condition: enableKeycloak
@@ -7058,6 +7114,23 @@ entries:
     - https://github.com/eclipse-tractusx/sldt-semantic-hub/releases/download/semantic-hub-0.1.3/semantic-hub-0.1.3.tgz
     version: 0.1.3
   sharedidp:
+  - apiVersion: v2
+    appVersion: 1.2.0
+    created: "2023-08-25T15:33:48.709260866Z"
+    dependencies:
+    - name: keycloak
+      repository: https://raw.githubusercontent.com/bitnami/charts/archive-full-index/bitnami
+      version: 7.1.18
+    description: Helm chart for Catena-X Shared Keycloak Instance
+    digest: 2bb01284cbeb34dc00aa64300a372143ee452c9f2259170ade820dd6114e08c4
+    home: https://github.com/eclipse-tractusx/portal-iam
+    name: sharedidp
+    sources:
+    - https://github.com/eclipse-tractusx/portal-iam
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/portal-iam/releases/download/sharedidp-1.2.0/sharedidp-1.2.0.tgz
+    version: 1.2.0
   - apiVersion: v2
     appVersion: 1.2.0-RC2
     created: "2023-08-22T06:43:04.655849035Z"
@@ -8645,4 +8718,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-08-25T03:33:45.530680122Z"
+generated: "2023-08-26T03:33:37.503427531Z"
