@@ -707,6 +707,48 @@ entries:
     version: 0.0.2
   bpdm:
   - apiVersion: v2
+    appVersion: 4.0.1
+    created: "2023-08-29T07:01:29.442328815Z"
+    dependencies:
+    - alias: bpdm-gate
+      condition: bpdm-gate.enabled
+      name: bpdm-gate
+      repository: ""
+      version: 4.0.1
+    - alias: bpdm-pool
+      condition: bpdm-pool.enabled
+      name: bpdm-pool
+      repository: ""
+      version: 5.0.1
+    - alias: bpdm-bridge-dummy
+      condition: bpdm-bridge-dummy.enabled
+      name: bpdm-bridge-dummy
+      repository: ""
+      version: 1.0.2
+    - alias: opensearch
+      condition: opensearch.enabled
+      name: opensearch
+      repository: https://opensearch-project.github.io/helm-charts/
+      version: 2.12.2
+    - alias: postgres
+      condition: postgres.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.9.13
+    description: A Helm chart for Kubernetes that deploys the gate and pool applications
+    digest: b2e8e946b7336a2bd6a2a10f9cbe1ae843d3d09c00f8bae9cee32c535df545ae
+    home: https://github.com/eclipse-tractusx/bpdm
+    maintainers:
+    - name: Nico Koprowski
+    - name: Fabio D. Mota
+    name: bpdm
+    sources:
+    - https://github.com/eclipse-tractusx/bpdm
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/bpdm/releases/download/bpdm-3.0.4/bpdm-3.0.4.tgz
+    version: 3.0.4
+  - apiVersion: v2
     appVersion: 4.0.0
     created: "2023-08-24T12:18:53.767999418Z"
     dependencies:
@@ -5724,6 +5766,50 @@ entries:
     version: 1.9.7-SNAPSHOT
   registry:
   - apiVersion: v2
+    appVersion: 0.3.14-M1
+    created: "2023-08-29T09:33:27.903300742Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.1.7
+    - condition: enableKeycloak
+      name: keycloak
+      repository: https://charts.bitnami.com/bitnami
+      version: 13.3.0
+    description: Tractus-X Digital Twin Registry Helm Chart
+    digest: 36e47b940b8cad0a1195b28a07aa470e60704c411da3ef340573e41fb0f80e34
+    home: https://eclipse-tractusx.github.io/
+    name: registry
+    sources:
+    - https://github.com/eclipse-tractusx/sldt-digital-twin-registry
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-digital-twin-registry/releases/download/registry-0.3.22/registry-0.3.22.tgz
+    version: 0.3.22
+  - apiVersion: v2
+    appVersion: 0.3.13-M1
+    created: "2023-08-29T08:18:33.785336947Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.1.7
+    - condition: enableKeycloak
+      name: keycloak
+      repository: https://charts.bitnami.com/bitnami
+      version: 13.3.0
+    description: Tractus-X Digital Twin Registry Helm Chart
+    digest: 2ad9e4dd96ca0f15f3aeacdb3c2049438d5d9231ed1ea512c866662474ae9612
+    home: https://eclipse-tractusx.github.io/
+    name: registry
+    sources:
+    - https://github.com/eclipse-tractusx/sldt-digital-twin-registry
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-digital-twin-registry/releases/download/registry-0.3.21/registry-0.3.21.tgz
+    version: 0.3.21
+  - apiVersion: v2
     appVersion: 0.3.13-M1
     created: "2023-08-23T14:57:25.14844273Z"
     dependencies:
@@ -6786,6 +6872,24 @@ entries:
     - https://github.com/eclipse-tractusx/sd-factory/releases/download/sdfactory-1.0.8/sdfactory-1.0.8.tgz
     version: 1.0.8
   semantic-hub:
+  - apiVersion: v2
+    appVersion: 0.2.11-M1
+    created: "2023-08-29T09:22:32.908505324Z"
+    dependencies:
+    - condition: enableKeycloak
+      name: keycloak
+      repository: https://charts.bitnami.com/bitnami
+      version: 13.3.0
+    description: Helm Chart for the Catena-X Semantic Hub Application
+    digest: e9fbe41929e6580634b1aae64bc3b1743684f8a92135455583b5a8a541982201
+    home: https://eclipse-tractusx.github.io/
+    name: semantic-hub
+    sources:
+    - https://github.com/eclipse-tractusx/sldt-semantic-hub
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-semantic-hub/releases/download/semantic-hub-0.1.29/semantic-hub-0.1.29.tgz
+    version: 0.1.29
   - apiVersion: v2
     appVersion: 0.2.10-M1
     created: "2023-08-25T13:23:16.882403139Z"
@@ -8756,4 +8860,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-08-29T03:33:50.98279144Z"
+generated: "2023-08-30T03:33:56.482106471Z"
