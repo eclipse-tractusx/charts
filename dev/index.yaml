@@ -3924,6 +3924,35 @@ entries:
     version: 1.0.1
   irs-helm:
   - apiVersion: v2
+    appVersion: 3.3.5
+    created: "2023-08-30T13:52:55.710348591Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      version: 1.x.x
+    - condition: minio.enabled
+      name: minio
+      repository: https://charts.min.io/
+      version: 5.0.1
+    - condition: prometheus.enabled
+      name: prometheus
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 17.0.1
+    - condition: grafana.enabled
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.44.8
+    description: IRS Helm chart for Kubernetes
+    digest: f050b44f835adcf10e0c4e3ab8e093d5f997d6ae2d927503fc2ebd6675fc644e
+    home: https://eclipse-tractusx.github.io/
+    name: irs-helm
+    sources:
+    - https://github.com/eclipse-tractusx/item-relationship-service
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/item-relationship-service/releases/download/irs-helm-6.5.0/irs-helm-6.5.0.tgz
+    version: 6.5.0
+  - apiVersion: v2
     appVersion: 3.3.4
     created: "2023-08-24T09:17:33.439141074Z"
     dependencies:
@@ -5766,6 +5795,28 @@ entries:
     version: 1.9.7-SNAPSHOT
   registry:
   - apiVersion: v2
+    appVersion: 0.3.15-M1
+    created: "2023-08-30T09:49:18.691043663Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.1.7
+    - condition: enableKeycloak
+      name: keycloak
+      repository: https://charts.bitnami.com/bitnami
+      version: 13.3.0
+    description: Tractus-X Digital Twin Registry Helm Chart
+    digest: 05a75200484ac3a4d899a38420ee21fc3ddab2b269b5af04b73767b930f18c00
+    home: https://eclipse-tractusx.github.io/
+    name: registry
+    sources:
+    - https://github.com/eclipse-tractusx/sldt-digital-twin-registry
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-digital-twin-registry/releases/download/registry-0.3.23/registry-0.3.23.tgz
+    version: 0.3.23
+  - apiVersion: v2
     appVersion: 0.3.14-M1
     created: "2023-08-29T09:33:27.903300742Z"
     dependencies:
@@ -6574,6 +6625,24 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/managed-simple-data-exchanger/releases/download/sde-0.0.4/sde-0.0.4.tgz
     version: 0.0.4
+  - apiVersion: v2
+    appVersion: 2.0.11
+    created: "2023-08-30T13:14:58.329048401Z"
+    dependencies:
+    - alias: sdepostgresql
+      condition: sdepostgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.x.x
+    description: A Helm chart for Kubernetes
+    digest: a93c7219c46524d6f2b570a5f8ad7e9dfffe40dbd210da53515c8a4c352595f7
+    name: sde
+    sources:
+    - https://github.com/eclipse-tractusx/managed-simple-data-exchanger
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/managed-simple-data-exchanger/releases/download/sde-0.0.7/sde-0.0.7.tgz
+    version: 0.0.7
   sdebackend:
   - apiVersion: v2
     appVersion: 2.0.9
@@ -8860,4 +8929,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-08-30T03:33:56.482106471Z"
+generated: "2023-08-31T03:33:48.301893198Z"
