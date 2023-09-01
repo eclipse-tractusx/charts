@@ -2533,6 +2533,23 @@ entries:
     version: 1.0.0
   conforming-agent:
   - apiVersion: v2
+    appVersion: 1.10.2-SNAPSHOT
+    created: "2023-09-01T06:05:30.324370415Z"
+    description: 'A Helm chart for the Tractus-X Conforming Agent which is a container
+      to assess the conformity of all other parts of the Agent-Enabled Dataspace.  This
+      chart has no prerequisites. '
+    digest: 4118ede73e9aa2b8078e1a0bc82dc2901dad4dfd51fe32eb0b1806d08f4bbd6f
+    home: https://github.com/eclipse-tractusx/knowledge-agents/
+    maintainers:
+    - name: Tractus-X Knowledge Agents Team
+    name: conforming-agent
+    sources:
+    - https://github.com/eclipse-tractusx/knowledge-agents/tree/main/conforming
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/knowledge-agents/releases/download/conforming-agent-1.10.2-SNAPSHOT/conforming-agent-1.10.2-SNAPSHOT.tgz
+    version: 1.10.2-SNAPSHOT
+  - apiVersion: v2
     appVersion: 1.9.5-SNAPSHOT
     created: "2023-08-24T08:15:20.289764325Z"
     description: 'A Helm chart for the Tractus-X Conforming Agent which is a container
@@ -3265,6 +3282,18 @@ entries:
     - https://github.com/eclipse-tractusx/daps-helm-chart/releases/download/daps-server-1.7.2/daps-server-1.7.2.tgz
     version: 1.7.2
   data-exchange:
+  - apiVersion: v2
+    appVersion: 1.0.9
+    created: "2023-09-01T06:25:33.225246074Z"
+    description: Data exchange service is used to exchange the data between connectors
+    digest: ad00375d77d6c73137b89d813191e4aab04dbd7b93d939b320dd752a1fc60896
+    name: data-exchange
+    sources:
+    - https://github.com/eclipse-tractusx/data-exchange-test-service
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/data-exchange-test-service/releases/download/data-exchange-1.0.9/data-exchange-1.0.9.tgz
+    version: 1.0.9
   - apiVersion: v2
     appVersion: 1.0.8
     created: "2023-08-23T11:32:52.781596563Z"
@@ -5964,6 +5993,23 @@ entries:
     version: 1.1.1
   provisioning-agent:
   - apiVersion: v2
+    appVersion: 1.10.2-SNAPSHOT
+    created: "2023-09-01T06:05:30.520143106Z"
+    description: 'A Helm chart for the Tractus-X Provisioning Agent which is a container
+      to Bridge Agent-Enabled Connector and Relational Data Sources.  This chart has
+      no prerequisites. '
+    digest: e8718602a3f145354f649f956ad23c68c7b33d0f33c3ee8c8f125c7410aef3ff
+    home: https://github.com/eclipse-tractusx/knowledge-agents/
+    maintainers:
+    - name: Tractus-X Knowledge Agents Team
+    name: provisioning-agent
+    sources:
+    - https://github.com/eclipse-tractusx/knowledge-agents/tree/main/provisioning
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/knowledge-agents/releases/download/provisioning-agent-1.10.2-SNAPSHOT/provisioning-agent-1.10.2-SNAPSHOT.tgz
+    version: 1.10.2-SNAPSHOT
+  - apiVersion: v2
     appVersion: 1.9.5-SNAPSHOT
     created: "2023-08-24T08:15:20.453202833Z"
     description: 'A Helm chart for the Tractus-X Provisioning Agent which is a container
@@ -6741,6 +6787,22 @@ entries:
     - https://github.com/eclipse-tractusx/sldt-digital-twin-registry/releases/download/v0.2.0-M3-multi-tenancy/registry-0.2.3.tgz
     version: 0.2.3
   remoting-agent:
+  - apiVersion: v2
+    appVersion: 1.10.2-SNAPSHOT
+    created: "2023-09-01T06:05:30.78448388Z"
+    description: 'A Helm chart for the Tractus-X Remoting Agent which is a container
+      to Bridge Agent-Enabled Connector and REST APIs.  This chart has no prerequisites. '
+    digest: f19b63c577096dd281d8e3f3f73ddf90b4755433af62a233db54aae66166a802
+    home: https://github.com/eclipse-tractusx/knowledge-agents/
+    maintainers:
+    - name: Tractus-X Knowledge Agents Team
+    name: remoting-agent
+    sources:
+    - https://github.com/eclipse-tractusx/knowledge-agents/tree/main/remoting
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/knowledge-agents/releases/download/remoting-agent-1.10.2-SNAPSHOT/remoting-agent-1.10.2-SNAPSHOT.tgz
+    version: 1.10.2-SNAPSHOT
   - apiVersion: v2
     appVersion: 1.9.5-SNAPSHOT
     created: "2023-08-24T08:15:20.618826414Z"
@@ -9116,4 +9178,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-09-01T03:33:49.903196931Z"
+generated: "2023-09-01T06:35:31.673814793Z"
