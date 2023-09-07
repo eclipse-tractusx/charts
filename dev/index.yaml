@@ -2705,6 +2705,15 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/portal-iam/releases/download/centralidp-1.0.0/centralidp-1.0.0.tgz
     version: 1.0.0
+  charts-cart:
+  - apiVersion: v2
+    created: "2023-09-06T06:47:11.537845645Z"
+    description: An empty Helm chart for this folder
+    digest: 91a231cf91312330b43593390d6ea317e5112ac0728f36dbd218b872431271ca
+    name: charts-cart
+    urls:
+    - https://github.com/eclipse-tractusx/demand-capacity-mgmt/releases/download/charts-cart-0.1.0/charts-cart-0.1.0.tgz
+    version: 0.1.0
   conforming-agent:
   - apiVersion: v2
     appVersion: 1.10.2-SNAPSHOT
@@ -7303,6 +7312,24 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/managed-simple-data-exchanger/releases/download/sde-0.0.4/sde-0.0.4.tgz
     version: 0.0.4
+  - apiVersion: v2
+    appVersion: 2.1.1
+    created: "2023-09-06T11:28:22.7729494Z"
+    dependencies:
+    - alias: sdepostgresql
+      condition: sdepostgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.x.x
+    description: A Helm chart for Kubernetes
+    digest: e6fbd2ee4731766a7ac39d472d78538eb5ec859dfc0afcca5fc292b35516fa88
+    name: sde
+    sources:
+    - https://github.com/eclipse-tractusx/managed-simple-data-exchanger
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/managed-simple-data-exchanger/releases/download/sde-0.0.9/sde-0.0.9.tgz
+    version: 0.0.9
   sdebackend:
   - apiVersion: v2
     appVersion: 2.0.9
@@ -9602,4 +9629,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-09-06T03:33:56.989045964Z"
+generated: "2023-09-07T03:33:40.472723883Z"
