@@ -4505,6 +4505,35 @@ entries:
     version: 1.0.1
   irs-helm:
   - apiVersion: v2
+    appVersion: 3.5.1
+    created: "2023-10-05T12:59:51.445444241Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      version: 1.x.x
+    - condition: minio.enabled
+      name: minio
+      repository: https://charts.min.io/
+      version: 5.0.1
+    - condition: prometheus.enabled
+      name: prometheus
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 17.0.1
+    - condition: grafana.enabled
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.44.8
+    description: IRS Helm chart for Kubernetes
+    digest: 0a698239df050039969d8660ca5c8e170a73b0d467e9b993501295b989da2a1c
+    home: https://eclipse-tractusx.github.io/
+    name: irs-helm
+    sources:
+    - https://github.com/eclipse-tractusx/item-relationship-service
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/item-relationship-service/releases/download/irs-helm-6.7.2/irs-helm-6.7.2.tgz
+    version: 6.7.2
+  - apiVersion: v2
     appVersion: 3.5.0
     created: "2023-09-29T13:48:21.706653448Z"
     dependencies:
@@ -5522,6 +5551,40 @@ entries:
     urls:
     - https://github.com/catenax-ng/product-item-relationship-service/releases/download/irs-helm-2.0.0/irs-helm-2.0.0.tgz
     version: 2.0.0
+  localdev-portal-iam:
+  - apiVersion: v2
+    created: "2023-10-05T15:23:40.377735424Z"
+    dependencies:
+    - condition: portal.enabled
+      name: portal
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 1.6.0
+    - condition: centralidp.enabled
+      name: centralidp
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 1.2.0
+    - condition: sharedidp.enabled
+      name: sharedidp
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 1.2.0
+    - condition: pgadmin4.enabled
+      name: pgadmin4
+      repository: https://helm.runix.net
+      version: 1.17.x
+    description: Setup of CX Portal & IAM for local development
+    digest: af1a783b903b2bccba390171eceadf9f3536a3572077eb196b9943859bfc494b
+    home: https://github.com/eclipse-tractusx/portal-cd
+    name: localdev-portal-iam
+    sources:
+    - https://github.com/eclipse-tractusx/portal-frontend
+    - https://github.com/eclipse-tractusx/portal-frontend-registration
+    - https://github.com/eclipse-tractusx/portal-assets
+    - https://github.com/eclipse-tractusx/portal-backend
+    - https://github.com/eclipse-tractusx/portal-iam
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/portal-cd/releases/download/localdev-portal-iam-0.0.1/localdev-portal-iam-0.0.1.tgz
+    version: 0.0.1
   managed-identity-wallet:
   - apiVersion: v2
     appVersion: 0.0.1
@@ -5966,6 +6029,27 @@ entries:
     - https://github.com/eclipse-tractusx/managed-service-orchestrator/releases/download/managed-service-orchestrator-1.4.3/managed-service-orchestrator-1.4.3.tgz
     version: 1.4.3
   portal:
+  - apiVersion: v2
+    appVersion: 1.7.0-alpha
+    created: "2023-10-05T15:23:40.658389058Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.9.13
+    description: Helm chart for Catena-X Portal
+    digest: d3cdff2db4c70765e858fd8ff0a74112470117965d497759e08ac8712e4d9d23
+    home: https://github.com/eclipse-tractusx/portal-cd
+    name: portal
+    sources:
+    - https://github.com/eclipse-tractusx/portal-frontend
+    - https://github.com/eclipse-tractusx/portal-frontend-registration
+    - https://github.com/eclipse-tractusx/portal-assets
+    - https://github.com/eclipse-tractusx/portal-backend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/portal-cd/releases/download/portal-1.7.0-alpha/portal-1.7.0-alpha.tgz
+    version: 1.7.0-alpha
   - apiVersion: v2
     appVersion: 1.6.0
     created: "2023-08-25T15:37:12.064359233Z"
@@ -9893,4 +9977,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-10-05T03:33:51.294852241Z"
+generated: "2023-10-05T19:25:23.669381717Z"
