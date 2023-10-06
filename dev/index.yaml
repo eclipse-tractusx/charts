@@ -5599,6 +5599,44 @@ entries:
     version: 2.0.0
   localdev-portal-iam:
   - apiVersion: v2
+    created: "2023-10-06T16:24:26.636061108Z"
+    dependencies:
+    - condition: portal.enabled
+      name: portal
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 1.7.0-alpha
+    - condition: centralidp.enabled
+      name: centralidp
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 2.0.0-alpha
+    - condition: sharedidp.enabled
+      name: sharedidp
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 2.0.0-alpha
+    - condition: pgadmin4.enabled
+      name: pgadmin4
+      repository: https://helm.runix.net
+      version: 1.17.x
+    - alias: postgresportal
+      condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.x
+    description: Setup of CX Portal & IAM for local development
+    digest: 148e59d53045caafbcaf0a624b002a66966a8e2032bb4cf38732e152bb2daee6
+    home: https://github.com/eclipse-tractusx/portal-cd
+    name: localdev-portal-iam
+    sources:
+    - https://github.com/eclipse-tractusx/portal-frontend
+    - https://github.com/eclipse-tractusx/portal-frontend-registration
+    - https://github.com/eclipse-tractusx/portal-assets
+    - https://github.com/eclipse-tractusx/portal-backend
+    - https://github.com/eclipse-tractusx/portal-iam
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/portal-cd/releases/download/localdev-portal-iam-0.1.0/localdev-portal-iam-0.1.0.tgz
+    version: 0.1.0
+  - apiVersion: v2
     created: "2023-10-05T15:23:40.377735424Z"
     dependencies:
     - condition: portal.enabled
@@ -10040,4 +10078,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-10-06T14:32:56.045242182Z"
+generated: "2023-10-06T16:40:55.743444115Z"
