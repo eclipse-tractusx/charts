@@ -2743,6 +2743,23 @@ entries:
     version: 0.1.0
   centralidp:
   - apiVersion: v2
+    appVersion: 22.0.3
+    created: "2023-10-06T14:28:10.369395317Z"
+    dependencies:
+    - name: keycloak
+      repository: https://raw.githubusercontent.com/bitnami/charts/archive-full-index/bitnami
+      version: 16.1.6
+    description: Helm chart for Catena-X Central Keycloak Instance
+    digest: 48667d7641b053b6f3d8397e32f92a5dea93a0a6a16c171ec5759840ad382e73
+    home: https://github.com/eclipse-tractusx/portal-iam
+    name: centralidp
+    sources:
+    - https://github.com/eclipse-tractusx/portal-iam
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/portal-iam/releases/download/centralidp-2.0.0-alpha/centralidp-2.0.0-alpha.tgz
+    version: 2.0.0-alpha
+  - apiVersion: v2
     appVersion: 1.2.0
     created: "2023-08-25T15:33:48.482129665Z"
     dependencies:
@@ -4504,6 +4521,35 @@ entries:
     - https://github.com/eclipse-tractusx/item-relationship-service/releases/download/irs-edc-consumer-1.0.1/irs-edc-consumer-1.0.1.tgz
     version: 1.0.1
   irs-helm:
+  - apiVersion: v2
+    appVersion: 3.5.2
+    created: "2023-10-06T13:43:11.278780013Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      version: 1.x.x
+    - condition: minio.enabled
+      name: minio
+      repository: https://charts.min.io/
+      version: 5.0.1
+    - condition: prometheus.enabled
+      name: prometheus
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 17.0.1
+    - condition: grafana.enabled
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.44.8
+    description: IRS Helm chart for Kubernetes
+    digest: 01d1ee1aded69379c08cdc90ead293be3adc4a434cbce972126f63fcd9966bd0
+    home: https://eclipse-tractusx.github.io/
+    name: irs-helm
+    sources:
+    - https://github.com/eclipse-tractusx/item-relationship-service
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/item-relationship-service/releases/download/irs-helm-6.7.3/irs-helm-6.7.3.tgz
+    version: 6.7.3
   - apiVersion: v2
     appVersion: 3.5.1
     created: "2023-10-05T12:59:51.445444241Z"
@@ -8333,6 +8379,23 @@ entries:
     version: 0.1.3
   sharedidp:
   - apiVersion: v2
+    appVersion: 22.0.3
+    created: "2023-10-06T14:28:10.661096183Z"
+    dependencies:
+    - name: keycloak
+      repository: https://raw.githubusercontent.com/bitnami/charts/archive-full-index/bitnami
+      version: 16.1.6
+    description: Helm chart for Catena-X Shared Keycloak Instance
+    digest: d41fcbe48d576c2e30927f27aeaa3c26e8f4b4f749abb0aa3e3ca01312809fcf
+    home: https://github.com/eclipse-tractusx/portal-iam
+    name: sharedidp
+    sources:
+    - https://github.com/eclipse-tractusx/portal-iam
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/portal-iam/releases/download/sharedidp-2.0.0-alpha/sharedidp-2.0.0-alpha.tgz
+    version: 2.0.0-alpha
+  - apiVersion: v2
     appVersion: 1.2.0
     created: "2023-08-25T15:33:48.709260866Z"
     dependencies:
@@ -9977,4 +10040,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-10-06T03:33:49.68115867Z"
+generated: "2023-10-06T14:32:56.045242182Z"
