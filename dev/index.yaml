@@ -432,6 +432,32 @@ entries:
     version: 1.9.6-SNAPSHOT
   app-dashboard:
   - apiVersion: v2
+    appVersion: 1.0.5
+    created: "2023-10-12T09:33:34.05402291Z"
+    description: A Helm chart for Kubernetes
+    digest: 5c76d738d9d740f0e713d4e69e3013fe72acd4fcb0d2bec4586f35b263e5a7b5
+    maintainers:
+    - name: The System Team of Catena-X / Eclipse Tractus-X
+      url: https://projects.eclipse.org/projects/automotive.tractusx
+    name: app-dashboard
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/app-dashboard/releases/download/app-dashboard-1.0.7/app-dashboard-1.0.7.tgz
+    version: 1.0.7
+  - apiVersion: v2
+    appVersion: 1.0.4
+    created: "2023-10-12T09:16:42.038100213Z"
+    description: A Helm chart for Kubernetes
+    digest: 175dd76ea511641ef19a771ecbc6f1a63d8375c92d91449a65992a729c594cd4
+    maintainers:
+    - name: The System Team of Catena-X / Eclipse Tractus-X
+      url: https://projects.eclipse.org/projects/automotive.tractusx
+    name: app-dashboard
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/app-dashboard/releases/download/app-dashboard-1.0.6/app-dashboard-1.0.6.tgz
+    version: 1.0.6
+  - apiVersion: v2
     appVersion: 1.0.4
     created: "2023-03-30T08:18:09.128887957Z"
     description: A Helm chart for Kubernetes
@@ -10213,4 +10239,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-10-12T03:33:59.066842799Z"
+generated: "2023-10-13T03:34:14.119480076Z"
