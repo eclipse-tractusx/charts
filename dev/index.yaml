@@ -1082,6 +1082,58 @@ entries:
   bpdm:
   - apiVersion: v2
     appVersion: 4.1.0-alpha.3
+    created: "2023-10-19T15:38:56.844637274Z"
+    dependencies:
+    - alias: bpdm-gate
+      condition: bpdm-gate.enabled
+      name: bpdm-gate
+      repository: ""
+      version: 4.1.0-alpha.2
+    - alias: bpdm-pool
+      condition: bpdm-pool.enabled
+      name: bpdm-pool
+      repository: ""
+      version: 5.1.0-alpha.2
+    - alias: bpdm-bridge-dummy
+      condition: bpdm-bridge-dummy.enabled
+      name: bpdm-bridge-dummy
+      repository: ""
+      version: 1.1.0-alpha.2
+    - alias: bpdm-cleaning-service-dummy
+      condition: bpdm-cleaning-service-dummy.enabled
+      name: bpdm-cleaning-service-dummy
+      repository: ""
+      version: 1.0.0-alpha.2
+    - alias: bpdm-orchestrator
+      condition: bpdm-orchestrator.enabled
+      name: bpdm-orchestrator
+      repository: ""
+      version: 1.0.0-alpha.0
+    - alias: opensearch
+      condition: opensearch.enabled
+      name: opensearch
+      repository: https://opensearch-project.github.io/helm-charts/
+      version: 2.12.2
+    - alias: postgres
+      condition: postgres.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.9.13
+    description: A Helm chart for Kubernetes that deploys the gate and pool applications
+    digest: 4cb53a23f82563dabea8a682a783a7d825a341b8df1f260e7e89e21bf1ebe652
+    home: https://github.com/eclipse-tractusx/bpdm
+    maintainers:
+    - name: Nico Koprowski
+    - name: Fabio D. Mota
+    name: bpdm
+    sources:
+    - https://github.com/eclipse-tractusx/bpdm
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/bpdm/releases/download/bpdm-3.1.0-alpha.4/bpdm-3.1.0-alpha.4.tgz
+    version: 3.1.0-alpha.4
+  - apiVersion: v2
+    appVersion: 4.1.0-alpha.3
     created: "2023-10-16T09:14:05.574500458Z"
     dependencies:
     - alias: bpdm-gate
@@ -4149,6 +4201,19 @@ entries:
     version: 1.4.7
   digital-product-pass:
   - apiVersion: v2
+    appVersion: 1.1.0
+    created: "2023-10-19T09:01:42.366824734Z"
+    description: A Helm chart for Tractus-X Digital Product Pass Kubernetes
+    digest: 54c17d30e4e250f0e0491e57135273169973b11055a8176b3fb1179b91fbb460
+    home: https://github.com/eclipse-tractusx/digital-product-pass/tree/main/charts/digital-product-pass
+    name: digital-product-pass
+    sources:
+    - https://github.com/eclipse-tractusx/digital-product-pass/tree/main/charts/digital-product-pass
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/digital-product-pass-1.1.0/digital-product-pass-1.1.0.tgz
+    version: 1.1.0
+  - apiVersion: v2
     appVersion: 1.0.1
     created: "2023-08-31T13:01:43.095511128Z"
     description: A Helm chart for Tractus-X Digital Product Pass Kubernetes
@@ -6933,6 +6998,28 @@ entries:
     - https://github.com/eclipse-tractusx/knowledge-agents/releases/download/provisioning-agent-1.9.7-SNAPSHOT/provisioning-agent-1.9.7-SNAPSHOT.tgz
     version: 1.9.7-SNAPSHOT
   registry:
+  - apiVersion: v2
+    appVersion: 0.3.17
+    created: "2023-10-19T10:48:40.488411521Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.10
+    - condition: enableKeycloak
+      name: keycloak
+      repository: https://charts.bitnami.com/bitnami
+      version: 16.1.7
+    description: Tractus-X Digital Twin Registry Helm Chart
+    digest: 3908ab453107d66d9eb262a8f17cafa895f934d6b7f517dff4933b419f5b9b46
+    home: https://eclipse-tractusx.github.io/
+    name: registry
+    sources:
+    - https://github.com/eclipse-tractusx/sldt-digital-twin-registry
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-digital-twin-registry/releases/download/registry-0.3.26/registry-0.3.26.tgz
+    version: 0.3.26
   - apiVersion: v2
     appVersion: 0.3.17
     created: "2023-10-17T08:35:00.500198118Z"
@@ -10405,4 +10492,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-10-19T03:34:03.227581623Z"
+generated: "2023-10-20T03:34:02.678870112Z"
