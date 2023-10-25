@@ -6495,6 +6495,27 @@ entries:
     - https://github.com/eclipse-tractusx/portal-cd/releases/download/portal-1.7.0-alpha/portal-1.7.0-alpha.tgz
     version: 1.7.0-alpha
   - apiVersion: v2
+    appVersion: 1.7.0-RC1
+    created: "2023-10-24T15:07:45.015452287Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.x
+    description: Helm chart for Catena-X Portal
+    digest: e43d815f5c76145f27bb7437bb2fd30a572334c01749c882e7fcfba4aabb0ebe
+    home: https://github.com/eclipse-tractusx/portal-cd
+    name: portal
+    sources:
+    - https://github.com/eclipse-tractusx/portal-frontend
+    - https://github.com/eclipse-tractusx/portal-frontend-registration
+    - https://github.com/eclipse-tractusx/portal-assets
+    - https://github.com/eclipse-tractusx/portal-backend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/portal-cd/releases/download/portal-1.7.0-RC1/portal-1.7.0-RC1.tgz
+    version: 1.7.0-RC1
+  - apiVersion: v2
     appVersion: 1.6.0
     created: "2023-08-25T15:37:12.064359233Z"
     dependencies:
@@ -8449,6 +8470,24 @@ entries:
     - https://github.com/eclipse-tractusx/sd-factory/releases/download/sdfactory-1.0.8/sdfactory-1.0.8.tgz
     version: 1.0.8
   semantic-hub:
+  - apiVersion: v2
+    appVersion: 0.2.14
+    created: "2023-10-24T12:20:02.136322155Z"
+    dependencies:
+    - condition: enableKeycloak
+      name: keycloak
+      repository: https://charts.bitnami.com/bitnami
+      version: 13.3.0
+    description: Helm Chart for the Catena-X Semantic Hub Application
+    digest: 572647d44ce51d8eb5eb518d840cdd4cb21bbcfdaafaa0645bb6d229e50fec9d
+    home: https://eclipse-tractusx.github.io/
+    name: semantic-hub
+    sources:
+    - https://github.com/eclipse-tractusx/sldt-semantic-hub
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-semantic-hub/releases/download/semantic-hub-0.1.31/semantic-hub-0.1.31.tgz
+    version: 0.1.31
   - apiVersion: v2
     appVersion: 0.2.12
     created: "2023-10-17T08:28:43.176507858Z"
@@ -10661,4 +10700,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-10-24T03:33:54.80922121Z"
+generated: "2023-10-25T03:33:59.580561683Z"
