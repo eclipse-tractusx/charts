@@ -3807,6 +3807,36 @@ entries:
     version: 0.2.0
   country-risk:
   - apiVersion: v2
+    appVersion: 1.2.0
+    created: "2023-11-20T10:09:53.747184592Z"
+    dependencies:
+    - alias: postgres
+      condition: postgres.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.*.*
+    - condition: pgadmin4.enabled
+      name: pgadmin4
+      repository: https://helm.runix.net
+      version: 1.x.x
+    - name: country-risk-backend
+      repository: ""
+      version: 3.0.2
+    - name: country-risk-frontend
+      repository: ""
+      version: 3.0.2
+    description: A Helm chart for deploying the Country Risk service
+    digest: e3393a6e148efed39fd061968dfab17dc965158b0dbfa3ce382006c36e88a40c
+    home: https://github.com/eclipse-tractusx/vas-country-risk-frontend
+    name: country-risk
+    sources:
+    - https://github.com/eclipse-tractusx/vas-country-risk-frontend
+    - https://github.com/eclipse-tractusx/vas-country-risk-backend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/vas-country-risk/releases/download/country-risk-1.1.1/country-risk-1.1.1.tgz
+    version: 1.1.1
+  - apiVersion: v2
     created: "2023-10-11T12:57:39.602360553Z"
     dependencies:
     - alias: postgres
@@ -5309,6 +5339,35 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/item-relationship-service/releases/download/irs-helm-6.10.0/irs-helm-6.10.0.tgz
     version: 6.10.0
+  - apiVersion: v2
+    appVersion: 4.0.2
+    created: "2023-11-20T14:02:52.596697851Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      version: 1.x.x
+    - condition: minio.enabled
+      name: minio
+      repository: https://charts.min.io/
+      version: 5.0.1
+    - condition: prometheus.enabled
+      name: prometheus
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 17.0.1
+    - condition: grafana.enabled
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.44.8
+    description: IRS Helm chart for Kubernetes
+    digest: 7fbab20a4ab15d1aa495fb79caf696434768a280c1a94a96d9ba79fc1c9ee823
+    home: https://eclipse-tractusx.github.io/
+    name: irs-helm
+    sources:
+    - https://github.com/eclipse-tractusx/item-relationship-service
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/item-relationship-service/releases/download/irs-helm-6.9.2/irs-helm-6.9.2.tgz
+    version: 6.9.2
   - apiVersion: v2
     appVersion: 4.0.1
     created: "2023-11-10T12:07:48.522871645Z"
@@ -7056,6 +7115,24 @@ entries:
     - https://github.com/eclipse-tractusx/managed-identity-wallets/releases/download/managed-identity-wallets-0.5.18/managed-identity-wallets-0.5.18.tgz
     version: 0.5.18
   managed-service-orchestrator:
+  - apiVersion: v2
+    appVersion: 1.5.1
+    created: "2023-11-20T08:04:58.850722663Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.x.x
+    description: This service will help service provider to set up DFT/SDE with EDC
+      and EDC as service in service provider environment.
+    digest: 0d29a1d5b2dd0368cd3f8c520f0a0f14870531666563d89114d6f4c57166356a
+    name: managed-service-orchestrator
+    sources:
+    - https://github.com/eclipse-tractusx/managed-service-orchestrator
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/managed-service-orchestrator/releases/download/managed-service-orchestrator-1.5.2/managed-service-orchestrator-1.5.2.tgz
+    version: 1.5.2
   - apiVersion: v2
     appVersion: 1.5.1
     created: "2023-11-14T12:10:44.615228879Z"
@@ -11716,4 +11793,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-11-20T03:34:07.5888095Z"
+generated: "2023-11-21T03:34:06.045318615Z"
