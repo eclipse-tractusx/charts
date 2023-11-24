@@ -6901,6 +6901,88 @@ entries:
     - https://eclipse-tractusx.github.io/managed-identity-wallet/helm-charts/managed-identity-wallet-0.2.0.tgz
     version: 0.2.0
   - apiVersion: v2
+    appVersion: 0.2.0-develop.7
+    created: "2023-11-23T07:47:31.657192818Z"
+    dependencies:
+    - condition: keycloak.enabled
+      name: keycloak
+      repository: https://charts.bitnami.com/bitnami
+      version: 15.1.6
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    - condition: postgresql.internal.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.9.13
+    description: 'Managed Identity Wallet is supposed to supply a secure data source
+      and data sink for Digital Identity Documents (DID), in order to enable Self-Sovereign
+      Identity founding on those DIDs. And at the same it shall support an uninterrupted
+      tracking and tracing and documenting the usage of those DIDs, e.g. within logistical
+      supply chains. '
+    digest: 7acefd3a6c9eca7a741e2582f915f1fb87e6aaa0fd9c4a57a44ccbe8fda10a01
+    home: https://github.com/eclipse-tractusx/managed-identity-wallet
+    keywords:
+    - Managed Identity Wallet
+    - eclipse-tractusx
+    maintainers:
+    - email: dominik.pinsel@mercedes-benz.com
+      name: Dominik Pinsel
+      url: https://github.com/DominikPinsel
+    - email: peter.motzko@volkswagen.de
+      name: Peter Motzko
+      url: https://github.com/pmoscode
+    name: managed-identity-wallet
+    sources:
+    - https://github.com/eclipse-tractusx/managed-identity-wallet
+    type: application
+    urls:
+    - https://eclipse-tractusx.github.io/managed-identity-wallet/helm-charts/managed-identity-wallet-0.2.0-develop.7.tgz
+    version: 0.2.0-develop.7
+  - apiVersion: v2
+    appVersion: 0.2.0-develop.6
+    created: "2023-11-23T07:47:31.647045413Z"
+    dependencies:
+    - condition: keycloak.enabled
+      name: keycloak
+      repository: https://charts.bitnami.com/bitnami
+      version: 15.1.6
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    - condition: postgresql.internal.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.9.13
+    description: 'Managed Identity Wallet is supposed to supply a secure data source
+      and data sink for Digital Identity Documents (DID), in order to enable Self-Sovereign
+      Identity founding on those DIDs. And at the same it shall support an uninterrupted
+      tracking and tracing and documenting the usage of those DIDs, e.g. within logistical
+      supply chains. '
+    digest: d2ccaad4f9b31d6b5b6ca8d889522a269cdeff81b0bb3fad748d8b934f002ed0
+    home: https://github.com/eclipse-tractusx/managed-identity-wallet
+    keywords:
+    - Managed Identity Wallet
+    - eclipse-tractusx
+    maintainers:
+    - email: dominik.pinsel@mercedes-benz.com
+      name: Dominik Pinsel
+      url: https://github.com/DominikPinsel
+    - email: peter.motzko@volkswagen.de
+      name: Peter Motzko
+      url: https://github.com/pmoscode
+    name: managed-identity-wallet
+    sources:
+    - https://github.com/eclipse-tractusx/managed-identity-wallet
+    type: application
+    urls:
+    - https://eclipse-tractusx.github.io/managed-identity-wallet/helm-charts/managed-identity-wallet-0.2.0-develop.6.tgz
+    version: 0.2.0-develop.6
+  - apiVersion: v2
     appVersion: 0.2.0-develop.5
     created: "2023-11-22T14:46:47.293501408Z"
     dependencies:
@@ -7523,6 +7605,27 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/portal-cd/releases/download/portal-1.7.0-alpha/portal-1.7.0-alpha.tgz
     version: 1.7.0-alpha
+  - apiVersion: v2
+    appVersion: 1.7.0-RC4
+    created: "2023-11-23T16:55:34.964871596Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.x
+    description: Helm chart for Catena-X Portal
+    digest: 31599873c41de3d331e0f7adb8c3e715b7f8a0183120949ed2eefd95efb39439
+    home: https://github.com/eclipse-tractusx/portal-cd
+    name: portal
+    sources:
+    - https://github.com/eclipse-tractusx/portal-frontend
+    - https://github.com/eclipse-tractusx/portal-frontend-registration
+    - https://github.com/eclipse-tractusx/portal-assets
+    - https://github.com/eclipse-tractusx/portal-backend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/portal-cd/releases/download/portal-1.7.0-RC4/portal-1.7.0-RC4.tgz
+    version: 1.7.0-RC4
   - apiVersion: v2
     appVersion: 1.7.0-RC3
     created: "2023-11-14T08:49:33.264249033Z"
@@ -12153,4 +12256,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-11-23T03:34:05.553184621Z"
+generated: "2023-11-24T03:34:26.34468842Z"
