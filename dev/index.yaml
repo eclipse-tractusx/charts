@@ -5735,6 +5735,35 @@ entries:
     version: 1.0.1
   irs-helm:
   - apiVersion: v2
+    appVersion: 4.3.0
+    created: "2023-12-08T12:24:33.041903626Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      version: 1.x.x
+    - condition: minio.enabled
+      name: minio
+      repository: https://charts.min.io/
+      version: 5.0.1
+    - condition: prometheus.enabled
+      name: prometheus
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 17.0.1
+    - condition: grafana.enabled
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.44.8
+    description: IRS Helm chart for Kubernetes
+    digest: 241a5056a2197dfc6d6601f39c59429b033ae2819e7b55b3f47553ba4b351eb7
+    home: https://eclipse-tractusx.github.io/
+    name: irs-helm
+    sources:
+    - https://github.com/eclipse-tractusx/item-relationship-service
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/item-relationship-service/releases/download/irs-helm-6.12.0/irs-helm-6.12.0.tgz
+    version: 6.12.0
+  - apiVersion: v2
     appVersion: 4.2.0
     created: "2023-11-28T16:07:37.90347251Z"
     dependencies:
@@ -11930,6 +11959,34 @@ entries:
     version: 1.1.0
   tractusx-connector:
   - apiVersion: v2
+    appVersion: 0.6.0-rc2
+    created: "2023-12-08T13:37:03.262074786Z"
+    dependencies:
+    - alias: vault
+      condition: install.vault
+      name: vault
+      repository: https://helm.releases.hashicorp.com
+      version: 0.20.0
+    - alias: postgresql
+      condition: install.postgresql
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.11.2
+    description: 'A Helm chart for Tractus-X Eclipse Data Space Connector. The connector
+      deployment consists of two runtime consists of a Control Plane and a Data Plane.
+      Note that _no_ external dependencies such as a PostgreSQL database and HashiCorp
+      Vault are included.  This chart is intended for use with an _existing_ PostgreSQL
+      database and an _existing_ HashiCorp Vault. '
+    digest: 2ed801deadd0ff4c269a68b58f3af2ffeb671242c3b512dc7ec634aa17d9d696
+    home: https://github.com/eclipse-tractusx/tractusx-edc/tree/main/charts/tractusx-connector
+    name: tractusx-connector
+    sources:
+    - https://github.com/eclipse-tractusx/tractusx-edc/tree/main/charts/tractusx-connector
+    type: application
+    urls:
+    - https://eclipse-tractusx.github.io/tractusx-edc/helm-charts/tractusx-connector-0.6.0-rc2.tgz
+    version: 0.6.0-rc2
+  - apiVersion: v2
     appVersion: 0.6.0-rc1
     created: "2023-10-16T10:10:33.620954797Z"
     dependencies:
@@ -12303,6 +12360,29 @@ entries:
     - https://github.com/eclipse-tractusx/tractusx-edc/releases/download/tractusx-connector-0.3.2/tractusx-connector-0.3.2.tgz
     version: 0.3.2
   tractusx-connector-azure-vault:
+  - apiVersion: v2
+    appVersion: 0.6.0-rc2
+    created: "2023-12-08T13:37:03.330383383Z"
+    dependencies:
+    - alias: postgresql
+      condition: install.postgresql
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.11.2
+    description: 'A Helm chart for Tractus-X Eclipse Data Space Connector. The connector
+      deployment consists of two runtime consists of a Control Plane and a Data Plane.
+      Note that _no_ external dependencies such as a PostgreSQL database and Azure
+      KeyVault are included.  This chart is intended for use with an _existing_ PostgreSQL
+      database and an _existing_ Azure KeyVault. '
+    digest: 70059c6bbccd8ae1f5f9407935bac3528a001d97cb2f7c44db05680e95899c66
+    home: https://github.com/eclipse-tractusx/tractusx-edc/tree/main/charts/tractusx-connector
+    name: tractusx-connector-azure-vault
+    sources:
+    - https://github.com/eclipse-tractusx/tractusx-edc/tree/main/charts/tractusx-connector
+    type: application
+    urls:
+    - https://eclipse-tractusx.github.io/tractusx-edc/helm-charts/tractusx-connector-azure-vault-0.6.0-rc2.tgz
+    version: 0.6.0-rc2
   - apiVersion: v2
     appVersion: 0.6.0-rc1
     created: "2023-10-16T10:10:33.700247934Z"
@@ -12820,6 +12900,21 @@ entries:
     version: 0.5.0-rc1
   tractusx-connector-memory:
   - apiVersion: v2
+    appVersion: 0.6.0-rc2
+    created: "2023-12-08T13:37:03.396830993Z"
+    description: A Helm chart for Tractus-X Eclipse Data Space Connector based on
+      memory. Please only use this for development or testing purposes, never in production
+      workloads!
+    digest: b767f004fa363930238f24dbcaf61ad93d61e086e9216c34ed80518925333bab
+    home: https://github.com/eclipse-tractusx/tractusx-edc/tree/main/charts/tractusx-connector-memory
+    name: tractusx-connector-memory
+    sources:
+    - https://github.com/eclipse-tractusx/tractusx-edc/tree/main/charts/tractusx-connector-memory
+    type: application
+    urls:
+    - https://eclipse-tractusx.github.io/tractusx-edc/helm-charts/tractusx-connector-memory-0.6.0-rc2.tgz
+    version: 0.6.0-rc2
+  - apiVersion: v2
     appVersion: 0.6.0-rc1
     created: "2023-10-16T10:10:33.804371007Z"
     description: A Helm chart for Tractus-X Eclipse Data Space Connector based on
@@ -13120,4 +13215,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-12-08T03:34:00.384210832Z"
+generated: "2023-12-09T03:32:03.698921092Z"
