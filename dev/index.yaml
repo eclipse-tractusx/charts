@@ -3395,6 +3395,24 @@ entries:
     version: 4.0.0
   bpndiscovery:
   - apiVersion: v2
+    appVersion: 0.2.7
+    created: "2023-12-27T07:21:43.486646463Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.2.3
+    description: Tractus-X BPN Discovery Helm Chart
+    digest: 7325f90dfb383797e6a71c4a2c0ab5d7b5c97948da6e1f77ae6ac28ca26a434e
+    home: https://eclipse-tractusx.github.io/
+    name: bpndiscovery
+    sources:
+    - https://github.com/eclipse-tractusx/sldt-bpn-discovery
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-bpn-discovery/releases/download/bpndiscovery-0.1.14/bpndiscovery-0.1.14.tgz
+    version: 0.1.14
+  - apiVersion: v2
     appVersion: 0.2.6
     created: "2023-11-09T09:47:55.257979479Z"
     dependencies:
@@ -5417,6 +5435,24 @@ entries:
     - https://github.com/eclipse-tractusx/sldt-digital-twin-registry/releases/download/digital-twin-registry-0.3.28/digital-twin-registry-0.3.28.tgz
     version: 0.3.28
   discoveryfinder:
+  - apiVersion: v2
+    appVersion: 0.2.6
+    created: "2023-12-27T07:21:07.865327411Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.2.3
+    description: Tractus-X Discovery Finder Helm Chart
+    digest: 96760d2d41a39ff3fb0c152ed398d71d497c69ebaee7730a7255d93686464c66
+    home: https://eclipse-tractusx.github.io/
+    name: discoveryfinder
+    sources:
+    - https://github.com/eclipse-tractusx/sldt-discovery-finder
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-discovery-finder/releases/download/discoveryfinder-0.1.14/discoveryfinder-0.1.14.tgz
+    version: 0.1.14
   - apiVersion: v2
     appVersion: 0.2.5
     created: "2023-12-01T11:18:11.590958688Z"
@@ -13652,4 +13688,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2023-12-27T03:32:04.058400994Z"
+generated: "2023-12-28T03:32:08.845545779Z"
