@@ -2630,6 +2630,27 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/bpdm-certificate-management/releases/download/bpdm-certificate-management-0.0.1-alpha.1/bpdm-certificate-management-0.0.1-alpha.1.tgz
     version: 0.0.1-alpha.1
+  - apiVersion: v2
+    appVersion: 0.0.4
+    created: "2024-01-09T14:15:14.406353172Z"
+    dependencies:
+    - alias: postgres
+      condition: postgres.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.9.13
+    description: A Helm chart for deploying the BPDM Certificate Management application
+    digest: 7bd22f19dea3324f9f69a4a4c00d5e9d7e1e6b4da5a6c931d6a3da122b6255d0
+    maintainers:
+    - name: Sujit Karne
+    - name: Nico Koprowski
+    name: bpdm-certificate-management
+    sources:
+    - https://github.com/eclipse-tractusx/bpdm-certificate-management
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/bpdm-certificate-management/releases/download/bpdm-certificate-management-0.0.1-alpha.2/bpdm-certificate-management-0.0.1-alpha.2.tgz
+    version: 0.0.1-alpha.2
   bpdm-gate:
   - apiVersion: v2
     appVersion: 4.0.0-alpha.2
@@ -3488,6 +3509,24 @@ entries:
     - https://github.com/eclipse-tractusx/bpdm/releases/download/bpdm-pool-4.0.0/bpdm-pool-4.0.0.tgz
     version: 4.0.0
   bpndiscovery:
+  - apiVersion: v2
+    appVersion: 0.2.7
+    created: "2024-01-09T14:40:59.471435496Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.2.3
+    description: Tractus-X BPN Discovery Helm Chart
+    digest: cd21004a11e080f9b11f0165d58ae49c629043c43e4bbcb454db5ca06789a741
+    home: https://eclipse-tractusx.github.io/
+    name: bpndiscovery
+    sources:
+    - https://github.com/eclipse-tractusx/sldt-bpn-discovery
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-bpn-discovery/releases/download/bpndiscovery-0.1.15/bpndiscovery-0.1.15.tgz
+    version: 0.1.15
   - apiVersion: v2
     appVersion: 0.2.7
     created: "2023-12-27T07:21:43.486646463Z"
@@ -5542,6 +5581,42 @@ entries:
     - https://github.com/eclipse-tractusx/sldt-digital-twin-registry/releases/download/digital-twin-registry-0.3.28/digital-twin-registry-0.3.28.tgz
     version: 0.3.28
   discoveryfinder:
+  - apiVersion: v2
+    appVersion: 0.2.7
+    created: "2024-01-09T14:43:35.665699761Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.2.3
+    description: Tractus-X Discovery Finder Helm Chart
+    digest: b1e9269a0955f10f86372e51a85b3c3af46dc2cc957c9dfaeb5b0b7ab05800b7
+    home: https://eclipse-tractusx.github.io/
+    name: discoveryfinder
+    sources:
+    - https://github.com/eclipse-tractusx/sldt-discovery-finder
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-discovery-finder/releases/download/discoveryfinder-0.1.16/discoveryfinder-0.1.16.tgz
+    version: 0.1.16
+  - apiVersion: v2
+    appVersion: 0.2.6
+    created: "2024-01-09T14:32:25.759631119Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.2.3
+    description: Tractus-X Discovery Finder Helm Chart
+    digest: 16b1e43f2211c725cf9a052ac9a3e5ddb5ec797708a4ccdb5f42e5412c2034fa
+    home: https://eclipse-tractusx.github.io/
+    name: discoveryfinder
+    sources:
+    - https://github.com/eclipse-tractusx/sldt-discovery-finder
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-discovery-finder/releases/download/discoveryfinder-0.1.15/discoveryfinder-0.1.15.tgz
+    version: 0.1.15
   - apiVersion: v2
     appVersion: 0.2.6
     created: "2023-12-27T07:21:07.865327411Z"
@@ -13795,4 +13870,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2024-01-09T03:32:05.124675679Z"
+generated: "2024-01-10T03:32:14.656010423Z"
