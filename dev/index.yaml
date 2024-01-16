@@ -4265,6 +4265,36 @@ entries:
   country-risk:
   - apiVersion: v2
     appVersion: 1.2.1
+    created: "2024-01-15T07:23:00.531601321Z"
+    dependencies:
+    - alias: postgres
+      condition: postgres.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.*.*
+    - condition: pgadmin4.enabled
+      name: pgadmin4
+      repository: https://helm.runix.net
+      version: 1.x.x
+    - name: country-risk-backend
+      repository: ""
+      version: 3.0.5
+    - name: country-risk-frontend
+      repository: ""
+      version: 3.0.4
+    description: A Helm chart for deploying the Country Risk service
+    digest: 1f50fff5ed8e020857b9ac93887013585305dfbbb2465803d04cb16a4f145c8e
+    home: https://github.com/eclipse-tractusx/vas-country-risk-frontend
+    name: country-risk
+    sources:
+    - https://github.com/eclipse-tractusx/vas-country-risk-frontend
+    - https://github.com/eclipse-tractusx/vas-country-risk-backend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/vas-country-risk/releases/download/country-risk-3.0.7/country-risk-3.0.7.tgz
+    version: 3.0.7
+  - apiVersion: v2
+    appVersion: 1.2.1
     created: "2023-12-06T10:53:33.643393467Z"
     dependencies:
     - alias: postgres
@@ -6100,6 +6130,35 @@ entries:
     - https://github.com/eclipse-tractusx/item-relationship-service/releases/download/irs-edc-consumer-1.0.1/irs-edc-consumer-1.0.1.tgz
     version: 1.0.1
   irs-helm:
+  - apiVersion: v2
+    appVersion: 4.4.0
+    created: "2024-01-15T13:31:26.444343334Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      version: 1.x.x
+    - condition: minio.enabled
+      name: minio
+      repository: https://charts.min.io/
+      version: 5.0.1
+    - condition: prometheus.enabled
+      name: prometheus
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 17.0.1
+    - condition: grafana.enabled
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.44.8
+    description: IRS Helm chart for Kubernetes
+    digest: 297fc03d1973038ee568e171b579ad011b134b993b9d72aef342887a0ad5800f
+    home: https://eclipse-tractusx.github.io/
+    name: irs-helm
+    sources:
+    - https://github.com/eclipse-tractusx/item-relationship-service
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/item-relationship-service/releases/download/irs-helm-6.13.0/irs-helm-6.13.0.tgz
+    version: 6.13.0
   - apiVersion: v2
     appVersion: 4.3.0
     created: "2023-12-08T12:24:33.041903626Z"
@@ -14034,4 +14093,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2024-01-15T03:32:05.951125808Z"
+generated: "2024-01-16T03:32:04.899637278Z"
