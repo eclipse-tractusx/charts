@@ -3692,6 +3692,24 @@ entries:
   bpndiscovery:
   - apiVersion: v2
     appVersion: 0.2.8
+    created: "2024-01-22T12:11:46.512153805Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.2.3
+    description: Tractus-X BPN Discovery Helm Chart
+    digest: 11db79061fe441850ff8ed4b0b5cb748cfd76fabab3b908d539975c2b104ec57
+    home: https://eclipse-tractusx.github.io/
+    name: bpndiscovery
+    sources:
+    - https://github.com/eclipse-tractusx/sldt-bpn-discovery
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-bpn-discovery/releases/download/bpndiscovery-0.1.17/bpndiscovery-0.1.17.tgz
+    version: 0.1.17
+  - apiVersion: v2
+    appVersion: 0.2.8
     created: "2024-01-10T12:33:31.424610659Z"
     dependencies:
     - condition: enablePostgres
@@ -5871,6 +5889,24 @@ entries:
     - https://github.com/eclipse-tractusx/sldt-digital-twin-registry/releases/download/digital-twin-registry-0.3.28/digital-twin-registry-0.3.28.tgz
     version: 0.3.28
   discoveryfinder:
+  - apiVersion: v2
+    appVersion: 0.2.7
+    created: "2024-01-22T12:27:25.929535994Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.2.3
+    description: Tractus-X Discovery Finder Helm Chart
+    digest: 82d32c29e44e6e28a6cd0f8aeab23381bba6607bb6dbbbf55b39958765431f86
+    home: https://eclipse-tractusx.github.io/
+    name: discoveryfinder
+    sources:
+    - https://github.com/eclipse-tractusx/sldt-discovery-finder
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-discovery-finder/releases/download/discoveryfinder-0.1.17/discoveryfinder-0.1.17.tgz
+    version: 0.1.17
   - apiVersion: v2
     appVersion: 0.2.7
     created: "2024-01-09T14:43:35.665699761Z"
@@ -12342,6 +12378,47 @@ entries:
     version: 1.0.0
   traceability-foss:
   - apiVersion: v2
+    appVersion: 10.2.0
+    created: "2024-01-22T14:47:29.993421554Z"
+    dependencies:
+    - name: frontend
+      repository: file://charts/frontend
+      version: 1.3.26
+    - name: backend
+      repository: file://charts/backend
+      version: 1.3.26
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.1.6
+    - condition: pgadmin4.enabled
+      name: pgadmin4
+      repository: https://helm.runix.net
+      version: 1.13.6
+    - condition: irs-helm.enabled
+      name: irs-helm
+      repository: https://eclipse-tractusx.github.io/item-relationship-service
+      version: 6.13.0
+    - condition: tractusx-connector.enabled
+      name: tractusx-connector
+      repository: https://eclipse-tractusx.github.io/tractusx-edc
+      version: 0.5.3
+    - alias: edc-postgresql
+      condition: edc-postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.1.6
+    description: An umbrella Helm chart for eclipse-tractusx/traceability-foss project
+    digest: a564721cf252a147bc8b6667f5905ce4dbd2e0726008c93ba36785249ab00e52
+    home: https://eclipse-tractusx.github.io/
+    name: traceability-foss
+    sources:
+    - https://github.com/eclipse-tractusx/traceability-foss
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/traceability-foss/releases/download/helm-charts-1.3.26/traceability-foss-1.3.26.tgz
+    version: 1.3.26
+  - apiVersion: v2
     appVersion: 10.1.0
     created: "2023-12-22T09:37:37.252905521Z"
     dependencies:
@@ -14560,4 +14637,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2024-01-22T06:13:49.193532609Z"
+generated: "2024-01-23T03:32:03.23218811Z"
