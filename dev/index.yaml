@@ -3692,6 +3692,24 @@ entries:
   bpndiscovery:
   - apiVersion: v2
     appVersion: 0.2.8
+    created: "2024-01-23T09:51:20.410314887Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.2.3
+    description: Tractus-X BPN Discovery Helm Chart
+    digest: 054d90ffd2b76547382140da9629b1df133c8875451024b5aacb8d1f419e6ff2
+    home: https://eclipse-tractusx.github.io/
+    name: bpndiscovery
+    sources:
+    - https://github.com/eclipse-tractusx/sldt-bpn-discovery
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-bpn-discovery/releases/download/bpndiscovery-0.1.18/bpndiscovery-0.1.18.tgz
+    version: 0.1.18
+  - apiVersion: v2
+    appVersion: 0.2.8
     created: "2024-01-22T12:11:46.512153805Z"
     dependencies:
     - condition: enablePostgres
@@ -4479,6 +4497,36 @@ entries:
     - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/consumer-ui-0.2.0/consumer-ui-0.2.0.tgz
     version: 0.2.0
   country-risk:
+  - apiVersion: v2
+    appVersion: 1.3.0
+    created: "2024-01-23T07:39:50.748675643Z"
+    dependencies:
+    - alias: postgres
+      condition: postgres.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.*.*
+    - condition: pgadmin4.enabled
+      name: pgadmin4
+      repository: https://helm.runix.net
+      version: 1.x.x
+    - name: country-risk-backend
+      repository: ""
+      version: 3.0.6
+    - name: country-risk-frontend
+      repository: ""
+      version: 3.0.4
+    description: A Helm chart for deploying the Country Risk service
+    digest: e70a2fbb5924d1222540f273eab4b46d622bf8badc99637c85a587c1d8af1a0c
+    home: https://github.com/eclipse-tractusx/vas-country-risk-frontend
+    name: country-risk
+    sources:
+    - https://github.com/eclipse-tractusx/vas-country-risk-frontend
+    - https://github.com/eclipse-tractusx/vas-country-risk-backend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/vas-country-risk/releases/download/country-risk-3.0.9/country-risk-3.0.9.tgz
+    version: 3.0.9
   - apiVersion: v2
     appVersion: 1.2.1
     created: "2024-01-15T07:23:00.531601321Z"
@@ -5889,6 +5937,24 @@ entries:
     - https://github.com/eclipse-tractusx/sldt-digital-twin-registry/releases/download/digital-twin-registry-0.3.28/digital-twin-registry-0.3.28.tgz
     version: 0.3.28
   discoveryfinder:
+  - apiVersion: v2
+    appVersion: 0.2.7
+    created: "2024-01-23T09:50:31.050938784Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.2.3
+    description: Tractus-X Discovery Finder Helm Chart
+    digest: 051251b49ba9b34fccda294ce3e32d1f5fd3eeec71ea965915c84d93fb71ebb2
+    home: https://eclipse-tractusx.github.io/
+    name: discoveryfinder
+    sources:
+    - https://github.com/eclipse-tractusx/sldt-discovery-finder
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-discovery-finder/releases/download/discoveryfinder-0.1.18/discoveryfinder-0.1.18.tgz
+    version: 0.1.18
   - apiVersion: v2
     appVersion: 0.2.7
     created: "2024-01-22T12:27:25.929535994Z"
@@ -9442,7 +9508,45 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/managed-service-orchestrator/releases/download/managed-service-orchestrator-1.4.3/managed-service-orchestrator-1.4.3.tgz
     version: 1.4.3
+  policy-hub:
+  - apiVersion: v2
+    appVersion: 0.1.0-rc.1
+    created: "2024-01-23T14:36:46.100796657Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.x
+    description: Helm chart for Catena-X Policy Hub
+    digest: 895f2cdba22b9521e8137cd8c49eb7417dc898e1195383dff92517967b5c22c6
+    home: https://github.com/eclipse-tractusx/policy-hub
+    name: policy-hub
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/policy-hub/releases/download/policy-hub-0.1.0-rc.1/policy-hub-0.1.0-rc.1.tgz
+    version: 0.1.0-rc.1
   portal:
+  - apiVersion: v2
+    appVersion: 1.8.0-RC3
+    created: "2024-01-23T16:09:26.660893461Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.x
+    description: Helm chart for Catena-X Portal
+    digest: 66f67376788a4d5932721df2c2d0d9385c1e9a2246a44a6d17c30735befc8853
+    home: https://github.com/eclipse-tractusx/portal-cd
+    name: portal
+    sources:
+    - https://github.com/eclipse-tractusx/portal-frontend
+    - https://github.com/eclipse-tractusx/portal-frontend-registration
+    - https://github.com/eclipse-tractusx/portal-assets
+    - https://github.com/eclipse-tractusx/portal-backend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/portal-cd/releases/download/portal-1.8.0-RC3/portal-1.8.0-RC3.tgz
+    version: 1.8.0-RC3
   - apiVersion: v2
     appVersion: 1.8.0-RC2
     created: "2024-01-18T10:54:08.498603124Z"
@@ -11754,6 +11858,24 @@ entries:
   semantic-hub:
   - apiVersion: v2
     appVersion: 0.2.16
+    created: "2024-01-23T10:30:06.688772065Z"
+    dependencies:
+    - condition: enableKeycloak
+      name: keycloak
+      repository: https://charts.bitnami.com/bitnami
+      version: 13.3.0
+    description: Helm Chart for the Catena-X Semantic Hub Application
+    digest: 74500b0025871d3ab0386004371f3787524cc82dc4ca1cb803ae64cafa8f3de4
+    home: https://eclipse-tractusx.github.io/
+    name: semantic-hub
+    sources:
+    - https://github.com/eclipse-tractusx/sldt-semantic-hub
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-semantic-hub/releases/download/semantic-hub-0.1.35/semantic-hub-0.1.35.tgz
+    version: 0.1.35
+  - apiVersion: v2
+    appVersion: 0.2.16
     created: "2024-01-12T13:37:57.107415928Z"
     dependencies:
     - condition: enableKeycloak
@@ -12377,6 +12499,47 @@ entries:
     - https://github.com/eclipse-tractusx/portal-iam/releases/download/sharedidp-1.0.0/sharedidp-1.0.0.tgz
     version: 1.0.0
   traceability-foss:
+  - apiVersion: v2
+    appVersion: 10.2.1
+    created: "2024-01-23T10:18:02.497466363Z"
+    dependencies:
+    - name: frontend
+      repository: file://charts/frontend
+      version: 1.3.27
+    - name: backend
+      repository: file://charts/backend
+      version: 1.3.27
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.1.6
+    - condition: pgadmin4.enabled
+      name: pgadmin4
+      repository: https://helm.runix.net
+      version: 1.13.6
+    - condition: irs-helm.enabled
+      name: irs-helm
+      repository: https://eclipse-tractusx.github.io/item-relationship-service
+      version: 6.13.0
+    - condition: tractusx-connector.enabled
+      name: tractusx-connector
+      repository: https://eclipse-tractusx.github.io/tractusx-edc
+      version: 0.5.3
+    - alias: edc-postgresql
+      condition: edc-postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.1.6
+    description: An umbrella Helm chart for eclipse-tractusx/traceability-foss project
+    digest: 15507cc111e2a69afdc1cbe38b401420995203872386d6976733bead24d98457
+    home: https://eclipse-tractusx.github.io/
+    name: traceability-foss
+    sources:
+    - https://github.com/eclipse-tractusx/traceability-foss
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/traceability-foss/releases/download/helm-charts-1.3.27/traceability-foss-1.3.27.tgz
+    version: 1.3.27
   - apiVersion: v2
     appVersion: 10.2.0
     created: "2024-01-22T14:47:29.993421554Z"
@@ -14637,4 +14800,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2024-01-23T03:32:03.23218811Z"
+generated: "2024-01-24T03:32:04.20531547Z"
