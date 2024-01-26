@@ -7769,6 +7769,45 @@ entries:
     version: 2.0.0
   localdev-portal-iam:
   - apiVersion: v2
+    appVersion: 0.2.0
+    created: "2024-01-25T10:17:47.402620401Z"
+    dependencies:
+    - condition: portal.enabled
+      name: portal
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 1.7.0
+    - condition: centralidp.enabled
+      name: centralidp
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 2.0.0
+    - condition: sharedidp.enabled
+      name: sharedidp
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 2.0.0
+    - condition: pgadmin4.enabled
+      name: pgadmin4
+      repository: https://helm.runix.net
+      version: 1.17.x
+    - alias: postgresportal
+      condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.x
+    description: Setup of CX Portal & IAM for local development
+    digest: 131323db9f0db7797a2e1f0f7b83e892b4aef4179f1daca21409d1809d494c88
+    home: https://github.com/eclipse-tractusx/portal-cd
+    name: localdev-portal-iam
+    sources:
+    - https://github.com/eclipse-tractusx/portal-frontend
+    - https://github.com/eclipse-tractusx/portal-frontend-registration
+    - https://github.com/eclipse-tractusx/portal-assets
+    - https://github.com/eclipse-tractusx/portal-backend
+    - https://github.com/eclipse-tractusx/portal-iam
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/portal-cd/releases/download/localdev-portal-iam-0.2.0/localdev-portal-iam-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
     created: "2023-10-06T16:24:26.636061108Z"
     dependencies:
     - condition: portal.enabled
@@ -14769,6 +14808,48 @@ entries:
     version: 1.1.0
   umbrella:
   - apiVersion: v2
+    created: "2024-01-25T14:13:23.985904662Z"
+    dependencies:
+    - alias: certsconsumer
+      name: certs
+      repository: ""
+      version: 0.1.0
+    - alias: certsprovider
+      name: certs
+      repository: ""
+      version: 0.1.0
+    - alias: edcconsumer
+      name: tractusx-connector-legacy
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 0.5.0-rc1
+    - alias: edcprovider
+      name: tractusx-connector-legacy
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 0.5.0-rc1
+    - condition: portal.enabled
+      name: portal
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 1.6.0
+    - condition: centralidp.enabled
+      name: centralidp
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 1.2.0
+    - condition: sharedidp.enabled
+      name: sharedidp
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 1.2.0
+    description: 'A Helm chart to spin up Catena-X OSS components to simulate a complete
+      dataspace network.  With this Helm chart you are able to create a sandbox environment
+      or run end-to-end. '
+    digest: 3d8d306382690153dc64472395487e7f2f8adbaf2012aef7e157aa2b2c5412c7
+    name: umbrella
+    sources:
+    - https://github.com/eclipse-tractusx/e2e-testing
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/e2e-testing/releases/download/umbrella-0.2.2/umbrella-0.2.2.tgz
+    version: 0.2.2
+  - apiVersion: v2
     created: "2023-06-02T13:52:37.61749054Z"
     dependencies:
     - alias: certsconsumer
@@ -14842,4 +14923,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2024-01-25T03:32:07.326137904Z"
+generated: "2024-01-26T03:32:06.537979357Z"
