@@ -2797,6 +2797,27 @@ entries:
     version: 2.0.0
   bpdm-certificate-management:
   - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2024-01-29T11:07:41.592734905Z"
+    dependencies:
+    - alias: postgres
+      condition: postgres.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.9.13
+    description: A Helm chart for deploying the BPDM Certificate Management application
+    digest: 94cf96f3ab6f50ecb7d512a467d41488644b225f2cc792afcdbffc96f71a611a
+    maintainers:
+    - name: Sujit Karne
+    - name: Nico Koprowski
+    name: bpdm-certificate-management
+    sources:
+    - https://github.com/eclipse-tractusx/bpdm-certificate-management
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/bpdm-certificate-management/releases/download/bpdm-certificate-management-1.0.0/bpdm-certificate-management-1.0.0.tgz
+    version: 1.0.0
+  - apiVersion: v2
     appVersion: 0.0.4
     created: "2024-01-09T14:15:14.406353172Z"
     dependencies:
@@ -14965,4 +14986,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2024-01-29T03:32:01.078236488Z"
+generated: "2024-01-30T03:32:01.552337397Z"
