@@ -5892,6 +5892,50 @@ entries:
   digital-twin-registry:
   - apiVersion: v2
     appVersion: 0.3.23
+    created: "2024-01-30T15:20:56.854647787Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.10
+    - condition: enableKeycloak
+      name: keycloak
+      repository: https://charts.bitnami.com/bitnami
+      version: 16.1.7
+    description: Tractus-X Digital Twin Registry Helm Chart
+    digest: 757742b5eb010dae86276782dfd618e4f80d03d88bba3be1dee21f79dc242df4
+    home: https://eclipse-tractusx.github.io/
+    name: digital-twin-registry
+    sources:
+    - https://github.com/eclipse-tractusx/sldt-digital-twin-registry
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-digital-twin-registry/releases/download/digital-twin-registry-0.4.0/digital-twin-registry-0.4.0.tgz
+    version: 0.4.0
+  - apiVersion: v2
+    appVersion: 0.3.23
+    created: "2024-01-30T10:53:12.03314049Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.10
+    - condition: enableKeycloak
+      name: keycloak
+      repository: https://charts.bitnami.com/bitnami
+      version: 16.1.7
+    description: Tractus-X Digital Twin Registry Helm Chart
+    digest: 461399ca9989dbe5725cf6041d4414a138c80c30b3837d4127e3b095af4f289c
+    home: https://eclipse-tractusx.github.io/
+    name: digital-twin-registry
+    sources:
+    - https://github.com/eclipse-tractusx/sldt-digital-twin-registry
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-digital-twin-registry/releases/download/digital-twin-registry-0.3.32/digital-twin-registry-0.3.32.tgz
+    version: 0.3.32
+  - apiVersion: v2
+    appVersion: 0.3.23
     created: "2024-01-11T14:48:00.830788701Z"
     dependencies:
     - condition: enablePostgres
@@ -15049,4 +15093,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2024-01-30T10:35:34.615866711Z"
+generated: "2024-01-31T03:31:56.930088533Z"
