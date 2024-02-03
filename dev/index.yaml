@@ -5742,6 +5742,45 @@ entries:
     version: 1.4.7
   digital-product-pass:
   - apiVersion: v2
+    appVersion: 2.1.0
+    created: "2024-02-02T20:33:41.978495179Z"
+    description: A Helm chart for Tractus-X Digital Product Pass Kubernetes
+    digest: 9a18311adb22c8a4e3495074759df35a7fe354cde879fdaf7060ea686df15072
+    home: https://github.com/eclipse-tractusx/digital-product-pass/tree/main/charts/digital-product-pass
+    name: digital-product-pass
+    sources:
+    - https://github.com/eclipse-tractusx/digital-product-pass/tree/main/charts/digital-product-pass
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/digital-product-pass-2.1.0/digital-product-pass-2.1.0.tgz
+    version: 2.1.0
+  - apiVersion: v2
+    appVersion: 2.0.3
+    created: "2024-02-02T20:06:52.401539564Z"
+    description: A Helm chart for Tractus-X Digital Product Pass Kubernetes
+    digest: 1e50eb6117e89d8bef9c5137936b0e46e910ea66dcb65dfc3f711bae186e3bbd
+    home: https://github.com/eclipse-tractusx/digital-product-pass/tree/main/charts/digital-product-pass
+    name: digital-product-pass
+    sources:
+    - https://github.com/eclipse-tractusx/digital-product-pass/tree/main/charts/digital-product-pass
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/digital-product-pass-2.0.3/digital-product-pass-2.0.3.tgz
+    version: 2.0.3
+  - apiVersion: v2
+    appVersion: 2.0.2
+    created: "2024-02-02T19:19:16.64218Z"
+    description: A Helm chart for Tractus-X Digital Product Pass Kubernetes
+    digest: 89fe3a3f60148d41222c0ed440f2b9d6ef2ef46f701cd4b794faf2e4071d28a6
+    home: https://github.com/eclipse-tractusx/digital-product-pass/tree/main/charts/digital-product-pass
+    name: digital-product-pass
+    sources:
+    - https://github.com/eclipse-tractusx/digital-product-pass/tree/main/charts/digital-product-pass
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/digital-product-pass-2.0.2/digital-product-pass-2.0.2.tgz
+    version: 2.0.2
+  - apiVersion: v2
     appVersion: 2.0.1
     created: "2024-01-03T17:18:02.877491821Z"
     description: A Helm chart for Tractus-X Digital Product Pass Kubernetes
@@ -7971,6 +8010,45 @@ entries:
     version: 2.0.0
   localdev-portal-iam:
   - apiVersion: v2
+    appVersion: 0.3.0
+    created: "2024-02-02T12:03:02.254406513Z"
+    dependencies:
+    - condition: portal.enabled
+      name: portal
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 1.8.0-RC4
+    - condition: centralidp.enabled
+      name: centralidp
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 2.1.0-RC1
+    - condition: sharedidp.enabled
+      name: sharedidp
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 2.1.0-RC1
+    - condition: pgadmin4.enabled
+      name: pgadmin4
+      repository: https://helm.runix.net
+      version: 1.17.x
+    - alias: postgresportal
+      condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.x
+    description: Setup of CX Portal & IAM for local development
+    digest: 695424e3ac8b8e75dfdedecb36d202e97fe368f0995b4cafe6e1615d2f566f26
+    home: https://github.com/eclipse-tractusx/portal-cd
+    name: localdev-portal-iam
+    sources:
+    - https://github.com/eclipse-tractusx/portal-frontend
+    - https://github.com/eclipse-tractusx/portal-frontend-registration
+    - https://github.com/eclipse-tractusx/portal-assets
+    - https://github.com/eclipse-tractusx/portal-backend
+    - https://github.com/eclipse-tractusx/portal-iam
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/portal-cd/releases/download/localdev-portal-iam-0.3.0/localdev-portal-iam-0.3.0.tgz
+    version: 0.3.0
+  - apiVersion: v2
     appVersion: 0.2.0
     created: "2024-01-25T10:17:47.402620401Z"
     dependencies:
@@ -9892,6 +9970,22 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/policy-hub/releases/download/policy-hub-0.1.0-rc.1/policy-hub-0.1.0-rc.1.tgz
     version: 0.1.0-rc.1
+  - apiVersion: v2
+    appVersion: 0.1.0-rc.2
+    created: "2024-02-02T11:53:23.536052367Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.x
+    description: Helm chart for Catena-X Policy Hub
+    digest: dbac88fa0cc221b3d2ce49436361e08168a132996d3adc25c5beaa53c914eb6d
+    home: https://github.com/eclipse-tractusx/policy-hub
+    name: policy-hub
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/policy-hub/releases/download/policy-hub-0.1.0-rc.2/policy-hub-0.1.0-rc.2.tgz
+    version: 0.1.0-rc.2
   portal:
   - apiVersion: v2
     appVersion: 1.8.0-RC4
@@ -15269,4 +15363,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2024-02-02T03:31:56.355795824Z"
+generated: "2024-02-03T03:31:56.496865481Z"
