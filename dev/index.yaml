@@ -1517,6 +1517,53 @@ entries:
   bpdm:
   - apiVersion: v2
     appVersion: 5.0.0-alpha.6
+    created: "2024-02-09T03:14:58.041721437Z"
+    dependencies:
+    - alias: bpdm-gate
+      condition: bpdm-gate.enabled
+      name: bpdm-gate
+      repository: ""
+      version: 5.0.0-alpha.8
+    - alias: bpdm-pool
+      condition: bpdm-pool.enabled
+      name: bpdm-pool
+      repository: ""
+      version: 6.0.0-alpha.8
+    - alias: bpdm-bridge-dummy
+      condition: bpdm-bridge-dummy.enabled
+      name: bpdm-bridge-dummy
+      repository: ""
+      version: 2.0.0-alpha.8
+    - alias: bpdm-cleaning-service-dummy
+      condition: bpdm-cleaning-service-dummy.enabled
+      name: bpdm-cleaning-service-dummy
+      repository: ""
+      version: 2.0.0-alpha.8
+    - alias: bpdm-orchestrator
+      condition: bpdm-orchestrator.enabled
+      name: bpdm-orchestrator
+      repository: ""
+      version: 2.0.0-alpha.8
+    - alias: postgres
+      condition: postgres.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.9.13
+    description: A Helm chart for Kubernetes that deploys the BPDM applications
+    digest: 593b48aaeda22e0f4769d5b189dea88f03e1d9d54434ea998ca2217ca747a4cd
+    home: https://github.com/eclipse-tractusx/bpdm
+    maintainers:
+    - name: Nico Koprowski
+    - name: Fabio D. Mota
+    name: bpdm
+    sources:
+    - https://github.com/eclipse-tractusx/bpdm
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/bpdm/releases/download/bpdm-4.0.0-alpha.8/bpdm-4.0.0-alpha.8.tgz
+    version: 4.0.0-alpha.8
+  - apiVersion: v2
+    appVersion: 5.0.0-alpha.6
     created: "2024-02-07T05:33:47.812320814Z"
     dependencies:
     - alias: bpdm-gate
@@ -3873,6 +3920,24 @@ entries:
     - https://github.com/eclipse-tractusx/bpdm/releases/download/bpdm-pool-4.0.0/bpdm-pool-4.0.0.tgz
     version: 4.0.0
   bpndiscovery:
+  - apiVersion: v2
+    appVersion: 0.2.8
+    created: "2024-02-08T12:07:15.373369026Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.10
+    description: Tractus-X BPN Discovery Helm Chart
+    digest: b2f6c3dc5cbf54283f0a1388528f35e94ea60e3cd1e7397db669bc96aebf7aef
+    home: https://eclipse-tractusx.github.io/
+    name: bpndiscovery
+    sources:
+    - https://github.com/eclipse-tractusx/sldt-bpn-discovery
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-bpn-discovery/releases/download/bpndiscovery-0.2.0/bpndiscovery-0.2.0.tgz
+    version: 0.2.0
   - apiVersion: v2
     appVersion: 0.2.8
     created: "2024-01-23T09:51:20.410314887Z"
@@ -6255,6 +6320,24 @@ entries:
     - https://github.com/eclipse-tractusx/sldt-digital-twin-registry/releases/download/digital-twin-registry-0.3.28/digital-twin-registry-0.3.28.tgz
     version: 0.3.28
   discoveryfinder:
+  - apiVersion: v2
+    appVersion: 0.2.7
+    created: "2024-02-08T12:07:24.639404666Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.10
+    description: Tractus-X Discovery Finder Helm Chart
+    digest: 3c8181e66aec73b7e22f36e7c0c73b0808e564283300fb73c1a30c2bcf21ffbb
+    home: https://eclipse-tractusx.github.io/
+    name: discoveryfinder
+    sources:
+    - https://github.com/eclipse-tractusx/sldt-discovery-finder
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-discovery-finder/releases/download/discoveryfinder-0.2.0/discoveryfinder-0.2.0.tgz
+    version: 0.2.0
   - apiVersion: v2
     appVersion: 0.2.7
     created: "2024-01-23T09:50:31.050938784Z"
@@ -15543,4 +15626,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2024-02-08T03:32:08.805821816Z"
+generated: "2024-02-09T03:32:03.884615377Z"
