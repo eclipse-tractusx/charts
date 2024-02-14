@@ -4016,6 +4016,24 @@ entries:
   bpndiscovery:
   - apiVersion: v2
     appVersion: 0.2.8
+    created: "2024-02-13T08:31:03.278608061Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.10
+    description: Tractus-X BPN Discovery Helm Chart
+    digest: 5319edb5ca1fb8a40b61edcfb787b18a79c40d8e7021255ec64365772da276b4
+    home: https://eclipse-tractusx.github.io/
+    name: bpndiscovery
+    sources:
+    - https://github.com/eclipse-tractusx/sldt-bpn-discovery
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-bpn-discovery/releases/download/bpndiscovery-0.2.1/bpndiscovery-0.2.1.tgz
+    version: 0.2.1
+  - apiVersion: v2
+    appVersion: 0.2.8
     created: "2024-02-08T12:07:15.373369026Z"
     dependencies:
     - condition: enablePostgres
@@ -5601,6 +5619,18 @@ entries:
     version: 1.7.2
   data-exchange:
   - apiVersion: v2
+    appVersion: 1.0.10
+    created: "2024-02-13T13:05:57.029913258Z"
+    description: Data exchange service is used to exchange the data between connectors
+    digest: 8e3784769974b5c9725173fc9b9090eda8f7255bd90b89eb63d3ad77d007ec82
+    name: data-exchange
+    sources:
+    - https://github.com/eclipse-tractusx/data-exchange-test-service
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/data-exchange-test-service/releases/download/data-exchange-1.0.10/data-exchange-1.0.10.tgz
+    version: 1.0.10
+  - apiVersion: v2
     appVersion: 1.0.9
     created: "2023-09-01T06:25:33.225246074Z"
     description: Data exchange service is used to exchange the data between connectors
@@ -6259,6 +6289,28 @@ entries:
     - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/digital-product-pass-0.3.2/digital-product-pass-0.3.2.tgz
     version: 0.3.2
   digital-twin-registry:
+  - apiVersion: v2
+    appVersion: 0.3.23
+    created: "2024-02-13T09:10:44.754681429Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.10
+    - condition: enableKeycloak
+      name: keycloak
+      repository: https://charts.bitnami.com/bitnami
+      version: 16.1.7
+    description: Tractus-X Digital Twin Registry Helm Chart
+    digest: 666dad05450b150f0b26a49fd60e19578bf72b3e1001e4e1769a593e9e3b8c11
+    home: https://eclipse-tractusx.github.io/
+    name: digital-twin-registry
+    sources:
+    - https://github.com/eclipse-tractusx/sldt-digital-twin-registry
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-digital-twin-registry/releases/download/digital-twin-registry-0.4.3/digital-twin-registry-0.4.3.tgz
+    version: 0.4.3
   - apiVersion: v2
     appVersion: 0.3.23
     created: "2024-02-12T12:44:03.230673977Z"
@@ -15913,4 +15965,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2024-02-13T03:32:05.284703745Z"
+generated: "2024-02-14T03:32:04.923446976Z"
