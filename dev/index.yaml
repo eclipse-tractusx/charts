@@ -5995,6 +5995,19 @@ entries:
     version: 1.4.7
   digital-product-pass:
   - apiVersion: v2
+    appVersion: 2.1.2
+    created: "2024-02-16T18:01:12.027540073Z"
+    description: A Helm chart for Tractus-X Digital Product Pass Kubernetes
+    digest: 01021f4b1cefc273a67d7f796246120a5efc28377d7cadb6a6497c7ab2ecd8f9
+    home: https://github.com/eclipse-tractusx/digital-product-pass/tree/main/charts/digital-product-pass
+    name: digital-product-pass
+    sources:
+    - https://github.com/eclipse-tractusx/digital-product-pass/tree/main/charts/digital-product-pass
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/digital-product-pass-2.1.2/digital-product-pass-2.1.2.tgz
+    version: 2.1.2
+  - apiVersion: v2
     appVersion: 2.1.1
     created: "2024-02-05T18:00:13.608944331Z"
     description: A Helm chart for Tractus-X Digital Product Pass Kubernetes
@@ -10414,6 +10427,22 @@ entries:
     version: 1.4.3
   policy-hub:
   - apiVersion: v2
+    appVersion: 0.1.0-rc.3
+    created: "2024-02-15T12:53:48.621080521Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.x
+    description: Helm chart for Catena-X Policy Hub
+    digest: 9eac90c77c792f3580e1f6b0e214f165301fbb3fa703f9b035e38d493aed23a3
+    home: https://github.com/eclipse-tractusx/policy-hub
+    name: policy-hub
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/policy-hub/releases/download/policy-hub-0.1.0-rc.3/policy-hub-0.1.0-rc.3.tgz
+    version: 0.1.0-rc.3
+  - apiVersion: v2
     appVersion: 0.1.0-rc.2
     created: "2024-02-02T11:53:23.536052367Z"
     dependencies:
@@ -10445,22 +10474,6 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/policy-hub/releases/download/policy-hub-0.1.0-rc.1/policy-hub-0.1.0-rc.1.tgz
     version: 0.1.0-rc.1
-  - apiVersion: v2
-    appVersion: 0.1.0-rc.3
-    created: "2024-02-15T12:53:48.621080521Z"
-    dependencies:
-    - condition: postgresql.enabled
-      name: postgresql
-      repository: https://charts.bitnami.com/bitnami
-      version: 12.12.x
-    description: Helm chart for Catena-X Policy Hub
-    digest: 9eac90c77c792f3580e1f6b0e214f165301fbb3fa703f9b035e38d493aed23a3
-    home: https://github.com/eclipse-tractusx/policy-hub
-    name: policy-hub
-    type: application
-    urls:
-    - https://github.com/eclipse-tractusx/policy-hub/releases/download/policy-hub-0.1.0-rc.3/policy-hub-0.1.0-rc.3.tgz
-    version: 0.1.0-rc.3
   portal:
   - apiVersion: v2
     appVersion: 1.8.0-RC6
@@ -16020,4 +16033,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2024-02-16T03:31:59.069053245Z"
+generated: "2024-02-17T03:32:41.406576441Z"
