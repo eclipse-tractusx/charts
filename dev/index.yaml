@@ -4016,6 +4016,24 @@ entries:
   bpndiscovery:
   - apiVersion: v2
     appVersion: 0.2.8
+    created: "2024-02-19T12:10:59.564449524Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.10
+    description: Tractus-X BPN Discovery Helm Chart
+    digest: ecd81bdbe6bad7b328b49ac08cf975d130955bd996c4f06cd79814356725dfeb
+    home: https://eclipse-tractusx.github.io/
+    name: bpndiscovery
+    sources:
+    - https://github.com/eclipse-tractusx/sldt-bpn-discovery
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-bpn-discovery/releases/download/bpndiscovery-0.2.2/bpndiscovery-0.2.2.tgz
+    version: 0.2.2
+  - apiVersion: v2
+    appVersion: 0.2.8
     created: "2024-02-13T08:31:03.278608061Z"
     dependencies:
     - condition: enablePostgres
@@ -6304,6 +6322,28 @@ entries:
   digital-twin-registry:
   - apiVersion: v2
     appVersion: 0.3.23
+    created: "2024-02-19T12:11:36.461540322Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.10
+    - condition: enableKeycloak
+      name: keycloak
+      repository: https://charts.bitnami.com/bitnami
+      version: 16.1.7
+    description: Tractus-X Digital Twin Registry Helm Chart
+    digest: 55e394a0b9697bd6bf10480f4793f3889c66688a323a5efb52f72390f7150e22
+    home: https://eclipse-tractusx.github.io/
+    name: digital-twin-registry
+    sources:
+    - https://github.com/eclipse-tractusx/sldt-digital-twin-registry
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-digital-twin-registry/releases/download/digital-twin-registry-0.4.4/digital-twin-registry-0.4.4.tgz
+    version: 0.4.4
+  - apiVersion: v2
+    appVersion: 0.3.23
     created: "2024-02-13T09:10:44.754681429Z"
     dependencies:
     - condition: enablePostgres
@@ -6501,6 +6541,24 @@ entries:
     - https://github.com/eclipse-tractusx/sldt-digital-twin-registry/releases/download/digital-twin-registry-0.3.28/digital-twin-registry-0.3.28.tgz
     version: 0.3.28
   discoveryfinder:
+  - apiVersion: v2
+    appVersion: 0.2.7
+    created: "2024-02-19T12:11:14.468737285Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.10
+    description: Tractus-X Discovery Finder Helm Chart
+    digest: 288672d36a5006cc4761aa66c7dc22f5e646d08c951c748c85e762dd533fe04c
+    home: https://eclipse-tractusx.github.io/
+    name: discoveryfinder
+    sources:
+    - https://github.com/eclipse-tractusx/sldt-discovery-finder
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-discovery-finder/releases/download/discoveryfinder-0.2.2/discoveryfinder-0.2.2.tgz
+    version: 0.2.2
   - apiVersion: v2
     appVersion: 0.2.7
     created: "2024-02-14T06:27:34.087875601Z"
@@ -14727,6 +14785,34 @@ entries:
     - https://eclipse-tractusx.github.io/tractusx-edc/helm-charts/tractusx-connector-0.6.0-rc1.tgz
     version: 0.6.0-rc1
   - apiVersion: v2
+    appVersion: 0.5.4
+    created: "2024-02-19T11:10:14.864939183Z"
+    dependencies:
+    - alias: vault
+      condition: install.vault
+      name: vault
+      repository: https://helm.releases.hashicorp.com
+      version: 0.20.0
+    - alias: postgresql
+      condition: install.postgresql
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.1.6
+    description: 'A Helm chart for Tractus-X Eclipse Data Space Connector. The connector
+      deployment consists of two runtime consists of a Control Plane and a Data Plane.
+      Note that _no_ external dependencies such as a PostgreSQL database and HashiCorp
+      Vault are included.  This chart is intended for use with an _existing_ PostgreSQL
+      database and an _existing_ HashiCorp Vault. '
+    digest: a4944b4b3ff618f4f314d8919c1ca135dc37c722a9881f001ae1f7050d497d28
+    home: https://github.com/eclipse-tractusx/tractusx-edc/tree/main/charts/tractusx-connector
+    name: tractusx-connector
+    sources:
+    - https://github.com/eclipse-tractusx/tractusx-edc/tree/main/charts/tractusx-connector
+    type: application
+    urls:
+    - https://eclipse-tractusx.github.io/tractusx-edc/helm-charts/tractusx-connector-0.5.4.tgz
+    version: 0.5.4
+  - apiVersion: v2
     appVersion: 0.5.3
     created: "2023-11-10T11:36:57.000539855+01:00"
     dependencies:
@@ -15141,6 +15227,29 @@ entries:
     urls:
     - https://eclipse-tractusx.github.io/tractusx-edc/helm-charts/tractusx-connector-azure-vault-0.6.0-rc1.tgz
     version: 0.6.0-rc1
+  - apiVersion: v2
+    appVersion: 0.5.4
+    created: "2024-02-19T11:10:14.94947507Z"
+    dependencies:
+    - alias: postgresql
+      condition: install.postgresql
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.1.6
+    description: 'A Helm chart for Tractus-X Eclipse Data Space Connector. The connector
+      deployment consists of two runtime consists of a Control Plane and a Data Plane.
+      Note that _no_ external dependencies such as a PostgreSQL database and Azure
+      KeyVault are included.  This chart is intended for use with an _existing_ PostgreSQL
+      database and an _existing_ Azure KeyVault. '
+    digest: 7ab95d763ea9b56313fba1c59aa0e4747d32fea2edba24dc4fb87fb443fd3842
+    home: https://github.com/eclipse-tractusx/tractusx-edc/tree/main/charts/tractusx-connector
+    name: tractusx-connector-azure-vault
+    sources:
+    - https://github.com/eclipse-tractusx/tractusx-edc/tree/main/charts/tractusx-connector
+    type: application
+    urls:
+    - https://eclipse-tractusx.github.io/tractusx-edc/helm-charts/tractusx-connector-azure-vault-0.5.4.tgz
+    version: 0.5.4
   - apiVersion: v2
     appVersion: 0.5.3
     created: "2023-11-10T11:36:57.066956388+01:00"
@@ -15680,6 +15789,21 @@ entries:
     - https://eclipse-tractusx.github.io/tractusx-edc/helm-charts/tractusx-connector-memory-0.6.0-rc1.tgz
     version: 0.6.0-rc1
   - apiVersion: v2
+    appVersion: 0.5.4
+    created: "2024-02-19T11:10:15.032214822Z"
+    description: A Helm chart for Tractus-X Eclipse Data Space Connector based on
+      memory. Please only use this for development or testing purposes, never in production
+      workloads!
+    digest: 431f241a24147588b6ef171abeeadaf642b47ca38e709f7dd6492c2c2d1298b4
+    home: https://github.com/eclipse-tractusx/tractusx-edc/tree/main/charts/tractusx-connector-memory
+    name: tractusx-connector-memory
+    sources:
+    - https://github.com/eclipse-tractusx/tractusx-edc/tree/main/charts/tractusx-connector-memory
+    type: application
+    urls:
+    - https://eclipse-tractusx.github.io/tractusx-edc/helm-charts/tractusx-connector-memory-0.5.4.tgz
+    version: 0.5.4
+  - apiVersion: v2
     appVersion: 0.5.3
     created: "2023-11-10T11:36:57.138438646+01:00"
     description: A Helm chart for Tractus-X Eclipse Data Space Connector based on
@@ -16033,4 +16157,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2024-02-19T03:32:18.186215959Z"
+generated: "2024-02-19T12:18:23.272183675Z"
