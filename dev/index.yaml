@@ -2,6 +2,38 @@ apiVersion: v1
 entries:
   agent-connector:
   - apiVersion: v2
+    appVersion: 1.11.16
+    created: "2024-02-20T09:41:06.465203137Z"
+    dependencies:
+    - alias: vault
+      condition: install.vault
+      name: vault
+      repository: https://helm.releases.hashicorp.com
+      version: 0.20.0
+    - alias: postgresql
+      condition: install.postgresql
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.1.6
+    description: 'A Helm chart for an Agent-Enabled Tractus-X Eclipse Data Space Connector.
+      This is a variant of [the Tractus-X Connector Helm Chart](https://github.com/eclipse-tractusx/tractusx-edc/tree/main/charts/tractusx-connector)
+      which allows to deal with several data (and agent) planes. The connector deployment
+      consists of at least two runtime consists of a Control Plane and one or several
+      Data Planes. Note that _no_ external dependencies such as a PostgreSQL database
+      and HashiCorp Vault are included.  This chart is intended for use with an _existing_
+      PostgreSQL database and an _existing_ HashiCorp Vault. '
+    digest: ddde5b7246a73e974ff7d8f8b60f4c66b294a0d376f258db41cb822f1fcf7151
+    home: https://github.com/eclipse-tractusx/knowledge-agents-edc/
+    maintainers:
+    - name: Tractus-X Knowledge Agents Team
+    name: agent-connector
+    sources:
+    - https://github.com/eclipse-tractusx/knowledge-agents-edc/tree/main/charts/agent-connector
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/knowledge-agents-edc/releases/download/agent-connector-1.11.16/agent-connector-1.11.16.tgz
+    version: 1.11.16
+  - apiVersion: v2
     appVersion: 1.11.16-SNAPSHOT
     created: "2024-01-18T12:57:43.445383237Z"
     dependencies:
@@ -321,6 +353,34 @@ entries:
     version: 1.9.6-SNAPSHOT
   agent-connector-azure-vault:
   - apiVersion: v2
+    appVersion: 1.11.16
+    created: "2024-02-20T09:41:06.703357986Z"
+    dependencies:
+    - alias: postgresql
+      condition: install.postgresql
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.1.6
+    description: 'A Helm chart for an Agent-Enabled Tractus-X Eclipse Data Space Connector
+      configured against Azure Vault. This is a variant of [the Tractus-X Azure Vault
+      Connector Helm Chart](https://github.com/eclipse-tractusx/tractusx-edc/tree/main/charts/tractusx-connector-azure-vault)
+      which allows to deal with several data (and agent) planes. The connector deployment
+      consists of at least two runtime consists of a Control Plane and one or several
+      Data Planes. Note that _no_ external dependencies such as a PostgreSQL database
+      and Azure KeyVault are included.  This chart is intended for use with an _existing_
+      PostgreSQL database and an _existing_ Azure KeyVault. '
+    digest: 856c74b27a0e07e6aca9a1adf9c8d2f80749d09134b77a900cae1650f28e164e
+    home: https://github.com/eclipse-tractusx/knowledge-agents-edc/
+    maintainers:
+    - name: Tractus-X Knowledge Agents Team
+    name: agent-connector-azure-vault
+    sources:
+    - https://github.com/eclipse-tractusx/knowledge-agents-edc/tree/main/charts/agent-connector
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/knowledge-agents-edc/releases/download/agent-connector-azure-vault-1.11.16/agent-connector-azure-vault-1.11.16.tgz
+    version: 1.11.16
+  - apiVersion: v2
     appVersion: 1.11.16-SNAPSHOT
     created: "2024-01-18T12:57:43.701264176Z"
     dependencies:
@@ -598,6 +658,33 @@ entries:
     - https://github.com/eclipse-tractusx/knowledge-agents-edc/releases/download/agent-connector-azure-vault-1.9.6-SNAPSHOT/agent-connector-azure-vault-1.9.6-SNAPSHOT.tgz
     version: 1.9.6-SNAPSHOT
   agent-connector-memory:
+  - apiVersion: v2
+    appVersion: 1.11.16
+    created: "2024-02-20T09:41:06.901014992Z"
+    dependencies:
+    - alias: vault
+      condition: install.vault
+      name: vault
+      repository: https://helm.releases.hashicorp.com
+      version: 0.20.0
+    description: 'A Helm chart for an Agent-Enabled Tractus-X Eclipse Data Space Connector
+      using In-Memory Persistence. This is a variant of [the Tractus-X In-Memory Connector
+      Helm Chart](https://github.com/eclipse-tractusx/tractusx-edc/tree/main/charts/tractusx-connector-memory)
+      which allows to deal with several data (and agent) planes. The connector deployment
+      consists of at least two runtime consists of a Control Plane and one or several
+      Data Planes. Note that _no_ external dependencies such as HashiCorp Vault are
+      included.  This chart is intended for use with an _existing_ HashiCorp Vault. '
+    digest: bb8843e63b0bf951c7049d9926b6569da4cf5890b1f5ddda6d89db682cd0b0e9
+    home: https://github.com/eclipse-tractusx/knowledge-agents-edc/
+    maintainers:
+    - name: Tractus-X Knowledge Agents Team
+    name: agent-connector-memory
+    sources:
+    - https://github.com/eclipse-tractusx/knowledge-agents-edc/tree/main/charts/agent-connector
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/knowledge-agents-edc/releases/download/agent-connector-memory-1.11.16/agent-connector-memory-1.11.16.tgz
+    version: 1.11.16
   - apiVersion: v2
     appVersion: 1.11.16-SNAPSHOT
     created: "2024-01-18T12:57:43.929618569Z"
@@ -4551,6 +4638,23 @@ entries:
     version: 0.1.0
   conforming-agent:
   - apiVersion: v2
+    appVersion: 1.11.16
+    created: "2024-02-20T09:52:51.372456313Z"
+    description: 'A Helm chart for the Tractus-X Conforming Agent which is a container
+      to assess the conformity of all other parts of the Agent-Enabled Dataspace.  This
+      chart has no prerequisites. '
+    digest: 20fcaab65ff664b0159264b6cf5f2f6ef64d5441992b629fe1d4f5b16ddb1d0b
+    home: https://github.com/eclipse-tractusx/knowledge-agents/
+    maintainers:
+    - name: Tractus-X Knowledge Agents Team
+    name: conforming-agent
+    sources:
+    - https://github.com/eclipse-tractusx/knowledge-agents/tree/main/conforming
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/knowledge-agents/releases/download/conforming-agent-1.11.16/conforming-agent-1.11.16.tgz
+    version: 1.11.16
+  - apiVersion: v2
     appVersion: 1.11.16-SNAPSHOT
     created: "2024-02-05T12:04:11.595252542Z"
     description: 'A Helm chart for the Tractus-X Conforming Agent which is a container
@@ -6556,6 +6660,24 @@ entries:
   discoveryfinder:
   - apiVersion: v2
     appVersion: 0.2.7
+    created: "2024-02-20T12:19:24.466502648Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.10
+    description: Tractus-X Discovery Finder Helm Chart
+    digest: 1a6e43b1c9bdbcccd40cec9e7b68480bb1a76994350d8a31be47ef873c4600bc
+    home: https://eclipse-tractusx.github.io/
+    name: discoveryfinder
+    sources:
+    - https://github.com/eclipse-tractusx/sldt-discovery-finder
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-discovery-finder/releases/download/discoveryfinder-0.2.3/discoveryfinder-0.2.3.tgz
+    version: 0.2.3
+  - apiVersion: v2
+    appVersion: 0.2.7
     created: "2024-02-19T12:11:14.468737285Z"
     dependencies:
     - condition: enablePostgres
@@ -7101,6 +7223,35 @@ entries:
     - https://github.com/eclipse-tractusx/item-relationship-service/releases/download/irs-edc-consumer-1.0.1/irs-edc-consumer-1.0.1.tgz
     version: 1.0.1
   irs-helm:
+  - apiVersion: v2
+    appVersion: 4.5.1
+    created: "2024-02-20T09:28:04.163385937Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      version: 1.x.x
+    - condition: minio.enabled
+      name: minio
+      repository: https://charts.min.io/
+      version: 5.0.1
+    - condition: prometheus.enabled
+      name: prometheus
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 17.0.1
+    - condition: grafana.enabled
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.44.8
+    description: IRS Helm chart for Kubernetes
+    digest: 71a0367d3bd1b81be83aa1d2a2bb4ffabded4c624933b21ac94c75113ad2e011
+    home: https://eclipse-tractusx.github.io/
+    name: irs-helm
+    sources:
+    - https://github.com/eclipse-tractusx/item-relationship-service
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/item-relationship-service/releases/download/irs-helm-6.14.1/irs-helm-6.14.1.tgz
+    version: 6.14.1
   - apiVersion: v2
     appVersion: 4.5.0
     created: "2024-02-07T10:45:54.891678396Z"
@@ -11362,6 +11513,23 @@ entries:
     version: 1.1.1
   provisioning-agent:
   - apiVersion: v2
+    appVersion: 1.11.16
+    created: "2024-02-20T09:52:51.540377447Z"
+    description: 'A Helm chart for the Tractus-X Provisioning Agent which is a container
+      to Bridge Agent-Enabled Connector and Relational Data Sources.  This chart has
+      no prerequisites. '
+    digest: 734dcbd245ef408a49581ba7ac0115c14e728123f220fbbb63d3c8548d44d19a
+    home: https://github.com/eclipse-tractusx/knowledge-agents/
+    maintainers:
+    - name: Tractus-X Knowledge Agents Team
+    name: provisioning-agent
+    sources:
+    - https://github.com/eclipse-tractusx/knowledge-agents/tree/main/provisioning
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/knowledge-agents/releases/download/provisioning-agent-1.11.16/provisioning-agent-1.11.16.tgz
+    version: 1.11.16
+  - apiVersion: v2
     appVersion: 1.11.16-SNAPSHOT
     created: "2024-02-05T12:04:11.73332992Z"
     description: 'A Helm chart for the Tractus-X Provisioning Agent which is a container
@@ -12329,6 +12497,22 @@ entries:
     - https://github.com/eclipse-tractusx/sldt-digital-twin-registry/releases/download/v0.2.0-M3-multi-tenancy/registry-0.2.3.tgz
     version: 0.2.3
   remoting-agent:
+  - apiVersion: v2
+    appVersion: 1.11.16
+    created: "2024-02-20T09:52:51.709624181Z"
+    description: 'A Helm chart for the Tractus-X Remoting Agent which is a container
+      to Bridge Agent-Enabled Connector and REST APIs.  This chart has no prerequisites. '
+    digest: 38459fb969b5ac31fc77b0f745291be7f144e7855f7c4fc6b3d90d08bf45feb6
+    home: https://github.com/eclipse-tractusx/knowledge-agents/
+    maintainers:
+    - name: Tractus-X Knowledge Agents Team
+    name: remoting-agent
+    sources:
+    - https://github.com/eclipse-tractusx/knowledge-agents/tree/main/remoting
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/knowledge-agents/releases/download/remoting-agent-1.11.16/remoting-agent-1.11.16.tgz
+    version: 1.11.16
   - apiVersion: v2
     appVersion: 1.11.16-SNAPSHOT
     created: "2024-02-05T12:04:11.873520175Z"
@@ -16245,4 +16429,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2024-02-20T03:32:03.97977574Z"
+generated: "2024-02-20T13:50:43.264468858Z"
