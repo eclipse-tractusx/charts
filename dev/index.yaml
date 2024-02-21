@@ -4103,6 +4103,24 @@ entries:
   bpndiscovery:
   - apiVersion: v2
     appVersion: 0.2.8
+    created: "2024-02-20T16:24:32.006469002Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.10
+    description: Tractus-X BPN Discovery Helm Chart
+    digest: b80cc62c27013efba099115288b6d64f8d3c531e0c44b08bf0518ad6ec85e93e
+    home: https://eclipse-tractusx.github.io/
+    name: bpndiscovery
+    sources:
+    - https://github.com/eclipse-tractusx/sldt-bpn-discovery
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-bpn-discovery/releases/download/bpndiscovery-0.2.3/bpndiscovery-0.2.3.tgz
+    version: 0.2.3
+  - apiVersion: v2
+    appVersion: 0.2.8
     created: "2024-02-19T12:10:59.564449524Z"
     dependencies:
     - condition: enablePostgres
@@ -6118,6 +6136,19 @@ entries:
   digital-product-pass:
   - apiVersion: v2
     appVersion: 2.1.3
+    created: "2024-02-20T17:31:28.779777961Z"
+    description: A Helm chart for Tractus-X Digital Product Pass Kubernetes
+    digest: 2bd6104cc55ec0ef1f27dddb4432d8a7f403bd75912d55f4c20731b5000107cc
+    home: https://github.com/eclipse-tractusx/digital-product-pass/tree/main/charts/digital-product-pass
+    name: digital-product-pass
+    sources:
+    - https://github.com/eclipse-tractusx/digital-product-pass/tree/main/charts/digital-product-pass
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/digital-product-pass-2.1.4/digital-product-pass-2.1.4.tgz
+    version: 2.1.4
+  - apiVersion: v2
+    appVersion: 2.1.3
     created: "2024-02-19T17:26:59.621070587Z"
     description: A Helm chart for Tractus-X Digital Product Pass Kubernetes
     digest: 9a1eb0e9a74995a8476ff1ba69dc5d23145f66dc00117eb3700e3652b49cc73e
@@ -6437,6 +6468,50 @@ entries:
     - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/digital-product-pass-0.3.2/digital-product-pass-0.3.2.tgz
     version: 0.3.2
   digital-twin-registry:
+  - apiVersion: v2
+    appVersion: 0.3.23
+    created: "2024-02-20T16:24:16.12174379Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.10
+    - condition: enableKeycloak
+      name: keycloak
+      repository: https://charts.bitnami.com/bitnami
+      version: 16.1.7
+    description: Tractus-X Digital Twin Registry Helm Chart
+    digest: 01cc9e7e3d094b548cbe777c7176809432203e171472e4d8a1b6071660726e53
+    home: https://eclipse-tractusx.github.io/
+    name: digital-twin-registry
+    sources:
+    - https://github.com/eclipse-tractusx/sldt-digital-twin-registry
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-digital-twin-registry/releases/download/digital-twin-registry-0.4.6/digital-twin-registry-0.4.6.tgz
+    version: 0.4.6
+  - apiVersion: v2
+    appVersion: 0.3.23
+    created: "2024-02-20T15:16:26.911336432Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.10
+    - condition: enableKeycloak
+      name: keycloak
+      repository: https://charts.bitnami.com/bitnami
+      version: 16.1.7
+    description: Tractus-X Digital Twin Registry Helm Chart
+    digest: 8727672f9083841a93338419ed0cdbfcffe41fc4c32739144b602852bbd02fa5
+    home: https://eclipse-tractusx.github.io/
+    name: digital-twin-registry
+    sources:
+    - https://github.com/eclipse-tractusx/sldt-digital-twin-registry
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-digital-twin-registry/releases/download/digital-twin-registry-0.4.5/digital-twin-registry-0.4.5.tgz
+    version: 0.4.5
   - apiVersion: v2
     appVersion: 0.3.23
     created: "2024-02-19T12:11:36.461540322Z"
@@ -7223,6 +7298,35 @@ entries:
     - https://github.com/eclipse-tractusx/item-relationship-service/releases/download/irs-edc-consumer-1.0.1/irs-edc-consumer-1.0.1.tgz
     version: 1.0.1
   irs-helm:
+  - apiVersion: v2
+    appVersion: 4.6.0
+    created: "2024-02-20T14:09:22.870414374Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      version: 1.x.x
+    - condition: minio.enabled
+      name: minio
+      repository: https://charts.min.io/
+      version: 5.0.1
+    - condition: prometheus.enabled
+      name: prometheus
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 17.0.1
+    - condition: grafana.enabled
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.44.8
+    description: IRS Helm chart for Kubernetes
+    digest: 3817f57e61a68013647539fd1976a25c58b6616002f3d0efe20e91ad7b513576
+    home: https://eclipse-tractusx.github.io/
+    name: irs-helm
+    sources:
+    - https://github.com/eclipse-tractusx/item-relationship-service
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/item-relationship-service/releases/download/irs-helm-6.15.0/irs-helm-6.15.0.tgz
+    version: 6.15.0
   - apiVersion: v2
     appVersion: 4.5.1
     created: "2024-02-20T09:28:04.163385937Z"
@@ -13170,6 +13274,24 @@ entries:
     version: 1.0.8
   semantic-hub:
   - apiVersion: v2
+    appVersion: 0.3.0
+    created: "2024-02-20T16:13:43.183869467Z"
+    dependencies:
+    - condition: enableKeycloak
+      name: keycloak
+      repository: https://charts.bitnami.com/bitnami
+      version: 13.3.0
+    description: Helm Chart for the Catena-X Semantic Hub Application
+    digest: 8ba6875cdd342b2b9b8fcbd34b5604881d5720bc61333c74e749b9dcf6e11a9a
+    home: https://eclipse-tractusx.github.io/
+    name: semantic-hub
+    sources:
+    - https://github.com/eclipse-tractusx/sldt-semantic-hub
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-semantic-hub/releases/download/semantic-hub-0.2.0/semantic-hub-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
     appVersion: 0.2.16
     created: "2024-01-23T10:30:06.688772065Z"
     dependencies:
@@ -16429,4 +16551,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2024-02-20T13:50:43.264468858Z"
+generated: "2024-02-21T03:32:13.156507517Z"
