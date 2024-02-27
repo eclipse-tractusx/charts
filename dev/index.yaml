@@ -9168,6 +9168,48 @@ entries:
     version: 0.0.1
   managed-identity-wallet:
   - apiVersion: v2
+    appVersion: 0.5.0-develop.5
+    created: "2024-02-27T08:38:05.603477664Z"
+    dependencies:
+    - condition: keycloak.enabled
+      name: keycloak
+      repository: https://charts.bitnami.com/bitnami
+      version: 15.1.6
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.9.13
+    - condition: pgadmin4.enabled
+      name: pgadmin4
+      repository: file://charts/pgadmin4
+      version: 1.19.0
+    description: 'Managed Identity Wallet is supposed to supply a secure data source
+      and data sink for Digital Identity Documents (DID), in order to enable Self-Sovereign
+      Identity founding on those DIDs. And at the same it shall support an uninterrupted
+      tracking and tracing and documenting the usage of those DIDs, e.g. within logistical
+      supply chains. '
+    digest: 5d04a959ff385b1f3fc8b3feb1fe6228cedb874ac6c95a16fac6bc5e8d5afb4c
+    home: https://github.com/eclipse-tractusx/managed-identity-wallet
+    keywords:
+    - Managed Identity Wallet
+    - eclipse-tractusx
+    maintainers:
+    - email: dominik.pinsel@mercedes-benz.com
+      name: Dominik Pinsel
+      url: https://github.com/DominikPinsel
+    name: managed-identity-wallet
+    sources:
+    - https://github.com/eclipse-tractusx/managed-identity-wallet
+    type: application
+    urls:
+    - https://eclipse-tractusx.github.io/managed-identity-wallet/helm-charts/managed-identity-wallet-0.5.0-develop.5.tgz
+    version: 0.5.0-develop.5
+  - apiVersion: v2
     appVersion: 0.5.0-develop.4
     created: "2024-02-23T12:44:03.98196437Z"
     dependencies:
@@ -11222,6 +11264,27 @@ entries:
     version: 0.1.0-rc.1
   portal:
   - apiVersion: v2
+    appVersion: 1.8.0-RC8
+    created: "2024-02-27T14:18:15.222341774Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.x
+    description: Helm chart for Catena-X Portal
+    digest: c4ceeab0d4ccd07a63715f04aad001933c690a9f1cc1c8eac5fb07a5738d0c04
+    home: https://github.com/eclipse-tractusx/portal-cd
+    name: portal
+    sources:
+    - https://github.com/eclipse-tractusx/portal-frontend
+    - https://github.com/eclipse-tractusx/portal-frontend-registration
+    - https://github.com/eclipse-tractusx/portal-assets
+    - https://github.com/eclipse-tractusx/portal-backend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/portal-cd/releases/download/portal-1.8.0-RC8/portal-1.8.0-RC8.tgz
+    version: 1.8.0-RC8
+  - apiVersion: v2
     appVersion: 1.8.0-RC7
     created: "2024-02-23T13:08:09.475186966Z"
     dependencies:
@@ -12210,6 +12273,25 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/knowledge-agents/releases/download/provisioning-agent-1.9.7-SNAPSHOT/provisioning-agent-1.9.7-SNAPSHOT.tgz
     version: 1.9.7-SNAPSHOT
+  puris:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2024-02-27T06:03:13.52412829Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.x
+    description: A helm chart for Kubernetes deployment of PURIS
+    digest: 4fa4cb83069a23d8ccea6d5a01516f85ea1bf36e035d1e6c6f7a9f6a2b71593d
+    home: https://github.com/eclipse-tractusx/puris
+    name: puris
+    sources:
+    - https://github.com/eclipse-tractusx/puris
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/puris/releases/download/puris-1.0.0/puris-1.0.0.tgz
+    version: 1.0.0
   registry:
   - apiVersion: v2
     appVersion: 0.3.19
@@ -17084,4 +17166,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2024-02-27T03:32:08.750512157Z"
+generated: "2024-02-27T14:58:57.069352538Z"
