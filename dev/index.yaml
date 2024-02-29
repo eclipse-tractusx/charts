@@ -4236,6 +4236,24 @@ entries:
     version: 4.0.0
   bpndiscovery:
   - apiVersion: v2
+    appVersion: 0.3.0-RC1
+    created: "2024-02-28T12:49:04.304644536Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.10
+    description: Tractus-X BPN Discovery Helm Chart
+    digest: c8278bc1e6430c5e318954bdd775050f111be02ecb62033a83f4da9b955661d6
+    home: https://eclipse-tractusx.github.io/
+    name: bpndiscovery
+    sources:
+    - https://github.com/eclipse-tractusx/sldt-bpn-discovery
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-bpn-discovery/releases/download/bpndiscovery-0.2.5-RC1/bpndiscovery-0.2.5-RC1.tgz
+    version: 0.2.5-RC1
+  - apiVersion: v2
     appVersion: 0.2.8
     created: "2024-02-23T08:24:36.914938837Z"
     dependencies:
@@ -6668,6 +6686,28 @@ entries:
     version: 0.3.2
   digital-twin-registry:
   - apiVersion: v2
+    appVersion: 0.4.1-RC2
+    created: "2024-02-28T12:47:18.797774422Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.10
+    - condition: enableKeycloak
+      name: keycloak
+      repository: https://charts.bitnami.com/bitnami
+      version: 16.1.7
+    description: Tractus-X Digital Twin Registry Helm Chart
+    digest: b56323471a7add4f4308c009512f48b0724fbdbbc8f27681d9a4b44e3815dbc4
+    home: https://eclipse-tractusx.github.io/
+    name: digital-twin-registry
+    sources:
+    - https://github.com/eclipse-tractusx/sldt-digital-twin-registry
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-digital-twin-registry/releases/download/digital-twin-registry-0.4.9-RC2/digital-twin-registry-0.4.9-RC2.tgz
+    version: 0.4.9-RC2
+  - apiVersion: v2
     appVersion: 0.4.1-RC1
     created: "2024-02-26T15:15:50.403281937Z"
     dependencies:
@@ -6998,6 +7038,24 @@ entries:
     - https://github.com/eclipse-tractusx/sldt-digital-twin-registry/releases/download/digital-twin-registry-0.3.28/digital-twin-registry-0.3.28.tgz
     version: 0.3.28
   discoveryfinder:
+  - apiVersion: v2
+    appVersion: 0.3.0-RC1
+    created: "2024-02-28T11:53:12.212163822Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.10
+    description: Tractus-X Discovery Finder Helm Chart
+    digest: a99cc89078d1d5921e6eb0ce849fd209e22060bb03cf9cd325fe4122ebad65ec
+    home: https://eclipse-tractusx.github.io/
+    name: discoveryfinder
+    sources:
+    - https://github.com/eclipse-tractusx/sldt-discovery-finder
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-discovery-finder/releases/download/discoveryfinder-0.2.4-RC1/discoveryfinder-0.2.4-RC1.tgz
+    version: 0.2.4-RC1
   - apiVersion: v2
     appVersion: 0.2.7
     created: "2024-02-20T12:19:24.466502648Z"
@@ -13511,6 +13569,19 @@ entries:
     version: 2.0.8
   sdfactory:
   - apiVersion: v2
+    appVersion: 2.1.10
+    created: "2024-02-28T10:02:11.532519028Z"
+    description: Helm Charts for SD Factory application. Self-Description Factory
+      component is responsible for the creation of Self Descriptions.
+    digest: b98281a3d640c0477f1810611459b4cdaee7796866fc9ef38d32aee5745163fa
+    name: sdfactory
+    sources:
+    - https://github.com/eclipse-tractusx/sd-factory
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sd-factory/releases/download/sdfactory-2.1.12/sdfactory-2.1.12.tgz
+    version: 2.1.12
+  - apiVersion: v2
     appVersion: 2.1.9
     created: "2024-02-01T08:06:32.717819392Z"
     description: Helm Charts for SD Factory application. Self-Description Factory
@@ -13847,6 +13918,24 @@ entries:
     - https://github.com/eclipse-tractusx/sd-factory/releases/download/sdfactory-1.0.8/sdfactory-1.0.8.tgz
     version: 1.0.8
   semantic-hub:
+  - apiVersion: v2
+    appVersion: 0.3.1-RC1
+    created: "2024-02-28T12:48:54.298743794Z"
+    dependencies:
+    - condition: enableKeycloak
+      name: keycloak
+      repository: https://charts.bitnami.com/bitnami
+      version: 13.3.0
+    description: Helm Chart for the Catena-X Semantic Hub Application
+    digest: f300dd765e25ded1eedc9f52ddedc395cb90f89477a1a51cc47a96f246ba75d8
+    home: https://eclipse-tractusx.github.io/
+    name: semantic-hub
+    sources:
+    - https://github.com/eclipse-tractusx/sldt-semantic-hub
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-semantic-hub/releases/download/semantic-hub-0.2.1-RC1/semantic-hub-0.2.1-RC1.tgz
+    version: 0.2.1-RC1
   - apiVersion: v2
     appVersion: 0.3.0
     created: "2024-02-20T16:13:43.183869467Z"
@@ -17166,4 +17255,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2024-02-28T03:32:08.59424896Z"
+generated: "2024-02-29T03:31:54.925131424Z"
