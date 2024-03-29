@@ -1708,6 +1708,25 @@ entries:
     urls:
     - https://eclipse-tractusx.github.io/bpn-did-resolution-service/helm-charts/bdrs-server-0.0.1.tgz
     version: 0.0.1
+  - apiVersion: v2
+    appVersion: 0.0.2
+    created: "2024-03-28T08:24:30.216512163Z"
+    dependencies:
+    - alias: postgresql
+      condition: install.postgresql
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.11.2
+    description: A Helm chart for the Tractus-X BPN-DID Resolution Service
+    digest: f2bc3d216009a40a44e09597e344113e111c5ac6df89d0398d04869797d058de
+    home: https://github.com/eclipse-tractusx/bpn-did-resolution-service/tree/main/charts/bdrs-server
+    name: bdrs-server
+    sources:
+    - https://github.com/eclipse-tractusx/bpn-did-resolution-service/tree/main/charts/bdrs-server
+    type: application
+    urls:
+    - https://eclipse-tractusx.github.io/bpn-did-resolution-service/helm-charts/bdrs-server-0.0.2.tgz
+    version: 0.0.2
   bdrs-server-memory:
   - apiVersion: v2
     appVersion: 0.0.1
@@ -1723,6 +1742,20 @@ entries:
     urls:
     - https://eclipse-tractusx.github.io/bpn-did-resolution-service/helm-charts/bdrs-server-memory-0.0.1.tgz
     version: 0.0.1
+  - apiVersion: v2
+    appVersion: 0.0.2
+    created: "2024-03-28T08:24:30.218334845Z"
+    description: A Helm chart for the Tractus-X BPN-DID Resolution Service (only in-memory
+      persistence)
+    digest: 81e8c24802d71599417d9350e811e0b4ca9477f4d5d53d472694ca46c9ee2fca
+    home: https://github.com/eclipse-tractusx/bpn-did-resolution-service/tree/main/charts/bdrs-server
+    name: bdrs-server-memory
+    sources:
+    - https://github.com/eclipse-tractusx/bpn-did-resolution-service/tree/main/charts/bdrs-server
+    type: application
+    urls:
+    - https://eclipse-tractusx.github.io/bpn-did-resolution-service/helm-charts/bdrs-server-memory-0.0.2.tgz
+    version: 0.0.2
   bpdm:
   - apiVersion: v2
     appVersion: 5.0.1
@@ -18158,4 +18191,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2024-03-28T03:32:04.719432935Z"
+generated: "2024-03-29T03:32:11.156586141Z"
