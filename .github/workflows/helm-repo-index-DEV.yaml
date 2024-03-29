@@ -27,7 +27,7 @@ jobs:
   repoIndex:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Rebuild Helm Repository
         run: .github/bin/helmRepoIndex -owner ${{ github.repository_owner }} -token ${{ secrets.GITHUB_TOKEN }} -indexFile "dev/index.yaml"
