@@ -1690,25 +1690,6 @@ entries:
     version: 0.0.2
   bdrs-server:
   - apiVersion: v2
-    appVersion: 0.0.1
-    created: "2024-03-26T10:47:53.250486903Z"
-    dependencies:
-    - alias: postgresql
-      condition: install.postgresql
-      name: postgresql
-      repository: https://charts.bitnami.com/bitnami
-      version: 12.11.2
-    description: A Helm chart for the Tractus-X BPN-DID Resolution Service
-    digest: f9519858dd979dd8d1de0a7ce5b8c03de5241b830f3e7bbbcb39b75709e99ba2
-    home: https://github.com/eclipse-tractusx/bpn-did-resolution-service/tree/main/charts/bdrs-server
-    name: bdrs-server
-    sources:
-    - https://github.com/eclipse-tractusx/bpn-did-resolution-service/tree/main/charts/bdrs-server
-    type: application
-    urls:
-    - https://eclipse-tractusx.github.io/bpn-did-resolution-service/helm-charts/bdrs-server-0.0.1.tgz
-    version: 0.0.1
-  - apiVersion: v2
     appVersion: 0.0.2
     created: "2024-03-28T08:24:30.216512163Z"
     dependencies:
@@ -1727,21 +1708,26 @@ entries:
     urls:
     - https://eclipse-tractusx.github.io/bpn-did-resolution-service/helm-charts/bdrs-server-0.0.2.tgz
     version: 0.0.2
-  bdrs-server-memory:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2024-03-26T10:47:53.251435771Z"
-    description: A Helm chart for the Tractus-X BPN-DID Resolution Service (only in-memory
-      persistence)
-    digest: 11e7f0a8cbc8908b5b1552a1b9513227b35cbee8c20de5de57360c4418266090
+    created: "2024-03-26T10:47:53.250486903Z"
+    dependencies:
+    - alias: postgresql
+      condition: install.postgresql
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.11.2
+    description: A Helm chart for the Tractus-X BPN-DID Resolution Service
+    digest: f9519858dd979dd8d1de0a7ce5b8c03de5241b830f3e7bbbcb39b75709e99ba2
     home: https://github.com/eclipse-tractusx/bpn-did-resolution-service/tree/main/charts/bdrs-server
-    name: bdrs-server-memory
+    name: bdrs-server
     sources:
     - https://github.com/eclipse-tractusx/bpn-did-resolution-service/tree/main/charts/bdrs-server
     type: application
     urls:
-    - https://eclipse-tractusx.github.io/bpn-did-resolution-service/helm-charts/bdrs-server-memory-0.0.1.tgz
+    - https://eclipse-tractusx.github.io/bpn-did-resolution-service/helm-charts/bdrs-server-0.0.1.tgz
     version: 0.0.1
+  bdrs-server-memory:
   - apiVersion: v2
     appVersion: 0.0.2
     created: "2024-03-28T08:24:30.218334845Z"
@@ -1756,7 +1742,161 @@ entries:
     urls:
     - https://eclipse-tractusx.github.io/bpn-did-resolution-service/helm-charts/bdrs-server-memory-0.0.2.tgz
     version: 0.0.2
+  - apiVersion: v2
+    appVersion: 0.0.1
+    created: "2024-03-26T10:47:53.251435771Z"
+    description: A Helm chart for the Tractus-X BPN-DID Resolution Service (only in-memory
+      persistence)
+    digest: 11e7f0a8cbc8908b5b1552a1b9513227b35cbee8c20de5de57360c4418266090
+    home: https://github.com/eclipse-tractusx/bpn-did-resolution-service/tree/main/charts/bdrs-server
+    name: bdrs-server-memory
+    sources:
+    - https://github.com/eclipse-tractusx/bpn-did-resolution-service/tree/main/charts/bdrs-server
+    type: application
+    urls:
+    - https://eclipse-tractusx.github.io/bpn-did-resolution-service/helm-charts/bdrs-server-memory-0.0.1.tgz
+    version: 0.0.1
   bpdm:
+  - apiVersion: v2
+    appVersion: 6.0.0-alpha.0
+    created: "2024-03-29T10:39:05.973672275Z"
+    dependencies:
+    - alias: bpdm-gate
+      condition: bpdm-gate.enabled
+      name: bpdm-gate
+      repository: ""
+      version: 6.0.0-alpha.0
+    - alias: bpdm-pool
+      condition: bpdm-pool.enabled
+      name: bpdm-pool
+      repository: ""
+      version: 7.0.0-alpha.0
+    - alias: bpdm-cleaning-service-dummy
+      condition: bpdm-cleaning-service-dummy.enabled
+      name: bpdm-cleaning-service-dummy
+      repository: ""
+      version: 3.0.0-alpha.0
+    - alias: bpdm-orchestrator
+      condition: bpdm-orchestrator.enabled
+      name: bpdm-orchestrator
+      repository: ""
+      version: 3.0.0-alpha.0
+    - name: bpdm-common
+      repository: ""
+      version: 1.0.1
+    - alias: postgres
+      condition: postgres.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.9.13
+    description: A Helm chart for Kubernetes that deploys the BPDM applications
+    digest: 8c526742a8b0f0d61e10d5775f44493ce7db1af716a807a7fc171e03409067e4
+    home: https://github.com/eclipse-tractusx/bpdm
+    maintainers:
+    - name: Nico Koprowski
+    - name: Fabio D. Mota
+    name: bpdm
+    sources:
+    - https://github.com/eclipse-tractusx/bpdm
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/bpdm/releases/download/bpdm-5.0.0-alpha.1/bpdm-5.0.0-alpha.1.tgz
+    version: 5.0.0-alpha.1
+  - apiVersion: v2
+    appVersion: 5.0.1
+    created: "2024-03-29T09:05:39.951742131Z"
+    dependencies:
+    - alias: bpdm-gate
+      condition: bpdm-gate.enabled
+      name: bpdm-gate
+      repository: ""
+      version: 5.0.4
+    - alias: bpdm-pool
+      condition: bpdm-pool.enabled
+      name: bpdm-pool
+      repository: ""
+      version: 6.0.4
+    - alias: bpdm-cleaning-service-dummy
+      condition: bpdm-cleaning-service-dummy.enabled
+      name: bpdm-cleaning-service-dummy
+      repository: ""
+      version: 2.0.4
+    - alias: bpdm-orchestrator
+      condition: bpdm-orchestrator.enabled
+      name: bpdm-orchestrator
+      repository: ""
+      version: 2.0.4
+    - name: bpdm-common
+      repository: ""
+      version: 1.0.0
+    - alias: postgres
+      condition: postgres.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.9.13
+    description: A Helm chart for Kubernetes that deploys the BPDM applications
+    digest: 3c11bf25aad6ba97ba07a31999ca9bbf5cf849244798b934a4747535b4eb866c
+    home: https://github.com/eclipse-tractusx/bpdm
+    maintainers:
+    - name: Nico Koprowski
+    - name: Fabio D. Mota
+    name: bpdm
+    sources:
+    - https://github.com/eclipse-tractusx/bpdm
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/bpdm/releases/download/bpdm-5.0.0-alpha.0/bpdm-5.0.0-alpha.0.tgz
+    version: 5.0.0-alpha.0
+  - apiVersion: v2
+    appVersion: 5.0.1
+    created: "2024-03-29T07:31:04.489391114Z"
+    dependencies:
+    - alias: bpdm-gate
+      condition: bpdm-gate.enabled
+      name: bpdm-gate
+      repository: ""
+      version: 5.0.4
+    - alias: bpdm-pool
+      condition: bpdm-pool.enabled
+      name: bpdm-pool
+      repository: ""
+      version: 6.0.4
+    - alias: bpdm-bridge-dummy
+      condition: bpdm-bridge-dummy.enabled
+      name: bpdm-bridge-dummy
+      repository: ""
+      version: 2.0.4
+    - alias: bpdm-cleaning-service-dummy
+      condition: bpdm-cleaning-service-dummy.enabled
+      name: bpdm-cleaning-service-dummy
+      repository: ""
+      version: 2.0.4
+    - alias: bpdm-orchestrator
+      condition: bpdm-orchestrator.enabled
+      name: bpdm-orchestrator
+      repository: ""
+      version: 2.0.4
+    - name: bpdm-common
+      repository: ""
+      version: 1.0.0
+    - alias: postgres
+      condition: postgres.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.9.13
+    description: A Helm chart for Kubernetes that deploys the BPDM applications
+    digest: 46f8cb7f1ef330ada287db5320ac42003f8cbb5b45e36cc808ae3d5dc881e14f
+    home: https://github.com/eclipse-tractusx/bpdm
+    maintainers:
+    - name: Nico Koprowski
+    - name: Fabio D. Mota
+    name: bpdm
+    sources:
+    - https://github.com/eclipse-tractusx/bpdm
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/bpdm/releases/download/bpdm-4.0.4/bpdm-4.0.4.tgz
+    version: 4.0.4
   - apiVersion: v2
     appVersion: 5.0.1
     created: "2024-03-12T06:45:29.588397539Z"
@@ -18191,4 +18331,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2024-03-29T03:32:11.156586141Z"
+generated: "2024-03-30T03:32:05.594078954Z"
