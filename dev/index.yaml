@@ -6410,6 +6410,30 @@ entries:
   data-exchange:
   - apiVersion: v2
     appVersion: 1.0.10
+    created: "2024-04-09T09:19:56.479830421Z"
+    description: Data exchange service is used to exchange the data between connectors
+    digest: 247751512532b659a9fdf3178216ed090f61f8d077fc87306662bdbc60350dda
+    name: data-exchange
+    sources:
+    - https://github.com/eclipse-tractusx/data-exchange-test-service
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/data-exchange-test-service/releases/download/data-exchange-1.0.13/data-exchange-1.0.13.tgz
+    version: 1.0.13
+  - apiVersion: v2
+    appVersion: 1.0.10
+    created: "2024-04-09T07:23:31.435557322Z"
+    description: Data exchange service is used to exchange the data between connectors
+    digest: fd1cd42e22021d3b37e4cffb4dccddedfcefe158f9618819dc1b171c32ff2df1
+    name: data-exchange
+    sources:
+    - https://github.com/eclipse-tractusx/data-exchange-test-service
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/data-exchange-test-service/releases/download/data-exchange-1.0.12/data-exchange-1.0.12.tgz
+    version: 1.0.12
+  - apiVersion: v2
+    appVersion: 1.0.10
     created: "2024-04-08T11:55:03.999925997Z"
     description: Data exchange service is used to exchange the data between connectors
     digest: a127204d0b8083c1b11fd3b6cec0cd7444cf7d25e7b5681f7bd5346857740569
@@ -12121,6 +12145,42 @@ entries:
     - https://github.com/eclipse-tractusx/managed-identity-wallets/releases/download/managed-identity-wallets-0.5.18/managed-identity-wallets-0.5.18.tgz
     version: 0.5.18
   managed-service-orchestrator:
+  - apiVersion: v2
+    appVersion: 1.5.4
+    created: "2024-04-09T09:17:43.215430579Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.x.x
+    description: This service will help service provider to set up DFT/SDE with EDC
+      and EDC as service in service provider environment.
+    digest: 3c56a9657113c2f878a98b6c38736aa5d686572fa4c02a6b80ce0022a7233b4d
+    name: managed-service-orchestrator
+    sources:
+    - https://github.com/eclipse-tractusx/managed-service-orchestrator
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/managed-service-orchestrator/releases/download/managed-service-orchestrator-1.5.6/managed-service-orchestrator-1.5.6.tgz
+    version: 1.5.6
+  - apiVersion: v2
+    appVersion: 1.5.4
+    created: "2024-04-09T07:54:22.641068651Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.x.x
+    description: This service will help service provider to set up DFT/SDE with EDC
+      and EDC as service in service provider environment.
+    digest: 7e7e7d63fea65c16a845e1d43429ec7865a3561e1f5a910ef98f34ee3d18c3a1
+    name: managed-service-orchestrator
+    sources:
+    - https://github.com/eclipse-tractusx/managed-service-orchestrator
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/managed-service-orchestrator/releases/download/managed-service-orchestrator-1.5.5/managed-service-orchestrator-1.5.5.tgz
+    version: 1.5.5
   - apiVersion: v2
     appVersion: 1.5.4
     created: "2024-03-07T15:47:41.338401492Z"
@@ -18742,4 +18802,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2024-04-09T03:32:18.036566255Z"
+generated: "2024-04-10T03:32:03.2268179Z"
