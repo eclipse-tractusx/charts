@@ -5052,6 +5052,23 @@ entries:
     version: 0.1.0
   centralidp:
   - apiVersion: v2
+    appVersion: 23.0.7
+    created: "2024-04-11T13:05:38.844703747Z"
+    dependencies:
+    - name: keycloak
+      repository: https://raw.githubusercontent.com/bitnami/charts/archive-full-index/bitnami
+      version: 19.3.0
+    description: Helm chart for Central Keycloak Instance
+    digest: f9fbedf3e1cc91d2ac92c6a386a3dbb8ef4f559e151907dc9043c952d203c0df
+    home: https://github.com/eclipse-tractusx/portal-iam
+    name: centralidp
+    sources:
+    - https://github.com/eclipse-tractusx/portal-iam
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/portal-iam/releases/download/centralidp-3.0.0-rc.1/centralidp-3.0.0-rc.1.tgz
+    version: 3.0.0-rc.1
+  - apiVersion: v2
     appVersion: 22.0.3
     created: "2024-03-05T14:52:51.730177388Z"
     dependencies:
@@ -15618,6 +15635,23 @@ entries:
     version: 0.1.3
   sharedidp:
   - apiVersion: v2
+    appVersion: 23.0.7
+    created: "2024-04-11T13:05:38.99748937Z"
+    dependencies:
+    - name: keycloak
+      repository: https://raw.githubusercontent.com/bitnami/charts/archive-full-index/bitnami
+      version: 19.3.0
+    description: Helm chart for Shared Keycloak Instance
+    digest: b5ec0e548c7fb8a5e76dbfbb34bab65ebfbe09c5c1612e2977d3a66126e5c53a
+    home: https://github.com/eclipse-tractusx/portal-iam
+    name: sharedidp
+    sources:
+    - https://github.com/eclipse-tractusx/portal-iam
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/portal-iam/releases/download/sharedidp-3.0.0-rc.1/sharedidp-3.0.0-rc.1.tgz
+    version: 3.0.0-rc.1
+  - apiVersion: v2
     appVersion: 22.0.3
     created: "2024-03-05T14:52:51.883888894Z"
     dependencies:
@@ -18802,4 +18836,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2024-04-11T03:32:17.61660835Z"
+generated: "2024-04-12T03:32:07.15764862Z"
