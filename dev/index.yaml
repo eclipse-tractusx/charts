@@ -1814,6 +1814,30 @@ entries:
     urls:
     - https://eclipse-tractusx.github.io/bpn-did-resolution-service/helm-charts/bdrs-server-0.0.1.tgz
     version: 0.0.1
+  - apiVersion: v2
+    appVersion: 0.0.3
+    created: "2024-04-25T16:19:08.994944865Z"
+    dependencies:
+    - alias: postgresql
+      condition: install.postgresql
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.11.2
+    - alias: vault
+      condition: install.vault
+      name: vault
+      repository: https://helm.releases.hashicorp.com
+      version: 0.27.0
+    description: A Helm chart for the Tractus-X BPN-DID Resolution Service
+    digest: 5323c7657d37ac8ccf850a4fe3fabd9f59af3c2ed62baa425380834f5d1186a6
+    home: https://github.com/eclipse-tractusx/bpn-did-resolution-service/tree/main/charts/bdrs-server
+    name: bdrs-server
+    sources:
+    - https://github.com/eclipse-tractusx/bpn-did-resolution-service/tree/main/charts/bdrs-server
+    type: application
+    urls:
+    - https://eclipse-tractusx.github.io/bpn-did-resolution-service/helm-charts/bdrs-server-0.0.3.tgz
+    version: 0.0.3
   bdrs-server-memory:
   - apiVersion: v2
     appVersion: 0.0.2
@@ -1843,6 +1867,20 @@ entries:
     urls:
     - https://eclipse-tractusx.github.io/bpn-did-resolution-service/helm-charts/bdrs-server-memory-0.0.1.tgz
     version: 0.0.1
+  - apiVersion: v2
+    appVersion: 0.0.3
+    created: "2024-04-25T16:19:08.997645428Z"
+    description: A Helm chart for the Tractus-X BPN-DID Resolution Service (only in-memory
+      persistence)
+    digest: bd3a7bb7ccc59bd62b1b0c7d6e6e524c267e9c756efaacfc37f7954c6b6517ed
+    home: https://github.com/eclipse-tractusx/bpn-did-resolution-service/tree/main/charts/bdrs-server
+    name: bdrs-server-memory
+    sources:
+    - https://github.com/eclipse-tractusx/bpn-did-resolution-service/tree/main/charts/bdrs-server
+    type: application
+    urls:
+    - https://eclipse-tractusx.github.io/bpn-did-resolution-service/helm-charts/bdrs-server-memory-0.0.3.tgz
+    version: 0.0.3
   bpdm:
   - apiVersion: v2
     appVersion: 6.0.0-alpha.1
@@ -5416,6 +5454,23 @@ entries:
     version: 0.1.0
   conforming-agent:
   - apiVersion: v2
+    appVersion: 1.12.18-SNAPSHOT
+    created: "2024-04-25T09:01:30.138543069Z"
+    description: 'A Helm chart for the Tractus-X Conforming Agent which is a container
+      to assess the conformity of all other parts of the Agent-Enabled Dataspace.  This
+      chart has no prerequisites. '
+    digest: b213ccddfcf79188f1d4766ad064b569dde15ad44db7ff8545fe96f59c5ede68
+    home: https://github.com/eclipse-tractusx/knowledge-agents/
+    maintainers:
+    - name: Tractus-X Knowledge Agents Team
+    name: conforming-agent
+    sources:
+    - https://github.com/eclipse-tractusx/knowledge-agents/tree/main/conforming
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/knowledge-agents/releases/download/conforming-agent-1.12.18-SNAPSHOT/conforming-agent-1.12.18-SNAPSHOT.tgz
+    version: 1.12.18-SNAPSHOT
+  - apiVersion: v2
     appVersion: 1.12.17-SNAPSHOT
     created: "2024-02-23T10:03:07.244100291Z"
     description: 'A Helm chart for the Tractus-X Conforming Agent which is a container
@@ -6595,6 +6650,18 @@ entries:
     - https://github.com/eclipse-tractusx/daps-helm-chart/releases/download/daps-server-1.7.2/daps-server-1.7.2.tgz
     version: 1.7.2
   data-exchange:
+  - apiVersion: v2
+    appVersion: 1.0.10
+    created: "2024-04-25T08:19:48.444700639Z"
+    description: Data exchange service is used to exchange the data between connectors
+    digest: 0bba0fb498645d85bd546ee124c61cd0edb65fa10cc4cecce004a78c56b1d9e0
+    name: data-exchange
+    sources:
+    - https://github.com/eclipse-tractusx/data-exchange-test-service
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/data-exchange-test-service/releases/download/data-exchange-1.0.14/data-exchange-1.0.14.tgz
+    version: 1.0.14
   - apiVersion: v2
     appVersion: 1.0.10
     created: "2024-04-09T09:19:56.479830421Z"
@@ -12648,6 +12715,23 @@ entries:
     version: 1.4.3
   matchmaking-agent:
   - apiVersion: v2
+    appVersion: 1.12.18-SNAPSHOT
+    created: "2024-04-25T09:01:30.260865097Z"
+    description: 'A Helm chart for the Tractus-X Matchmaking Agent which is a container
+      encompassing data storage capabilities accessible from the dataplane by a REST
+      API  This chart has no prerequisites. '
+    digest: 0f097ab1fb599bcb060decbf39fa719dd400a628f1b0ecb9ff267a5c1bcb5d3e
+    home: https://github.com/eclipse-tractusx/knowledge-agents/
+    maintainers:
+    - name: Tractus-X Knowledge Agents Team
+    name: matchmaking-agent
+    sources:
+    - https://github.com/eclipse-tractusx/knowledge-agents/tree/main/matchmaking
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/knowledge-agents/releases/download/matchmaking-agent-1.12.18-SNAPSHOT/matchmaking-agent-1.12.18-SNAPSHOT.tgz
+    version: 1.12.18-SNAPSHOT
+  - apiVersion: v2
     appVersion: 1.12.17-SNAPSHOT
     created: "2024-04-16T07:47:45.734238587Z"
     description: 'A Helm chart for the Tractus-X Matchmaking Agent which is a container
@@ -13693,6 +13777,23 @@ entries:
     version: 1.1.1
   provisioning-agent:
   - apiVersion: v2
+    appVersion: 1.12.18-SNAPSHOT
+    created: "2024-04-25T09:01:30.397299734Z"
+    description: 'A Helm chart for the Tractus-X Provisioning Agent which is a container
+      to Bridge Agent-Enabled Connector and Relational Data Sources.  This chart has
+      no prerequisites. '
+    digest: 4d4d50e5ef80e92e4739914a05f9086b4344bc47b7f7f6588946f4481f330e44
+    home: https://github.com/eclipse-tractusx/knowledge-agents/
+    maintainers:
+    - name: Tractus-X Knowledge Agents Team
+    name: provisioning-agent
+    sources:
+    - https://github.com/eclipse-tractusx/knowledge-agents/tree/main/provisioning
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/knowledge-agents/releases/download/provisioning-agent-1.12.18-SNAPSHOT/provisioning-agent-1.12.18-SNAPSHOT.tgz
+    version: 1.12.18-SNAPSHOT
+  - apiVersion: v2
     appVersion: 1.12.17-SNAPSHOT
     created: "2024-02-23T10:03:07.345452102Z"
     description: 'A Helm chart for the Tractus-X Provisioning Agent which is a container
@@ -14714,6 +14815,22 @@ entries:
     version: 0.2.3
   remoting-agent:
   - apiVersion: v2
+    appVersion: 1.12.18-SNAPSHOT
+    created: "2024-04-25T09:01:30.529826599Z"
+    description: 'A Helm chart for the Tractus-X Remoting Agent which is a container
+      to Bridge Agent-Enabled Connector and REST APIs.  This chart has no prerequisites. '
+    digest: e9c4ad94b4a278e093f3594f211db498160f2faccfaebc984aa532d11cce51ba
+    home: https://github.com/eclipse-tractusx/knowledge-agents/
+    maintainers:
+    - name: Tractus-X Knowledge Agents Team
+    name: remoting-agent
+    sources:
+    - https://github.com/eclipse-tractusx/knowledge-agents/tree/main/remoting
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/knowledge-agents/releases/download/remoting-agent-1.12.18-SNAPSHOT/remoting-agent-1.12.18-SNAPSHOT.tgz
+    version: 1.12.18-SNAPSHOT
+  - apiVersion: v2
     appVersion: 1.12.17-SNAPSHOT
     created: "2024-02-23T10:03:07.444513527Z"
     description: 'A Helm chart for the Tractus-X Remoting Agent which is a container
@@ -15100,6 +15217,19 @@ entries:
     - https://github.com/eclipse-tractusx/managed-simple-data-exchanger-backend/releases/download/sdebackend-2.0.8/sdebackend-2.0.8.tgz
     version: 2.0.8
   sdfactory:
+  - apiVersion: v2
+    appVersion: 2.1.10
+    created: "2024-04-25T10:45:52.11443754Z"
+    description: Helm Charts for SD Factory application. Self-Description Factory
+      component is responsible for the creation of Self Descriptions.
+    digest: 41b9cd7cc663e938f74ffa728d6a3803a1c91c05c5fd95b238c5ff9e9b2dbfb3
+    name: sdfactory
+    sources:
+    - https://github.com/eclipse-tractusx/sd-factory
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sd-factory/releases/download/sdfactory-2.1.16/sdfactory-2.1.16.tgz
+    version: 2.1.16
   - apiVersion: v2
     appVersion: 2.1.10
     created: "2024-04-16T06:58:50.571539276Z"
@@ -19183,6 +19313,58 @@ entries:
     version: 1.1.0
   umbrella:
   - apiVersion: v2
+    created: "2024-04-25T11:01:16.055268424Z"
+    dependencies:
+    - condition: portal.enabled
+      name: portal
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 1.8.0
+    - condition: centralidp.enabled
+      name: centralidp
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 2.1.0
+    - condition: sharedidp.enabled
+      name: sharedidp
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 2.1.0
+    - condition: discoveryfinder.enabled
+      name: discoveryfinder
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 0.2.2
+    - condition: bpndiscovery.enabled
+      name: bpndiscovery
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 0.2.2
+    - condition: sdfactory.enabled
+      name: sdfactory
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 2.1.12
+    - condition: managed-identity-wallet.enabled
+      name: managed-identity-wallet
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 0.4.0
+    - alias: dataconsumer
+      condition: dataconsumer.enabled
+      name: tx-data-provider
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 0.0.2
+    - alias: dataprovider
+      condition: dataprovider.enabled
+      name: tx-data-provider
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 0.0.2
+    description: 'A Helm chart to spin up Tractus-X OSS components to simulate a complete
+      dataspace network.  With this Helm chart you are able to run end-to-end or create
+      a sandbox environment. '
+    digest: a92c3a4008a7725cc79073dcb92d1a85c4273940ad60f51794847302d166d7dd
+    name: umbrella
+    sources:
+    - https://github.com/eclipse-tractusx/tractus-x-umbrella
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/tractus-x-umbrella/releases/download/umbrella-0.11.2/umbrella-0.11.2.tgz
+    version: 0.11.2
+  - apiVersion: v2
     created: "2024-04-24T13:51:29.061329405Z"
     dependencies:
     - condition: portal.enabled
@@ -19770,4 +19952,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2024-04-25T03:32:22.533493282Z"
+generated: "2024-04-26T03:32:00.615259436Z"
