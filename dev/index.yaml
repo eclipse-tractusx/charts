@@ -12805,6 +12805,22 @@ entries:
     version: 1.12.17-SNAPSHOT
   policy-hub:
   - apiVersion: v2
+    appVersion: 1.0.0-rc.1
+    created: "2024-04-30T14:51:46.877877023Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.x
+    description: Helm chart for Policy Hub
+    digest: acae7a3cc2097aa462af7bb24fe6b752bf6cb675ee1c4b2ceeab271a32c407db
+    home: https://github.com/eclipse-tractusx/policy-hub
+    name: policy-hub
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/policy-hub/releases/download/policy-hub-1.0.0-rc.1/policy-hub-1.0.0-rc.1.tgz
+    version: 1.0.0-rc.1
+  - apiVersion: v2
     appVersion: 0.1.0
     created: "2024-03-06T11:45:45.165633172Z"
     dependencies:
@@ -16526,6 +16542,22 @@ entries:
     version: 0.1.0
   ssi-credential-issuer:
   - apiVersion: v2
+    appVersion: 1.0.0-rc.3
+    created: "2024-04-30T14:50:59.424962302Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.x
+    description: Helm chart for SSI Credential Issuer
+    digest: 4a821a69a8a3a8b2c93b1eb0e88608cb5a0a8ecfe0c16cb414f76c4aef15e8b9
+    home: https://github.com/eclipse-tractusx/ssi-credential-issuer
+    name: ssi-credential-issuer
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/ssi-credential-issuer/releases/download/ssi-credential-issuer-1.0.0-rc.3/ssi-credential-issuer-1.0.0-rc.3.tgz
+    version: 1.0.0-rc.3
+  - apiVersion: v2
     appVersion: 1.0.0-rc.2
     created: "2024-04-23T09:50:47.47909723Z"
     dependencies:
@@ -19406,6 +19438,57 @@ entries:
     version: 1.1.0
   umbrella:
   - apiVersion: v2
+    created: "2024-04-30T07:04:45.400551542Z"
+    dependencies:
+    - condition: portal.enabled
+      name: portal
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 1.8.0
+    - condition: centralidp.enabled
+      name: centralidp
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 2.1.0
+    - condition: sharedidp.enabled
+      name: sharedidp
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 2.1.0
+    - condition: discoveryfinder.enabled
+      name: discoveryfinder
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 0.2.2
+    - condition: bpndiscovery.enabled
+      name: bpndiscovery
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 0.2.2
+    - condition: sdfactory.enabled
+      name: sdfactory
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 2.1.12
+    - condition: managed-identity-wallet.enabled
+      name: managed-identity-wallet
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 0.4.0
+    - alias: dataconsumer
+      condition: dataconsumer.enabled
+      name: tx-data-provider
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 0.0.2
+    - condition: tx-data-provider.enabled
+      name: tx-data-provider
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 0.0.2
+    description: 'A Helm chart to spin up Tractus-X OSS components to simulate a complete
+      dataspace network.  With this Helm chart you are able to run end-to-end or create
+      a sandbox environment. '
+    digest: 1e1def33e478fb31781569b80fd7a94aaec50ce54b8fb9e64214e3abd50c310b
+    name: umbrella
+    sources:
+    - https://github.com/eclipse-tractusx/tractus-x-umbrella
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/tractus-x-umbrella/releases/download/umbrella-0.11.4/umbrella-0.11.4.tgz
+    version: 0.11.4
+  - apiVersion: v2
     created: "2024-04-29T10:02:13.675016528Z"
     dependencies:
     - condition: portal.enabled
@@ -20096,4 +20179,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2024-04-30T03:32:08.450679743Z"
+generated: "2024-05-01T03:32:03.650575866Z"
