@@ -4,7 +4,7 @@ go 1.19
 
 require (
 	github.com/google/go-github/v48 v48.0.0
-	golang.org/x/oauth2 v0.2.0
+	golang.org/x/oauth2 v0.19.0
 	helm.sh/helm/v3 v3.10.2
 )
 
@@ -77,7 +77,6 @@ require (
 	golang.org/x/term v0.2.0 // indirect
 	golang.org/x/text v0.4.0 // indirect
 	golang.org/x/time v0.0.0-20220609170525-579cf78fd858 // indirect
-	google.golang.org/appengine v1.6.7 // indirect
 	google.golang.org/genproto v0.0.0-20221024183307-1bc688fe9f3e // indirect
 	google.golang.org/grpc v1.50.1 // indirect
 	google.golang.org/protobuf v1.28.1 // indirect
