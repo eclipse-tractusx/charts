@@ -7173,6 +7173,45 @@ entries:
   digital-product-pass:
   - apiVersion: v2
     appVersion: 2.3.0
+    created: "2024-05-10T08:54:41.144960402Z"
+    description: A Helm chart for Tractus-X Digital Product Pass Kubernetes
+    digest: a322d1e876a06ca1aca5d95873e20f31b664563ca12b14a3fec25e9f35e46c02
+    home: https://github.com/eclipse-tractusx/digital-product-pass/tree/main/charts/digital-product-pass
+    name: digital-product-pass
+    sources:
+    - https://github.com/eclipse-tractusx/digital-product-pass/tree/main/charts/digital-product-pass
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/digital-product-pass-2.3.3/digital-product-pass-2.3.3.tgz
+    version: 2.3.3
+  - apiVersion: v2
+    appVersion: 2.3.0
+    created: "2024-05-10T08:51:32.086380046Z"
+    description: A Helm chart for Tractus-X Digital Product Pass Kubernetes
+    digest: 0800cace0ee805c636ee091d3eaa3999d043d375e193b812d9b91effacb216f7
+    home: https://github.com/eclipse-tractusx/digital-product-pass/tree/main/charts/digital-product-pass
+    name: digital-product-pass
+    sources:
+    - https://github.com/eclipse-tractusx/digital-product-pass/tree/main/charts/digital-product-pass
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/digital-product-pass-2.3.2/digital-product-pass-2.3.2.tgz
+    version: 2.3.2
+  - apiVersion: v2
+    appVersion: 2.3.0
+    created: "2024-05-10T08:44:34.05691269Z"
+    description: A Helm chart for Tractus-X Digital Product Pass Kubernetes
+    digest: 41568d725bd34a99b8c84f89a664f203e722716e082b1a7962ae5438553dd746
+    home: https://github.com/eclipse-tractusx/digital-product-pass/tree/main/charts/digital-product-pass
+    name: digital-product-pass
+    sources:
+    - https://github.com/eclipse-tractusx/digital-product-pass/tree/main/charts/digital-product-pass
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/digital-product-pass-2.3.1/digital-product-pass-2.3.1.tgz
+    version: 2.3.1
+  - apiVersion: v2
+    appVersion: 2.3.0
     created: "2024-05-06T13:18:37.717305395Z"
     description: A Helm chart for Tractus-X Digital Product Pass Kubernetes
     digest: 46810485b64b3d25bc5cc2427cd28df90c07e37b2ca3d069414c9a26bc06c665
@@ -15283,6 +15322,24 @@ entries:
     version: 1.9.7-SNAPSHOT
   sde:
   - apiVersion: v2
+    appVersion: 2.3.7
+    created: "2024-05-10T08:39:17.512178821Z"
+    dependencies:
+    - alias: sdepostgresql
+      condition: sdepostgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.x.x
+    description: A Helm chart for simple data exchanger
+    digest: 61a01ab0a4fcd1d63cfde77be870a6c8ed2d71f19a02b3f48551be7b6fd4453a
+    name: sde
+    sources:
+    - https://github.com/eclipse-tractusx/managed-simple-data-exchanger
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/managed-simple-data-exchanger/releases/download/sde-0.1.6/sde-0.1.6.tgz
+    version: 0.1.6
+  - apiVersion: v2
     appVersion: 2.3.6
     created: "2024-03-06T09:31:53.885237335Z"
     dependencies:
@@ -19818,6 +19875,66 @@ entries:
     version: 1.1.0
   umbrella:
   - apiVersion: v2
+    created: "2024-05-10T07:53:07.135725569Z"
+    dependencies:
+    - condition: portal.enabled
+      name: portal
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 1.8.1
+    - condition: centralidp.enabled
+      name: centralidp
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 2.1.0
+    - condition: sharedidp.enabled
+      name: sharedidp
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 2.1.0
+    - condition: discoveryfinder.enabled
+      name: discoveryfinder
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 0.2.2
+    - condition: bpndiscovery.enabled
+      name: bpndiscovery
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 0.2.2
+    - condition: sdfactory.enabled
+      name: sdfactory
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 2.1.12
+    - condition: managed-identity-wallet.enabled
+      name: managed-identity-wallet
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 0.4.0
+    - alias: dataconsumerOne
+      condition: dataconsumerOne.enabled
+      name: tx-data-provider
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 0.0.3
+    - condition: tx-data-provider.enabled
+      name: tx-data-provider
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 0.0.3
+    - alias: dataconsumerTwo
+      condition: dataconsumerTwo.enabled
+      name: tx-data-provider
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 0.0.3
+    - condition: pgadmin4.enabled
+      name: pgadmin4
+      repository: https://helm.runix.net
+      version: 1.25.x
+    description: 'A Helm chart to spin up Tractus-X OSS components to simulate a complete
+      dataspace network.  With this Helm chart you are able to run end-to-end or create
+      a sandbox environment. '
+    digest: 01110aef1ed47a3a94ea39f9289079def37d00ad250f0b8d89379cfeb4495f9b
+    name: umbrella
+    sources:
+    - https://github.com/eclipse-tractusx/tractus-x-umbrella
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/tractus-x-umbrella/releases/download/umbrella-0.14.0/umbrella-0.14.0.tgz
+    version: 0.14.0
+  - apiVersion: v2
     created: "2024-05-08T14:47:02.951879204Z"
     dependencies:
     - condition: portal.enabled
@@ -20823,4 +20940,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2024-05-10T03:32:03.521276645Z"
+generated: "2024-05-11T03:32:32.295433837Z"
