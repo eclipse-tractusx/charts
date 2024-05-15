@@ -15540,6 +15540,24 @@ entries:
     version: 1.9.7-SNAPSHOT
   sde:
   - apiVersion: v2
+    appVersion: 2.4.0
+    created: "2024-05-15T06:18:59.206605788Z"
+    dependencies:
+    - alias: sdepostgresql
+      condition: sdepostgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.x.x
+    description: A Helm chart for simple data exchanger
+    digest: c641a24a69ad8930133192636377892820f8b2b1c3290cdd87190031f6ac06f0
+    name: sde
+    sources:
+    - https://github.com/eclipse-tractusx/managed-simple-data-exchanger
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/managed-simple-data-exchanger/releases/download/sde-0.1.7/sde-0.1.7.tgz
+    version: 0.1.7
+  - apiVersion: v2
     appVersion: 2.3.7
     created: "2024-05-10T08:39:17.512178821Z"
     dependencies:
@@ -20057,6 +20075,33 @@ entries:
   tx-data-provider:
   - apiVersion: v2
     appVersion: 0.0.1
+    created: "2024-05-15T06:19:45.010868554Z"
+    dependencies:
+    - condition: digital-twin-registry.enabled
+      name: digital-twin-registry
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 0.4.5
+    - condition: simple-data-backend.enabled
+      name: simple-data-backend
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 0.1.0
+    - condition: tractusx-connector.enabled
+      name: tractusx-connector
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 0.5.3
+    - condition: vault.enabled
+      name: vault
+      repository: https://helm.releases.hashicorp.com
+      version: 0.20.0
+    description: A Helm chart for Kubernetes
+    digest: dbea10a8691f898d3e7a01c6e19cabe0ee54d1cbdb42a77a2568c9e3b7a051b4
+    name: tx-data-provider
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/tractus-x-umbrella/releases/download/tx-data-provider-0.0.5/tx-data-provider-0.0.5.tgz
+    version: 0.0.5
+  - apiVersion: v2
+    appVersion: 0.0.1
     created: "2024-05-13T13:04:54.653058493Z"
     dependencies:
     - condition: digital-twin-registry.enabled
@@ -21338,4 +21383,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2024-05-15T03:32:34.489301168Z"
+generated: "2024-05-15T06:22:33.251098235Z"
