@@ -6848,6 +6848,30 @@ entries:
     version: 1.7.2
   data-exchange:
   - apiVersion: v2
+    appVersion: 1.0.12
+    created: "2024-05-14T16:54:03.238439114Z"
+    description: Data exchange service is used to exchange the data between connectors
+    digest: be0aadc9bcf42670d6787cb791c20aa135c20d4e0019cfaed4c00099b96ca847
+    name: data-exchange
+    sources:
+    - https://github.com/eclipse-tractusx/data-exchange-test-service
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/data-exchange-test-service/releases/download/data-exchange-1.0.16/data-exchange-1.0.16.tgz
+    version: 1.0.16
+  - apiVersion: v2
+    appVersion: 1.0.12
+    created: "2024-05-14T13:08:04.072717242Z"
+    description: Data exchange service is used to exchange the data between connectors
+    digest: 1fb25ed3e17e7b44666da2fb8eb867c1efa6b519a9a173156295ca302f43d8ec
+    name: data-exchange
+    sources:
+    - https://github.com/eclipse-tractusx/data-exchange-test-service
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/data-exchange-test-service/releases/download/data-exchange-1.0.15/data-exchange-1.0.15.tgz
+    version: 1.0.15
+  - apiVersion: v2
     appVersion: 1.0.10
     created: "2024-04-25T08:19:48.444700639Z"
     description: Data exchange service is used to exchange the data between connectors
@@ -10276,6 +10300,35 @@ entries:
     version: 2.0.0
   item-relationship-service:
   - apiVersion: v2
+    appVersion: 5.1.2
+    created: "2024-05-14T07:13:23.123459213Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      version: 1.x.x
+    - condition: minio.enabled
+      name: minio
+      repository: https://charts.min.io/
+      version: 5.0.1
+    - condition: prometheus.enabled
+      name: prometheus
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 17.0.1
+    - condition: grafana.enabled
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.44.8
+    description: Tractus-X Item Relationship Service Helm Chart
+    digest: 3c1028518684b5122f76351542da1b235b13e7c730d75900c1d41898f562f66f
+    home: https://eclipse-tractusx.github.io/
+    name: item-relationship-service
+    sources:
+    - https://github.com/eclipse-tractusx/item-relationship-service
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/item-relationship-service/releases/download/item-relationship-service-7.1.2/item-relationship-service-7.1.2.tgz
+    version: 7.1.2
+  - apiVersion: v2
     appVersion: 5.1.1
     created: "2024-05-08T10:15:43.743692457Z"
     dependencies:
@@ -12944,6 +12997,24 @@ entries:
     - https://github.com/eclipse-tractusx/managed-identity-wallets/releases/download/managed-identity-wallets-0.5.18/managed-identity-wallets-0.5.18.tgz
     version: 0.5.18
   managed-service-orchestrator:
+  - apiVersion: v2
+    appVersion: 1.5.5
+    created: "2024-05-14T12:02:23.537402054Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.x.x
+    description: This service will help service provider to set up DFT/SDE with EDC
+      and EDC as service in service provider environment.
+    digest: 58a94190fdcf4a815f99843ac6fa8c18ed4653f70598f5ce172d93bfb28cace1
+    name: managed-service-orchestrator
+    sources:
+    - https://github.com/eclipse-tractusx/managed-service-orchestrator
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/managed-service-orchestrator/releases/download/managed-service-orchestrator-1.5.8/managed-service-orchestrator-1.5.8.tgz
+    version: 1.5.8
   - apiVersion: v2
     appVersion: 1.5.4
     created: "2024-04-15T07:30:26.40612882Z"
@@ -15728,6 +15799,19 @@ entries:
     - https://github.com/eclipse-tractusx/managed-simple-data-exchanger-backend/releases/download/sdebackend-2.0.8/sdebackend-2.0.8.tgz
     version: 2.0.8
   sdfactory:
+  - apiVersion: v2
+    appVersion: 2.1.12
+    created: "2024-05-14T16:52:26.889273419Z"
+    description: Helm Charts for SD Factory application. Self-Description Factory
+      component is responsible for the creation of Self Descriptions.
+    digest: 908081c863365e40646302992d6036a3a04516928e6940b72235035481b9ed5b
+    name: sdfactory
+    sources:
+    - https://github.com/eclipse-tractusx/sd-factory
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sd-factory/releases/download/sdfactory-2.1.18/sdfactory-2.1.18.tgz
+    version: 2.1.18
   - apiVersion: v2
     appVersion: 2.1.11
     created: "2024-05-03T11:45:03.319653695Z"
@@ -20065,6 +20149,70 @@ entries:
     version: 1.1.0
   umbrella:
   - apiVersion: v2
+    created: "2024-05-14T13:10:12.988989602Z"
+    dependencies:
+    - condition: portal.enabled
+      name: portal
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 1.8.1
+    - condition: centralidp.enabled
+      name: centralidp
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 2.1.0
+    - condition: sharedidp.enabled
+      name: sharedidp
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 2.1.0
+    - condition: discoveryfinder.enabled
+      name: discoveryfinder
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 0.2.2
+    - condition: bpndiscovery.enabled
+      name: bpndiscovery
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 0.2.2
+    - condition: sdfactory.enabled
+      name: sdfactory
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 2.1.12
+    - condition: managed-identity-wallet.enabled
+      name: managed-identity-wallet
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 0.4.0
+    - condition: semantic-hub.enabled
+      name: semantic-hub
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 0.2.2
+    - alias: dataconsumerOne
+      condition: dataconsumerOne.enabled
+      name: tx-data-provider
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 0.0.3
+    - condition: tx-data-provider.enabled
+      name: tx-data-provider
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 0.0.3
+    - alias: dataconsumerTwo
+      condition: dataconsumerTwo.enabled
+      name: tx-data-provider
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 0.0.3
+    - condition: pgadmin4.enabled
+      name: pgadmin4
+      repository: https://helm.runix.net
+      version: 1.25.x
+    description: 'A Helm chart to spin up Tractus-X OSS components to simulate a complete
+      dataspace network.  With this Helm chart you are able to run end-to-end or create
+      a sandbox environment. '
+    digest: 653c2d1af8076503510c647cfc04d17cd4b5dc779056548a5d4261ac624396e0
+    name: umbrella
+    sources:
+    - https://github.com/eclipse-tractusx/tractus-x-umbrella
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/tractus-x-umbrella/releases/download/umbrella-0.15.0/umbrella-0.15.0.tgz
+    version: 0.15.0
+  - apiVersion: v2
     created: "2024-05-13T13:04:54.964988119Z"
     dependencies:
     - condition: portal.enabled
@@ -21190,4 +21338,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2024-05-14T03:32:32.563059328Z"
+generated: "2024-05-15T03:32:34.489301168Z"
