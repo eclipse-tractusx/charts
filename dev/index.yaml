@@ -7370,6 +7370,19 @@ entries:
     version: 1.4.7
   digital-product-pass:
   - apiVersion: v2
+    appVersion: 3.0.0
+    created: "2024-05-16T08:28:03.83670813Z"
+    description: A Helm chart for Tractus-X Digital Product Pass Kubernetes
+    digest: 0b7f0e19f178441e67d992b01ff3aee1bd363266c982802c1369e4eaf23895bd
+    home: https://github.com/eclipse-tractusx/digital-product-pass/tree/main/charts/digital-product-pass
+    name: digital-product-pass
+    sources:
+    - https://github.com/eclipse-tractusx/digital-product-pass/tree/main/charts/digital-product-pass
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/digital-product-pass-3.0.0/digital-product-pass-3.0.0.tgz
+    version: 3.0.0
+  - apiVersion: v2
     appVersion: 3.0.0-rc1
     created: "2024-05-13T19:20:40.474521768Z"
     description: A Helm chart for Tractus-X Digital Product Pass Kubernetes
@@ -13288,6 +13301,22 @@ entries:
     version: 1.12.17-SNAPSHOT
   policy-hub:
   - apiVersion: v2
+    appVersion: 1.0.0-rc.2
+    created: "2024-05-16T09:46:35.869622404Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.x
+    description: Helm chart for Policy Hub
+    digest: 3547ec0536f2dc34da9f0faa99c79e490c98d9c3bdda8864eb2a7719b62164ee
+    home: https://github.com/eclipse-tractusx/policy-hub
+    name: policy-hub
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/policy-hub/releases/download/policy-hub-1.0.0-rc.2/policy-hub-1.0.0-rc.2.tgz
+    version: 1.0.0-rc.2
+  - apiVersion: v2
     appVersion: 1.0.0-rc.1
     created: "2024-04-30T14:51:46.877877023Z"
     dependencies:
@@ -15634,6 +15663,24 @@ entries:
     - https://github.com/eclipse-tractusx/knowledge-agents/releases/download/remoting-agent-1.9.7-SNAPSHOT/remoting-agent-1.9.7-SNAPSHOT.tgz
     version: 1.9.7-SNAPSHOT
   sde:
+  - apiVersion: v2
+    appVersion: 2.4.0
+    created: "2024-05-16T07:30:47.834656684Z"
+    dependencies:
+    - alias: sdepostgresql
+      condition: sdepostgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.x.x
+    description: A Helm chart for simple data exchanger
+    digest: 08d57dacb6dc9ce2ddbf24c082df27264b788634a11cd802800459d738cd6386
+    name: sde
+    sources:
+    - https://github.com/eclipse-tractusx/managed-simple-data-exchanger
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/managed-simple-data-exchanger/releases/download/sde-0.1.8/sde-0.1.8.tgz
+    version: 0.1.8
   - apiVersion: v2
     appVersion: 2.4.0
     created: "2024-05-15T06:18:59.206605788Z"
@@ -21734,4 +21781,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2024-05-16T03:32:26.091443895Z"
+generated: "2024-05-17T03:32:05.254076863Z"
