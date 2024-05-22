@@ -6120,6 +6120,30 @@ entries:
     version: 0.2.0
   country-risk:
   - apiVersion: v2
+    appVersion: 2.0.0
+    created: "2024-05-21T14:03:20.877258194Z"
+    dependencies:
+    - alias: postgres
+      condition: postgres.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.x.x
+    - condition: pgadmin4.enabled
+      name: pgadmin4
+      repository: https://helm.runix.net
+      version: 1.x.x
+    description: A Helm chart for deploying the Country Risk service
+    digest: 9586ec44428ad16957f69daaf60f869a3c918ffc6ffd786f996d167075b7014a
+    home: https://github.com/eclipse-tractusx/vas-country-risk-frontend
+    name: country-risk
+    sources:
+    - https://github.com/eclipse-tractusx/vas-country-risk-frontend
+    - https://github.com/eclipse-tractusx/vas-country-risk-backend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/vas-country-risk/releases/download/country-risk-4.0.2/country-risk-4.0.2.tgz
+    version: 4.0.2
+  - apiVersion: v2
     appVersion: 2.0.0-alpha
     created: "2024-05-15T14:37:29.827069525Z"
     dependencies:
@@ -14715,6 +14739,24 @@ entries:
     version: 1.9.7-SNAPSHOT
   puris:
   - apiVersion: v2
+    appVersion: 2.0.0
+    created: "2024-05-21T15:48:17.180068778Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.x
+    description: A helm chart for Kubernetes deployment of PURIS
+    digest: d22aa4989314ddd09829da8505c652a81a1ab9b71c0010c13696bf0fb8c5b1f3
+    home: https://github.com/eclipse-tractusx/puris
+    name: puris
+    sources:
+    - https://github.com/eclipse-tractusx/puris
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/puris/releases/download/puris-2.5.1/puris-2.5.1.tgz
+    version: 2.5.1
+  - apiVersion: v2
     appVersion: 1.0.0
     created: "2024-02-27T06:03:13.52412829Z"
     dependencies:
@@ -21860,4 +21902,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2024-05-21T03:32:42.776283589Z"
+generated: "2024-05-22T03:32:22.402964535Z"
