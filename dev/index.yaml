@@ -15132,6 +15132,24 @@ entries:
     version: 1.9.7-SNAPSHOT
   puris:
   - apiVersion: v2
+    appVersion: 2.0.1
+    created: "2024-05-27T06:51:28.057288613Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.x
+    description: A helm chart for Kubernetes deployment of PURIS
+    digest: 6fc05583c38e5692345cb39824ae0e5dc584aa0e64db03493f072f3702b726cf
+    home: https://github.com/eclipse-tractusx/puris
+    name: puris
+    sources:
+    - https://github.com/eclipse-tractusx/puris
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/puris/releases/download/puris-2.6.2/puris-2.6.2.tgz
+    version: 2.6.2
+  - apiVersion: v2
     appVersion: 2.0.0
     created: "2024-05-23T19:25:46.170100832Z"
     dependencies:
@@ -16227,6 +16245,24 @@ entries:
     - https://github.com/eclipse-tractusx/knowledge-agents/releases/download/remoting-agent-1.9.7-SNAPSHOT/remoting-agent-1.9.7-SNAPSHOT.tgz
     version: 1.9.7-SNAPSHOT
   sde:
+  - apiVersion: v2
+    appVersion: 2.4.1
+    created: "2024-05-27T07:54:03.525336397Z"
+    dependencies:
+    - alias: sdepostgresql
+      condition: sdepostgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.x.x
+    description: A Helm chart for simple data exchanger
+    digest: ede5b24cc19d245a63f1afc95941367fa6dcba4cf7b749b4820d35ebb9383076
+    name: sde
+    sources:
+    - https://github.com/eclipse-tractusx/managed-simple-data-exchanger
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/managed-simple-data-exchanger/releases/download/sde-0.1.9/sde-0.1.9.tgz
+    version: 0.1.9
   - apiVersion: v2
     appVersion: 2.4.0
     created: "2024-05-16T07:30:47.834656684Z"
@@ -17812,6 +17848,22 @@ entries:
     - https://github.com/eclipse-tractusx/tractus-x-umbrella/releases/download/simple-data-backend-0.1.0/simple-data-backend-0.1.0.tgz
     version: 0.1.0
   ssi-credential-issuer:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2024-05-27T07:02:19.293095716Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.x
+    description: Helm chart for SSI Credential Issuer
+    digest: 965e4837bba52b0e985e20d82021b7c792fdfc0884de01f0c46d089a3e11fb96
+    home: https://github.com/eclipse-tractusx/ssi-credential-issuer
+    name: ssi-credential-issuer
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/ssi-credential-issuer/releases/download/ssi-credential-issuer-1.0.0/ssi-credential-issuer-1.0.0.tgz
+    version: 1.0.0
   - apiVersion: v2
     appVersion: 1.0.0-rc.6
     created: "2024-05-24T11:00:03.457226574Z"
@@ -22497,4 +22549,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2024-05-27T04:04:51.074490806Z"
+generated: "2024-05-27T08:32:41.470813332Z"
