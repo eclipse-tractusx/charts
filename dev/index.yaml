@@ -5754,6 +5754,23 @@ entries:
   centralidp:
   - apiVersion: v2
     appVersion: 23.0.7
+    created: "2024-05-27T15:41:35.288117329Z"
+    dependencies:
+    - name: keycloak
+      repository: https://raw.githubusercontent.com/bitnami/charts/archive-full-index/bitnami
+      version: 19.3.0
+    description: Helm chart for Central Keycloak Instance
+    digest: 980ac2b0b655ce591e25443d428df826a218443ba1426540b0979f745c82889a
+    home: https://github.com/eclipse-tractusx/portal-iam
+    name: centralidp
+    sources:
+    - https://github.com/eclipse-tractusx/portal-iam
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/portal-iam/releases/download/centralidp-3.0.0/centralidp-3.0.0.tgz
+    version: 3.0.0
+  - apiVersion: v2
+    appVersion: 23.0.7
     created: "2024-04-26T09:23:10.368789986Z"
     dependencies:
     - name: keycloak
@@ -10749,6 +10766,35 @@ entries:
     version: 2.0.0
   item-relationship-service:
   - apiVersion: v2
+    appVersion: 5.1.4
+    created: "2024-05-27T14:36:53.500731054Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      version: 1.x.x
+    - condition: minio.enabled
+      name: minio
+      repository: https://charts.min.io/
+      version: 5.0.1
+    - condition: prometheus.enabled
+      name: prometheus
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 17.0.1
+    - condition: grafana.enabled
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.44.8
+    description: Tractus-X Item Relationship Service Helm Chart
+    digest: 7ec198428486a351a07ea2342de7975c36375609b0010d164ae66f7a9492f091
+    home: https://eclipse-tractusx.github.io/
+    name: item-relationship-service
+    sources:
+    - https://github.com/eclipse-tractusx/item-relationship-service
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/item-relationship-service/releases/download/item-relationship-service-7.1.4/item-relationship-service-7.1.4.tgz
+    version: 7.1.4
+  - apiVersion: v2
     appVersion: 5.1.3
     created: "2024-05-17T12:48:37.316795566Z"
     dependencies:
@@ -13476,6 +13522,24 @@ entries:
     version: 0.5.18
   managed-service-orchestrator:
   - apiVersion: v2
+    appVersion: 1.5.6
+    created: "2024-05-27T11:05:23.335751534Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.x.x
+    description: This service will help service provider to set up DFT/SDE with EDC
+      and EDC as service in service provider environment.
+    digest: a678fcbadbbd866efbad93003907e1214c89b3c4bc29ce329447db48d5bcbd3c
+    name: managed-service-orchestrator
+    sources:
+    - https://github.com/eclipse-tractusx/managed-service-orchestrator
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/managed-service-orchestrator/releases/download/managed-service-orchestrator-1.5.9/managed-service-orchestrator-1.5.9.tgz
+    version: 1.5.9
+  - apiVersion: v2
     appVersion: 1.5.5
     created: "2024-05-14T12:02:23.537402054Z"
     dependencies:
@@ -14006,6 +14070,27 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/portal/releases/download/portal-2.0.0-RC2/portal-2.0.0-RC2.tgz
     version: 2.0.0-RC2
+  - apiVersion: v2
+    appVersion: 2.0.0-RC10
+    created: "2024-05-27T17:39:29.378321678Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.x.x
+    description: Helm chart for Catena-X Portal
+    digest: 1fd4ac1457a6570d2388b2fed81e6ac18df5b986b126f4182abed5fd10fd56ee
+    home: https://github.com/eclipse-tractusx/portal
+    name: portal
+    sources:
+    - https://github.com/eclipse-tractusx/portal-frontend
+    - https://github.com/eclipse-tractusx/portal-frontend-registration
+    - https://github.com/eclipse-tractusx/portal-assets
+    - https://github.com/eclipse-tractusx/portal-backend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/portal/releases/download/portal-2.0.0-RC10/portal-2.0.0-RC10.tgz
+    version: 2.0.0-RC10
   - apiVersion: v2
     appVersion: 2.0.0-RC1
     created: "2024-04-12T15:10:26.180906874Z"
@@ -17618,6 +17703,23 @@ entries:
     - https://github.com/eclipse-tractusx/sldt-semantic-hub/releases/download/semantic-hub-0.1.3/semantic-hub-0.1.3.tgz
     version: 0.1.3
   sharedidp:
+  - apiVersion: v2
+    appVersion: 23.0.7
+    created: "2024-05-27T15:41:35.419786527Z"
+    dependencies:
+    - name: keycloak
+      repository: https://raw.githubusercontent.com/bitnami/charts/archive-full-index/bitnami
+      version: 19.3.0
+    description: Helm chart for Shared Keycloak Instance
+    digest: 2a47757929dac09e26fc93de1291a3615c1f45e35f5954e512a4545d723673c2
+    home: https://github.com/eclipse-tractusx/portal-iam
+    name: sharedidp
+    sources:
+    - https://github.com/eclipse-tractusx/portal-iam
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/portal-iam/releases/download/sharedidp-3.0.0/sharedidp-3.0.0.tgz
+    version: 3.0.0
   - apiVersion: v2
     appVersion: 23.0.7
     created: "2024-04-26T09:23:10.692406406Z"
@@ -22549,4 +22651,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2024-05-27T08:32:41.470813332Z"
+generated: "2024-05-28T03:32:48.3368389Z"
