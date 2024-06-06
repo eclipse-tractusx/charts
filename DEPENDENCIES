@@ -77,7 +77,7 @@ go/golang/github.com%2Fgolang/protobuf/v1.4.1, BSD-3-Clause, approved, #5711
 go/golang/github.com%2Fgolang/protobuf/v1.5.0, BSD-3-Clause, approved, #5706
 go/golang/github.com%2Fgolang/protobuf/v1.5.3, BSD-3-Clause, approved, #5706
 go/golang/github.com%2Fgomodule/redigo/v1.8.2, Apache-2.0, approved, clearlydefined
-go/golang/github.com%2Fgoogle%2Fgo-github/v48/v48.0.0, BSD-3-Clause AND MIT, approved, #6383
+go/golang/github.com%2Fgoogle%2Fgo-github/v48/v48.2.0, BSD-3-Clause, approved, #14892
 go/golang/github.com%2Fgoogle/btree/v1.0.1, Apache-2.0, approved, clearlydefined
 go/golang/github.com%2Fgoogle/gnostic-models/v0.6.8, Apache-2.0, approved, #10742
 go/golang/github.com%2Fgoogle/go-cmp/v0.2.0, BSD-3-Clause, approved, #5682
@@ -210,7 +210,7 @@ go/golang/golang.org%2Fx/net/v0.0.0-20200226121028-0de0cce0169b, BSD-3-Clause AN
 go/golang/golang.org%2Fx/net/v0.0.0-20201021035429-f5854403a974, BSD-3-Clause AND (BSD-2-Clause AND BSD-3-Clause), approved, #5736
 go/golang/golang.org%2Fx/net/v0.17.0, BSD-3-Clause AND (BSD-2-Clause AND BSD-3-Clause), approved, #11054
 go/golang/golang.org%2Fx/oauth2/v0.0.0-20180821212333-d2e6202438be, BSD-3-Clause, approved, clearlydefined
-go/golang/golang.org%2Fx/oauth2/v0.19.0, BSD-3-Clause, approved, clearlydefined
+go/golang/golang.org%2Fx/oauth2/v0.20.0, BSD-3-Clause, approved, clearlydefined
 go/golang/golang.org%2Fx/sync/v0.0.0-20180314180146-1d60e4601c6f, BSD-3-Clause, approved, #5719
 go/golang/golang.org%2Fx/sync/v0.0.0-20181108010431-42b317875d0f, BSD-3-Clause, approved, #5719
 go/golang/golang.org%2Fx/sync/v0.0.0-20181221193216-37e7f081c4d4, BSD-3-Clause, approved, #5719
