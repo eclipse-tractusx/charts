@@ -6,7 +6,7 @@ toolchain go1.21.6
 
 require (
 	github.com/google/go-github/v48 v48.2.0
-	golang.org/x/oauth2 v0.20.0
+	golang.org/x/oauth2 v0.21.0
 	helm.sh/helm/v3 v3.14.4
 )
 
