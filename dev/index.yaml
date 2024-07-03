@@ -2089,6 +2089,56 @@ entries:
     version: 0.0.1
   bpdm:
   - apiVersion: v2
+    appVersion: 6.0.2
+    created: "2024-07-03T17:30:59.24178+08:00"
+    dependencies:
+    - alias: bpdm-gate
+      condition: bpdm-gate.enabled
+      name: bpdm-gate
+      repository: file://./charts/bpdm-gate
+      version: 6.0.2
+    - alias: bpdm-pool
+      condition: bpdm-pool.enabled
+      name: bpdm-pool
+      repository: file://./charts/bpdm-pool
+      version: 7.0.2
+    - alias: bpdm-cleaning-service-dummy
+      condition: bpdm-cleaning-service-dummy.enabled
+      name: bpdm-cleaning-service-dummy
+      repository: file://./charts/bpdm-cleaning-service-dummy
+      version: 3.0.2
+    - alias: bpdm-orchestrator
+      condition: bpdm-orchestrator.enabled
+      name: bpdm-orchestrator
+      repository: file://./charts/bpdm-orchestrator
+      version: 3.0.2
+    - name: bpdm-common
+      repository: file://./charts/bpdm-common
+      version: 1.0.1
+    - alias: postgres
+      condition: postgres.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.10
+    - alias: keycloak
+      condition: keycloak.enabled
+      name: keycloak
+      repository: https://charts.bitnami.com/bitnami
+      version: 19.3.0
+    description: A Helm chart for Kubernetes that deploys the BPDM applications
+    digest: 2a6c80c0dc1e6ef90989035bcc70c8b45f2142683997a8da5e51b585dfaea3c9
+    home: https://github.com/eclipse-tractusx/bpdm
+    maintainers:
+    - name: Nico Koprowski
+    - name: Fabio D. Mota
+    name: bpdm
+    sources:
+    - https://github.com/eclipse-tractusx/bpdm
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/bpdm/releases/download/bpdm-5.0.2/bpdm-5.0.2.tgz
+    version: 5.0.2
+  - apiVersion: v2
     appVersion: 6.0.1
     created: "2024-05-27T03:51:55.22671902Z"
     dependencies:
@@ -7812,6 +7862,19 @@ entries:
     - https://github.com/eclipse-tractusx/autosetup-backend/releases/download/dftfrontend-1.4.7/dftfrontend-1.4.7.tgz
     version: 1.4.7
   digital-product-pass:
+  - apiVersion: v2
+    appVersion: 3.1.0
+    created: "2024-07-03T08:32:02.468522297Z"
+    description: A Helm chart for Tractus-X Digital Product Pass Kubernetes
+    digest: eee4c8ebab92cb161212bdeea87356a637df03515b21e108e0a0047c6f2062e7
+    home: https://github.com/eclipse-tractusx/digital-product-pass/tree/main/charts/digital-product-pass
+    name: digital-product-pass
+    sources:
+    - https://github.com/eclipse-tractusx/digital-product-pass/tree/main/charts/digital-product-pass
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/digital-product-pass-3.1.1/digital-product-pass-3.1.1.tgz
+    version: 3.1.1
   - apiVersion: v2
     appVersion: 3.1.0
     created: "2024-06-20T14:09:32.625580446Z"
@@ -23405,4 +23468,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2024-07-03T03:32:19.33549024Z"
+generated: "2024-07-03T09:37:57.897638355Z"
