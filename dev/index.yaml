@@ -7863,6 +7863,32 @@ entries:
     version: 1.4.7
   digital-product-pass:
   - apiVersion: v2
+    appVersion: 4.0.0-rc1
+    created: "2024-07-03T17:35:08.021257629Z"
+    description: A Helm chart for Tractus-X Digital Product Pass Kubernetes
+    digest: b0d2e5912ebb03248b216a546e3ddff966c69bc8b74642947ced1fdaf063d0a6
+    home: https://github.com/eclipse-tractusx/digital-product-pass/tree/main/charts/digital-product-pass
+    name: digital-product-pass
+    sources:
+    - https://github.com/eclipse-tractusx/digital-product-pass/tree/main/charts/digital-product-pass
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/digital-product-pass-4.0.0-rc1/digital-product-pass-4.0.0-rc1.tgz
+    version: 4.0.0-rc1
+  - apiVersion: v2
+    appVersion: 3.1.0
+    created: "2024-07-03T14:33:21.359208509Z"
+    description: A Helm chart for Tractus-X Digital Product Pass Kubernetes
+    digest: 9fbf191aec07adef434ce1abb8b286a4f87afdc28d3cb2661d8325e297bf5380
+    home: https://github.com/eclipse-tractusx/digital-product-pass/tree/main/charts/digital-product-pass
+    name: digital-product-pass
+    sources:
+    - https://github.com/eclipse-tractusx/digital-product-pass/tree/main/charts/digital-product-pass
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/digital-product-pass-3.1.2/digital-product-pass-3.1.2.tgz
+    version: 3.1.2
+  - apiVersion: v2
     appVersion: 3.1.0
     created: "2024-07-03T08:32:02.468522297Z"
     description: A Helm chart for Tractus-X Digital Product Pass Kubernetes
@@ -10949,6 +10975,35 @@ entries:
     - https://github.com/catenax-ng/product-item-relationship-service/releases/download/irs-helm-2.0.0/irs-helm-2.0.0.tgz
     version: 2.0.0
   item-relationship-service:
+  - apiVersion: v2
+    appVersion: 5.2.0
+    created: "2024-07-03T13:20:22.266064769Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      version: 1.x.x
+    - condition: minio.enabled
+      name: minio
+      repository: https://charts.min.io/
+      version: 5.0.1
+    - condition: prometheus.enabled
+      name: prometheus
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 17.0.1
+    - condition: grafana.enabled
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.44.8
+    description: Tractus-X Item Relationship Service Helm Chart
+    digest: 3724cca3cbcbda8020ef4fd65205dcb6dbebeffaf634c5bfc29e743c8db37565
+    home: https://eclipse-tractusx.github.io/
+    name: item-relationship-service
+    sources:
+    - https://github.com/eclipse-tractusx/item-relationship-service
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/item-relationship-service/releases/download/item-relationship-service-7.2.0/item-relationship-service-7.2.0.tgz
+    version: 7.2.0
   - apiVersion: v2
     appVersion: 5.1.4
     created: "2024-05-27T14:36:53.500731054Z"
@@ -23468,4 +23523,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2024-07-03T09:37:57.897638355Z"
+generated: "2024-07-04T03:33:22.688432168Z"
