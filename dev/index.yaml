@@ -2030,6 +2030,30 @@ entries:
     urls:
     - https://eclipse-tractusx.github.io/bpn-did-resolution-service/helm-charts/bdrs-server-0.0.1.tgz
     version: 0.0.1
+  - apiVersion: v2
+    appVersion: 0.0.5
+    created: "2024-07-05T08:43:27.185883886Z"
+    dependencies:
+    - alias: postgresql
+      condition: install.postgresql
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.11.2
+    - alias: vault
+      condition: install.vault
+      name: vault
+      repository: https://helm.releases.hashicorp.com
+      version: 0.27.0
+    description: A Helm chart for the Tractus-X BPN-DID Resolution Service
+    digest: 70a7a9be2265dbfba0a3bd31ad6e4d293020c65ff7f3fd61bd249409cf8bce45
+    home: https://github.com/eclipse-tractusx/bpn-did-resolution-service/tree/main/charts/bdrs-server
+    name: bdrs-server
+    sources:
+    - https://github.com/eclipse-tractusx/bpn-did-resolution-service/tree/main/charts/bdrs-server
+    type: application
+    urls:
+    - https://eclipse-tractusx.github.io/bpn-did-resolution-service/helm-charts/bdrs-server-0.0.5.tgz
+    version: 0.0.5
   bdrs-server-memory:
   - apiVersion: v2
     appVersion: 0.0.4
@@ -2087,6 +2111,20 @@ entries:
     urls:
     - https://eclipse-tractusx.github.io/bpn-did-resolution-service/helm-charts/bdrs-server-memory-0.0.1.tgz
     version: 0.0.1
+  - apiVersion: v2
+    appVersion: 0.0.5
+    created: "2024-07-05T08:43:27.190949971Z"
+    description: A Helm chart for the Tractus-X BPN-DID Resolution Service (only in-memory
+      persistence)
+    digest: 6bd984cb2d22d9eea4a402538a6afdb2046786c363beff3615ebcfdd70cf9824
+    home: https://github.com/eclipse-tractusx/bpn-did-resolution-service/tree/main/charts/bdrs-server
+    name: bdrs-server-memory
+    sources:
+    - https://github.com/eclipse-tractusx/bpn-did-resolution-service/tree/main/charts/bdrs-server
+    type: application
+    urls:
+    - https://eclipse-tractusx.github.io/bpn-did-resolution-service/helm-charts/bdrs-server-memory-0.0.5.tgz
+    version: 0.0.5
   bpdm:
   - apiVersion: v2
     appVersion: 6.0.2
@@ -9551,6 +9589,35 @@ entries:
     - https://github.com/eclipse-tractusx/item-relationship-service/releases/download/irs-helm-6.15.0/irs-helm-6.15.0.tgz
     version: 6.15.0
   - apiVersion: v2
+    appVersion: 4.5.3
+    created: "2024-07-05T13:18:28.321249537Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      version: 1.x.x
+    - condition: minio.enabled
+      name: minio
+      repository: https://charts.min.io/
+      version: 5.0.1
+    - condition: prometheus.enabled
+      name: prometheus
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 17.0.1
+    - condition: grafana.enabled
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.44.8
+    description: IRS Helm chart for Kubernetes
+    digest: 35f16df5535abb29bca724a28023999c378e389d0f90dec1bd0f5d0ae86cd5be
+    home: https://eclipse-tractusx.github.io/
+    name: irs-helm
+    sources:
+    - https://github.com/eclipse-tractusx/item-relationship-service
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/item-relationship-service/releases/download/irs-helm-6.14.3/irs-helm-6.14.3.tgz
+    version: 6.14.3
+  - apiVersion: v2
     appVersion: 4.5.2
     created: "2024-02-22T15:26:24.872203555Z"
     dependencies:
@@ -11542,6 +11609,48 @@ entries:
     - https://github.com/eclipse-tractusx/portal-cd/releases/download/localdev-portal-iam-0.0.1/localdev-portal-iam-0.0.1.tgz
     version: 0.0.1
   managed-identity-wallet:
+  - apiVersion: v2
+    appVersion: 0.5.0
+    created: "2024-07-05T07:47:06.37441167Z"
+    dependencies:
+    - condition: keycloak.enabled
+      name: keycloak
+      repository: https://charts.bitnami.com/bitnami
+      version: 15.1.6
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.9.13
+    - condition: pgadmin4.enabled
+      name: pgadmin4
+      repository: file://charts/pgadmin4
+      version: 1.19.0
+    description: 'Managed Identity Wallet is supposed to supply a secure data source
+      and data sink for Digital Identity Documents (DID), in order to enable Self-Sovereign
+      Identity founding on those DIDs. And at the same it shall support an uninterrupted
+      tracking and tracing and documenting the usage of those DIDs, e.g. within logistical
+      supply chains. '
+    digest: 72c6381826ce0b106c8afee008590b0fd70e7103e33aa7d87b11054c04a28bf9
+    home: https://github.com/eclipse-tractusx/managed-identity-wallet
+    keywords:
+    - Managed Identity Wallet
+    - eclipse-tractusx
+    maintainers:
+    - email: dominik.pinsel@mercedes-benz.com
+      name: Dominik Pinsel
+      url: https://github.com/DominikPinsel
+    name: managed-identity-wallet
+    sources:
+    - https://github.com/eclipse-tractusx/managed-identity-wallet
+    type: application
+    urls:
+    - https://eclipse-tractusx.github.io/managed-identity-wallet/helm-charts/managed-identity-wallet-0.5.0.tgz
+    version: 0.5.0
   - apiVersion: v2
     appVersion: 0.5.0-develop.20
     created: "2024-06-13T11:02:37.162817463Z"
@@ -18699,6 +18808,47 @@ entries:
     version: 1.0.0-rc.1
   traceability-foss:
   - apiVersion: v2
+    appVersion: 12.0.0
+    created: "2024-07-05T13:22:39.470935251Z"
+    dependencies:
+    - name: frontend
+      repository: file://charts/frontend
+      version: 1.3.40
+    - name: backend
+      repository: file://charts/backend
+      version: 1.3.40
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.10
+    - condition: pgadmin4.enabled
+      name: pgadmin4
+      repository: https://helm.runix.net
+      version: 1.23.1
+    - condition: item-relationship-service.enabled
+      name: item-relationship-service
+      repository: https://eclipse-tractusx.github.io/item-relationship-service
+      version: 7.1.4
+    - condition: tractusx-connector.enabled
+      name: tractusx-connector
+      repository: https://eclipse-tractusx.github.io/tractusx-edc
+      version: 0.7.0
+    - alias: edc-postgresql
+      condition: edc-postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.10
+    description: An umbrella Helm chart for eclipse-tractusx/traceability-foss project
+    digest: 9122c5601ae179ebcd1664cc02ae153dbbb85f57b3fab4f9574db2ca5c722492
+    home: https://eclipse-tractusx.github.io/
+    name: traceability-foss
+    sources:
+    - https://github.com/eclipse-tractusx/traceability-foss
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/traceability-foss/releases/download/helm-charts-1.3.40/traceability-foss-1.3.40.tgz
+    version: 1.3.40
+  - apiVersion: v2
     appVersion: 11.0.2
     created: "2024-05-29T08:57:42.346837827Z"
     dependencies:
@@ -23523,4 +23673,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2024-07-05T03:32:25.45725778Z"
+generated: "2024-07-06T03:32:35.24165179Z"
