@@ -8567,6 +8567,28 @@ entries:
   digital-twin-registry:
   - apiVersion: v2
     appVersion: 0.5.0
+    created: "2024-07-16T13:15:33.562904122Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.10
+    - condition: enableKeycloak
+      name: keycloak
+      repository: https://charts.bitnami.com/bitnami
+      version: 16.1.7
+    description: Tractus-X Digital Twin Registry Helm Chart
+    digest: b80704a0bc07800145ef7b1519a7fb04ece8caf0a4aa1f823e10c271faa56ee1
+    home: https://eclipse-tractusx.github.io/
+    name: digital-twin-registry
+    sources:
+    - https://github.com/eclipse-tractusx/sldt-digital-twin-registry
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-digital-twin-registry/releases/download/digital-twin-registry-0.5.2/digital-twin-registry-0.5.2.tgz
+    version: 0.5.2
+  - apiVersion: v2
+    appVersion: 0.5.0
     created: "2024-07-08T14:08:16.294228512Z"
     dependencies:
     - condition: enablePostgres
@@ -11257,6 +11279,35 @@ entries:
     - https://github.com/catenax-ng/product-item-relationship-service/releases/download/irs-helm-2.0.0/irs-helm-2.0.0.tgz
     version: 2.0.0
   item-relationship-service:
+  - apiVersion: v2
+    appVersion: 5.3.0
+    created: "2024-07-16T13:09:07.224499961Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      version: 2.x.x
+    - condition: minio.enabled
+      name: minio
+      repository: https://charts.min.io/
+      version: 5.0.1
+    - condition: prometheus.enabled
+      name: prometheus
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 17.0.1
+    - condition: grafana.enabled
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.44.8
+    description: Tractus-X Item Relationship Service Helm Chart
+    digest: 8dbdf5100b4ad0a3306531d6347b8db2deb74653dd1b73e2bab47130a7af28b1
+    home: https://eclipse-tractusx.github.io/
+    name: item-relationship-service
+    sources:
+    - https://github.com/eclipse-tractusx/item-relationship-service
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/item-relationship-service/releases/download/item-relationship-service-7.3.1/item-relationship-service-7.3.1.tgz
+    version: 7.3.1
   - apiVersion: v2
     appVersion: 5.3.0
     created: "2024-07-15T14:26:21.890715358Z"
@@ -24121,4 +24172,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2024-07-16T03:34:10.329576839Z"
+generated: "2024-07-16T13:36:46.802823822Z"
