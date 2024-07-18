@@ -2130,6 +2130,30 @@ entries:
     urls:
     - https://eclipse-tractusx.github.io/bpn-did-resolution-service/helm-charts/bdrs-server-0.0.1.tgz
     version: 0.0.1
+  - apiVersion: v2
+    appVersion: 0.5.2
+    created: "2024-07-17T09:00:23.000550957Z"
+    dependencies:
+    - alias: postgresql
+      condition: install.postgresql
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.11.2
+    - alias: vault
+      condition: install.vault
+      name: vault
+      repository: https://helm.releases.hashicorp.com
+      version: 0.27.0
+    description: A Helm chart for the Tractus-X BPN-DID Resolution Service
+    digest: 803f2ad1475c42f191aff6119e152c3652d0b36833e0459cfcb8604b19e74977
+    home: https://github.com/eclipse-tractusx/bpn-did-resolution-service/tree/main/charts/bdrs-server
+    name: bdrs-server
+    sources:
+    - https://github.com/eclipse-tractusx/bpn-did-resolution-service/tree/main/charts/bdrs-server
+    type: application
+    urls:
+    - https://eclipse-tractusx.github.io/bpn-did-resolution-service/helm-charts/bdrs-server-0.5.2.tgz
+    version: 0.5.2
   bdrs-server-memory:
   - apiVersion: v2
     appVersion: 0.5.1
@@ -2215,6 +2239,20 @@ entries:
     urls:
     - https://eclipse-tractusx.github.io/bpn-did-resolution-service/helm-charts/bdrs-server-memory-0.0.1.tgz
     version: 0.0.1
+  - apiVersion: v2
+    appVersion: 0.5.2
+    created: "2024-07-17T09:00:23.007626001Z"
+    description: A Helm chart for the Tractus-X BPN-DID Resolution Service (only in-memory
+      persistence)
+    digest: e30518d620a608fec24e054899dc456e4f6cce8dce5b5516a33c34b3bb3c433f
+    home: https://github.com/eclipse-tractusx/bpn-did-resolution-service/tree/main/charts/bdrs-server
+    name: bdrs-server-memory
+    sources:
+    - https://github.com/eclipse-tractusx/bpn-did-resolution-service/tree/main/charts/bdrs-server
+    type: application
+    urls:
+    - https://eclipse-tractusx.github.io/bpn-did-resolution-service/helm-charts/bdrs-server-memory-0.5.2.tgz
+    version: 0.5.2
   bpdm:
   - apiVersion: v2
     appVersion: 6.1.0
@@ -15020,6 +15058,27 @@ entries:
     version: 0.1.0-rc.1
   portal:
   - apiVersion: v2
+    appVersion: 2.1.0-RC2
+    created: "2024-07-17T17:41:27.560504202Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.x.x
+    description: Helm chart for Catena-X Portal
+    digest: cf9d461b6ebcb2a5ec2841f36210af7bb2f02828e10ef8fed06e9ef6bdc4e497
+    home: https://github.com/eclipse-tractusx/portal
+    name: portal
+    sources:
+    - https://github.com/eclipse-tractusx/portal-frontend
+    - https://github.com/eclipse-tractusx/portal-frontend-registration
+    - https://github.com/eclipse-tractusx/portal-assets
+    - https://github.com/eclipse-tractusx/portal-backend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/portal/releases/download/portal-2.1.0-RC2/portal-2.1.0-RC2.tgz
+    version: 2.1.0-RC2
+  - apiVersion: v2
     appVersion: 2.1.0-RC1
     created: "2024-07-16T13:38:57.93909785Z"
     dependencies:
@@ -19244,6 +19303,22 @@ entries:
     - https://github.com/eclipse-tractusx/ssi-authority-schema-registry/releases/download/ssi-asr-1.0.0-rc.1/ssi-asr-1.0.0-rc.1.tgz
     version: 1.0.0-rc.1
   ssi-credential-issuer:
+  - apiVersion: v2
+    appVersion: 1.1.0-rc.1
+    created: "2024-07-17T18:09:44.126339408Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.x
+    description: Helm chart for SSI Credential Issuer
+    digest: f3820788fe322b8369313f9b47b4da4f4b287d93c81e9049546ec1dfdeae785c
+    home: https://github.com/eclipse-tractusx/ssi-credential-issuer
+    name: ssi-credential-issuer
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/ssi-credential-issuer/releases/download/ssi-credential-issuer-1.1.0-rc.1/ssi-credential-issuer-1.1.0-rc.1.tgz
+    version: 1.1.0-rc.1
   - apiVersion: v2
     appVersion: 1.0.0
     created: "2024-05-27T07:02:19.293095716Z"
@@ -24330,4 +24405,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2024-07-17T07:44:16.376611737Z"
+generated: "2024-07-18T03:34:28.028737569Z"
