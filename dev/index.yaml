@@ -1997,6 +1997,30 @@ entries:
     version: 0.0.2
   bdrs-server:
   - apiVersion: v2
+    appVersion: 0.5.2
+    created: "2024-07-17T09:00:23.000550957Z"
+    dependencies:
+    - alias: postgresql
+      condition: install.postgresql
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.11.2
+    - alias: vault
+      condition: install.vault
+      name: vault
+      repository: https://helm.releases.hashicorp.com
+      version: 0.27.0
+    description: A Helm chart for the Tractus-X BPN-DID Resolution Service
+    digest: 803f2ad1475c42f191aff6119e152c3652d0b36833e0459cfcb8604b19e74977
+    home: https://github.com/eclipse-tractusx/bpn-did-resolution-service/tree/main/charts/bdrs-server
+    name: bdrs-server
+    sources:
+    - https://github.com/eclipse-tractusx/bpn-did-resolution-service/tree/main/charts/bdrs-server
+    type: application
+    urls:
+    - https://eclipse-tractusx.github.io/bpn-did-resolution-service/helm-charts/bdrs-server-0.5.2.tgz
+    version: 0.5.2
+  - apiVersion: v2
     appVersion: 0.5.1
     created: "2024-07-08T10:52:05.148391985Z"
     dependencies:
@@ -2130,31 +2154,21 @@ entries:
     urls:
     - https://eclipse-tractusx.github.io/bpn-did-resolution-service/helm-charts/bdrs-server-0.0.1.tgz
     version: 0.0.1
+  bdrs-server-memory:
   - apiVersion: v2
     appVersion: 0.5.2
-    created: "2024-07-17T09:00:23.000550957Z"
-    dependencies:
-    - alias: postgresql
-      condition: install.postgresql
-      name: postgresql
-      repository: https://charts.bitnami.com/bitnami
-      version: 12.11.2
-    - alias: vault
-      condition: install.vault
-      name: vault
-      repository: https://helm.releases.hashicorp.com
-      version: 0.27.0
-    description: A Helm chart for the Tractus-X BPN-DID Resolution Service
-    digest: 803f2ad1475c42f191aff6119e152c3652d0b36833e0459cfcb8604b19e74977
+    created: "2024-07-17T09:00:23.007626001Z"
+    description: A Helm chart for the Tractus-X BPN-DID Resolution Service (only in-memory
+      persistence)
+    digest: e30518d620a608fec24e054899dc456e4f6cce8dce5b5516a33c34b3bb3c433f
     home: https://github.com/eclipse-tractusx/bpn-did-resolution-service/tree/main/charts/bdrs-server
-    name: bdrs-server
+    name: bdrs-server-memory
     sources:
     - https://github.com/eclipse-tractusx/bpn-did-resolution-service/tree/main/charts/bdrs-server
     type: application
     urls:
-    - https://eclipse-tractusx.github.io/bpn-did-resolution-service/helm-charts/bdrs-server-0.5.2.tgz
+    - https://eclipse-tractusx.github.io/bpn-did-resolution-service/helm-charts/bdrs-server-memory-0.5.2.tgz
     version: 0.5.2
-  bdrs-server-memory:
   - apiVersion: v2
     appVersion: 0.5.1
     created: "2024-07-08T10:52:05.154418892Z"
@@ -2239,20 +2253,6 @@ entries:
     urls:
     - https://eclipse-tractusx.github.io/bpn-did-resolution-service/helm-charts/bdrs-server-memory-0.0.1.tgz
     version: 0.0.1
-  - apiVersion: v2
-    appVersion: 0.5.2
-    created: "2024-07-17T09:00:23.007626001Z"
-    description: A Helm chart for the Tractus-X BPN-DID Resolution Service (only in-memory
-      persistence)
-    digest: e30518d620a608fec24e054899dc456e4f6cce8dce5b5516a33c34b3bb3c433f
-    home: https://github.com/eclipse-tractusx/bpn-did-resolution-service/tree/main/charts/bdrs-server
-    name: bdrs-server-memory
-    sources:
-    - https://github.com/eclipse-tractusx/bpn-did-resolution-service/tree/main/charts/bdrs-server
-    type: application
-    urls:
-    - https://eclipse-tractusx.github.io/bpn-did-resolution-service/helm-charts/bdrs-server-memory-0.5.2.tgz
-    version: 0.5.2
   bpdm:
   - apiVersion: v2
     appVersion: 6.1.0
@@ -12057,6 +12057,90 @@ entries:
     - https://github.com/eclipse-tractusx/portal-cd/releases/download/localdev-portal-iam-0.0.1/localdev-portal-iam-0.0.1.tgz
     version: 0.0.1
   managed-identity-wallet:
+  - apiVersion: v2
+    appVersion: 1.0.0-develop.1
+    created: "2024-07-18T14:00:38.414009949Z"
+    dependencies:
+    - condition: keycloak.enabled
+      name: keycloak
+      repository: https://charts.bitnami.com/bitnami
+      version: 15.1.6
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.9.13
+    - condition: pgadmin4.enabled
+      name: pgadmin4
+      repository: file://charts/pgadmin4
+      version: 1.19.0
+    description: 'Managed Identity Wallet is supposed to supply a secure data source
+      and data sink for Digital Identity Documents (DID), in order to enable Self-Sovereign
+      Identity founding on those DIDs. And at the same it shall support an uninterrupted
+      tracking and tracing and documenting the usage of those DIDs, e.g. within logistical
+      supply chains. '
+    digest: 59ec325cad99df394dbfc0283bbc9d15cec2594d1467ee1d4cb160d11debd554
+    home: https://github.com/eclipse-tractusx/managed-identity-wallet
+    keywords:
+    - Managed Identity Wallet
+    - eclipse-tractusx
+    maintainers:
+    - email: dominik.pinsel@mercedes-benz.com
+      name: Dominik Pinsel
+      url: https://github.com/DominikPinsel
+    name: managed-identity-wallet
+    sources:
+    - https://github.com/eclipse-tractusx/managed-identity-wallet
+    type: application
+    urls:
+    - https://eclipse-tractusx.github.io/managed-identity-wallet/helm-charts/managed-identity-wallet-1.0.0-develop.1.tgz
+    version: 1.0.0-develop.1
+  - apiVersion: v2
+    appVersion: 0.6.0-develop.1
+    created: "2024-07-18T14:00:38.402614743Z"
+    dependencies:
+    - condition: keycloak.enabled
+      name: keycloak
+      repository: https://charts.bitnami.com/bitnami
+      version: 15.1.6
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.9.13
+    - condition: pgadmin4.enabled
+      name: pgadmin4
+      repository: file://charts/pgadmin4
+      version: 1.19.0
+    description: 'Managed Identity Wallet is supposed to supply a secure data source
+      and data sink for Digital Identity Documents (DID), in order to enable Self-Sovereign
+      Identity founding on those DIDs. And at the same it shall support an uninterrupted
+      tracking and tracing and documenting the usage of those DIDs, e.g. within logistical
+      supply chains. '
+    digest: 29f1aa3453d840bfa53e94add8596219b2f9f34787e8d16e064894974ebfaa51
+    home: https://github.com/eclipse-tractusx/managed-identity-wallet
+    keywords:
+    - Managed Identity Wallet
+    - eclipse-tractusx
+    maintainers:
+    - email: dominik.pinsel@mercedes-benz.com
+      name: Dominik Pinsel
+      url: https://github.com/DominikPinsel
+    name: managed-identity-wallet
+    sources:
+    - https://github.com/eclipse-tractusx/managed-identity-wallet
+    type: application
+    urls:
+    - https://eclipse-tractusx.github.io/managed-identity-wallet/helm-charts/managed-identity-wallet-0.6.0-develop.1.tgz
+    version: 0.6.0-develop.1
   - apiVersion: v2
     appVersion: 0.5.0
     created: "2024-07-05T07:47:06.37441167Z"
@@ -24405,4 +24489,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2024-07-18T03:34:28.028737569Z"
+generated: "2024-07-19T03:34:17.674436068Z"
