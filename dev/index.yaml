@@ -8212,6 +8212,19 @@ entries:
     version: 1.4.7
   digital-product-pass:
   - apiVersion: v2
+    appVersion: 4.0.1
+    created: "2024-07-25T09:30:04.827664426Z"
+    description: A Helm chart for Tractus-X Digital Product Pass Kubernetes
+    digest: 210a6017d9080bddafe3d003516a0620971896c9cc2d3c4bd7be476958a81b3c
+    home: https://github.com/eclipse-tractusx/digital-product-pass/tree/main/charts/digital-product-pass
+    name: digital-product-pass
+    sources:
+    - https://github.com/eclipse-tractusx/digital-product-pass/tree/main/charts/digital-product-pass
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/digital-product-pass-4.0.1/digital-product-pass-4.0.1.tgz
+    version: 4.0.1
+  - apiVersion: v2
     appVersion: 4.0.0
     created: "2024-07-19T17:46:21.807596505Z"
     description: A Helm chart for Tractus-X Digital Product Pass Kubernetes
@@ -15127,6 +15140,22 @@ entries:
     version: 1.12.17-SNAPSHOT
   policy-hub:
   - apiVersion: v2
+    appVersion: 1.1.0-rc.2
+    created: "2024-07-25T15:16:53.149179815Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.x
+    description: Helm chart for Policy Hub
+    digest: aa309f245e71242ff8f81ead35cff68b91fc28450f4c0177f608361f805bd8fb
+    home: https://github.com/eclipse-tractusx/policy-hub
+    name: policy-hub
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/policy-hub/releases/download/policy-hub-1.1.0-rc.2/policy-hub-1.1.0-rc.2.tgz
+    version: 1.1.0-rc.2
+  - apiVersion: v2
     appVersion: 1.1.0-rc.1
     created: "2024-07-16T21:14:11.129808715Z"
     dependencies:
@@ -16649,6 +16678,24 @@ entries:
     - https://github.com/eclipse-tractusx/knowledge-agents/releases/download/provisioning-agent-1.9.7-SNAPSHOT/provisioning-agent-1.9.7-SNAPSHOT.tgz
     version: 1.9.7-SNAPSHOT
   puris:
+  - apiVersion: v2
+    appVersion: 2.1.0
+    created: "2024-07-25T13:07:06.579466038Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.x
+    description: A helm chart for Kubernetes deployment of PURIS
+    digest: 0250feb55596173a1b24fc005a5029f39cbd3a4350bad9ff348736141bf5a706
+    home: https://github.com/eclipse-tractusx/puris
+    name: puris
+    sources:
+    - https://github.com/eclipse-tractusx/puris
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/puris/releases/download/puris-2.7.0/puris-2.7.0.tgz
+    version: 2.7.0
   - apiVersion: v2
     appVersion: 2.0.2
     created: "2024-06-05T11:33:02.898418681Z"
@@ -19514,6 +19561,22 @@ entries:
     - https://github.com/eclipse-tractusx/ssi-authority-schema-registry/releases/download/ssi-asr-1.0.0-rc.1/ssi-asr-1.0.0-rc.1.tgz
     version: 1.0.0-rc.1
   ssi-credential-issuer:
+  - apiVersion: v2
+    appVersion: 1.1.0-rc.2
+    created: "2024-07-25T15:17:19.97342656Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.x
+    description: Helm chart for SSI Credential Issuer
+    digest: 2b676cac6ab3f350e9d6acaf0169031c66533d5a98ad1b32665a0b64cc92879c
+    home: https://github.com/eclipse-tractusx/ssi-credential-issuer
+    name: ssi-credential-issuer
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/ssi-credential-issuer/releases/download/ssi-credential-issuer-1.1.0-rc.2/ssi-credential-issuer-1.1.0-rc.2.tgz
+    version: 1.1.0-rc.2
   - apiVersion: v2
     appVersion: 1.1.0-rc.1
     created: "2024-07-17T18:09:44.126339408Z"
@@ -24657,4 +24720,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2024-07-25T03:32:35.320604576Z"
+generated: "2024-07-26T03:32:44.077167982Z"
