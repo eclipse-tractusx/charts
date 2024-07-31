@@ -1146,6 +1146,35 @@ entries:
     version: 1.9.6-SNAPSHOT
   agent-plane:
   - apiVersion: v2
+    appVersion: 1.13.22-SNAPSHOT
+    created: "2024-07-30T09:51:33.8949514Z"
+    dependencies:
+    - alias: vault
+      condition: install.vault
+      name: vault
+      repository: https://helm.releases.hashicorp.com
+      version: 0.27.0
+    - alias: postgresql
+      condition: install.postgresql
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 15.2.1
+    description: 'A Helm chart for an Agent-Enabled Tractus-X Data Plane which registers
+      at a running Control Plane.  This chart is intended for use with an _existing_
+      HashiCorp Vault and Tractusx Connector. '
+    digest: b357c9994baa8e7d56906c1d00f636a50f622e74abd70a4b07a7511b8c35bbb0
+    home: https://github.com/eclipse-tractusx/knowledge-agents-edc/
+    maintainers:
+    - name: Tractus-X Knowledge Agents Team
+      url: https://github.com/eclipse-tractusx
+    name: agent-plane
+    sources:
+    - https://github.com/eclipse-tractusx/knowledge-agents-edc/tree/main/charts/agent-connector
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/knowledge-agents-edc/releases/download/agent-plane-1.13.22-SNAPSHOT/agent-plane-1.13.22-SNAPSHOT.tgz
+    version: 1.13.22-SNAPSHOT
+  - apiVersion: v2
     appVersion: 1.13.21-SNAPSHOT
     created: "2024-07-11T12:10:29.251894347Z"
     dependencies:
@@ -1259,6 +1288,29 @@ entries:
     - https://github.com/eclipse-tractusx/knowledge-agents-edc/releases/download/agent-plane-1.12.19-SNAPSHOT/agent-plane-1.12.19-SNAPSHOT.tgz
     version: 1.12.19-SNAPSHOT
   agent-plane-azure-vault:
+  - apiVersion: v2
+    appVersion: 1.13.22-SNAPSHOT
+    created: "2024-07-30T09:51:34.107392705Z"
+    dependencies:
+    - alias: postgresql
+      condition: install.postgresql
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 15.2.1
+    description: 'A Helm chart for an Agent-Enabled Tractus-X Data Plane which registers
+      at a running Control Plane.  This chart is intended for use with an _existing_
+      Azure Vault and Tractusx Connector. '
+    digest: 6f3417894c5bc0494c1c34997f55cb6ff47d02fcaa1790737c6d6a8fb8bb9c2e
+    home: https://github.com/eclipse-tractusx/knowledge-agents-edc/
+    maintainers:
+    - name: Tractus-X Knowledge Agents Team
+    name: agent-plane-azure-vault
+    sources:
+    - https://github.com/eclipse-tractusx/knowledge-agents-edc/tree/main/charts/agent-connector
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/knowledge-agents-edc/releases/download/agent-plane-azure-vault-1.13.22-SNAPSHOT/agent-plane-azure-vault-1.13.22-SNAPSHOT.tgz
+    version: 1.13.22-SNAPSHOT
   - apiVersion: v2
     appVersion: 1.13.21-SNAPSHOT
     created: "2024-07-11T12:10:29.439554476Z"
@@ -6188,6 +6240,23 @@ entries:
   centralidp:
   - apiVersion: v2
     appVersion: 23.0.7
+    created: "2024-07-30T13:23:45.634825244Z"
+    dependencies:
+    - name: keycloak
+      repository: https://raw.githubusercontent.com/bitnami/charts/archive-full-index/bitnami
+      version: 19.3.0
+    description: Helm chart for Central Keycloak Instance
+    digest: 0ac2ca12c614e71ccc487e2b63231f5bfa99537409b9987c35dd52adc5afef07
+    home: https://github.com/eclipse-tractusx/portal-iam
+    name: centralidp
+    sources:
+    - https://github.com/eclipse-tractusx/portal-iam
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/portal-iam/releases/download/centralidp-3.0.1/centralidp-3.0.1.tgz
+    version: 3.0.1
+  - apiVersion: v2
+    appVersion: 23.0.7
     created: "2024-05-27T15:41:35.288117329Z"
     dependencies:
     - name: keycloak
@@ -6431,6 +6500,23 @@ entries:
     - https://github.com/eclipse-tractusx/demand-capacity-mgmt/releases/download/charts-cart-0.1.0/charts-cart-0.1.0.tgz
     version: 0.1.0
   conforming-agent:
+  - apiVersion: v2
+    appVersion: 1.13.22-SNAPSHOT
+    created: "2024-07-30T09:51:28.024036914Z"
+    description: 'A Helm chart for the Tractus-X Conforming Agent which is a container
+      to assess the conformity of all other parts of the Agent-Enabled Dataspace.  This
+      chart has no prerequisites. '
+    digest: e46ac7ec718522f0ba1859c45b729157a4344e1c326f2c094530ee4307dddd4a
+    home: https://github.com/eclipse-tractusx/knowledge-agents/
+    maintainers:
+    - name: Tractus-X Knowledge Agents Team
+    name: conforming-agent
+    sources:
+    - https://github.com/eclipse-tractusx/knowledge-agents/tree/main/conforming
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/knowledge-agents/releases/download/conforming-agent-1.13.22-SNAPSHOT/conforming-agent-1.13.22-SNAPSHOT.tgz
+    version: 1.13.22-SNAPSHOT
   - apiVersion: v2
     appVersion: 1.13.21-SNAPSHOT
     created: "2024-07-11T10:44:13.469148081Z"
@@ -14897,6 +14983,24 @@ entries:
     version: 0.5.18
   managed-service-orchestrator:
   - apiVersion: v2
+    appVersion: 1.5.7
+    created: "2024-07-30T10:56:13.494662846Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.x.x
+    description: This service will help service provider to set up DFT/SDE with EDC
+      and EDC as service in service provider environment.
+    digest: 1ba938c77c92f6cb83bc4e10dc001e63bbaa32e8230007d4fd90b2ad156ebe31
+    name: managed-service-orchestrator
+    sources:
+    - https://github.com/eclipse-tractusx/managed-service-orchestrator
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/managed-service-orchestrator/releases/download/managed-service-orchestrator-1.6.0/managed-service-orchestrator-1.6.0.tgz
+    version: 1.6.0
+  - apiVersion: v2
     appVersion: 1.5.6
     created: "2024-05-27T11:05:23.335751534Z"
     dependencies:
@@ -15096,6 +15200,23 @@ entries:
     version: 1.4.3
   matchmaking-agent:
   - apiVersion: v2
+    appVersion: 1.13.22-SNAPSHOT
+    created: "2024-07-30T09:51:28.129432167Z"
+    description: 'A Helm chart for the Tractus-X Matchmaking Agent which is a container
+      encompassing data storage capabilities accessible from the dataplane by a REST
+      API  This chart has no prerequisites. '
+    digest: 4217f02d1ee8f43c47c5abd048eb373d91ee9fc9a98721993664c2bcacdd75b6
+    home: https://github.com/eclipse-tractusx/knowledge-agents/
+    maintainers:
+    - name: Tractus-X Knowledge Agents Team
+    name: matchmaking-agent
+    sources:
+    - https://github.com/eclipse-tractusx/knowledge-agents/tree/main/matchmaking
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/knowledge-agents/releases/download/matchmaking-agent-1.13.22-SNAPSHOT/matchmaking-agent-1.13.22-SNAPSHOT.tgz
+    version: 1.13.22-SNAPSHOT
+  - apiVersion: v2
     appVersion: 1.13.21-SNAPSHOT
     created: "2024-07-11T10:44:13.588122234Z"
     description: 'A Helm chart for the Tractus-X Matchmaking Agent which is a container
@@ -15181,6 +15302,22 @@ entries:
     - https://github.com/eclipse-tractusx/knowledge-agents/releases/download/matchmaking-agent-1.12.17-SNAPSHOT/matchmaking-agent-1.12.17-SNAPSHOT.tgz
     version: 1.12.17-SNAPSHOT
   policy-hub:
+  - apiVersion: v2
+    appVersion: 1.1.0
+    created: "2024-07-30T13:43:31.938453298Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.x
+    description: Helm chart for Policy Hub
+    digest: f1604733ff8b2909841d60948f692ceb7d2588fe0a9225b675390fef9a1dca6f
+    home: https://github.com/eclipse-tractusx/policy-hub
+    name: policy-hub
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/policy-hub/releases/download/policy-hub-1.1.0/policy-hub-1.1.0.tgz
+    version: 1.1.0
   - apiVersion: v2
     appVersion: 1.1.0-rc.2
     created: "2024-07-25T15:16:53.149179815Z"
@@ -15326,6 +15463,27 @@ entries:
     - https://github.com/eclipse-tractusx/policy-hub/releases/download/policy-hub-0.1.0-rc.1/policy-hub-0.1.0-rc.1.tgz
     version: 0.1.0-rc.1
   portal:
+  - apiVersion: v2
+    appVersion: 2.1.0
+    created: "2024-07-30T16:30:00.916512219Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.x.x
+    description: Helm chart for Catena-X Portal
+    digest: 06800d60dd780e7d0ec9147d5505c2010eaefa56619b42ccdbf847061fc07870
+    home: https://github.com/eclipse-tractusx/portal
+    name: portal
+    sources:
+    - https://github.com/eclipse-tractusx/portal-frontend
+    - https://github.com/eclipse-tractusx/portal-frontend-registration
+    - https://github.com/eclipse-tractusx/portal-assets
+    - https://github.com/eclipse-tractusx/portal-backend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/portal/releases/download/portal-2.1.0/portal-2.1.0.tgz
+    version: 2.1.0
   - apiVersion: v2
     appVersion: 2.1.0-RC3
     created: "2024-07-29T16:21:37.187853584Z"
@@ -16520,6 +16678,23 @@ entries:
     version: 1.1.1
   provisioning-agent:
   - apiVersion: v2
+    appVersion: 1.13.22-SNAPSHOT
+    created: "2024-07-30T09:51:28.237597633Z"
+    description: 'A Helm chart for the Tractus-X Provisioning Agent which is a container
+      to Bridge Agent-Enabled Connector and Relational Data Sources.  This chart has
+      no prerequisites. '
+    digest: 838ad6ba9f189a79ecdfac2d45dad44c0b1582eb99b11016a839ff1ad756a14d
+    home: https://github.com/eclipse-tractusx/knowledge-agents/
+    maintainers:
+    - name: Tractus-X Knowledge Agents Team
+    name: provisioning-agent
+    sources:
+    - https://github.com/eclipse-tractusx/knowledge-agents/tree/main/provisioning
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/knowledge-agents/releases/download/provisioning-agent-1.13.22-SNAPSHOT/provisioning-agent-1.13.22-SNAPSHOT.tgz
+    version: 1.13.22-SNAPSHOT
+  - apiVersion: v2
     appVersion: 1.13.21-SNAPSHOT
     created: "2024-07-11T10:44:13.716962773Z"
     description: 'A Helm chart for the Tractus-X Provisioning Agent which is a container
@@ -17699,6 +17874,22 @@ entries:
     version: 0.2.3
   remoting-agent:
   - apiVersion: v2
+    appVersion: 1.13.22-SNAPSHOT
+    created: "2024-07-30T09:51:28.391660926Z"
+    description: 'A Helm chart for the Tractus-X Remoting Agent which is a container
+      to Bridge Agent-Enabled Connector and REST APIs.  This chart has no prerequisites. '
+    digest: 134a4faa774f3e483a120e4d29a874a97fe760f50a17921dc39ec8a4681ed177
+    home: https://github.com/eclipse-tractusx/knowledge-agents/
+    maintainers:
+    - name: Tractus-X Knowledge Agents Team
+    name: remoting-agent
+    sources:
+    - https://github.com/eclipse-tractusx/knowledge-agents/tree/main/remoting
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/knowledge-agents/releases/download/remoting-agent-1.13.22-SNAPSHOT/remoting-agent-1.13.22-SNAPSHOT.tgz
+    version: 1.13.22-SNAPSHOT
+  - apiVersion: v2
     appVersion: 1.13.21-SNAPSHOT
     created: "2024-07-11T10:44:13.834107346Z"
     description: 'A Helm chart for the Tractus-X Remoting Agent which is a container
@@ -17907,6 +18098,24 @@ entries:
     - https://github.com/eclipse-tractusx/knowledge-agents/releases/download/remoting-agent-1.9.7-SNAPSHOT/remoting-agent-1.9.7-SNAPSHOT.tgz
     version: 1.9.7-SNAPSHOT
   sde:
+  - apiVersion: v2
+    appVersion: 2.4.2
+    created: "2024-07-30T11:44:38.309876523Z"
+    dependencies:
+    - alias: sdepostgresql
+      condition: sdepostgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.x.x
+    description: A Helm chart for simple data exchanger
+    digest: d144c943b3655e582bf5a7cd5d6fe505f69d1b69210eb6436cb5be6783a1e1e5
+    name: sde
+    sources:
+    - https://github.com/eclipse-tractusx/managed-simple-data-exchanger
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/managed-simple-data-exchanger/releases/download/sde-0.1.11/sde-0.1.11.tgz
+    version: 0.1.11
   - apiVersion: v2
     appVersion: 2.3.8
     created: "2024-07-01T13:13:56.586583706Z"
@@ -19362,6 +19571,23 @@ entries:
   sharedidp:
   - apiVersion: v2
     appVersion: 23.0.7
+    created: "2024-07-30T13:23:45.785761079Z"
+    dependencies:
+    - name: keycloak
+      repository: https://raw.githubusercontent.com/bitnami/charts/archive-full-index/bitnami
+      version: 19.3.0
+    description: Helm chart for Shared Keycloak Instance
+    digest: a971041ecf1dee63c58693e3ba4a9e8e065cdf034a609f8c43a77c900804002b
+    home: https://github.com/eclipse-tractusx/portal-iam
+    name: sharedidp
+    sources:
+    - https://github.com/eclipse-tractusx/portal-iam
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/portal-iam/releases/download/sharedidp-3.0.1/sharedidp-3.0.1.tgz
+    version: 3.0.1
+  - apiVersion: v2
+    appVersion: 23.0.7
     created: "2024-05-27T15:41:35.419786527Z"
     dependencies:
     - name: keycloak
@@ -19608,6 +19834,22 @@ entries:
     version: 0.1.0
   ssi-asr:
   - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2024-07-30T14:05:37.148752069Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.x
+    description: Helm chart for SSI Authority & Schema Registry
+    digest: f840345559b45893de280864a69120e72cb3277640c687fe07d5e9195af2f41f
+    home: https://github.com/eclipse-tractusx/ssi-authority-schema-registry
+    name: ssi-asr
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/ssi-authority-schema-registry/releases/download/ssi-asr-1.0.0/ssi-asr-1.0.0.tgz
+    version: 1.0.0
+  - apiVersion: v2
     appVersion: 1.0.0-rc.1
     created: "2024-07-16T19:28:27.007528036Z"
     dependencies:
@@ -19624,6 +19866,22 @@ entries:
     - https://github.com/eclipse-tractusx/ssi-authority-schema-registry/releases/download/ssi-asr-1.0.0-rc.1/ssi-asr-1.0.0-rc.1.tgz
     version: 1.0.0-rc.1
   ssi-credential-issuer:
+  - apiVersion: v2
+    appVersion: 1.1.0
+    created: "2024-07-30T13:18:52.600778557Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.x
+    description: Helm chart for SSI Credential Issuer
+    digest: f06df23763bb29bb470c73508181feecce51fc582ee37cab97c95cdf10188f59
+    home: https://github.com/eclipse-tractusx/ssi-credential-issuer
+    name: ssi-credential-issuer
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/ssi-credential-issuer/releases/download/ssi-credential-issuer-1.1.0/ssi-credential-issuer-1.1.0.tgz
+    version: 1.1.0
   - apiVersion: v2
     appVersion: 1.1.0-rc.2
     created: "2024-07-25T15:17:19.97342656Z"
@@ -24824,4 +25082,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2024-07-30T03:34:05.01793028Z"
+generated: "2024-07-31T03:31:58.901761544Z"
