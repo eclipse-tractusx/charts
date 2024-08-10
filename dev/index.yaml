@@ -12044,6 +12044,44 @@ entries:
     version: 6.18.0
   localdev-portal-iam:
   - apiVersion: v2
+    created: "2024-08-09T08:21:24.626398204Z"
+    dependencies:
+    - condition: portal.enabled
+      name: portal
+      repository: file://../portal
+      version: 2.2.0-RC1
+    - condition: centralidp.enabled
+      name: centralidp
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 3.0.0
+    - condition: sharedidp.enabled
+      name: sharedidp
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 3.0.0
+    - condition: pgadmin4.enabled
+      name: pgadmin4
+      repository: https://helm.runix.net
+      version: 1.17.x
+    - alias: postgresportal
+      condition: postgresportal.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.x
+    description: Setup of CX Portal & IAM for local development
+    digest: 12eab1ff0c1e5d8fae283f364adbce349fc2c7e1e04c04c2527231dbba439268
+    home: https://github.com/eclipse-tractusx/portal-cd
+    name: localdev-portal-iam
+    sources:
+    - https://github.com/eclipse-tractusx/portal-frontend
+    - https://github.com/eclipse-tractusx/portal-frontend-registration
+    - https://github.com/eclipse-tractusx/portal-assets
+    - https://github.com/eclipse-tractusx/portal-backend
+    - https://github.com/eclipse-tractusx/portal-iam
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/portal/releases/download/localdev-portal-iam-0.7.0/localdev-portal-iam-0.7.0.tgz
+    version: 0.7.0
+  - apiVersion: v2
     created: "2024-06-12T11:04:10.677945823Z"
     dependencies:
     - condition: portal.enabled
@@ -12348,6 +12386,48 @@ entries:
     - https://github.com/eclipse-tractusx/portal-cd/releases/download/localdev-portal-iam-0.0.1/localdev-portal-iam-0.0.1.tgz
     version: 0.0.1
   managed-identity-wallet:
+  - apiVersion: v2
+    appVersion: 1.0.0-develop.4
+    created: "2024-08-09T09:53:55.921500876Z"
+    dependencies:
+    - condition: keycloak.enabled
+      name: keycloak
+      repository: https://charts.bitnami.com/bitnami
+      version: 15.1.6
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.9.13
+    - condition: pgadmin4.enabled
+      name: pgadmin4
+      repository: file://charts/pgadmin4
+      version: 1.19.0
+    description: 'Managed Identity Wallet is supposed to supply a secure data source
+      and data sink for Digital Identity Documents (DID), in order to enable Self-Sovereign
+      Identity founding on those DIDs. And at the same it shall support an uninterrupted
+      tracking and tracing and documenting the usage of those DIDs, e.g. within logistical
+      supply chains. '
+    digest: fe82ee773d4ebd9461d73beadc371880dbd82fcbbb290f6a578b101a623f6101
+    home: https://github.com/eclipse-tractusx/managed-identity-wallet
+    keywords:
+    - Managed Identity Wallet
+    - eclipse-tractusx
+    maintainers:
+    - email: dominik.pinsel@mercedes-benz.com
+      name: Dominik Pinsel
+      url: https://github.com/DominikPinsel
+    name: managed-identity-wallet
+    sources:
+    - https://github.com/eclipse-tractusx/managed-identity-wallet
+    type: application
+    urls:
+    - https://eclipse-tractusx.github.io/managed-identity-wallet/helm-charts/managed-identity-wallet-1.0.0-develop.4.tgz
+    version: 1.0.0-develop.4
   - apiVersion: v2
     appVersion: 1.0.0-develop.3
     created: "2024-07-29T09:24:25.839015145Z"
@@ -15617,6 +15697,27 @@ entries:
     - https://github.com/eclipse-tractusx/policy-hub/releases/download/policy-hub-0.1.0-rc.1/policy-hub-0.1.0-rc.1.tgz
     version: 0.1.0-rc.1
   portal:
+  - apiVersion: v2
+    appVersion: 2.2.0-RC1
+    created: "2024-08-09T08:21:24.748940771Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.x.x
+    description: Helm chart for Catena-X Portal
+    digest: 6ad67924d24ce54dd3921b346154f4ab76809d8553256179af80727f1e669fbf
+    home: https://github.com/eclipse-tractusx/portal
+    name: portal
+    sources:
+    - https://github.com/eclipse-tractusx/portal-frontend
+    - https://github.com/eclipse-tractusx/portal-frontend-registration
+    - https://github.com/eclipse-tractusx/portal-assets
+    - https://github.com/eclipse-tractusx/portal-backend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/portal/releases/download/portal-2.2.0-RC1/portal-2.2.0-RC1.tgz
+    version: 2.2.0-RC1
   - apiVersion: v2
     appVersion: 2.1.0
     created: "2024-07-30T16:30:00.916512219Z"
@@ -25386,4 +25487,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2024-08-09T03:33:05.655498002Z"
+generated: "2024-08-10T03:33:54.077928763Z"
