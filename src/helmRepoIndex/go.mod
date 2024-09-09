@@ -1,11 +1,11 @@
 module helmRepoIndex
 
 go 1.21
-toolchain go1.22.4
+toolchain go1.22.5
 
 require (
 	github.com/google/go-github/v48 v48.2.0
-	golang.org/x/oauth2 v0.21.0
+	golang.org/x/oauth2 v0.23.0
 	helm.sh/helm/v3 v3.15.2
 )
 
