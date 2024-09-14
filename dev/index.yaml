@@ -5874,6 +5874,24 @@ entries:
   bpndiscovery:
   - apiVersion: v2
     appVersion: 0.4.0
+    created: "2024-09-13T14:15:17.269650025Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.10
+    description: Tractus-X BPN Discovery Helm Chart
+    digest: f158cc45a0355af011fd8b8355f028612abbc0ca4b53ec3b8ebfaa5825261802
+    home: https://eclipse-tractusx.github.io/
+    name: bpndiscovery
+    sources:
+    - https://github.com/eclipse-tractusx/sldt-bpn-discovery
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-bpn-discovery/releases/download/bpndiscovery-0.3.2-RC1/bpndiscovery-0.3.2-RC1.tgz
+    version: 0.3.2-RC1
+  - apiVersion: v2
+    appVersion: 0.4.0
     created: "2024-07-16T14:28:35.974105835Z"
     dependencies:
     - condition: enablePostgres
@@ -8467,6 +8485,19 @@ entries:
     - https://github.com/eclipse-tractusx/autosetup-backend/releases/download/dftfrontend-1.4.7/dftfrontend-1.4.7.tgz
     version: 1.4.7
   digital-product-pass:
+  - apiVersion: v2
+    appVersion: 4.0.1
+    created: "2024-09-13T11:25:11.002977137Z"
+    description: A Helm chart for Tractus-X Digital Product Pass Kubernetes
+    digest: 0c4420f097b3247b280bba9f5320ad6bf1450e5e530aa2d08ae22363fc300cef
+    home: https://github.com/eclipse-tractusx/digital-product-pass/tree/main/charts/digital-product-pass
+    name: digital-product-pass
+    sources:
+    - https://github.com/eclipse-tractusx/digital-product-pass/tree/main/charts/digital-product-pass
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/digital-product-pass-4.0.2/digital-product-pass-4.0.2.tgz
+    version: 4.0.2
   - apiVersion: v2
     appVersion: 4.0.1
     created: "2024-07-25T09:30:04.827664426Z"
@@ -19419,6 +19450,24 @@ entries:
   semantic-hub:
   - apiVersion: v2
     appVersion: 0.4.0
+    created: "2024-09-13T14:05:11.974760095Z"
+    dependencies:
+    - condition: enableKeycloak
+      name: keycloak
+      repository: https://charts.bitnami.com/bitnami
+      version: 13.3.0
+    description: Helm Chart for the Catena-X Semantic Hub Application
+    digest: b8b385ca0ab76490801b65d4be4b129a999e1a234a0798d5237887b7a7d442df
+    home: https://eclipse-tractusx.github.io/
+    name: semantic-hub
+    sources:
+    - https://github.com/eclipse-tractusx/sldt-semantic-hub
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-semantic-hub/releases/download/semantic-hub-0.3.2-RC1/semantic-hub-0.3.2-RC1.tgz
+    version: 0.3.2-RC1
+  - apiVersion: v2
+    appVersion: 0.4.0
     created: "2024-07-16T14:28:50.074695098Z"
     dependencies:
     - condition: enableKeycloak
@@ -25926,4 +25975,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2024-09-13T03:34:01.055762531Z"
+generated: "2024-09-14T03:33:29.989303128Z"
