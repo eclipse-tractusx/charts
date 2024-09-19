@@ -20577,6 +20577,25 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/ssi-credential-issuer/releases/download/ssi-credential-issuer-1.0.0-rc.1/ssi-credential-issuer-1.0.0-rc.1.tgz
     version: 1.0.0-rc.1
+  ssi-dim-wallet-stub:
+  - apiVersion: v2
+    appVersion: 0.0.1
+    created: "2024-09-18T06:27:43.837427019Z"
+    dependencies:
+    - condition: keycloak.enabled
+      name: centralidp
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 3.0.0
+    description: 'A Helm chart to deploy SSI DIM wallet stub in kubernetes cluster '
+    digest: 6dbfa0aa77ea187478708667443c083131d908f54954bf27a16ec60ed65861f3
+    home: https://github.com/eclipse-tractusx/ssi-dim-wallet-stub/tree/main/charts/ssi-dim-wallet-stub
+    name: ssi-dim-wallet-stub
+    sources:
+    - https://github.com/eclipse-tractusx/ssi-dim-wallet-stub/tree/main/charts/ssi-dim-wallet-stub
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/ssi-dim-wallet-stub/releases/download/ssi-dim-wallet-stub-0.1.0/ssi-dim-wallet-stub-0.1.0.tgz
+    version: 0.1.0
   traceability-foss:
   - apiVersion: v2
     appVersion: 13.0.2
@@ -25975,4 +25994,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2024-09-18T03:34:10.043216861Z"
+generated: "2024-09-19T03:34:40.438279099Z"
