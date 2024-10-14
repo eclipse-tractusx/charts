@@ -6394,6 +6394,23 @@ entries:
   centralidp:
   - apiVersion: v2
     appVersion: 23.0.7
+    created: "2024-10-14T19:10:37.490679964Z"
+    dependencies:
+    - name: keycloak
+      repository: https://raw.githubusercontent.com/bitnami/charts/archive-full-index/bitnami
+      version: 19.3.0
+    description: Helm chart for Central Keycloak Instance
+    digest: 059356f57f68cad18029fe096c272c5c57b2689080b7ebc7aa2d87ec341df709
+    home: https://github.com/eclipse-tractusx/portal-iam
+    name: centralidp
+    sources:
+    - https://github.com/eclipse-tractusx/portal-iam
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/portal-iam/releases/download/centralidp-4.0.0-alpha.1/centralidp-4.0.0-alpha.1.tgz
+    version: 4.0.0-alpha.1
+  - apiVersion: v2
+    appVersion: 23.0.7
     created: "2024-07-30T13:23:45.634825244Z"
     dependencies:
     - name: keycloak
@@ -20164,6 +20181,23 @@ entries:
   sharedidp:
   - apiVersion: v2
     appVersion: 23.0.7
+    created: "2024-10-14T19:10:37.691662673Z"
+    dependencies:
+    - name: keycloak
+      repository: https://raw.githubusercontent.com/bitnami/charts/archive-full-index/bitnami
+      version: 19.3.0
+    description: Helm chart for Shared Keycloak Instance
+    digest: 1bf03a219c1d706bf508189ccd3cd1a4aab337c75b64b4f6774ca553e7d17471
+    home: https://github.com/eclipse-tractusx/portal-iam
+    name: sharedidp
+    sources:
+    - https://github.com/eclipse-tractusx/portal-iam
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/portal-iam/releases/download/sharedidp-4.0.0-alpha.1/sharedidp-4.0.0-alpha.1.tgz
+    version: 4.0.0-alpha.1
+  - apiVersion: v2
+    appVersion: 23.0.7
     created: "2024-07-30T13:23:45.785761079Z"
     dependencies:
     - name: keycloak
@@ -26350,4 +26384,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2024-10-14T03:37:50.815003769Z"
+generated: "2024-10-14T19:22:32.10434802Z"
