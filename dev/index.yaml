@@ -6479,6 +6479,23 @@ entries:
   centralidp:
   - apiVersion: v2
     appVersion: 23.0.7
+    created: "2024-10-21T06:55:46.415176224Z"
+    dependencies:
+    - name: keycloak
+      repository: https://raw.githubusercontent.com/bitnami/charts/archive-full-index/bitnami
+      version: 19.3.0
+    description: Helm chart for Central Keycloak Instance
+    digest: b7ce4a872994db36bd8725c181da6cabf6eea7198e9a0c1e17f8d800c5e978bd
+    home: https://github.com/eclipse-tractusx/portal-iam
+    name: centralidp
+    sources:
+    - https://github.com/eclipse-tractusx/portal-iam
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/portal-iam/releases/download/centralidp-4.0.0-alpha.2/centralidp-4.0.0-alpha.2.tgz
+    version: 4.0.0-alpha.2
+  - apiVersion: v2
+    appVersion: 23.0.7
     created: "2024-10-14T19:10:37.490679964Z"
     dependencies:
     - name: keycloak
@@ -26527,4 +26544,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2024-10-21T03:38:00.6457927Z"
+generated: "2024-10-21T06:58:59.530528241Z"
