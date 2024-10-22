@@ -15967,6 +15967,27 @@ entries:
     version: 0.1.0-rc.1
   portal:
   - apiVersion: v2
+    appVersion: 2.3.0-alpha.3
+    created: "2024-10-21T16:29:29.733563116Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.x.x
+    description: Helm chart for Catena-X Portal
+    digest: 90c8342ef8af232bd16554b5bb3e99e5bf0e74cd6a64b20ddc0cde54d67fbcd3
+    home: https://github.com/eclipse-tractusx/portal
+    name: portal
+    sources:
+    - https://github.com/eclipse-tractusx/portal-frontend
+    - https://github.com/eclipse-tractusx/portal-frontend-registration
+    - https://github.com/eclipse-tractusx/portal-assets
+    - https://github.com/eclipse-tractusx/portal-backend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/portal/releases/download/portal-2.3.0-alpha.3/portal-2.3.0-alpha.3.tgz
+    version: 2.3.0-alpha.3
+  - apiVersion: v2
     appVersion: 2.3.0-alpha.2
     created: "2024-10-07T15:48:02.712832425Z"
     dependencies:
@@ -20653,6 +20674,22 @@ entries:
     - https://github.com/eclipse-tractusx/ssi-authority-schema-registry/releases/download/ssi-asr-1.0.0-rc.1/ssi-asr-1.0.0-rc.1.tgz
     version: 1.0.0-rc.1
   ssi-credential-issuer:
+  - apiVersion: v2
+    appVersion: 1.2.0-rc.1
+    created: "2024-10-21T16:23:22.539218931Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.x
+    description: Helm chart for SSI Credential Issuer
+    digest: 6ed2c107762b361c391d867e0fe3d088721ed462ad46b5d48fe340f86c518749
+    home: https://github.com/eclipse-tractusx/ssi-credential-issuer
+    name: ssi-credential-issuer
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/ssi-credential-issuer/releases/download/ssi-credential-issuer-1.2.0-rc.1/ssi-credential-issuer-1.2.0-rc.1.tgz
+    version: 1.2.0-rc.1
   - apiVersion: v2
     appVersion: 1.2.0-alpha.2
     created: "2024-10-10T12:11:50.27691024Z"
@@ -26544,4 +26581,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2024-10-21T06:58:59.530528241Z"
+generated: "2024-10-22T03:36:29.746783896Z"
