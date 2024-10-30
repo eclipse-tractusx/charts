@@ -22792,6 +22792,34 @@ entries:
     version: 1.1.0
   tractusx-connector:
   - apiVersion: v2
+    appVersion: 0.8.0-rc5
+    created: "2024-10-29T08:54:54.712508037Z"
+    dependencies:
+    - alias: vault
+      condition: install.vault
+      name: vault
+      repository: https://helm.releases.hashicorp.com
+      version: 0.27.0
+    - alias: postgresql
+      condition: install.postgresql
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 15.2.1
+    description: 'A Helm chart for Tractus-X Eclipse Data Space Connector. The connector
+      deployment consists of two runtime consists of a Control Plane and a Data Plane.
+      Note that _no_ external dependencies such as a PostgreSQL database and HashiCorp
+      Vault are included.  This chart is intended for use with an _existing_ PostgreSQL
+      database and an _existing_ HashiCorp Vault. '
+    digest: d7f8a129c352802e46fec1001dbfe176393b4ab95ee403a7f729e1c74a425336
+    home: https://github.com/eclipse-tractusx/tractusx-edc/tree/main/charts/tractusx-connector
+    name: tractusx-connector
+    sources:
+    - https://github.com/eclipse-tractusx/tractusx-edc/tree/main/charts/tractusx-connector
+    type: application
+    urls:
+    - https://eclipse-tractusx.github.io/tractusx-edc/helm-charts/tractusx-connector-0.8.0-rc5.tgz
+    version: 0.8.0-rc5
+  - apiVersion: v2
     appVersion: 0.8.0-rc4
     created: "2024-10-08T14:49:50.596710984Z"
     dependencies:
@@ -23585,6 +23613,31 @@ entries:
     - https://github.com/eclipse-tractusx/tractusx-edc/releases/download/tractusx-connector-0.3.2/tractusx-connector-0.3.2.tgz
     version: 0.3.2
   tractusx-connector-azure-vault:
+  - apiVersion: v2
+    appVersion: 0.8.0-rc5
+    created: "2024-10-29T08:54:54.859817088Z"
+    dependencies:
+    - alias: postgresql
+      condition: install.postgresql
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 15.2.1
+    deprecated: true
+    description: 'DEPRECATED: this chart will be no more available after version 0.8.0  A
+      Helm chart for Tractus-X Eclipse Data Space Connector. The connector deployment
+      consists of two runtime consists of a Control Plane and a Data Plane. Note that
+      _no_ external dependencies such as a PostgreSQL database and Azure KeyVault
+      are included.  This chart is intended for use with an _existing_ PostgreSQL
+      database and an _existing_ Azure KeyVault. '
+    digest: 3395b7604ba9d150436d03a0d54bf810c1c513d12a92bff01d1d7655cbf365fa
+    home: https://github.com/eclipse-tractusx/tractusx-edc/tree/main/charts/tractusx-connector
+    name: tractusx-connector-azure-vault
+    sources:
+    - https://github.com/eclipse-tractusx/tractusx-edc/tree/main/charts/tractusx-connector
+    type: application
+    urls:
+    - https://eclipse-tractusx.github.io/tractusx-edc/helm-charts/tractusx-connector-azure-vault-0.8.0-rc5.tgz
+    version: 0.8.0-rc5
   - apiVersion: v2
     appVersion: 0.8.0-rc4
     created: "2024-10-08T14:49:50.744817035Z"
@@ -24446,6 +24499,21 @@ entries:
     - https://eclipse-tractusx.github.io/tractusx-edc/helm-charts/tractusx-connector-legacy-0.5.0-rc1.tgz
     version: 0.5.0-rc1
   tractusx-connector-memory:
+  - apiVersion: v2
+    appVersion: 0.8.0-rc5
+    created: "2024-10-29T08:54:54.93708874Z"
+    description: A Helm chart for Tractus-X Eclipse Data Space Connector based on
+      memory. Please only use this for development or testing purposes, never in production
+      workloads!
+    digest: 249c41809bd13f842fe28511b55782371ec9d1f34d7215414d263405f68ecea3
+    home: https://github.com/eclipse-tractusx/tractusx-edc/tree/main/charts/tractusx-connector-memory
+    name: tractusx-connector-memory
+    sources:
+    - https://github.com/eclipse-tractusx/tractusx-edc/tree/main/charts/tractusx-connector-memory
+    type: application
+    urls:
+    - https://eclipse-tractusx.github.io/tractusx-edc/helm-charts/tractusx-connector-memory-0.8.0-rc5.tgz
+    version: 0.8.0-rc5
   - apiVersion: v2
     appVersion: 0.8.0-rc4
     created: "2024-10-08T14:49:50.823990786Z"
@@ -26829,4 +26897,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2024-10-29T03:37:07.592799558Z"
+generated: "2024-10-30T03:36:58.513193689Z"
