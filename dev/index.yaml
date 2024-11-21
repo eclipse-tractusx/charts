@@ -6667,6 +6667,23 @@ entries:
   centralidp:
   - apiVersion: v2
     appVersion: 25.0.6
+    created: "2024-11-20T15:32:41.27298032Z"
+    dependencies:
+    - name: keycloak
+      repository: https://raw.githubusercontent.com/bitnami/charts/archive-full-index/bitnami
+      version: 23.0.0
+    description: Helm chart for Central Keycloak Instance
+    digest: 4869dd9358056697254e6580c761476a2ccf8f11a3bfe903e5d54d3cf4e727b6
+    home: https://github.com/eclipse-tractusx/portal-iam
+    name: centralidp
+    sources:
+    - https://github.com/eclipse-tractusx/portal-iam
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/portal-iam/releases/download/centralidp-4.0.0-rc.2/centralidp-4.0.0-rc.2.tgz
+    version: 4.0.0-rc.2
+  - apiVersion: v2
+    appVersion: 25.0.6
     created: "2024-10-23T15:45:27.342147303Z"
     dependencies:
     - name: keycloak
@@ -20821,6 +20838,23 @@ entries:
   sharedidp:
   - apiVersion: v2
     appVersion: 25.0.6
+    created: "2024-11-20T15:32:41.399829084Z"
+    dependencies:
+    - name: keycloak
+      repository: https://raw.githubusercontent.com/bitnami/charts/archive-full-index/bitnami
+      version: 23.0.0
+    description: Helm chart for Shared Keycloak Instance
+    digest: 78901c71eec63f622dae1df8db7db8bd7281219d50412ea182aa64f2e6ad9d92
+    home: https://github.com/eclipse-tractusx/portal-iam
+    name: sharedidp
+    sources:
+    - https://github.com/eclipse-tractusx/portal-iam
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/portal-iam/releases/download/sharedidp-4.0.0-rc.2/sharedidp-4.0.0-rc.2.tgz
+    version: 4.0.0-rc.2
+  - apiVersion: v2
+    appVersion: 25.0.6
     created: "2024-10-23T15:45:27.462840505Z"
     dependencies:
     - name: keycloak
@@ -21424,6 +21458,24 @@ entries:
     version: 1.0.0-rc.1
   ssi-dim-wallet-stub:
   - apiVersion: v2
+    appVersion: 0.0.3
+    created: "2024-11-20T07:40:45.196094323Z"
+    dependencies:
+    - condition: keycloak.enabled
+      name: centralidp
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 3.0.0
+    description: 'A Helm chart to deploy SSI DIM wallet stub in kubernetes cluster '
+    digest: ffe48ef4073607ddb34efab0a753f6bf11b644f72a98ac1116c69a57e439a50e
+    home: https://github.com/eclipse-tractusx/ssi-dim-wallet-stub/tree/main/charts/ssi-dim-wallet-stub
+    name: ssi-dim-wallet-stub
+    sources:
+    - https://github.com/eclipse-tractusx/ssi-dim-wallet-stub/tree/main/charts/ssi-dim-wallet-stub
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/ssi-dim-wallet-stub/releases/download/ssi-dim-wallet-stub-0.1.3/ssi-dim-wallet-stub-0.1.3.tgz
+    version: 0.1.3
+  - apiVersion: v2
     appVersion: 0.0.2
     created: "2024-10-23T08:52:07.769787704Z"
     dependencies:
@@ -21477,24 +21529,6 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/ssi-dim-wallet-stub/releases/download/ssi-dim-wallet-stub-0.1.0/ssi-dim-wallet-stub-0.1.0.tgz
     version: 0.1.0
-  - apiVersion: v2
-    appVersion: 0.0.3
-    created: "2024-11-20T07:40:45.196094323Z"
-    dependencies:
-    - condition: keycloak.enabled
-      name: centralidp
-      repository: https://eclipse-tractusx.github.io/charts/dev
-      version: 3.0.0
-    description: 'A Helm chart to deploy SSI DIM wallet stub in kubernetes cluster '
-    digest: ffe48ef4073607ddb34efab0a753f6bf11b644f72a98ac1116c69a57e439a50e
-    home: https://github.com/eclipse-tractusx/ssi-dim-wallet-stub/tree/main/charts/ssi-dim-wallet-stub
-    name: ssi-dim-wallet-stub
-    sources:
-    - https://github.com/eclipse-tractusx/ssi-dim-wallet-stub/tree/main/charts/ssi-dim-wallet-stub
-    type: application
-    urls:
-    - https://github.com/eclipse-tractusx/ssi-dim-wallet-stub/releases/download/ssi-dim-wallet-stub-0.1.3/ssi-dim-wallet-stub-0.1.3.tgz
-    version: 0.1.3
   traceability-foss:
   - apiVersion: v2
     appVersion: 13.0.2
@@ -28134,4 +28168,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2024-11-20T10:02:32.615888108Z"
+generated: "2024-11-21T03:39:19.469486392Z"
