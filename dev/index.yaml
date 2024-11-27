@@ -21546,6 +21546,24 @@ entries:
     version: 1.0.0-rc.1
   ssi-dim-wallet-stub:
   - apiVersion: v2
+    appVersion: 0.0.4
+    created: "2024-11-26T09:19:43.200762744Z"
+    dependencies:
+    - condition: keycloak.enabled
+      name: centralidp
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 3.0.0
+    description: 'A Helm chart to deploy SSI DIM wallet stub in kubernetes cluster '
+    digest: eab485f53dbe91bb58f3264088cb4ea68fa399d74da190cf0f461555dee3f965
+    home: https://github.com/eclipse-tractusx/ssi-dim-wallet-stub/tree/main/charts/ssi-dim-wallet-stub
+    name: ssi-dim-wallet-stub
+    sources:
+    - https://github.com/eclipse-tractusx/ssi-dim-wallet-stub/tree/main/charts/ssi-dim-wallet-stub
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/ssi-dim-wallet-stub/releases/download/ssi-dim-wallet-stub-0.1.4/ssi-dim-wallet-stub-0.1.4.tgz
+    version: 0.1.4
+  - apiVersion: v2
     appVersion: 0.0.3
     created: "2024-11-20T07:40:45.196094323Z"
     dependencies:
@@ -21617,24 +21635,6 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/ssi-dim-wallet-stub/releases/download/ssi-dim-wallet-stub-0.1.0/ssi-dim-wallet-stub-0.1.0.tgz
     version: 0.1.0
-  - apiVersion: v2
-    appVersion: 0.0.4
-    created: "2024-11-26T09:19:43.200762744Z"
-    dependencies:
-    - condition: keycloak.enabled
-      name: centralidp
-      repository: https://eclipse-tractusx.github.io/charts/dev
-      version: 3.0.0
-    description: 'A Helm chart to deploy SSI DIM wallet stub in kubernetes cluster '
-    digest: eab485f53dbe91bb58f3264088cb4ea68fa399d74da190cf0f461555dee3f965
-    home: https://github.com/eclipse-tractusx/ssi-dim-wallet-stub/tree/main/charts/ssi-dim-wallet-stub
-    name: ssi-dim-wallet-stub
-    sources:
-    - https://github.com/eclipse-tractusx/ssi-dim-wallet-stub/tree/main/charts/ssi-dim-wallet-stub
-    type: application
-    urls:
-    - https://github.com/eclipse-tractusx/ssi-dim-wallet-stub/releases/download/ssi-dim-wallet-stub-0.1.4/ssi-dim-wallet-stub-0.1.4.tgz
-    version: 0.1.4
   traceability-foss:
   - apiVersion: v2
     appVersion: 13.0.2
@@ -28693,4 +28693,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2024-11-26T09:30:31.318902956Z"
+generated: "2024-11-27T03:40:08.385738184Z"
