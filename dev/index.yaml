@@ -6767,6 +6767,23 @@ entries:
   centralidp:
   - apiVersion: v2
     appVersion: 25.0.6
+    created: "2024-11-29T08:46:11.558911018Z"
+    dependencies:
+    - name: keycloak
+      repository: https://raw.githubusercontent.com/bitnami/charts/archive-full-index/bitnami
+      version: 23.0.0
+    description: Helm chart for Central Keycloak Instance
+    digest: 72bbf9e90460492c25f64851c819c69b86933d4f655e837b0cb3e90c0339e08b
+    home: https://github.com/eclipse-tractusx/portal-iam
+    name: centralidp
+    sources:
+    - https://github.com/eclipse-tractusx/portal-iam
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/portal-iam/releases/download/centralidp-4.0.0-rc.3/centralidp-4.0.0-rc.3.tgz
+    version: 4.0.0-rc.3
+  - apiVersion: v2
+    appVersion: 25.0.6
     created: "2024-11-20T15:32:41.27298032Z"
     dependencies:
     - name: keycloak
@@ -20976,6 +20993,23 @@ entries:
   sharedidp:
   - apiVersion: v2
     appVersion: 25.0.6
+    created: "2024-11-29T08:46:11.775824189Z"
+    dependencies:
+    - name: keycloak
+      repository: https://raw.githubusercontent.com/bitnami/charts/archive-full-index/bitnami
+      version: 23.0.0
+    description: Helm chart for Shared Keycloak Instance
+    digest: f53c6041a44732e71648622bba666ffb1524cb9688c24f8c62119cb9720ee83d
+    home: https://github.com/eclipse-tractusx/portal-iam
+    name: sharedidp
+    sources:
+    - https://github.com/eclipse-tractusx/portal-iam
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/portal-iam/releases/download/sharedidp-4.0.0-rc.3/sharedidp-4.0.0-rc.3.tgz
+    version: 4.0.0-rc.3
+  - apiVersion: v2
+    appVersion: 25.0.6
     created: "2024-11-20T15:32:41.399829084Z"
     dependencies:
     - name: keycloak
@@ -21717,6 +21751,24 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/ssi-dim-wallet-stub/releases/download/ssi-dim-wallet-stub-0.1.0/ssi-dim-wallet-stub-0.1.0.tgz
     version: 0.1.0
+  - apiVersion: v2
+    appVersion: 0.0.4
+    created: "2024-11-29T12:35:40.962566039Z"
+    dependencies:
+    - condition: keycloak.enabled
+      name: centralidp
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 3.0.0
+    description: 'A Helm chart to deploy SSI DIM wallet stub in kubernetes cluster '
+    digest: b2081f63eba83237624f09c2775bacc7fbd2cf1517fbc1449846719d678e4324
+    home: https://github.com/eclipse-tractusx/ssi-dim-wallet-stub/tree/main/charts/ssi-dim-wallet-stub
+    name: ssi-dim-wallet-stub
+    sources:
+    - https://github.com/eclipse-tractusx/ssi-dim-wallet-stub/tree/main/charts/ssi-dim-wallet-stub
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/ssi-dim-wallet-stub/releases/download/ssi-dim-wallet-stub-0.1.5/ssi-dim-wallet-stub-0.1.5.tgz
+    version: 0.1.5
   traceability-foss:
   - apiVersion: v2
     appVersion: 13.0.2
@@ -28856,4 +28908,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2024-11-29T03:40:07.424291632Z"
+generated: "2024-11-29T12:58:00.201093026Z"
