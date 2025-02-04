@@ -2291,6 +2291,30 @@ entries:
     version: 0.0.2
   bdrs-server:
   - apiVersion: v2
+    appVersion: 0.5.3
+    created: "2025-02-03T12:56:06.038910226Z"
+    dependencies:
+    - alias: postgresql
+      condition: install.postgresql
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 15.2.1
+    - alias: vault
+      condition: install.vault
+      name: vault
+      repository: https://helm.releases.hashicorp.com
+      version: 0.28.0
+    description: A Helm chart for the Tractus-X BPN-DID Resolution Service
+    digest: a1009592e29771c6d0d4d3c59f5a5b44ace92025ed45331ff6d955d46d0e487c
+    home: https://github.com/eclipse-tractusx/bpn-did-resolution-service/tree/main/charts/bdrs-server
+    name: bdrs-server
+    sources:
+    - https://github.com/eclipse-tractusx/bpn-did-resolution-service/tree/main/charts/bdrs-server
+    type: application
+    urls:
+    - https://eclipse-tractusx.github.io/bpn-did-resolution-service/helm-charts/bdrs-server-0.5.3.tgz
+    version: 0.5.3
+  - apiVersion: v2
     appVersion: 0.5.2
     created: "2024-07-17T09:00:23.000550957Z"
     dependencies:
@@ -2449,6 +2473,20 @@ entries:
     - https://eclipse-tractusx.github.io/bpn-did-resolution-service/helm-charts/bdrs-server-0.0.1.tgz
     version: 0.0.1
   bdrs-server-memory:
+  - apiVersion: v2
+    appVersion: 0.5.3
+    created: "2025-02-03T12:56:06.046908938Z"
+    description: A Helm chart for the Tractus-X BPN-DID Resolution Service (only in-memory
+      persistence)
+    digest: b1acbc161f1d560aee3e551d965dd64bf8f5ca182dac498e8867ae286914251d
+    home: https://github.com/eclipse-tractusx/bpn-did-resolution-service/tree/main/charts/bdrs-server
+    name: bdrs-server-memory
+    sources:
+    - https://github.com/eclipse-tractusx/bpn-did-resolution-service/tree/main/charts/bdrs-server
+    type: application
+    urls:
+    - https://eclipse-tractusx.github.io/bpn-did-resolution-service/helm-charts/bdrs-server-memory-0.5.3.tgz
+    version: 0.5.3
   - apiVersion: v2
     appVersion: 0.5.2
     created: "2024-07-17T09:00:23.007626001Z"
@@ -6261,6 +6299,24 @@ entries:
     version: 4.0.0
   bpndiscovery:
   - apiVersion: v2
+    appVersion: 0.6.0
+    created: "2025-02-03T09:26:43.398502471Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.10
+    description: Tractus-X BPN Discovery Helm Chart
+    digest: ee2ac2bcc7e59ca35ba26979104b453603671f3afa99b19a23e9594052696897
+    home: https://eclipse-tractusx.github.io/
+    name: bpndiscovery
+    sources:
+    - https://github.com/eclipse-tractusx/sldt-bpn-discovery
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-bpn-discovery/releases/download/bpndiscovery-0.5.0/bpndiscovery-0.5.0.tgz
+    version: 0.5.0
+  - apiVersion: v2
     appVersion: 0.5.2
     created: "2024-11-18T14:08:26.443459898Z"
     dependencies:
@@ -9610,6 +9666,28 @@ entries:
     version: 0.3.2
   digital-twin-registry:
   - apiVersion: v2
+    appVersion: 0.7.0
+    created: "2025-02-03T13:26:20.969443737Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.10
+    - condition: enableKeycloak
+      name: keycloak
+      repository: https://charts.bitnami.com/bitnami
+      version: 16.1.7
+    description: Tractus-X Digital Twin Registry Helm Chart
+    digest: 5f2ab77b50d81df83bef8817ff90c748e40e1f179362ba2eeb7a1af35d84f05e
+    home: https://eclipse-tractusx.github.io/
+    name: digital-twin-registry
+    sources:
+    - https://github.com/eclipse-tractusx/sldt-digital-twin-registry
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-digital-twin-registry/releases/download/digital-twin-registry-0.7.0/digital-twin-registry-0.7.0.tgz
+    version: 0.7.0
+  - apiVersion: v2
     appVersion: 0.6.2
     created: "2024-11-22T06:00:30.122369507Z"
     dependencies:
@@ -10204,6 +10282,24 @@ entries:
     - https://github.com/eclipse-tractusx/sldt-digital-twin-registry/releases/download/digital-twin-registry-0.3.28/digital-twin-registry-0.3.28.tgz
     version: 0.3.28
   discoveryfinder:
+  - apiVersion: v2
+    appVersion: 0.6.0
+    created: "2025-02-03T09:03:13.379361893Z"
+    dependencies:
+    - condition: enablePostgres
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.10
+    description: Tractus-X Discovery Finder Helm Chart
+    digest: df33ffb9afc06f6c1f4b5ccef99c8bb74feeadcd13a0f886ad0b0fcc2230ad0c
+    home: https://eclipse-tractusx.github.io/
+    name: discoveryfinder
+    sources:
+    - https://github.com/eclipse-tractusx/sldt-discovery-finder
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-discovery-finder/releases/download/discoveryfinder-0.5.0/discoveryfinder-0.5.0.tgz
+    version: 0.5.0
   - apiVersion: v2
     appVersion: 0.5.2
     created: "2024-11-18T14:08:42.823244703Z"
@@ -29455,4 +29551,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2025-02-03T03:35:27.910635919Z"
+generated: "2025-02-04T03:34:20.002349316Z"
