@@ -2291,6 +2291,30 @@ entries:
     version: 0.0.2
   bdrs-server:
   - apiVersion: v2
+    appVersion: 0.5.4
+    created: "2025-02-04T09:29:22.734142459Z"
+    dependencies:
+    - alias: postgresql
+      condition: install.postgresql
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.11.2
+    - alias: vault
+      condition: install.vault
+      name: vault
+      repository: https://helm.releases.hashicorp.com
+      version: 0.28.0
+    description: A Helm chart for the Tractus-X BPN-DID Resolution Service
+    digest: a3eaa805e5fdf0230838daf6265b86b9cedadcb4c165ab8f73d31bb0c928accd
+    home: https://github.com/eclipse-tractusx/bpn-did-resolution-service/tree/main/charts/bdrs-server
+    name: bdrs-server
+    sources:
+    - https://github.com/eclipse-tractusx/bpn-did-resolution-service/tree/main/charts/bdrs-server
+    type: application
+    urls:
+    - https://eclipse-tractusx.github.io/bpn-did-resolution-service/helm-charts/bdrs-server-0.5.4.tgz
+    version: 0.5.4
+  - apiVersion: v2
     appVersion: 0.5.3
     created: "2025-02-03T12:56:06.038910226Z"
     dependencies:
@@ -2473,6 +2497,20 @@ entries:
     - https://eclipse-tractusx.github.io/bpn-did-resolution-service/helm-charts/bdrs-server-0.0.1.tgz
     version: 0.0.1
   bdrs-server-memory:
+  - apiVersion: v2
+    appVersion: 0.5.4
+    created: "2025-02-04T09:29:22.74318113Z"
+    description: A Helm chart for the Tractus-X BPN-DID Resolution Service (only in-memory
+      persistence)
+    digest: b30ec8f884ac49e0d5102ef4441fba4d70d06d7787af19d2fbbb1312dc08e268
+    home: https://github.com/eclipse-tractusx/bpn-did-resolution-service/tree/main/charts/bdrs-server
+    name: bdrs-server-memory
+    sources:
+    - https://github.com/eclipse-tractusx/bpn-did-resolution-service/tree/main/charts/bdrs-server
+    type: application
+    urls:
+    - https://eclipse-tractusx.github.io/bpn-did-resolution-service/helm-charts/bdrs-server-memory-0.5.4.tgz
+    version: 0.5.4
   - apiVersion: v2
     appVersion: 0.5.3
     created: "2025-02-03T12:56:06.046908938Z"
@@ -23856,6 +23894,34 @@ entries:
     - https://eclipse-tractusx.github.io/tractusx-edc/helm-charts/tractusx-connector-0.9.0-rc1.tgz
     version: 0.9.0-rc1
   - apiVersion: v2
+    appVersion: 0.8.1
+    created: "2025-02-04T12:36:22.758648691Z"
+    dependencies:
+    - alias: vault
+      condition: install.vault
+      name: vault
+      repository: https://helm.releases.hashicorp.com
+      version: 0.27.0
+    - alias: postgresql
+      condition: install.postgresql
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 15.2.1
+    description: 'A Helm chart for Tractus-X Eclipse Data Space Connector. The connector
+      deployment consists of two runtime consists of a Control Plane and a Data Plane.
+      Note that _no_ external dependencies such as a PostgreSQL database and HashiCorp
+      Vault are included.  This chart is intended for use with an _existing_ PostgreSQL
+      database and an _existing_ HashiCorp Vault. '
+    digest: a13118531c6e8037e70ba4dd5f884bb897674d1dcae91a01ad58fdc960232886
+    home: https://github.com/eclipse-tractusx/tractusx-edc/tree/main/charts/tractusx-connector
+    name: tractusx-connector
+    sources:
+    - https://github.com/eclipse-tractusx/tractusx-edc/tree/main/charts/tractusx-connector
+    type: application
+    urls:
+    - https://eclipse-tractusx.github.io/tractusx-edc/helm-charts/tractusx-connector-0.8.1.tgz
+    version: 0.8.1
+  - apiVersion: v2
     appVersion: 0.8.0
     created: "2024-11-21T14:31:56.664930672Z"
     dependencies:
@@ -24761,6 +24827,31 @@ entries:
     - https://github.com/eclipse-tractusx/tractusx-edc/releases/download/tractusx-connector-0.3.2/tractusx-connector-0.3.2.tgz
     version: 0.3.2
   tractusx-connector-azure-vault:
+  - apiVersion: v2
+    appVersion: 0.8.1
+    created: "2025-02-04T12:36:22.940081528Z"
+    dependencies:
+    - alias: postgresql
+      condition: install.postgresql
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 15.2.1
+    deprecated: true
+    description: 'DEPRECATED: this chart will be no more available after version 0.8.0  A
+      Helm chart for Tractus-X Eclipse Data Space Connector. The connector deployment
+      consists of two runtime consists of a Control Plane and a Data Plane. Note that
+      _no_ external dependencies such as a PostgreSQL database and Azure KeyVault
+      are included.  This chart is intended for use with an _existing_ PostgreSQL
+      database and an _existing_ Azure KeyVault. '
+    digest: 680f81fcf3d3662dda82ab5a045909b1c4e5dc189b0340e023e9eb21fa591ff7
+    home: https://github.com/eclipse-tractusx/tractusx-edc/tree/main/charts/tractusx-connector
+    name: tractusx-connector-azure-vault
+    sources:
+    - https://github.com/eclipse-tractusx/tractusx-edc/tree/main/charts/tractusx-connector
+    type: application
+    urls:
+    - https://eclipse-tractusx.github.io/tractusx-edc/helm-charts/tractusx-connector-azure-vault-0.8.1.tgz
+    version: 0.8.1
   - apiVersion: v2
     appVersion: 0.8.0
     created: "2024-11-21T14:31:56.831237077Z"
@@ -25735,6 +25826,21 @@ entries:
     urls:
     - https://eclipse-tractusx.github.io/tractusx-edc/helm-charts/tractusx-connector-memory-0.9.0-rc1.tgz
     version: 0.9.0-rc1
+  - apiVersion: v2
+    appVersion: 0.8.1
+    created: "2025-02-04T12:36:23.024132857Z"
+    description: A Helm chart for Tractus-X Eclipse Data Space Connector based on
+      memory. Please only use this for development or testing purposes, never in production
+      workloads!
+    digest: a85d343bbdfae0bd4211bbd05051b8b5f4ac19d92c93e756a142648f42134a8f
+    home: https://github.com/eclipse-tractusx/tractusx-edc/tree/main/charts/tractusx-connector-memory
+    name: tractusx-connector-memory
+    sources:
+    - https://github.com/eclipse-tractusx/tractusx-edc/tree/main/charts/tractusx-connector-memory
+    type: application
+    urls:
+    - https://eclipse-tractusx.github.io/tractusx-edc/helm-charts/tractusx-connector-memory-0.8.1.tgz
+    version: 0.8.1
   - apiVersion: v2
     appVersion: 0.8.0
     created: "2024-11-21T14:31:56.912237285Z"
@@ -29551,4 +29657,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2025-02-04T03:34:20.002349316Z"
+generated: "2025-02-05T03:35:47.456162773Z"
