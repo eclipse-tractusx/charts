@@ -20591,6 +20591,42 @@ entries:
     version: 1.0.8
   semantic-hub:
   - apiVersion: v2
+    appVersion: 0.5.3
+    created: "2025-02-06T15:40:44.668155126Z"
+    dependencies:
+    - condition: enableKeycloak
+      name: keycloak
+      repository: https://charts.bitnami.com/bitnami
+      version: 13.3.0
+    description: Helm Chart for the Catena-X Semantic Hub Application
+    digest: e9434f43eefe9a9851cbd9f14f1e8b94fe471a2ffa3619005f738e4aeb1edc38
+    home: https://eclipse-tractusx.github.io/
+    name: semantic-hub
+    sources:
+    - https://github.com/eclipse-tractusx/sldt-semantic-hub
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-semantic-hub/releases/download/semantic-hub-0.4.4/semantic-hub-0.4.4.tgz
+    version: 0.4.4
+  - apiVersion: v2
+    appVersion: 0.5.2
+    created: "2025-02-06T14:47:27.738023053Z"
+    dependencies:
+    - condition: enableKeycloak
+      name: keycloak
+      repository: https://charts.bitnami.com/bitnami
+      version: 13.3.0
+    description: Helm Chart for the Catena-X Semantic Hub Application
+    digest: 09612ebe49d79b94d489ba9ba2870bc021ac1335739c73c99a795afe60dcda12
+    home: https://eclipse-tractusx.github.io/
+    name: semantic-hub
+    sources:
+    - https://github.com/eclipse-tractusx/sldt-semantic-hub
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sldt-semantic-hub/releases/download/semantic-hub-0.4.3/semantic-hub-0.4.3.tgz
+    version: 0.4.3
+  - apiVersion: v2
     appVersion: 0.5.2
     created: "2024-11-18T14:11:07.758541116Z"
     dependencies:
@@ -22164,6 +22200,24 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/ssi-dim-wallet-stub/releases/download/ssi-dim-wallet-stub-0.1.0/ssi-dim-wallet-stub-0.1.0.tgz
     version: 0.1.0
+  - apiVersion: v2
+    appVersion: 0.0.5
+    created: "2025-02-06T12:04:36.655146629Z"
+    dependencies:
+    - condition: keycloak.enabled
+      name: centralidp
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 3.0.0
+    description: 'A Helm chart to deploy SSI DIM wallet stub in kubernetes cluster '
+    digest: 78463654e96f08bc8cfc6a0a8a0e80db84ffc1eed5db8ec57116850f72c47804
+    home: https://github.com/eclipse-tractusx/ssi-dim-wallet-stub/tree/main/charts/ssi-dim-wallet-stub
+    name: ssi-dim-wallet-stub
+    sources:
+    - https://github.com/eclipse-tractusx/ssi-dim-wallet-stub/tree/main/charts/ssi-dim-wallet-stub
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/ssi-dim-wallet-stub/releases/download/ssi-dim-wallet-stub-0.1.8/ssi-dim-wallet-stub-0.1.8.tgz
+    version: 0.1.8
   traceability-foss:
   - apiVersion: v2
     appVersion: 13.0.2
@@ -29657,4 +29711,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2025-02-06T03:34:50.828135827Z"
+generated: "2025-02-07T03:35:54.671566211Z"
