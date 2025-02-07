@@ -6980,6 +6980,23 @@ entries:
   centralidp:
   - apiVersion: v2
     appVersion: 25.0.6
+    created: "2025-02-07T11:08:35.438503194Z"
+    dependencies:
+    - name: keycloak
+      repository: https://raw.githubusercontent.com/bitnami/charts/archive-full-index/bitnami
+      version: 23.0.0
+    description: Helm chart for Central Keycloak Instance
+    digest: 60a01824d6dfdd747acde90a54846557ace39264ae8ef93fa6cf777e7d9e79a9
+    home: https://github.com/eclipse-tractusx/portal-iam
+    name: centralidp
+    sources:
+    - https://github.com/eclipse-tractusx/portal-iam
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/portal-iam/releases/download/centralidp-4.1.0-rc.1/centralidp-4.1.0-rc.1.tgz
+    version: 4.1.0-rc.1
+  - apiVersion: v2
+    appVersion: 25.0.6
     created: "2025-01-13T15:29:01.734559365Z"
     dependencies:
     - name: keycloak
@@ -21404,6 +21421,23 @@ entries:
   sharedidp:
   - apiVersion: v2
     appVersion: 25.0.6
+    created: "2025-02-07T11:08:35.564098752Z"
+    dependencies:
+    - name: keycloak
+      repository: https://raw.githubusercontent.com/bitnami/charts/archive-full-index/bitnami
+      version: 23.0.0
+    description: Helm chart for Shared Keycloak Instance
+    digest: 9ad176c7d79e0bbe584d9bee7842d9bdce125a3203f75b0c29870ac201ab92cc
+    home: https://github.com/eclipse-tractusx/portal-iam
+    name: sharedidp
+    sources:
+    - https://github.com/eclipse-tractusx/portal-iam
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/portal-iam/releases/download/sharedidp-4.1.0-rc.1/sharedidp-4.1.0-rc.1.tgz
+    version: 4.1.0-rc.1
+  - apiVersion: v2
+    appVersion: 25.0.6
     created: "2025-01-13T15:29:01.91172785Z"
     dependencies:
     - name: keycloak
@@ -21769,6 +21803,22 @@ entries:
     version: 0.1.0
   ssi-asr:
   - apiVersion: v2
+    appVersion: 1.2.0-rc.1
+    created: "2025-02-07T14:33:19.703931988Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.x
+    description: Helm chart for SSI Authority & Schema Registry
+    digest: 20148670754d4abc7accd0f46b35f2c00571a484fc0876dbb679554e2d43c120
+    home: https://github.com/eclipse-tractusx/ssi-authority-schema-registry
+    name: ssi-asr
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/ssi-authority-schema-registry/releases/download/ssi-asr-1.2.0-rc.1/ssi-asr-1.2.0-rc.1.tgz
+    version: 1.2.0-rc.1
+  - apiVersion: v2
     appVersion: 1.1.0
     created: "2024-11-22T08:49:50.281160488Z"
     dependencies:
@@ -21865,6 +21915,22 @@ entries:
     - https://github.com/eclipse-tractusx/ssi-authority-schema-registry/releases/download/ssi-asr-1.0.0-rc.1/ssi-asr-1.0.0-rc.1.tgz
     version: 1.0.0-rc.1
   ssi-credential-issuer:
+  - apiVersion: v2
+    appVersion: 1.3.0-rc.1
+    created: "2025-02-07T14:40:32.870877219Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.x
+    description: Helm chart for SSI Credential Issuer
+    digest: 2389e3f837b16dae0263191084e996cb94bc3f85d1ebd87f07ecc3755e6e6da5
+    home: https://github.com/eclipse-tractusx/ssi-credential-issuer
+    name: ssi-credential-issuer
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/ssi-credential-issuer/releases/download/ssi-credential-issuer-1.3.0-rc.1/ssi-credential-issuer-1.3.0-rc.1.tgz
+    version: 1.3.0-rc.1
   - apiVersion: v2
     appVersion: 1.2.0
     created: "2024-11-27T11:29:21.256427819Z"
@@ -29761,4 +29827,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2025-02-07T08:16:31.296278625Z"
+generated: "2025-02-07T15:16:23.745280313Z"
