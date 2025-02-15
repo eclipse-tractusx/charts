@@ -20264,6 +20264,45 @@ entries:
     version: 2.0.8
   sdfactory:
   - apiVersion: v2
+    appVersion: 2.1.17
+    created: "2025-02-14T10:47:12.926997981Z"
+    description: Helm Charts for SD Factory application. Self-Description Factory
+      component is responsible for the creation of Self Descriptions.
+    digest: 07b61e443358ed37e8b6de2d9da8ab2f11dd69c41b35290df0495103eda1dc08
+    name: sdfactory
+    sources:
+    - https://github.com/eclipse-tractusx/sd-factory
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sd-factory/releases/download/sdfactory-2.1.25/sdfactory-2.1.25.tgz
+    version: 2.1.25
+  - apiVersion: v2
+    appVersion: 2.1.16
+    created: "2025-02-14T09:56:51.620890399Z"
+    description: Helm Charts for SD Factory application. Self-Description Factory
+      component is responsible for the creation of Self Descriptions.
+    digest: 606dd9419636ab0ec20bfdfeb131ec2e60ffe4f756db15691535e3c640ef5fac
+    name: sdfactory
+    sources:
+    - https://github.com/eclipse-tractusx/sd-factory
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sd-factory/releases/download/sdfactory-2.1.24/sdfactory-2.1.24.tgz
+    version: 2.1.24
+  - apiVersion: v2
+    appVersion: 2.1.15
+    created: "2025-02-14T08:30:42.700863376Z"
+    description: Helm Charts for SD Factory application. Self-Description Factory
+      component is responsible for the creation of Self Descriptions.
+    digest: fc0052d805143fb895ae4273c7f49e1dbf420bfca625b92e824697807a25bdda
+    name: sdfactory
+    sources:
+    - https://github.com/eclipse-tractusx/sd-factory
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/sd-factory/releases/download/sdfactory-2.1.23/sdfactory-2.1.23.tgz
+    version: 2.1.23
+  - apiVersion: v2
     appVersion: 2.1.14
     created: "2024-11-14T08:22:54.48082202Z"
     description: Helm Charts for SD Factory application. Self-Description Factory
@@ -24122,6 +24161,34 @@ entries:
     version: 1.1.0
   tractusx-connector:
   - apiVersion: v2
+    appVersion: 0.9.0-rc2
+    created: "2025-02-14T09:55:31.929418955Z"
+    dependencies:
+    - alias: vault
+      condition: install.vault
+      name: vault
+      repository: https://helm.releases.hashicorp.com
+      version: 0.27.0
+    - alias: postgresql
+      condition: install.postgresql
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 15.2.1
+    description: 'A Helm chart for Tractus-X Eclipse Data Space Connector. The connector
+      deployment consists of two runtime consists of a Control Plane and a Data Plane.
+      Note that _no_ external dependencies such as a PostgreSQL database and HashiCorp
+      Vault are included.  This chart is intended for use with an _existing_ PostgreSQL
+      database and an _existing_ HashiCorp Vault. '
+    digest: ab5a5e7cb3024d975bf4227771f671bf2d3eb0c07ae4303e85a7feb760e4d564
+    home: https://github.com/eclipse-tractusx/tractusx-edc/tree/main/charts/tractusx-connector
+    name: tractusx-connector
+    sources:
+    - https://github.com/eclipse-tractusx/tractusx-edc/tree/main/charts/tractusx-connector
+    type: application
+    urls:
+    - https://eclipse-tractusx.github.io/tractusx-edc/helm-charts/tractusx-connector-0.9.0-rc2.tgz
+    version: 0.9.0-rc2
+  - apiVersion: v2
     appVersion: 0.9.0-rc1
     created: "2025-01-28T09:21:29.764831187Z"
     dependencies:
@@ -26067,6 +26134,21 @@ entries:
     - https://eclipse-tractusx.github.io/tractusx-edc/helm-charts/tractusx-connector-legacy-0.5.0-rc1.tgz
     version: 0.5.0-rc1
   tractusx-connector-memory:
+  - apiVersion: v2
+    appVersion: 0.9.0-rc2
+    created: "2025-02-14T09:55:32.188337944Z"
+    description: A Helm chart for Tractus-X Eclipse Data Space Connector based on
+      memory. Please only use this for development or testing purposes, never in production
+      workloads!
+    digest: 8a086bbc0d317763b0cfa2b3d9f2b412a54c3ebf76fca6028b7e00d0515fe09f
+    home: https://github.com/eclipse-tractusx/tractusx-edc/tree/main/charts/tractusx-connector-memory
+    name: tractusx-connector-memory
+    sources:
+    - https://github.com/eclipse-tractusx/tractusx-edc/tree/main/charts/tractusx-connector-memory
+    type: application
+    urls:
+    - https://eclipse-tractusx.github.io/tractusx-edc/helm-charts/tractusx-connector-memory-0.9.0-rc2.tgz
+    version: 0.9.0-rc2
   - apiVersion: v2
     appVersion: 0.9.0-rc1
     created: "2025-01-28T09:21:30.022659757Z"
@@ -29994,4 +30076,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2025-02-14T03:34:51.435861483Z"
+generated: "2025-02-15T03:34:40.451706656Z"
