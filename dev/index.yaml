@@ -16813,6 +16813,22 @@ entries:
     version: 1.12.17-SNAPSHOT
   policy-hub:
   - apiVersion: v2
+    appVersion: 1.3.0
+    created: "2025-03-03T12:39:03.432604605Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.x
+    description: Helm chart for Policy Hub
+    digest: 16cf330033dde6516ec4332658961ad8c344c3c35bdc721d67513c2738795dc6
+    home: https://github.com/eclipse-tractusx/policy-hub
+    name: policy-hub
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/policy-hub/releases/download/policy-hub-1.3.0/policy-hub-1.3.0.tgz
+    version: 1.3.0
+  - apiVersion: v2
     appVersion: 1.3.0-rc.1
     created: "2025-02-20T15:14:48.487897915Z"
     dependencies:
@@ -22148,6 +22164,22 @@ entries:
     version: 0.1.0
   ssi-asr:
   - apiVersion: v2
+    appVersion: 1.2.0-rc.2
+    created: "2025-03-03T16:26:17.55155904Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.x
+    description: Helm chart for SSI Authority & Schema Registry
+    digest: c863ecdfc6d07a53f40908acf498fe01c9b8cde6cdb896872be4bb6f6314a217
+    home: https://github.com/eclipse-tractusx/ssi-authority-schema-registry
+    name: ssi-asr
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/ssi-authority-schema-registry/releases/download/ssi-asr-1.2.0-rc.2/ssi-asr-1.2.0-rc.2.tgz
+    version: 1.2.0-rc.2
+  - apiVersion: v2
     appVersion: 1.2.0-rc.1
     created: "2025-02-07T14:33:19.703931988Z"
     dependencies:
@@ -22260,6 +22292,22 @@ entries:
     - https://github.com/eclipse-tractusx/ssi-authority-schema-registry/releases/download/ssi-asr-1.0.0-rc.1/ssi-asr-1.0.0-rc.1.tgz
     version: 1.0.0-rc.1
   ssi-credential-issuer:
+  - apiVersion: v2
+    appVersion: 1.3.0-rc.2
+    created: "2025-03-03T14:19:52.718846677Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.x
+    description: Helm chart for SSI Credential Issuer
+    digest: 85665c265aff4e6ee32e3a8a256217805d9b12a0d606df09b179e05e8e1b9589
+    home: https://github.com/eclipse-tractusx/ssi-credential-issuer
+    name: ssi-credential-issuer
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/ssi-credential-issuer/releases/download/ssi-credential-issuer-1.3.0-rc.2/ssi-credential-issuer-1.3.0-rc.2.tgz
+    version: 1.3.0-rc.2
   - apiVersion: v2
     appVersion: 1.3.0-rc.1
     created: "2025-02-07T14:40:32.870877219Z"
@@ -27238,6 +27286,83 @@ entries:
     version: 1.1.0
   umbrella:
   - apiVersion: v2
+    created: "2025-03-03T11:26:04.121773944Z"
+    dependencies:
+    - condition: portal.enabled
+      name: portal
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 2.3.0
+    - condition: centralidp.enabled
+      name: centralidp
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 4.0.1
+    - condition: sharedidp.enabled
+      name: sharedidp
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 4.0.1
+    - condition: discoveryfinder.enabled
+      name: discoveryfinder
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 0.3.1
+    - condition: bpndiscovery.enabled
+      name: bpndiscovery
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 0.3.1
+    - alias: selfdescription
+      condition: selfdescription.enabled
+      name: sdfactory
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 2.1.22
+    - condition: ssi-credential-issuer.enabled
+      name: ssi-credential-issuer
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 1.2.0
+    - condition: semantic-hub.enabled
+      name: semantic-hub
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 0.3.1
+    - condition: bpdm.enabled
+      name: bpdm
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 5.2.0
+    - alias: dataconsumerOne
+      condition: dataconsumerOne.enabled
+      name: tx-data-provider
+      repository: file://../tx-data-provider
+      version: 0.1.4
+    - condition: tx-data-provider.enabled
+      name: tx-data-provider
+      repository: file://../tx-data-provider
+      version: 0.1.4
+    - alias: dataconsumerTwo
+      condition: dataconsumerTwo.enabled
+      name: tx-data-provider
+      repository: file://../tx-data-provider
+      version: 0.1.4
+    - condition: pgadmin4.enabled
+      name: pgadmin4
+      repository: https://helm.runix.net
+      version: 1.25.x
+    - condition: bdrs-server-memory.enabled
+      name: bdrs-server-memory
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 0.5.2
+    - condition: ssi-dim-wallet-stub.enabled
+      name: ssi-dim-wallet-stub
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 0.1.8
+    description: 'A Helm chart to spin up Tractus-X OSS components to simulate a complete
+      dataspace network.  With this Helm chart you are able to run end-to-end or create
+      a sandbox environment. '
+    digest: bc9e55be163633498e74af481e0347023c29127ce7dea114a60c0b644bbb6d87
+    name: umbrella
+    sources:
+    - https://github.com/eclipse-tractusx/tractus-x-umbrella
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/tractus-x-umbrella/releases/download/umbrella-2.6.0/umbrella-2.6.0.tgz
+    version: 2.6.0
+  - apiVersion: v2
     created: "2025-02-27T07:10:40.515541192Z"
     dependencies:
     - condition: portal.enabled
@@ -30713,4 +30838,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2025-03-03T03:38:38.750363874Z"
+generated: "2025-03-04T03:38:28.578247309Z"
