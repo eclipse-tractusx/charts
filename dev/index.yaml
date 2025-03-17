@@ -7148,6 +7148,23 @@ entries:
   centralidp:
   - apiVersion: v2
     appVersion: 25.0.6
+    created: "2025-03-17T15:39:59.346665782Z"
+    dependencies:
+    - name: keycloak
+      repository: https://raw.githubusercontent.com/bitnami/charts/archive-full-index/bitnami
+      version: 23.0.0
+    description: Helm chart for Central Keycloak Instance
+    digest: 2b19f62e1f03be96723c61607439682dcf63d6afd100f63d3ccf06646497c54e
+    home: https://github.com/eclipse-tractusx/portal-iam
+    name: centralidp
+    sources:
+    - https://github.com/eclipse-tractusx/portal-iam
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/portal-iam/releases/download/centralidp-4.1.0/centralidp-4.1.0.tgz
+    version: 4.1.0
+  - apiVersion: v2
+    appVersion: 25.0.6
     created: "2025-02-07T11:08:35.438503194Z"
     dependencies:
     - name: keycloak
@@ -17088,6 +17105,27 @@ entries:
     version: 0.1.0-rc.1
   portal:
   - apiVersion: v2
+    appVersion: 2.4.0-RC2
+    created: "2025-03-17T14:23:36.819193782Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.x.x
+    description: Helm chart for Catena-X Portal
+    digest: bf4f8961f6982ed615c26e71e5705ff32f8a27e521c2527c8c3f38d90c121af2
+    home: https://github.com/eclipse-tractusx/portal
+    name: portal
+    sources:
+    - https://github.com/eclipse-tractusx/portal-frontend
+    - https://github.com/eclipse-tractusx/portal-frontend-registration
+    - https://github.com/eclipse-tractusx/portal-assets
+    - https://github.com/eclipse-tractusx/portal-backend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/portal/releases/download/portal-2.4.0-RC2/portal-2.4.0-RC2.tgz
+    version: 2.4.0-RC2
+  - apiVersion: v2
     appVersion: 2.4.0-RC1
     created: "2025-02-07T15:27:32.040581553Z"
     dependencies:
@@ -21900,6 +21938,23 @@ entries:
     - https://github.com/eclipse-tractusx/sldt-semantic-hub/releases/download/semantic-hub-0.1.3/semantic-hub-0.1.3.tgz
     version: 0.1.3
   sharedidp:
+  - apiVersion: v2
+    appVersion: 25.0.6
+    created: "2025-03-17T15:39:59.535639182Z"
+    dependencies:
+    - name: keycloak
+      repository: https://raw.githubusercontent.com/bitnami/charts/archive-full-index/bitnami
+      version: 23.0.0
+    description: Helm chart for Shared Keycloak Instance
+    digest: 641f3ee8522be42bc5384a2f4b52b5ce946636251219911d8603f661b894330b
+    home: https://github.com/eclipse-tractusx/portal-iam
+    name: sharedidp
+    sources:
+    - https://github.com/eclipse-tractusx/portal-iam
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/portal-iam/releases/download/sharedidp-4.1.0/sharedidp-4.1.0.tgz
+    version: 4.1.0
   - apiVersion: v2
     appVersion: 25.0.6
     created: "2025-02-07T11:08:35.564098752Z"
@@ -31214,4 +31269,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2025-03-17T03:39:36.791383638Z"
+generated: "2025-03-17T16:13:04.236278802Z"
