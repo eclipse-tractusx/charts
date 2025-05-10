@@ -7198,6 +7198,23 @@ entries:
   centralidp:
   - apiVersion: v2
     appVersion: 25.0.6
+    created: "2025-05-09T10:08:46.535313147Z"
+    dependencies:
+    - name: keycloak
+      repository: https://raw.githubusercontent.com/bitnami/charts/archive-full-index/bitnami
+      version: 23.0.0
+    description: Helm chart for Central Keycloak Instance
+    digest: 778f7601ff09ca27201794cdf16137d7d23d9b8083efed40afc8f0c89e2cb5f3
+    home: https://github.com/eclipse-tractusx/portal-iam
+    name: centralidp
+    sources:
+    - https://github.com/eclipse-tractusx/portal-iam
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/portal-iam/releases/download/centralidp-v4.2.0-rc.1/centralidp-v4.2.0-rc.1.tgz
+    version: v4.2.0-rc.1
+  - apiVersion: v2
+    appVersion: 25.0.6
     created: "2025-03-17T15:39:59.346665782Z"
     dependencies:
     - name: keycloak
@@ -11276,28 +11293,6 @@ entries:
   industry-core-hub:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2025-05-05T12:30:42.119021166Z"
-    dependencies:
-    - condition: postgresql.enabled
-      name: postgresql
-      repository: https://charts.bitnami.com/bitnami
-      version: 12.x.x
-    - condition: pgadmin4.enabled
-      name: pgadmin4
-      repository: https://helm.runix.net
-      version: 1.25.x
-    description: A Helm chart for Eclipse Tractus-X - Industry Core Hub
-    digest: 0cb5402d2a0a43dc7557d96c27fb1a113ec2d81dd493f3cbbe41490b4ac8204a
-    home: https://github.com/eclipse-tractusx/industry-core-hub
-    name: industry-core-hub
-    sources:
-    - https://github.com/eclipse-tractusx/industry-core-hub
-    type: application
-    urls:
-    - https://github.com/eclipse-tractusx/industry-core-hub/releases/download/industry-core-hub-0.1.3/industry-core-hub-0.1.3.tgz
-    version: 0.1.3
-  - apiVersion: v2
-    appVersion: 0.0.1
     created: "2025-05-08T14:02:51.787854331Z"
     dependencies:
     - condition: postgresql.enabled
@@ -11318,6 +11313,28 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/industry-core-hub/releases/download/industry-core-hub-0.1.4/industry-core-hub-0.1.4.tgz
     version: 0.1.4
+  - apiVersion: v2
+    appVersion: 0.0.1
+    created: "2025-05-05T12:30:42.119021166Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.x.x
+    - condition: pgadmin4.enabled
+      name: pgadmin4
+      repository: https://helm.runix.net
+      version: 1.25.x
+    description: A Helm chart for Eclipse Tractus-X - Industry Core Hub
+    digest: 0cb5402d2a0a43dc7557d96c27fb1a113ec2d81dd493f3cbbe41490b4ac8204a
+    home: https://github.com/eclipse-tractusx/industry-core-hub
+    name: industry-core-hub
+    sources:
+    - https://github.com/eclipse-tractusx/industry-core-hub
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/industry-core-hub/releases/download/industry-core-hub-0.1.3/industry-core-hub-0.1.3.tgz
+    version: 0.1.3
   irs:
   - apiVersion: v2
     appVersion: 1.1.0
@@ -13004,6 +13021,39 @@ entries:
     - https://github.com/catenax-ng/product-item-relationship-service/releases/download/irs-helm-2.0.0/irs-helm-2.0.0.tgz
     version: 2.0.0
   item-relationship-service:
+  - apiVersion: v2
+    appVersion: 7.0.0
+    created: "2025-05-09T07:14:29.095625616Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      version: 2.x.x
+    - condition: minio.enabled
+      name: minio
+      repository: https://charts.min.io/
+      version: 5.0.1
+    - condition: prometheus.enabled
+      name: prometheus
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 17.0.1
+    - condition: grafana.enabled
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.44.8
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 20.11.4
+    description: Tractus-X Item Relationship Service Helm Chart
+    digest: 2fcef4c616fe91a4ba3d4230aee7786a800af63eb3f9389da0572ed3269811cd
+    home: https://eclipse-tractusx.github.io/
+    name: item-relationship-service
+    sources:
+    - https://github.com/eclipse-tractusx/item-relationship-service
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/item-relationship-service/releases/download/item-relationship-service-8.0.2/item-relationship-service-8.0.2.tgz
+    version: 8.0.2
   - apiVersion: v2
     appVersion: 6.0.1
     created: "2025-02-20T09:37:07.165442493Z"
@@ -17221,6 +17271,27 @@ entries:
     - https://github.com/eclipse-tractusx/policy-hub/releases/download/policy-hub-0.1.0-rc.1/policy-hub-0.1.0-rc.1.tgz
     version: 0.1.0-rc.1
   portal:
+  - apiVersion: v2
+    appVersion: 2.5.0-RC1
+    created: "2025-05-09T13:10:32.944098752Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.x.x
+    description: Helm chart for Catena-X Portal
+    digest: 34af575691d2164e57a3ecf7ccdd09322ec4c7f430c7a6dc88e63531b9f9f3e7
+    home: https://github.com/eclipse-tractusx/portal
+    name: portal
+    sources:
+    - https://github.com/eclipse-tractusx/portal-frontend
+    - https://github.com/eclipse-tractusx/portal-frontend-registration
+    - https://github.com/eclipse-tractusx/portal-assets
+    - https://github.com/eclipse-tractusx/portal-backend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/portal/releases/download/portal-2.5.0-RC1/portal-2.5.0-RC1.tgz
+    version: 2.5.0-RC1
   - apiVersion: v2
     appVersion: 2.4.0
     created: "2025-03-17T16:28:30.495801282Z"
@@ -22078,6 +22149,23 @@ entries:
   sharedidp:
   - apiVersion: v2
     appVersion: 25.0.6
+    created: "2025-05-09T10:08:46.672443732Z"
+    dependencies:
+    - name: keycloak
+      repository: https://raw.githubusercontent.com/bitnami/charts/archive-full-index/bitnami
+      version: 23.0.0
+    description: Helm chart for Shared Keycloak Instance
+    digest: ad52fdbc23efb05d3891366583d13cdf97a8780b48e82797a21e5a2388b72f6e
+    home: https://github.com/eclipse-tractusx/portal-iam
+    name: sharedidp
+    sources:
+    - https://github.com/eclipse-tractusx/portal-iam
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/portal-iam/releases/download/sharedidp-4.2.0-rc.1/sharedidp-4.2.0-rc.1.tgz
+    version: 4.2.0-rc.1
+  - apiVersion: v2
+    appVersion: 25.0.6
     created: "2025-03-17T15:39:59.535639182Z"
     dependencies:
     - name: keycloak
@@ -22638,6 +22726,22 @@ entries:
     version: 1.0.0-rc.1
   ssi-credential-issuer:
   - apiVersion: v2
+    appVersion: 1.4.0-rc.1
+    created: "2025-05-09T12:58:57.619690858Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.x
+    description: Helm chart for SSI Credential Issuer
+    digest: 02d4c48396c09c7fc44788b8d563fa5ca93fb473e4383bf14dca076283ed2970
+    home: https://github.com/eclipse-tractusx/ssi-credential-issuer
+    name: ssi-credential-issuer
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/ssi-credential-issuer/releases/download/ssi-credential-issuer-1.4.0-rc.1/ssi-credential-issuer-1.4.0-rc.1.tgz
+    version: 1.4.0-rc.1
+  - apiVersion: v2
     appVersion: 1.3.0
     created: "2025-03-05T15:14:49.92010405Z"
     dependencies:
@@ -23089,6 +23193,47 @@ entries:
     - https://github.com/eclipse-tractusx/ssi-dim-wallet-stub/releases/download/ssi-dim-wallet-stub-0.1.0/ssi-dim-wallet-stub-0.1.0.tgz
     version: 0.1.0
   traceability-foss:
+  - apiVersion: v2
+    appVersion: 15.0.0
+    created: "2025-05-09T08:03:24.873724143Z"
+    dependencies:
+    - name: frontend
+      repository: file://charts/frontend
+      version: 1.4.2
+    - name: backend
+      repository: file://charts/backend
+      version: 1.4.2
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.10
+    - condition: pgadmin4.enabled
+      name: pgadmin4
+      repository: https://helm.runix.net
+      version: 1.23.1
+    - condition: item-relationship-service.enabled
+      name: item-relationship-service
+      repository: https://eclipse-tractusx.github.io/item-relationship-service
+      version: 8.0.2
+    - condition: tractusx-connector.enabled
+      name: tractusx-connector
+      repository: https://eclipse-tractusx.github.io/tractusx-edc
+      version: 0.9.0-rc2
+    - alias: edc-postgresql
+      condition: edc-postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.10
+    description: An umbrella Helm chart for eclipse-tractusx/traceability-foss project
+    digest: c92fca563be713769621e12fb69f0f6c228dc960bc006dca29f0cf5c6ea6b0c5
+    home: https://eclipse-tractusx.github.io/
+    name: traceability-foss
+    sources:
+    - https://github.com/eclipse-tractusx/traceability-foss
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/traceability-foss/releases/download/helm-charts-1.4.2/traceability-foss-1.4.2.tgz
+    version: 1.4.2
   - apiVersion: v2
     appVersion: 14.0.1
     created: "2025-02-26T12:06:56.58697351Z"
@@ -32030,4 +32175,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2025-05-09T03:43:38.27645514Z"
+generated: "2025-05-10T03:40:53.957042352Z"
