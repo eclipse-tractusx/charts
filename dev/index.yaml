@@ -17460,6 +17460,22 @@ entries:
     version: 1.12.17-SNAPSHOT
   policy-hub:
   - apiVersion: v2
+    appVersion: 1.3.1
+    created: "2025-06-03T12:39:47.359816754Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.x
+    description: Helm chart for Policy Hub
+    digest: b5678d19c83d32d9337859b9083bddfbe9541e39f39fa1296e07cd7da9c20f90
+    home: https://github.com/eclipse-tractusx/policy-hub
+    name: policy-hub
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/policy-hub/releases/download/policy-hub-1.3.1/policy-hub-1.3.1.tgz
+    version: 1.3.1
+  - apiVersion: v2
     appVersion: 1.3.1-rc.1
     created: "2025-05-12T09:34:41.005534828Z"
     dependencies:
@@ -19536,6 +19552,24 @@ entries:
     - https://github.com/eclipse-tractusx/knowledge-agents/releases/download/provisioning-agent-1.9.7-SNAPSHOT/provisioning-agent-1.9.7-SNAPSHOT.tgz
     version: 1.9.7-SNAPSHOT
   puris:
+  - apiVersion: v2
+    appVersion: 3.1.0
+    created: "2025-06-03T05:15:19.939471017Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.x
+    description: A helm chart for Kubernetes deployment of PURIS
+    digest: 9a0ceb34ed5d9010ec376f86c230c861ac3d87c88bb021ad2559d239fe6cae26
+    home: https://github.com/eclipse-tractusx/puris
+    name: puris
+    sources:
+    - https://github.com/eclipse-tractusx/puris
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/puris/releases/download/puris-3.0.0/puris-3.0.0.tgz
+    version: 3.0.0
   - apiVersion: v2
     appVersion: 3.1.0
     created: "2025-05-26T16:43:05.429384944Z"
@@ -33059,4 +33093,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2025-06-03T03:45:16.980167435Z"
+generated: "2025-06-04T03:45:23.089943685Z"
