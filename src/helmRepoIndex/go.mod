@@ -1,7 +1,7 @@
 module helmRepoIndex
 
 go 1.21
-toolchain go1.22.4
+toolchain go1.24.1
 
 require (
 	github.com/google/go-github/v48 v48.2.0
@@ -22,7 +22,7 @@ require (
 	github.com/distribution/reference v0.5.0 // indirect
 	github.com/docker/cli v25.0.1+incompatible // indirect
 	github.com/docker/distribution v2.8.3+incompatible // indirect
-	github.com/docker/docker v25.0.5+incompatible // indirect
+	github.com/docker/docker v25.0.6+incompatible // indirect
 	github.com/docker/docker-credential-helpers v0.7.0 // indirect
 	github.com/docker/go-connections v0.5.0 // indirect
 	github.com/docker/go-metrics v0.0.1 // indirect
