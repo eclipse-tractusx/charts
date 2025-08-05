@@ -2291,6 +2291,30 @@ entries:
     version: 0.0.2
   bdrs-server:
   - apiVersion: v2
+    appVersion: 0.5.6
+    created: "2025-08-04T12:37:07.361831512Z"
+    dependencies:
+    - alias: postgresql
+      condition: install.postgresql
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.11.2
+    - alias: vault
+      condition: install.vault
+      name: vault
+      repository: https://helm.releases.hashicorp.com
+      version: 0.28.0
+    description: A Helm chart for the Tractus-X BPN-DID Resolution Service
+    digest: 4b67fa12b9a700defe872d412aa4fd3a6207286eefdb7396f623f1220c8924c1
+    home: https://github.com/eclipse-tractusx/bpn-did-resolution-service/tree/main/charts/bdrs-server
+    name: bdrs-server
+    sources:
+    - https://github.com/eclipse-tractusx/bpn-did-resolution-service/tree/main/charts/bdrs-server
+    type: application
+    urls:
+    - https://eclipse-tractusx.github.io/bpn-did-resolution-service/helm-charts/bdrs-server-0.5.6.tgz
+    version: 0.5.6
+  - apiVersion: v2
     appVersion: 0.5.5
     created: "2025-07-28T09:38:37.771338776Z"
     dependencies:
@@ -2521,6 +2545,20 @@ entries:
     - https://eclipse-tractusx.github.io/bpn-did-resolution-service/helm-charts/bdrs-server-0.0.1.tgz
     version: 0.0.1
   bdrs-server-memory:
+  - apiVersion: v2
+    appVersion: 0.5.6
+    created: "2025-08-04T12:37:07.373106799Z"
+    description: A Helm chart for the Tractus-X BPN-DID Resolution Service (only in-memory
+      persistence)
+    digest: fdaac0e8b2052630934a5952c274914cc119654bb921e791337430df16c8e53b
+    home: https://github.com/eclipse-tractusx/bpn-did-resolution-service/tree/main/charts/bdrs-server
+    name: bdrs-server-memory
+    sources:
+    - https://github.com/eclipse-tractusx/bpn-did-resolution-service/tree/main/charts/bdrs-server
+    type: application
+    urls:
+    - https://eclipse-tractusx.github.io/bpn-did-resolution-service/helm-charts/bdrs-server-memory-0.5.6.tgz
+    version: 0.5.6
   - apiVersion: v2
     appVersion: 0.5.5
     created: "2025-07-28T09:38:37.781617493Z"
@@ -18094,6 +18132,27 @@ entries:
     - https://github.com/eclipse-tractusx/policy-hub/releases/download/policy-hub-0.1.0-rc.1/policy-hub-0.1.0-rc.1.tgz
     version: 0.1.0-rc.1
   portal:
+  - apiVersion: v2
+    appVersion: 2.6.0-RC1
+    created: "2025-08-04T13:19:10.00894274Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.x.x
+    description: Helm chart for Catena-X Portal
+    digest: 608a2d213fa57b3e4a93e3401400647d9f3731d677bc000bcb5d5c2b65418e3a
+    home: https://github.com/eclipse-tractusx/portal
+    name: portal
+    sources:
+    - https://github.com/eclipse-tractusx/portal-frontend
+    - https://github.com/eclipse-tractusx/portal-frontend-registration
+    - https://github.com/eclipse-tractusx/portal-assets
+    - https://github.com/eclipse-tractusx/portal-backend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/portal/releases/download/portal-2.6.0-RC1/portal-2.6.0-RC1.tgz
+    version: 2.6.0-RC1
   - apiVersion: v2
     appVersion: 2.5.0
     created: "2025-06-12T14:22:34.913800657Z"
@@ -34629,4 +34688,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2025-08-04T04:03:40.979825339Z"
+generated: "2025-08-05T03:57:58.884676079Z"
