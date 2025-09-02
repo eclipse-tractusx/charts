@@ -2291,6 +2291,30 @@ entries:
     version: 0.0.2
   bdrs-server:
   - apiVersion: v2
+    appVersion: 0.5.7
+    created: "2025-09-01T11:03:12.119303504Z"
+    dependencies:
+    - alias: postgresql
+      condition: install.postgresql
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.11.2
+    - alias: vault
+      condition: install.vault
+      name: vault
+      repository: https://helm.releases.hashicorp.com
+      version: 0.28.0
+    description: A Helm chart for the Tractus-X BPN-DID Resolution Service
+    digest: 317b91e5e52cc0311f58daa12b1e4b5b85542a391556ce751f6290b1d6311f35
+    home: https://github.com/eclipse-tractusx/bpn-did-resolution-service/tree/main/charts/bdrs-server
+    name: bdrs-server
+    sources:
+    - https://github.com/eclipse-tractusx/bpn-did-resolution-service/tree/main/charts/bdrs-server
+    type: application
+    urls:
+    - https://eclipse-tractusx.github.io/bpn-did-resolution-service/helm-charts/bdrs-server-0.5.7.tgz
+    version: 0.5.7
+  - apiVersion: v2
     appVersion: 0.5.6
     created: "2025-08-04T12:37:07.361831512Z"
     dependencies:
@@ -2545,6 +2569,20 @@ entries:
     - https://eclipse-tractusx.github.io/bpn-did-resolution-service/helm-charts/bdrs-server-0.0.1.tgz
     version: 0.0.1
   bdrs-server-memory:
+  - apiVersion: v2
+    appVersion: 0.5.7
+    created: "2025-09-01T11:03:12.130734322Z"
+    description: A Helm chart for the Tractus-X BPN-DID Resolution Service (only in-memory
+      persistence)
+    digest: 3a5e9d59debda360890eec4d402baed4264b368e3f42c7ba1b4b80af3a72d737
+    home: https://github.com/eclipse-tractusx/bpn-did-resolution-service/tree/main/charts/bdrs-server
+    name: bdrs-server-memory
+    sources:
+    - https://github.com/eclipse-tractusx/bpn-did-resolution-service/tree/main/charts/bdrs-server
+    type: application
+    urls:
+    - https://eclipse-tractusx.github.io/bpn-did-resolution-service/helm-charts/bdrs-server-memory-0.5.7.tgz
+    version: 0.5.7
   - apiVersion: v2
     appVersion: 0.5.6
     created: "2025-08-04T12:37:07.373106799Z"
@@ -35069,4 +35107,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2025-09-01T03:47:01.599253891Z"
+generated: "2025-09-02T03:42:01.194883304Z"
