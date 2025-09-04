@@ -7512,6 +7512,23 @@ entries:
   centralidp:
   - apiVersion: v2
     appVersion: 25.0.6
+    created: "2025-09-04T07:25:06.659939832Z"
+    dependencies:
+    - name: keycloak
+      repository: https://raw.githubusercontent.com/bitnami/charts/archive-full-index/bitnami
+      version: 23.0.0
+    description: Helm chart for Central Keycloak Instance
+    digest: b0f93bba1ffe472eab64eb9730cbb762118b7a4c7227183619406519565bf563
+    home: https://github.com/eclipse-tractusx/portal-iam
+    name: centralidp
+    sources:
+    - https://github.com/eclipse-tractusx/portal-iam
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/portal-iam/releases/download/centralidp-4.2.1-rc.1/centralidp-4.2.1-rc.1.tgz
+    version: 4.2.1-rc.1
+  - apiVersion: v2
+    appVersion: 25.0.6
     created: "2025-06-10T08:47:36.472769348Z"
     dependencies:
     - name: keycloak
@@ -23424,6 +23441,23 @@ entries:
   sharedidp:
   - apiVersion: v2
     appVersion: 25.0.6
+    created: "2025-09-04T07:25:06.88190677Z"
+    dependencies:
+    - name: keycloak
+      repository: https://raw.githubusercontent.com/bitnami/charts/archive-full-index/bitnami
+      version: 23.0.0
+    description: Helm chart for Shared Keycloak Instance
+    digest: 58b6c4238537a131b6febac8e3815483f54791dad040d156dfe8c4d7555d86b5
+    home: https://github.com/eclipse-tractusx/portal-iam
+    name: sharedidp
+    sources:
+    - https://github.com/eclipse-tractusx/portal-iam
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/portal-iam/releases/download/sharedidp-4.2.1-rc.1/sharedidp-4.2.1-rc.1.tgz
+    version: 4.2.1-rc.1
+  - apiVersion: v2
+    appVersion: 25.0.6
     created: "2025-06-10T08:47:36.645339691Z"
     dependencies:
     - name: keycloak
@@ -35243,4 +35277,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2025-09-04T03:38:40.548005133Z"
+generated: "2025-09-04T08:44:24.297851511Z"
