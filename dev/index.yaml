@@ -9704,6 +9704,32 @@ entries:
     version: 1.0.0
   dataspace-connector-bundle:
   - apiVersion: v2
+    created: "2025-09-29T07:49:02.101387358Z"
+    dependencies:
+    - condition: tractusx-connector.enabled
+      name: tractusx-connector
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 0.10.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 15.2.1
+    - condition: vault.enabled
+      name: vault
+      repository: https://helm.releases.hashicorp.com
+      version: 0.27.0
+    description: 'Helm chart for Capability Bundle: Dataspace Connector  For more
+      information on the Tractus-X EDC, see https://github.com/eclipse-tractusx/tractusx-edc '
+    digest: 150244ae00110ea223b5e18880e586380270713460438671a4acfe72b3767713
+    home: https://github.com/eclipse-tractusx/tractus-x-umbrella/tree/main/charts/dataspace-connector-bundle
+    name: dataspace-connector-bundle
+    sources:
+    - https://github.com/eclipse-tractusx/tractus-x-umbrella/tree/main/charts/dataspace-connector-bundle
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/tractus-x-umbrella/releases/download/dataspace-connector-bundle-1.1.1/dataspace-connector-bundle-1.1.1.tgz
+    version: 1.1.1
+  - apiVersion: v2
     created: "2025-07-16T07:53:16.09201769Z"
     dependencies:
     - condition: tractusx-connector.enabled
@@ -10576,6 +10602,31 @@ entries:
     - https://github.com/eclipse-tractusx/digital-product-pass/releases/download/digital-product-pass-0.3.2/digital-product-pass-0.3.2.tgz
     version: 0.3.2
   digital-twin-bundle:
+  - apiVersion: v2
+    created: "2025-09-29T07:49:02.311502278Z"
+    dependencies:
+    - condition: digital-twin-registry.enabled
+      name: digital-twin-registry
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 0.8.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 15.2.1
+    description: 'Helm chart for Capability Bundle: Digital Twin  The Digital Twin
+      Bundle provides a complete solution for managing digital twins in the Catena-X
+      ecosystem. It includes the Digital Twin Registry and its required dependencies.  For
+      more information about the Digital Twin Registry check this documentation [Digital
+      Twin Registry](https://github.com/eclipse-tractusx/sldt-digital-twin-registry/blob/main/charts/registry/README.md). '
+    digest: 705bccc31e654cdc24068fdb2306dbb245ed7f76d6add1b13db97752a41622ec
+    home: https://github.com/eclipse-tractusx/tractus-x-umbrella/tree/main/charts/digital-twin-bundle
+    name: digital-twin-bundle
+    sources:
+    - https://github.com/eclipse-tractusx/tractus-x-umbrella/tree/main/charts/digital-twin-bundle
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/tractus-x-umbrella/releases/download/digital-twin-bundle-1.0.2/digital-twin-bundle-1.0.2.tgz
+    version: 1.0.2
   - apiVersion: v2
     created: "2025-08-22T10:49:56.721430775Z"
     dependencies:
@@ -14771,6 +14822,44 @@ entries:
     version: 6.18.0
   localdev-portal-iam:
   - apiVersion: v2
+    created: "2025-09-29T09:30:40.921982009Z"
+    dependencies:
+    - condition: portal.enabled
+      name: portal
+      repository: file://../portal
+      version: 2.6.0
+    - condition: centralidp.enabled
+      name: centralidp
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 4.2.1
+    - condition: sharedidp.enabled
+      name: sharedidp
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 4.2.1
+    - condition: pgadmin4.enabled
+      name: pgadmin4
+      repository: https://helm.runix.net
+      version: 1.17.x
+    - alias: postgresportal
+      condition: postgresportal.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.x
+    description: Setup of CX Portal & IAM for local development
+    digest: d2e18cdd3a3f6ce90fa245810becc7f5a8fa307e31fb9eb5bd8ed1e6a2303b82
+    home: https://github.com/eclipse-tractusx/portal-cd
+    name: localdev-portal-iam
+    sources:
+    - https://github.com/eclipse-tractusx/portal-frontend
+    - https://github.com/eclipse-tractusx/portal-frontend-registration
+    - https://github.com/eclipse-tractusx/portal-assets
+    - https://github.com/eclipse-tractusx/portal-backend
+    - https://github.com/eclipse-tractusx/portal-iam
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/portal/releases/download/localdev-portal-iam-0.8.0/localdev-portal-iam-0.8.0.tgz
+    version: 0.8.0
+  - apiVersion: v2
     created: "2024-08-09T08:21:24.626398204Z"
     dependencies:
     - condition: portal.enabled
@@ -18586,6 +18675,27 @@ entries:
     - https://github.com/eclipse-tractusx/policy-hub/releases/download/policy-hub-0.1.0-rc.1/policy-hub-0.1.0-rc.1.tgz
     version: 0.1.0-rc.1
   portal:
+  - apiVersion: v2
+    appVersion: 2.6.0
+    created: "2025-09-29T09:30:41.118003546Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.x.x
+    description: Helm chart for Catena-X Portal
+    digest: ac4463de0c8d6227cd9e9ea004fea9dd52ac3ba0525ae8f85f14e49b92c8c6e4
+    home: https://github.com/eclipse-tractusx/portal
+    name: portal
+    sources:
+    - https://github.com/eclipse-tractusx/portal-frontend
+    - https://github.com/eclipse-tractusx/portal-frontend-registration
+    - https://github.com/eclipse-tractusx/portal-assets
+    - https://github.com/eclipse-tractusx/portal-backend
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/portal/releases/download/portal-2.6.0/portal-2.6.0.tgz
+    version: 2.6.0
   - apiVersion: v2
     appVersion: 2.6.0-RC1
     created: "2025-08-04T13:19:10.00894274Z"
@@ -29729,6 +29839,29 @@ entries:
   tx-data-provider:
   - apiVersion: v2
     appVersion: 0.0.1
+    created: "2025-09-29T07:49:02.599101834Z"
+    dependencies:
+    - condition: digital-twin-bundle.enabled
+      name: digital-twin-bundle
+      repository: file://../digital-twin-bundle
+      version: 1.0.2
+    - condition: data-persistence-layer-bundle.enabled
+      name: data-persistence-layer-bundle
+      repository: file://../data-persistence-layer-bundle
+      version: 1.0.0
+    - condition: dataspace-connector-bundle.enabled
+      name: dataspace-connector-bundle
+      repository: file://../dataspace-connector-bundle
+      version: 1.1.1
+    description: A Helm chart for Kubernetes
+    digest: fed06b6d3525d38a2fef072457c40644a985f79b6eff55445639037e74b2452c
+    name: tx-data-provider
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/tractus-x-umbrella/releases/download/tx-data-provider-0.3.3/tx-data-provider-0.3.3.tgz
+    version: 0.3.3
+  - apiVersion: v2
+    appVersion: 0.0.1
     created: "2025-09-10T08:32:27.141582627Z"
     dependencies:
     - condition: digital-twin-bundle.enabled
@@ -30155,6 +30288,108 @@ entries:
     - https://github.com/eclipse-tractusx/traceability-foss-frontend/releases/download/tx-traceability-foss-frontend-1.1.0/tx-traceability-foss-frontend-1.1.0.tgz
     version: 1.1.0
   umbrella:
+  - apiVersion: v2
+    created: "2025-09-29T07:49:03.081298713Z"
+    dependencies:
+    - condition: portal.enabled
+      name: portal
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 2.5.0
+    - condition: centralidp.enabled
+      name: centralidp
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 4.2.0
+    - condition: sharedidp.enabled
+      name: sharedidp
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 4.2.0
+    - condition: discoveryfinder.enabled
+      name: discoveryfinder
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 0.5.1
+    - condition: bpndiscovery.enabled
+      name: bpndiscovery
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 0.5.1
+    - alias: selfdescription
+      condition: selfdescription.enabled
+      name: sdfactory
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 2.1.33
+    - condition: ssi-credential-issuer.enabled
+      name: ssi-credential-issuer
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 1.4.0
+    - condition: semantic-hub.enabled
+      name: semantic-hub
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 0.5.0
+    - condition: bpdm.enabled
+      name: bpdm
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 6.0.0
+    - alias: dataconsumerOne
+      condition: dataconsumerOne.enabled
+      name: tx-data-provider
+      repository: file://../tx-data-provider
+      version: 0.3.3
+    - condition: tx-data-provider.enabled
+      name: tx-data-provider
+      repository: file://../tx-data-provider
+      version: 0.3.3
+    - alias: dataconsumerTwo
+      condition: dataconsumerTwo.enabled
+      name: tx-data-provider
+      repository: file://../tx-data-provider
+      version: 0.3.3
+    - condition: pgadmin4.enabled
+      name: pgadmin4
+      repository: https://helm.runix.net
+      version: 1.25.x
+    - condition: bdrs-server-memory.enabled
+      name: bdrs-server-memory
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 0.5.4
+    - condition: identity-and-trust-bundle.enabled
+      name: identity-and-trust-bundle
+      repository: file://../identity-and-trust-bundle
+      version: 1.1.0
+    - alias: opentelemetry-collector
+      condition: opentelemetry-collector.enabled
+      name: opentelemetry-collector
+      repository: https://open-telemetry.github.io/opentelemetry-helm-charts
+      version: 0.126.0
+    - alias: jaeger
+      condition: jaeger.enabled
+      name: jaeger
+      repository: https://jaegertracing.github.io/helm-charts
+      version: 3.0.7
+    - alias: prometheus
+      condition: prometheus.enabled
+      name: prometheus
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 27.1.0
+    - alias: loki
+      condition: loki.enabled
+      name: loki
+      repository: https://grafana.github.io/helm-charts
+      version: 6.27.0
+    - alias: grafana
+      condition: grafana.enabled
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 8.10.1
+    description: 'A Helm chart to spin up Tractus-X OSS components to simulate a complete
+      dataspace network.  With this Helm chart you are able to run end-to-end or create
+      a sandbox environment. '
+    digest: 9f7f07fdc1e82d8e20954ff5ae4914968d072e0fc50fd5010359b78237491f85
+    name: umbrella
+    sources:
+    - https://github.com/eclipse-tractusx/tractus-x-umbrella
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/tractus-x-umbrella/releases/download/umbrella-3.6.4/umbrella-3.6.4.tgz
+    version: 3.6.4
   - apiVersion: v2
     created: "2025-09-10T08:32:27.710451547Z"
     dependencies:
@@ -35902,4 +36137,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2025-09-29T06:58:18.499029539Z"
+generated: "2025-09-29T09:32:12.608585778Z"
