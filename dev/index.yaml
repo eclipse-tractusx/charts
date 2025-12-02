@@ -2739,6 +2739,56 @@ entries:
     version: 0.0.1
   bpdm:
   - apiVersion: v2
+    appVersion: 7.2.0
+    created: "2025-12-01T10:25:39.212174503Z"
+    dependencies:
+    - alias: bpdm-gate
+      condition: bpdm-gate.enabled
+      name: bpdm-gate
+      repository: ""
+      version: 7.2.0
+    - alias: bpdm-pool
+      condition: bpdm-pool.enabled
+      name: bpdm-pool
+      repository: ""
+      version: 8.2.0
+    - alias: bpdm-cleaning-service-dummy
+      condition: bpdm-cleaning-service-dummy.enabled
+      name: bpdm-cleaning-service-dummy
+      repository: ""
+      version: 4.2.0
+    - alias: bpdm-orchestrator
+      condition: bpdm-orchestrator.enabled
+      name: bpdm-orchestrator
+      repository: ""
+      version: 4.2.0
+    - name: bpdm-common
+      repository: ""
+      version: 1.0.5
+    - alias: postgres
+      condition: postgres.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.10
+    - alias: centralidp
+      condition: centralidp.enabled
+      name: centralidp
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 4.2.1
+    description: A Helm chart for Kubernetes that deploys the BPDM applications
+    digest: fbd658ccd047a96ca3274bd04d9b4202cf393e16d1d9e827a7696a9e090f3805
+    home: https://github.com/eclipse-tractusx/bpdm
+    maintainers:
+    - name: Nico Koprowski
+    - name: Sujit Karne
+    name: bpdm
+    sources:
+    - https://github.com/eclipse-tractusx/bpdm
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/bpdm/releases/download/bpdm-6.2.0/bpdm-6.2.0.tgz
+    version: 6.2.0
+  - apiVersion: v2
     appVersion: 7.2.0-rc2
     created: "2025-11-17T06:21:14.26457294Z"
     dependencies:
@@ -9872,6 +9922,32 @@ entries:
     version: 1.0.0
   dataspace-connector-bundle:
   - apiVersion: v2
+    created: "2025-12-01T13:12:22.993276623Z"
+    dependencies:
+    - condition: tractusx-connector.enabled
+      name: tractusx-connector
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 0.11.1
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 15.2.1
+    - condition: vault.enabled
+      name: vault
+      repository: https://helm.releases.hashicorp.com
+      version: 0.27.0
+    description: 'Helm chart for Capability Bundle: Dataspace Connector  For more
+      information on the Tractus-X EDC, see https://github.com/eclipse-tractusx/tractusx-edc '
+    digest: b2d975c4a24100bfedaddcff0bd25825667eb9422a4044fb52102771ceecf10e
+    home: https://github.com/eclipse-tractusx/tractus-x-umbrella/tree/main/charts/dataspace-connector-bundle
+    name: dataspace-connector-bundle
+    sources:
+    - https://github.com/eclipse-tractusx/tractus-x-umbrella/tree/main/charts/dataspace-connector-bundle
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/tractus-x-umbrella/releases/download/dataspace-connector-bundle-1.2.0/dataspace-connector-bundle-1.2.0.tgz
+    version: 1.2.0
+  - apiVersion: v2
     created: "2025-09-29T07:49:02.101387358Z"
     dependencies:
     - condition: tractusx-connector.enabled
@@ -12442,6 +12518,26 @@ entries:
     - https://github.com/eclipse-tractusx/tractusx-edc-kafka-extension/releases/download/edc-kafka-demo-0.1.0/edc-kafka-demo-0.1.0.tgz
     version: 0.1.0
   identity-and-trust-bundle:
+  - apiVersion: v2
+    created: "2025-12-01T13:12:23.251307841Z"
+    dependencies:
+    - condition: ssi-dim-wallet-stub.enabled
+      name: ssi-dim-wallet-stub
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 0.1.14
+    description: 'Helm chart for Capability Bundle: Identity and Trust  The Identity
+      & Trust Bundle provides identity management and authentication services for
+      the Catena-X ecosystem.  For more information on the SSI DIM Wallet stub application,
+      see https://github.com/eclipse-tractusx/ssi-dim-wallet-stub '
+    digest: f7e6bf0a25ae935d690e4b233992f00f6593ba5420cb6b94cd77a2237ff2af7e
+    home: https://github.com/eclipse-tractusx/tractus-x-umbrella/tree/main/charts/identity-and-trust-bundle
+    name: identity-and-trust-bundle
+    sources:
+    - https://github.com/eclipse-tractusx/tractus-x-umbrella/tree/main/charts/identity-and-trust-bundle
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/tractus-x-umbrella/releases/download/identity-and-trust-bundle-1.1.2/identity-and-trust-bundle-1.1.2.tgz
+    version: 1.1.2
   - apiVersion: v2
     created: "2025-11-19T12:02:01.161616346Z"
     dependencies:
@@ -30750,6 +30846,29 @@ entries:
   tx-data-provider:
   - apiVersion: v2
     appVersion: 0.0.1
+    created: "2025-12-01T13:12:23.64078078Z"
+    dependencies:
+    - condition: digital-twin-bundle.enabled
+      name: digital-twin-bundle
+      repository: file://../digital-twin-bundle
+      version: 1.0.3
+    - condition: data-persistence-layer-bundle.enabled
+      name: data-persistence-layer-bundle
+      repository: file://../data-persistence-layer-bundle
+      version: 1.0.0
+    - condition: dataspace-connector-bundle.enabled
+      name: dataspace-connector-bundle
+      repository: file://../dataspace-connector-bundle
+      version: 1.2.0
+    description: A Helm chart for Kubernetes
+    digest: f4e832c0c726c132649aa768f595d414ede654308b6ceda50befb44e597502f3
+    name: tx-data-provider
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/tractus-x-umbrella/releases/download/tx-data-provider-0.4.0/tx-data-provider-0.4.0.tgz
+    version: 0.4.0
+  - apiVersion: v2
+    appVersion: 0.0.1
     created: "2025-10-20T06:50:47.387330671Z"
     dependencies:
     - condition: digital-twin-bundle.enabled
@@ -31222,6 +31341,218 @@ entries:
     - https://github.com/eclipse-tractusx/traceability-foss-frontend/releases/download/tx-traceability-foss-frontend-1.1.0/tx-traceability-foss-frontend-1.1.0.tgz
     version: 1.1.0
   umbrella:
+  - apiVersion: v2
+    created: "2025-12-01T16:25:42.397299205Z"
+    dependencies:
+    - condition: portal.enabled
+      name: portal
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 2.6.0
+    - condition: centralidp.enabled
+      name: centralidp
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 4.2.1
+    - condition: sharedidp.enabled
+      name: sharedidp
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 4.2.1
+    - condition: discoveryfinder.enabled
+      name: discoveryfinder
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 0.5.1
+    - condition: bpndiscovery.enabled
+      name: bpndiscovery
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 0.5.1
+    - alias: selfdescription
+      condition: selfdescription.enabled
+      name: sdfactory
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 2.1.34
+    - condition: ssi-credential-issuer.enabled
+      name: ssi-credential-issuer
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 1.4.0
+    - condition: semantic-hub.enabled
+      name: semantic-hub
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 0.5.0
+    - condition: bpdm.enabled
+      name: bpdm
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 6.1.0
+    - alias: dataconsumerOne
+      condition: dataconsumerOne.enabled
+      name: tx-data-provider
+      repository: file://../tx-data-provider
+      version: 0.4.0
+    - condition: tx-data-provider.enabled
+      name: tx-data-provider
+      repository: file://../tx-data-provider
+      version: 0.4.0
+    - alias: dataconsumerTwo
+      condition: dataconsumerTwo.enabled
+      name: tx-data-provider
+      repository: file://../tx-data-provider
+      version: 0.4.0
+    - condition: pgadmin4.enabled
+      name: pgadmin4
+      repository: https://helm.runix.net
+      version: 1.25.x
+    - condition: bdrs-server-memory.enabled
+      name: bdrs-server-memory
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 0.5.7
+    - condition: identity-and-trust-bundle.enabled
+      name: identity-and-trust-bundle
+      repository: file://../identity-and-trust-bundle
+      version: 1.1.2
+    - alias: opentelemetry-collector
+      condition: opentelemetry-collector.enabled
+      name: opentelemetry-collector
+      repository: https://open-telemetry.github.io/opentelemetry-helm-charts
+      version: 0.126.0
+    - alias: jaeger
+      condition: jaeger.enabled
+      name: jaeger
+      repository: https://jaegertracing.github.io/helm-charts
+      version: 3.0.7
+    - alias: prometheus
+      condition: prometheus.enabled
+      name: prometheus
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 27.1.0
+    - alias: loki
+      condition: loki.enabled
+      name: loki
+      repository: https://grafana.github.io/helm-charts
+      version: 6.27.0
+    - alias: grafana
+      condition: grafana.enabled
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 8.10.1
+    - condition: cert-manager.enabled
+      name: cert-manager
+      repository: https://charts.jetstack.io
+      version: v1.18.2
+    description: 'A Helm chart to spin up Tractus-X OSS components to simulate a complete
+      dataspace network.  With this Helm chart you are able to run end-to-end or create
+      a sandbox environment. '
+    digest: f2806c900f2961b0024575ae5dc79c235d0d831972f41cbe86df37d9f43924d2
+    name: umbrella
+    sources:
+    - https://github.com/eclipse-tractusx/tractus-x-umbrella
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/tractus-x-umbrella/releases/download/umbrella-3.14.0/umbrella-3.14.0.tgz
+    version: 3.14.0
+  - apiVersion: v2
+    created: "2025-12-01T13:12:24.19288268Z"
+    dependencies:
+    - condition: portal.enabled
+      name: portal
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 2.6.0
+    - condition: centralidp.enabled
+      name: centralidp
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 4.2.1
+    - condition: sharedidp.enabled
+      name: sharedidp
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 4.2.1
+    - condition: discoveryfinder.enabled
+      name: discoveryfinder
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 0.5.1
+    - condition: bpndiscovery.enabled
+      name: bpndiscovery
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 0.5.1
+    - alias: selfdescription
+      condition: selfdescription.enabled
+      name: sdfactory
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 2.1.34
+    - condition: ssi-credential-issuer.enabled
+      name: ssi-credential-issuer
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 1.4.0
+    - condition: semantic-hub.enabled
+      name: semantic-hub
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 0.5.0
+    - condition: bpdm.enabled
+      name: bpdm
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 6.0.0
+    - alias: dataconsumerOne
+      condition: dataconsumerOne.enabled
+      name: tx-data-provider
+      repository: file://../tx-data-provider
+      version: 0.4.0
+    - condition: tx-data-provider.enabled
+      name: tx-data-provider
+      repository: file://../tx-data-provider
+      version: 0.4.0
+    - alias: dataconsumerTwo
+      condition: dataconsumerTwo.enabled
+      name: tx-data-provider
+      repository: file://../tx-data-provider
+      version: 0.4.0
+    - condition: pgadmin4.enabled
+      name: pgadmin4
+      repository: https://helm.runix.net
+      version: 1.25.x
+    - condition: bdrs-server-memory.enabled
+      name: bdrs-server-memory
+      repository: https://eclipse-tractusx.github.io/charts/dev
+      version: 0.5.7
+    - condition: identity-and-trust-bundle.enabled
+      name: identity-and-trust-bundle
+      repository: file://../identity-and-trust-bundle
+      version: 1.1.2
+    - alias: opentelemetry-collector
+      condition: opentelemetry-collector.enabled
+      name: opentelemetry-collector
+      repository: https://open-telemetry.github.io/opentelemetry-helm-charts
+      version: 0.126.0
+    - alias: jaeger
+      condition: jaeger.enabled
+      name: jaeger
+      repository: https://jaegertracing.github.io/helm-charts
+      version: 3.0.7
+    - alias: prometheus
+      condition: prometheus.enabled
+      name: prometheus
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 27.1.0
+    - alias: loki
+      condition: loki.enabled
+      name: loki
+      repository: https://grafana.github.io/helm-charts
+      version: 6.27.0
+    - alias: grafana
+      condition: grafana.enabled
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 8.10.1
+    - condition: cert-manager.enabled
+      name: cert-manager
+      repository: https://charts.jetstack.io
+      version: v1.18.2
+    description: 'A Helm chart to spin up Tractus-X OSS components to simulate a complete
+      dataspace network.  With this Helm chart you are able to run end-to-end or create
+      a sandbox environment. '
+    digest: fd1639434a984e1f5820ad9f7c98c051a5defdf849c76c965da889c2e00160bd
+    name: umbrella
+    sources:
+    - https://github.com/eclipse-tractusx/tractus-x-umbrella
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/tractus-x-umbrella/releases/download/umbrella-3.13.0/umbrella-3.13.0.tgz
+    version: 3.13.0
   - apiVersion: v2
     created: "2025-11-19T12:02:01.697781283Z"
     dependencies:
@@ -37616,4 +37947,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2025-12-01T04:00:53.240218004Z"
+generated: "2025-12-02T03:47:10.575898988Z"
