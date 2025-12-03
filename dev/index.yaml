@@ -12600,6 +12600,32 @@ entries:
     version: 1.0.0
   industry-core-hub:
   - apiVersion: v2
+    appVersion: v0.4.0
+    created: "2025-12-02T19:29:56.613652067Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.x
+    - condition: pgadmin4.enabled
+      name: pgadmin4
+      repository: https://helm.runix.net
+      version: 1.25.x
+    - condition: keycloak.enabled
+      name: keycloak
+      repository: https://raw.githubusercontent.com/bitnami/charts/archive-full-index/bitnami
+      version: 23.0.0
+    description: A Helm chart for Eclipse Tractus-X - Industry Core Hub
+    digest: 59cf7165dbec27308bba8a94de7c86038dd10aef45c5f81b8ff790ae987d60e9
+    home: https://github.com/eclipse-tractusx/industry-core-hub
+    name: industry-core-hub
+    sources:
+    - https://github.com/eclipse-tractusx/industry-core-hub
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/industry-core-hub/releases/download/industry-core-hub-0.4.0/industry-core-hub-0.4.0.tgz
+    version: 0.4.0
+  - apiVersion: v2
     appVersion: 0.3.0-RC2
     created: "2025-11-25T16:27:55.208152982Z"
     dependencies:
@@ -21182,6 +21208,24 @@ entries:
     - https://github.com/eclipse-tractusx/knowledge-agents/releases/download/provisioning-agent-1.9.7-SNAPSHOT/provisioning-agent-1.9.7-SNAPSHOT.tgz
     version: 1.9.7-SNAPSHOT
   puris:
+  - apiVersion: v2
+    appVersion: 5.0.0
+    created: "2025-12-02T18:37:30.452767034Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.x
+    description: A helm chart for Kubernetes deployment of PURIS
+    digest: a9938bcc699afc3900eebc8b194d67c8f0a9a9e314f5bfa4eb962622ef67d4f3
+    home: https://github.com/eclipse-tractusx/puris
+    name: puris
+    sources:
+    - https://github.com/eclipse-tractusx/puris
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/puris/releases/download/puris-6.0.0/puris-6.0.0.tgz
+    version: 6.0.0
   - apiVersion: v2
     appVersion: 4.1.1
     created: "2025-11-11T07:38:01.758818318Z"
@@ -37947,4 +37991,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2025-12-02T03:47:10.575898988Z"
+generated: "2025-12-03T03:46:47.150509206Z"
