@@ -7,12 +7,12 @@ go/golang/github.com%2FAdaLogics/go-fuzz-headers/v0.0.0-20240806141605-e8a1dd788
 go/golang/github.com%2FAzure/go-ansiterm/v0.0.0-20210617225240-d185dfc1b5a1, MIT, approved, clearlydefined
 go/golang/github.com%2FAzure/go-ansiterm/v0.0.0-20250102033503-faa5f7b0171c, MIT, approved, clearlydefined
 go/golang/github.com%2FBurntSushi/toml/v0.3.1, MIT AND BSD-3-Clause, approved, #5615
-go/golang/github.com%2FMakeNowJust/heredoc/v1.0.0, MIT, restricted, clearlydefined
+go/golang/github.com%2FMakeNowJust/heredoc/v1.0.0, MIT, approved, #25691
 go/golang/github.com%2FMasterminds%2Fsemver/v3/v3.2.1, MIT, approved, clearlydefined
 go/golang/github.com%2FMasterminds%2Fsemver/v3/v3.4.0, MIT, approved, clearlydefined
 go/golang/github.com%2FMicrosoft/go-winio/v0.6.1, MIT AND BSD-3-Clause, approved, #10746
 go/golang/github.com%2FMicrosoft/hcsshim/v0.11.4, MIT AND Apache-2.0 AND ISC AND BSD-2-Clause AND BSD-3-Clause AND CC-BY-SA-4.0 AND MPL-2.0-no-copyleft-exception AND LicenseRef-IP-Rights-Grant, approved, #13183
-go/golang/github.com%2FMicrosoft/hcsshim/v0.13.0, LicenseRef-scancode-dco-1.1 AND LicenseRef-scancode-generic-cla AND MIT, restricted, clearlydefined
+go/golang/github.com%2FMicrosoft/hcsshim/v0.13.0, MIT AND Apache-2.0 AND BSD-2-Clause AND (Apache-2.0 AND BSD-3-Clause) AND (ISC AND MIT) AND ISC AND BSD-3-Clause AND (Apache-2.0 AND BSD-3-Clause AND MIT) AND (BSD-3-Clause AND MIT) AND (Apache-2.0 AND MIT) AND CC-BY-SA-4.0 AND (Apache-2.0 AND CC-BY-SA-4.0) AND BSD-2-Clause-Views AND MPL-2.0, approved, #25703
 go/golang/github.com%2FShopify/logrus-bugsnag/v0.0.0-20171204204709-577dee27f20d, MIT, approved, clearlydefined
 go/golang/github.com%2Falecthomas/template/v0.0.0-20160405071501-a0175ee3bccc, BSD-3-Clause, approved, clearlydefined
 go/golang/github.com%2Falecthomas/units/v0.0.0-20151022065526-2efee857e7cf, MIT, approved, clearlydefined
@@ -27,7 +27,7 @@ go/golang/github.com%2Fbugsnag/panicwrap/v0.0.0-20151223152923-e2c28503fcd0, MIT
 go/golang/github.com%2Fcensus-instrumentation/opencensus-proto/v0.2.1, Apache-2.0, approved, #5610
 go/golang/github.com%2Fcespare%2Fxxhash/v2/v2.2.0, MIT, approved, clearlydefined
 go/golang/github.com%2Fcespare%2Fxxhash/v2/v2.3.0, MIT, approved, clearlydefined
-go/golang/github.com%2Fchai2010/gettext-go/v1.0.3, BSD-3-Clause, restricted, clearlydefined
+go/golang/github.com%2Fchai2010/gettext-go/v1.0.3, BSD-3-Clause AND LicenseRef-scancode-free-unknown AND GPL-1.0-or-later AND GPL-2.0-or-later AND (Apache-2.0 AND GPL-2.0-only AND GPL-3.0-or-later AND LGPL-2.1-or-later AND LicenseRef-scancode-free-unknown AND LicenseRef-scancode-other-copyleft) AND (Apache-2.0 AND GPL-2.0-only AND GPL-3.0-or-later AND LicenseRef-scancode-free-unknown AND LicenseRef-scancode-other-copyleft) AND GPL-3.0-or-later, restricted, #25693
 go/golang/github.com%2Fchzyer/logex/v1.1.10, MIT, approved, clearlydefined
 go/golang/github.com%2Fchzyer/readline/v0.0.0-20180603132655-2972be24d48e, MIT AND BSD-3-Clause AND WTFPL, approved, #5605
 go/golang/github.com%2Fchzyer/test/v0.0.0-20180213035817-a1ea475d72b1, MIT, approved, clearlydefined
@@ -52,14 +52,14 @@ go/golang/github.com%2Fdistribution%2Fdistribution/v3/v3.0.0-20221208165359-3629
 go/golang/github.com%2Fdistribution/reference/v0.5.0, Apache-2.0, approved, #15560
 go/golang/github.com%2Fdistribution/reference/v0.6.0, Apache-2.0, approved, #21689
 go/golang/github.com%2Fdocker/cli/v25.0.1, Apache-2.0 AND BSD-3-Clause AND BSD-2-Clause AND CC-BY-4.0 AND CC-BY-SA-4.0 AND MIT AND Unicode-3.0 AND LicenseRef-scancode-oasis-ipr-policy-2014 AND LicenseRef-Additional-IP-Rights-Grant, approved, #15555
-go/golang/github.com%2Fdocker/cli/v29.1.5, , restricted, clearlydefined
+go/golang/github.com%2Fdocker/cli/v29.1.5, Apache-2.0 AND BSD-3-Clause AND MIT AND CC-BY-SA-4.0 AND (Apache-2.0 AND CC-BY-SA-4.0) AND BSD-2-Clause AND (Apache-2.0 AND BSD-3-Clause AND MIT) AND (Apache-2.0 AND BSD-3-Clause) AND (Apache-2.0 AND LicenseRef-scancode-free-unknown) AND (Apache-2.0 AND MIT), restricted, #25695
 go/golang/github.com%2Fdocker/distribution/v2.8.3, Apache-2.0 AND MIT AND BSD-3-Clause AND BSD-2-Clause AND CC-BY-SA-4.0 AND Zlib, approved, #5670
 go/golang/github.com%2Fdocker/docker-credential-helpers/v0.7.0, MIT, approved, clearlydefined
-go/golang/github.com%2Fdocker/docker-credential-helpers/v0.9.5, MIT, restricted, clearlydefined
+go/golang/github.com%2Fdocker/docker-credential-helpers/v0.9.5, MIT, approved, #25704
 go/golang/github.com%2Fdocker/docker/v25.0.5, Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND CC-BY-4.0 AND CC-BY-SA-4.0 AND (OpenSSL OR BSD-3-Clause OR GPL-2.0-only) AND (Apache-2.0 OR GPL-2.0-or-later) AND GPL-2.0-only AND MIT AND MPL-2.0, approved, #15558
-go/golang/github.com%2Fdocker/docker/v28.5.2, , restricted, clearlydefined
+go/golang/github.com%2Fdocker/docker/v28.5.2, Apache-2.0 AND GPL-1.0-or-later AND MIT AND GPL-2.0-only AND BSD-3-Clause AND (Apache-2.0 AND LicenseRef-scancode-free-unknown) AND BSD-2-Clause AND (GPL-2.0-only AND MIT) AND (Apache-2.0 AND BSD-3-Clause) AND ISC AND CC-BY-SA-4.0 AND (Apache-2.0 AND CC-BY-SA-4.0) AND MPL-2.0 AND (Apache-2.0 AND BSD-3-Clause AND MIT) AND LicenseRef-scancode-unknown AND (Apache-2.0 AND MIT) AND (BSD-3-Clause AND MIT) AND (Apache-2.0 AND GPL-2.0-only) AND CC-BY-4.0 AND (Apache-2.0 OR GPL-2.0-or-later) AND (Apache-2.0 AND ISC AND MIT) AND (BSD-3-Clause AND OpenSSL), restricted, #25711
 go/golang/github.com%2Fdocker/go-connections/v0.5.0, Apache-2.0, approved, #15559
-go/golang/github.com%2Fdocker/go-connections/v0.6.0, Apache-2.0, restricted, clearlydefined
+go/golang/github.com%2Fdocker/go-connections/v0.6.0, Apache-2.0, approved, #25714
 go/golang/github.com%2Fdocker/go-events/v0.0.0-20190806004212-e31b211e4f1c, Apache-2.0, approved, #5604
 go/golang/github.com%2Fdocker/go-metrics/v0.0.1, Apache-2.0 AND CC-BY-SA-4.0, approved, #5613
 go/golang/github.com%2Fdocker/libtrust/v0.0.0-20150114040149-fa567046d9b1, Apache-2.0, approved, #5664
@@ -96,11 +96,11 @@ go/golang/github.com%2Fgo-openapi%2Fswag/stringutils/v0.25.4, Apache-2.0, approv
 go/golang/github.com%2Fgo-openapi%2Fswag/typeutils/v0.25.4, Apache-2.0, approved, clearlydefined
 go/golang/github.com%2Fgo-openapi%2Fswag/yamlutils/v0.25.4, Apache-2.0, approved, clearlydefined
 go/golang/github.com%2Fgo-openapi/jsonpointer/v0.19.6, Apache-2.0, approved, #5626
-go/golang/github.com%2Fgo-openapi/jsonpointer/v0.22.4, Apache-2.0, restricted, clearlydefined
+go/golang/github.com%2Fgo-openapi/jsonpointer/v0.22.4, Apache-2.0, approved, #25710
 go/golang/github.com%2Fgo-openapi/jsonreference/v0.20.2, Apache-2.0, approved, #10676
 go/golang/github.com%2Fgo-openapi/jsonreference/v0.21.4, Apache-2.0, approved, #20705
 go/golang/github.com%2Fgo-openapi/swag/v0.22.3, Apache-2.0 AND (Apache-2.0 AND MIT), approved, #10679
-go/golang/github.com%2Fgo-openapi/swag/v0.25.4, Apache-2.0, restricted, clearlydefined
+go/golang/github.com%2Fgo-openapi/swag/v0.25.4, Apache-2.0, approved, #25709
 go/golang/github.com%2Fgo-stack/stack/v1.8.0, MIT, approved, clearlydefined
 go/golang/github.com%2Fgo-task/slim-sprig/v0.0.0-20230315185526-52ccab3ef572, MIT, approved, #11068
 go/golang/github.com%2Fgogo/protobuf/v1.1.1, BSD-3-Clause AND BSD-2-Clause, approved, #5647
@@ -135,7 +135,7 @@ go/golang/github.com%2Fgoogle/go-cmp/v0.5.9, BSD-3-Clause, approved, #5689
 go/golang/github.com%2Fgoogle/go-cmp/v0.6.0, BSD-3-Clause, approved, #11058
 go/golang/github.com%2Fgoogle/go-cmp/v0.7.0, BSD-3-Clause, approved, #20698
 go/golang/github.com%2Fgoogle/go-querystring/v1.1.0, BSD-3-Clause, approved, clearlydefined
-go/golang/github.com%2Fgoogle/go-querystring/v1.2.0, BSD-3-Clause, restricted, clearlydefined
+go/golang/github.com%2Fgoogle/go-querystring/v1.2.0, BSD-3-Clause, approved, #25706
 go/golang/github.com%2Fgoogle/gofuzz/v1.0.0, Apache-2.0, approved, clearlydefined
 go/golang/github.com%2Fgoogle/gofuzz/v1.2.0, Apache-2.0, approved, clearlydefined
 go/golang/github.com%2Fgoogle/pprof/v0.0.0-20210720184732-4bb14d4b1be1, Apache-2.0 AND BSD-3-Clause, approved, #5792
@@ -195,7 +195,7 @@ go/golang/github.com%2Fmonochromegane/go-gitignore/v0.0.0-20200626010858-205db1a
 go/golang/github.com%2Fmunnerz/goautoneg/v0.0.0-20191010083416-a7dc8b61c822, BSD-3-Clause, approved, clearlydefined
 go/golang/github.com%2Fmwitkow/go-conntrack/v0.0.0-20161129095857-cc309e4a2223, Apache-2.0, approved, #5794
 go/golang/github.com%2Fonsi%2Fginkgo/v2/v2.15.0, MIT AND BSD-3-Clause, approved, #15542
-go/golang/github.com%2Fonsi%2Fginkgo/v2/v2.27.2, MIT, restricted, clearlydefined
+go/golang/github.com%2Fonsi%2Fginkgo/v2/v2.27.2, MIT AND BSD-2-Clause AND BSD-3-Clause, approved, #25697
 go/golang/github.com%2Fonsi/gomega/v1.31.0, MIT, approved, clearlydefined
 go/golang/github.com%2Fonsi/gomega/v1.38.2, MIT, approved, clearlydefined
 go/golang/github.com%2Fopencontainers/go-digest/v1.0.0, Apache-2.0 AND CC-BY-SA-4.0, approved, #6378
@@ -211,7 +211,7 @@ go/golang/github.com%2Fprometheus/client_golang/v0.9.1, Apache-2.0, approved, cl
 go/golang/github.com%2Fprometheus/client_golang/v1.0.0, Apache-2.0, approved, clearlydefined
 go/golang/github.com%2Fprometheus/client_golang/v1.1.0, Apache-2.0, approved, clearlydefined
 go/golang/github.com%2Fprometheus/client_golang/v1.16.0, Apache-2.0, approved, clearlydefined
-go/golang/github.com%2Fprometheus/client_golang/v1.23.2, Apache-2.0, restricted, clearlydefined
+go/golang/github.com%2Fprometheus/client_golang/v1.23.2, Apache-2.0 AND BSD-3-Clause AND MIT, approved, #25702
 go/golang/github.com%2Fprometheus/client_model/v0.0.0-20180712105110-5c3871d89910, Apache-2.0, approved, clearlydefined
 go/golang/github.com%2Fprometheus/client_model/v0.0.0-20190129233127-fd36f4220a90, Apache-2.0, approved, clearlydefined
 go/golang/github.com%2Fprometheus/client_model/v0.0.0-20190812154241-14fe0d1b01d4, Apache-2.0, approved, clearlydefined
@@ -220,7 +220,7 @@ go/golang/github.com%2Fprometheus/client_model/v0.6.2, Apache-2.0, approved, cle
 go/golang/github.com%2Fprometheus/common/v0.4.1, Apache-2.0 AND BSD-3-Clause, approved, #5789
 go/golang/github.com%2Fprometheus/common/v0.44.0, Apache-2.0 AND BSD-3-Clause, approved, #11072
 go/golang/github.com%2Fprometheus/common/v0.6.0, Apache-2.0 AND BSD-3-Clause, approved, #5787
-go/golang/github.com%2Fprometheus/common/v0.67.5, , restricted, clearlydefined
+go/golang/github.com%2Fprometheus/common/v0.67.5, Apache-2.0, approved, #25699
 go/golang/github.com%2Fprometheus/procfs/v0.0.0-20181005140218-185b4288413d, Apache-2.0, approved, clearlydefined
 go/golang/github.com%2Fprometheus/procfs/v0.0.2, Apache-2.0, approved, clearlydefined
 go/golang/github.com%2Fprometheus/procfs/v0.0.3, Apache-2.0, approved, clearlydefined
@@ -275,7 +275,7 @@ go/golang/golang.org%2Fx/crypto/v0.0.0-20190308221718-c2843e01d9a2, BSD-3-Clause
 go/golang/golang.org%2Fx/crypto/v0.0.0-20191011191535-87dc89f01550, BSD-3-Clause AND (BSD-3-Clause AND OpenSSL) AND (BSD-3-Clause AND MIT), approved, #5633
 go/golang/golang.org%2Fx/crypto/v0.0.0-20200622213623-75b288015ac9, BSD-3-Clause AND (BSD-3-Clause AND OpenSSL) AND (BSD-3-Clause AND MIT), approved, #5633
 go/golang/golang.org%2Fx/crypto/v0.21.0, BSD-3-Clause AND (BSD-3-Clause AND OpenSSL) AND (BSD-3-Clause AND MIT), approved, #13955
-go/golang/golang.org%2Fx/crypto/v0.47.0, BSD-3-Clause AND LicenseRef-scancode-google-patent-license-golang, restricted, clearlydefined
+go/golang/golang.org%2Fx/crypto/v0.47.0, BSD-3-Clause AND (BSD-3-Clause AND OpenSSL) AND (BSD-3-Clause AND MIT), approved, #25707
 go/golang/golang.org%2Fx/exp/v0.0.0-20190121172915-509febef88a4, BSD-3-Clause, approved, #5732
 go/golang/golang.org%2Fx/lint/v0.0.0-20181026193005-c67002cb31c3, BSD-3-Clause, approved, clearlydefined
 go/golang/golang.org%2Fx/lint/v0.0.0-20190227174305-5b3e6a55c961, BSD-3-Clause, approved, clearlydefined
@@ -283,7 +283,7 @@ go/golang/golang.org%2Fx/lint/v0.0.0-20190313153728-d0100b6bd8b3, BSD-3-Clause, 
 go/golang/golang.org%2Fx/mod/v0.15.0, BSD-3-Clause, approved, #15540
 go/golang/golang.org%2Fx/mod/v0.2.0, BSD-3-Clause, approved, #6050
 go/golang/golang.org%2Fx/mod/v0.3.0, BSD-3-Clause, approved, #6039
-go/golang/golang.org%2Fx/mod/v0.31.0, BSD-3-Clause AND LicenseRef-scancode-google-patent-license-golang, restricted, clearlydefined
+go/golang/golang.org%2Fx/mod/v0.31.0, BSD-3-Clause, approved, #25692
 go/golang/golang.org%2Fx/net/v0.0.0-20180724234803-3673e40ba225, BSD-3-Clause AND (BSD-2-Clause AND BSD-3-Clause), approved, #5736
 go/golang/golang.org%2Fx/net/v0.0.0-20180826012351-8a410e7b638d, BSD-3-Clause AND (BSD-2-Clause AND BSD-3-Clause), approved, #5736
 go/golang/golang.org%2Fx/net/v0.0.0-20181114220301-adae6a3d119a, BSD-3-Clause AND (BSD-2-Clause AND BSD-3-Clause), approved, #5736
@@ -295,7 +295,7 @@ go/golang/golang.org%2Fx/net/v0.0.0-20190620200207-3b0461eec859, BSD-3-Clause AN
 go/golang/golang.org%2Fx/net/v0.0.0-20200226121028-0de0cce0169b, BSD-3-Clause AND (BSD-2-Clause AND BSD-3-Clause), approved, #5736
 go/golang/golang.org%2Fx/net/v0.0.0-20201021035429-f5854403a974, BSD-3-Clause AND (BSD-2-Clause AND BSD-3-Clause), approved, #5736
 go/golang/golang.org%2Fx/net/v0.23.0, BSD-3-Clause AND (BSD-2-Clause AND BSD-3-Clause), approved, #15538
-go/golang/golang.org%2Fx/net/v0.49.0, BSD-3-Clause AND LicenseRef-scancode-google-patent-license-golang, restricted, clearlydefined
+go/golang/golang.org%2Fx/net/v0.49.0, BSD-3-Clause AND (BSD-2-Clause AND BSD-3-Clause), approved, #25696
 go/golang/golang.org%2Fx/oauth2/v0.0.0-20180821212333-d2e6202438be, BSD-3-Clause, approved, clearlydefined
 go/golang/golang.org%2Fx/oauth2/v0.31.0, BSD-3-Clause, approved, clearlydefined
 go/golang/golang.org%2Fx/oauth2/v0.34.0, BSD-3-Clause, approved, clearlydefined
@@ -305,7 +305,7 @@ go/golang/golang.org%2Fx/sync/v0.0.0-20181221193216-37e7f081c4d4, BSD-3-Clause, 
 go/golang/golang.org%2Fx/sync/v0.0.0-20190423024810-112230192c58, BSD-3-Clause, approved, #5719
 go/golang/golang.org%2Fx/sync/v0.0.0-20190911185100-cd5d95a43a6e, BSD-3-Clause, approved, #5719
 go/golang/golang.org%2Fx/sync/v0.0.0-20201020160332-67f06af15bc9, BSD-3-Clause, approved, #5719
-go/golang/golang.org%2Fx/sync/v0.19.0, BSD-3-Clause AND LicenseRef-scancode-google-patent-license-golang, restricted, clearlydefined
+go/golang/golang.org%2Fx/sync/v0.19.0, BSD-3-Clause, approved, #25694
 go/golang/golang.org%2Fx/sync/v0.6.0, BSD-3-Clause, approved, #15543
 go/golang/golang.org%2Fx/sys/v0.0.0-20180830151530-49385e6e1522, Apache-2.0 AND BSD-3-Clause AND BSD-3-Clause, approved, #3437
 go/golang/golang.org%2Fx/sys/v0.0.0-20180905080454-ebe1bf3edb33, Apache-2.0 AND BSD-3-Clause AND BSD-3-Clause, approved, #3437
@@ -318,14 +318,14 @@ go/golang/golang.org%2Fx/sys/v0.0.0-20210615035016-665e8c7367d1, Apache-2.0 AND 
 go/golang/golang.org%2Fx/sys/v0.0.0-20210616094352-59db8d763f22, Apache-2.0 AND BSD-3-Clause AND BSD-3-Clause, approved, #3437
 go/golang/golang.org%2Fx/sys/v0.0.0-20220715151400-c0bba94af5f8, Apache-2.0 AND BSD-3-Clause AND BSD-3-Clause, approved, #3437
 go/golang/golang.org%2Fx/sys/v0.18.0, BSD-3-Clause, approved, #13956
-go/golang/golang.org%2Fx/sys/v0.40.0, BSD-3-Clause AND LicenseRef-scancode-google-patent-license-golang, restricted, clearlydefined
+go/golang/golang.org%2Fx/sys/v0.40.0, BSD-3-Clause, approved, #25712
 go/golang/golang.org%2Fx/term/v0.0.0-20220526004731-065cf7ba2467, BSD-3-Clause, approved, #5720
 go/golang/golang.org%2Fx/term/v0.18.0, BSD-3-Clause, approved, #13957
-go/golang/golang.org%2Fx/term/v0.39.0, BSD-3-Clause AND LicenseRef-scancode-google-patent-license-golang, restricted, clearlydefined
+go/golang/golang.org%2Fx/term/v0.39.0, BSD-3-Clause, approved, #25687
 go/golang/golang.org%2Fx/text/v0.14.0, BSD-3-Clause AND LicenseRef-IP-Rights-Grant, approved, #12660
 go/golang/golang.org%2Fx/text/v0.3.0, BSD-3-Clause AND CC-BY-SA-1.0 AND CC-BY-SA-2.0 AND CC-BY-SA-2.5 AND CC-BY-SA-3.0, approved, #6122
 go/golang/golang.org%2Fx/text/v0.3.3, BSD-3-Clause AND CC-BY-SA-1.0 AND CC-BY-SA-2.0 AND CC-BY-SA-2.5 AND CC-BY-SA-3.0, approved, #6126
-go/golang/golang.org%2Fx/text/v0.33.0, BSD-3-Clause AND LicenseRef-scancode-google-patent-license-golang, restricted, clearlydefined
+go/golang/golang.org%2Fx/text/v0.33.0, BSD-3-Clause AND (BSD-3-Clause AND CC-BY-SA-1.0 AND CC-BY-SA-2.5 AND CC-BY-SA-3.0) AND (BSD-3-Clause AND CC-BY-SA-1.0 AND CC-BY-SA-2.0 AND CC-BY-SA-2.5 AND CC-BY-SA-3.0), restricted, #25705
 go/golang/golang.org%2Fx/time/v0.14.0, BSD-3-Clause, approved, #25001
 go/golang/golang.org%2Fx/time/v0.3.0, BSD-3-Clause, approved, #10756
 go/golang/golang.org%2Fx/tools/v0.0.0-20180917221912-90fa682c2a6e, BSD-3-Clause AND (GPL-1.0-or-later OR MIT), approved, #5725
@@ -341,8 +341,8 @@ go/golang/golang.org%2Fx/xerrors/v0.0.0-20190717185122-a985d3407aa7, BSD-3-Claus
 go/golang/golang.org%2Fx/xerrors/v0.0.0-20191011141410-1b5146add898, BSD-3-Clause, approved, #3443
 go/golang/golang.org%2Fx/xerrors/v0.0.0-20191204190536-9bdfabe68543, BSD-3-Clause, approved, #3443
 go/golang/golang.org%2Fx/xerrors/v0.0.0-20200804184101-5ec99f83aff1, BSD-3-Clause, approved, #3443
-go/golang/google.golang.org%2Fgenproto%2Fgoogleapis/rpc/v0.0.0-20230822172742-b8732ec3820d, Apache-2.0, approved, clearlydefined
-go/golang/google.golang.org%2Fgenproto%2Fgoogleapis/rpc/v0.0.0-20260122232226-8e98ce8d340d, , restricted, clearlydefined
+go/golang/google.golang.org%2Fgenproto%2Fgoogleapis/rpc/v0.0.0-20230822172742-b8732ec3820d, Apache-2.0, approved, #25689
+go/golang/google.golang.org%2Fgenproto%2Fgoogleapis/rpc/v0.0.0-20260122232226-8e98ce8d340d, Apache-2.0, approved, #25689
 go/golang/google.golang.org/appengine/v1.1.0, Apache-2.0 AND BSD-3-Clause, approved, #5404
 go/golang/google.golang.org/appengine/v1.4.0, Apache-2.0 AND BSD-3-Clause, approved, #5809
 go/golang/google.golang.org/genproto/v0.0.0-20180817151627-c66870c02cf8, Apache-2.0, approved, #5839
@@ -352,7 +352,7 @@ go/golang/google.golang.org/grpc/v1.19.0, Apache-2.0, approved, #6052
 go/golang/google.golang.org/grpc/v1.23.0, Apache-2.0, approved, #6096
 go/golang/google.golang.org/grpc/v1.27.0, Apache-2.0, approved, #6395
 go/golang/google.golang.org/grpc/v1.58.3, Apache-2.0, approved, #14624
-go/golang/google.golang.org/grpc/v1.78.0, Apache-2.0, restricted, clearlydefined
+go/golang/google.golang.org/grpc/v1.78.0, Apache-2.0, approved, #25698
 go/golang/google.golang.org/protobuf/v0.0.0-20200109180630-ec00e32a8dfd, BSD-3-Clause, approved, #5703
 go/golang/google.golang.org/protobuf/v0.0.0-20200221191635-4d8936d0db64, BSD-3-Clause, approved, #5703
 go/golang/google.golang.org/protobuf/v0.0.0-20200228230310-ab0ca4ff8a60, BSD-3-Clause, approved, #5703
@@ -376,7 +376,7 @@ go/golang/gopkg.in/yaml.v3/v3.0.0-20200313102051-9f266ea9e77c, Apache-2.0, appro
 go/golang/gopkg.in/yaml.v3/v3.0.1, Apache-2.0, approved, clearlydefined
 go/golang/gotest.tools/v3/v3.4.0, Apache-2.0, approved, clearlydefined
 go/golang/helm.sh%2Fhelm/v3/v3.15.2, Apache-2.0 AND (Apache-2.0 AND BSD-3-Clause) AND BSD-3-Clause AND (Apache-2.0 AND MIT), approved, #15554
-go/golang/helm.sh%2Fhelm/v3/v3.20.0, , restricted, clearlydefined
+go/golang/helm.sh%2Fhelm/v3/v3.20.0, Apache-2.0 AND (Apache-2.0 AND BSD-3-Clause) AND BSD-3-Clause AND (Apache-2.0 AND MIT), approved, #25700
 go/golang/honnef.co%2Fgo/tools/v0.0.0-20190102054323-c2f93a96b099, MIT AND (BSD-3-Clause AND MIT) AND BSD-3-Clause, approved, #6128
 go/golang/honnef.co%2Fgo/tools/v0.0.0-20190523083050-ea95bdfd59fc, MIT AND (BSD-3-Clause AND MIT) AND BSD-3-Clause, approved, #6128
 go/golang/k8s.io%2Fklog/v2/v2.120.1, Apache-2.0, approved, #15541
@@ -385,24 +385,24 @@ go/golang/k8s.io/api/v0.30.0, Apache-2.0, approved, clearlydefined
 go/golang/k8s.io/api/v0.35.0, Apache-2.0, approved, clearlydefined
 go/golang/k8s.io/apiextensions-apiserver/v0.35.0, Apache-2.0, approved, clearlydefined
 go/golang/k8s.io/apimachinery/v0.30.0, Apache-2.0 AND BSD-3-Clause, approved, #15544
-go/golang/k8s.io/apimachinery/v0.35.0, Apache-2.0, restricted, clearlydefined
+go/golang/k8s.io/apimachinery/v0.35.0, Apache-2.0 AND BSD-3-Clause, approved, #25688
 go/golang/k8s.io/cli-runtime/v0.30.0, Apache-2.0, approved, clearlydefined
 go/golang/k8s.io/cli-runtime/v0.35.0, Apache-2.0, approved, clearlydefined
 go/golang/k8s.io/client-go/v0.30.0, Apache-2.0 AND BSD-3-Clause, approved, #15539
-go/golang/k8s.io/client-go/v0.35.0, Apache-2.0, restricted, clearlydefined
+go/golang/k8s.io/client-go/v0.35.0, Apache-2.0 AND BSD-3-Clause, approved, #25713
 go/golang/k8s.io/component-base/v0.35.0, Apache-2.0, approved, clearlydefined
 go/golang/k8s.io/kube-openapi/v0.0.0-20240228011516-70dd3763d340, Apache-2.0 AND CC-BY-4.0, approved, #6065
 go/golang/k8s.io/kube-openapi/v0.0.0-20251125145642-4e65d59e963e, Apache-2.0 AND CC-BY-4.0, approved, #6065
-go/golang/k8s.io/kubectl/v0.35.0, Apache-2.0, restricted, clearlydefined
+go/golang/k8s.io/kubectl/v0.35.0, Apache-2.0 AND LicenseRef-scancode-free-unknown, restricted, #25690
 go/golang/k8s.io/utils/v0.0.0-20230726121419-3b25d923346b, Apache-2.0 AND BSD-3-Clause, approved, #6095
 go/golang/k8s.io/utils/v0.0.0-20260108192941-914a6e750570, Apache-2.0 AND BSD-3-Clause, approved, #6095
 go/golang/oras.land%2Foras-go/v2/v2.6.0, Apache-2.0, approved, clearlydefined
 go/golang/oras.land/oras-go/v1.2.5, Apache-2.0, approved, clearlydefined
 go/golang/oras.land/oras-go/v1.2.7, Apache-2.0, approved, clearlydefined
 go/golang/sigs.k8s.io%2Fkustomize/api/v0.13.5-0.20230601165947-6ce0bf390ce3, Apache-2.0, approved, #14628
-go/golang/sigs.k8s.io%2Fkustomize/api/v0.21.0, Apache-2.0, restricted, clearlydefined
+go/golang/sigs.k8s.io%2Fkustomize/api/v0.21.0, Apache-2.0 AND LicenseRef-scancode-unknown-spdx, restricted, #25701
 go/golang/sigs.k8s.io%2Fkustomize/kyaml/v0.14.3-0.20230601165947-6ce0bf390ce3, Apache-2.0, approved, clearlydefined
-go/golang/sigs.k8s.io%2Fkustomize/kyaml/v0.21.0, Apache-2.0, restricted, clearlydefined
+go/golang/sigs.k8s.io%2Fkustomize/kyaml/v0.21.0, Apache-2.0, approved, #25708
 go/golang/sigs.k8s.io%2Fstructured-merge-diff/v4/v4.4.1, Apache-2.0, approved, #12935
 go/golang/sigs.k8s.io%2Fstructured-merge-diff/v4/v4.7.0, Apache-2.0, approved, #20688
 go/golang/sigs.k8s.io%2Fstructured-merge-diff/v6/v6.3.1, Apache-2.0, approved, #24443
