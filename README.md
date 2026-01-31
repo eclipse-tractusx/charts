@@ -70,3 +70,23 @@ tractusx/portal          	0.6.0        	0.6.0                 	Helm chart for Ca
 $ helm install tractusx/portal
 [...]
 ```
+
+## Local Testing
+
+This repository also needs maintenance. To assess the functionality after e.g., version bumps, you can run it  manually.
+
+[act](https://github.com/nektos/act) ([installation guide](https://nektosact.com/installation/)) is a tool to run jobs within `./workflows` locally. Configuration of events can be stored in `./act`. We adjusted the workflow [helm-repo-index-DEV.yaml](./.github/workflows/helm-repo-index-DEV.yaml) to not interact with github in a writing way (commit / push). This implies to dispatch the workflow with `mode=local`.
+
+```bash
+act workflow_dispatch --job repoIndex -e ./.act/test-repoIndex-locally-event.json --bind
+```
+
+> [!warning]
+>
+> Using the `--bind` option act has write access to your local directory. 
+> 
+
+The act worfklow will copy the updated / created file `dev/index.yaml` to your local working file. You can check for changes, running `git diff dev/index.yaml`. There are two scenarios:
+
+1. If there have been no new releases, only the created timestamps will be now - the rest remains the same.
+2. If there have been new releases, there will be also version bumps or new entries (for new products).

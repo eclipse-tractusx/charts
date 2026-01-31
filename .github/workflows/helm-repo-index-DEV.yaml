@@ -1,5 +1,7 @@
-# Copyright (c) 2021,2022 Mercedes-Benz Tech Innovation GmbH
-# Copyright (c) 2021,2022 Contributors to the Eclipse Foundation
+# Copyright (c) 2025 Fraunhofer-Gesellschaft zur Foerderung der angewandten Forschung e.V.
+# (represented by Fraunhofer ISST)
+# Copyright (c) 2021 Mercedes-Benz Tech Innovation GmbH
+# Copyright (c) 2021 Contributors to the Eclipse Foundation
 #
 # See the NOTICE file(s) distributed with this work for additional
 # information regarding copyright ownership.
@@ -22,6 +24,11 @@ on:
   schedule:
     - cron: "30 3 * * *"
   workflow_dispatch:
+    inputs:
+      mode:
+        description: 'local (no git commit / push) or push'
+        required: false
+        default: 'push'
 
 jobs:
   repoIndex:
@@ -33,6 +40,7 @@ jobs:
         run: .github/bin/helmRepoIndex -owner ${{ github.repository_owner }} -token ${{ secrets.GITHUB_TOKEN }} -indexFile "dev/index.yaml"
 
       - name: Publish changes
+        if: ${{ github.event.inputs.mode != 'local' }}
         run: |
           git config user.name github-actions
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
