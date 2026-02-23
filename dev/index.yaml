@@ -12700,6 +12700,60 @@ entries:
     version: 1.0.0
   industry-core-hub:
   - apiVersion: v2
+    appVersion: v0.5.0-rc1
+    created: "2026-02-22T18:26:43.09849723Z"
+    dependencies:
+    - alias: postgresql
+      condition: postgresql.enabled
+      name: postgres
+      repository: oci://registry-1.docker.io/cloudpirates
+      version: 0.11.0
+    - condition: pgadmin4.enabled
+      name: pgadmin4
+      repository: https://helm.runix.net
+      version: 1.25.x
+    - condition: keycloak.enabled
+      name: keycloak
+      repository: https://raw.githubusercontent.com/bitnami/charts/archive-full-index/bitnami
+      version: 23.0.0
+    description: A Helm chart for Eclipse Tractus-X - Industry Core Hub
+    digest: 0b6e4ad359bc03ff3311cce865ca56e4b7368b2fd37fa47ee81a8e7032e0b493
+    home: https://github.com/eclipse-tractusx/industry-core-hub
+    name: industry-core-hub
+    sources:
+    - https://github.com/eclipse-tractusx/industry-core-hub
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/industry-core-hub/releases/download/industry-core-hub-v0.5.0-rc1/industry-core-hub-v0.5.0-rc1.tgz
+    version: v0.5.0-rc1
+  - apiVersion: v2
+    appVersion: v0.4.0
+    created: "2026-02-22T18:10:34.363147411Z"
+    dependencies:
+    - alias: postgresql
+      condition: postgresql.enabled
+      name: postgres
+      repository: oci://registry-1.docker.io/cloudpirates
+      version: 0.11.0
+    - condition: pgadmin4.enabled
+      name: pgadmin4
+      repository: https://helm.runix.net
+      version: 1.25.x
+    - condition: keycloak.enabled
+      name: keycloak
+      repository: https://raw.githubusercontent.com/bitnami/charts/archive-full-index/bitnami
+      version: 23.0.0
+    description: A Helm chart for Eclipse Tractus-X - Industry Core Hub
+    digest: 85e71ab3ba3330209236e0941fd676b48cb1da02e039389886363c7aabc88bd8
+    home: https://github.com/eclipse-tractusx/industry-core-hub
+    name: industry-core-hub
+    sources:
+    - https://github.com/eclipse-tractusx/industry-core-hub
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/industry-core-hub/releases/download/industry-core-hub-0.4.3/industry-core-hub-0.4.3.tgz
+    version: 0.4.3
+  - apiVersion: v2
     appVersion: v0.4.0
     created: "2026-02-10T11:18:47.067965926Z"
     dependencies:
@@ -39075,4 +39129,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2026-02-22T04:15:34.936915243Z"
+generated: "2026-02-23T04:16:32.733716117Z"
