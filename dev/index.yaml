@@ -12806,6 +12806,33 @@ entries:
     version: 1.0.0
   industry-core-hub:
   - apiVersion: v2
+    appVersion: v0.5.0-rc2
+    created: "2026-03-04T12:51:17.02317264Z"
+    dependencies:
+    - alias: postgresql
+      condition: postgresql.enabled
+      name: postgres
+      repository: oci://registry-1.docker.io/cloudpirates
+      version: 0.11.0
+    - condition: pgadmin4.enabled
+      name: pgadmin4
+      repository: https://helm.runix.net
+      version: 1.25.x
+    - condition: keycloak.enabled
+      name: keycloak
+      repository: https://raw.githubusercontent.com/bitnami/charts/archive-full-index/bitnami
+      version: 23.0.0
+    description: A Helm chart for Eclipse Tractus-X - Industry Core Hub
+    digest: 450b780257997b492db56daae9385903ac008267c6702474189271051180e342
+    home: https://github.com/eclipse-tractusx/industry-core-hub
+    name: industry-core-hub
+    sources:
+    - https://github.com/eclipse-tractusx/industry-core-hub
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/industry-core-hub/releases/download/industry-core-hub-v0.5.0-rc2/industry-core-hub-v0.5.0-rc2.tgz
+    version: v0.5.0-rc2
+  - apiVersion: v2
     appVersion: v0.5.0-rc1
     created: "2026-02-22T18:26:43.09849723Z"
     dependencies:
@@ -28111,6 +28138,34 @@ entries:
     version: 1.1.0
   tractusx-connector:
   - apiVersion: v2
+    appVersion: 0.12.0-rc4
+    created: "2026-03-04T10:06:45.221771651Z"
+    dependencies:
+    - alias: vault
+      condition: install.vault
+      name: vault
+      repository: https://helm.releases.hashicorp.com
+      version: 0.27.0
+    - alias: postgresql
+      condition: install.postgresql
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 15.2.1
+    description: 'A Helm chart for Tractus-X Eclipse Data Space Connector. The connector
+      deployment consists of two runtime consists of a Control Plane and a Data Plane.
+      Note that _no_ external dependencies such as a PostgreSQL database and HashiCorp
+      Vault are included.  This chart is intended for use with an _existing_ PostgreSQL
+      database and an _existing_ HashiCorp Vault. '
+    digest: b7c2dfd5dbb40a0c1b3a0fd22aae2e2a111e98e05e13081a5741ed390d4a7a20
+    home: https://github.com/eclipse-tractusx/tractusx-edc/tree/main/charts/tractusx-connector
+    name: tractusx-connector
+    sources:
+    - https://github.com/eclipse-tractusx/tractusx-edc/tree/main/charts/tractusx-connector
+    type: application
+    urls:
+    - https://eclipse-tractusx.github.io/tractusx-edc/helm-charts/tractusx-connector-0.12.0-rc4.tgz
+    version: 0.12.0-rc4
+  - apiVersion: v2
     appVersion: 0.12.0-rc3
     created: "2026-03-02T15:37:40.289538047Z"
     dependencies:
@@ -30532,6 +30587,21 @@ entries:
     - https://eclipse-tractusx.github.io/tractusx-edc/helm-charts/tractusx-connector-legacy-0.5.0-rc1.tgz
     version: 0.5.0-rc1
   tractusx-connector-memory:
+  - apiVersion: v2
+    appVersion: 0.12.0-rc4
+    created: "2026-03-04T10:06:45.757966171Z"
+    description: A Helm chart for Tractus-X Eclipse Data Space Connector based on
+      memory. Please only use this for development or testing purposes, never in production
+      workloads!
+    digest: f7b294c376e8e874a7f8923e871c097d83cce9fa874a08789039e1bbb8553be4
+    home: https://github.com/eclipse-tractusx/tractusx-edc/tree/main/charts/tractusx-connector-memory
+    name: tractusx-connector-memory
+    sources:
+    - https://github.com/eclipse-tractusx/tractusx-edc/tree/main/charts/tractusx-connector-memory
+    type: application
+    urls:
+    - https://eclipse-tractusx.github.io/tractusx-edc/helm-charts/tractusx-connector-memory-0.12.0-rc4.tgz
+    version: 0.12.0-rc4
   - apiVersion: v2
     appVersion: 0.12.0-rc3
     created: "2026-03-02T15:37:40.807679516Z"
@@ -39384,4 +39454,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2026-03-04T04:13:34.368221834Z"
+generated: "2026-03-05T04:15:01.1869531Z"
