@@ -154,10 +154,10 @@ go/golang/golang.org%2Fx/term/v0.39.0, BSD-3-Clause, approved, #25687
 go/golang/golang.org%2Fx/text/v0.33.0, BSD-3-Clause AND CC-BY-SA-1.0 AND CC-By-SA-2.0 AND CC-BY-SA-2.5 AND CC-BY-SA-3.0, approved, #25705
 go/golang/golang.org%2Fx/time/v0.14.0, BSD-3-Clause, approved, #25001
 go/golang/golang.org%2Fx/tools/v0.40.0, BSD-3-Clause AND LicenseRef-scancode-google-patent-license-golang, restricted, clearlydefined
-go/golang/google.golang.org%2Fgenproto%2Fgoogleapis/api/v0.0.0-20251029180050-ab9386a59fda, Apache-2.0, approved, clearlydefined
+go/golang/google.golang.org%2Fgenproto%2Fgoogleapis/api/v0.0.0-20251202230838-ff82c1b0f217, Apache-2.0, approved, clearlydefined
 go/golang/google.golang.org%2Fgenproto%2Fgoogleapis/rpc/v0.0.0-20260122232226-8e98ce8d340d, Apache-2.0, approved, #25689
 go/golang/google.golang.org/genproto/v0.0.0-20231211222908-989df2bf70f3, Apache-2.0, approved, #5839
-go/golang/google.golang.org/grpc/v1.78.0, Apache-2.0, approved, #25698
+go/golang/google.golang.org/grpc/v1.79.3, Apache-2.0, restricted, clearlydefined
 go/golang/google.golang.org/protobuf/v1.36.11, BSD-3-Clause, approved, #20676
 go/golang/gopkg.in%2Fevanphx/json-patch.v4/v4.13.0, BSD-3-Clause, approved, clearlydefined
 go/golang/gopkg.in/check.v1/v0.0.0-20161208181325-20d25e280405, BSD-3-Clause AND BSD-2-Clause, approved, #6054
