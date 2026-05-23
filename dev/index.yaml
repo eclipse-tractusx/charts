@@ -28724,6 +28724,34 @@ entries:
     version: 1.1.0
   tractusx-connector:
   - apiVersion: v2
+    appVersion: 0.13.0-rc2
+    created: "2026-05-22T09:37:37.82153706Z"
+    dependencies:
+    - alias: vault
+      condition: install.vault
+      name: vault
+      repository: https://helm.releases.hashicorp.com
+      version: 0.28.0
+    - alias: postgresql
+      condition: install.postgresql
+      name: postgres
+      repository: oci://registry-1.docker.io/cloudpirates
+      version: 0.18.3
+    description: 'A Helm chart for Tractus-X Eclipse Data Space Connector. The connector
+      deployment consists of two runtime consists of a Control Plane and a Data Plane.
+      Note that _no_ external dependencies such as a PostgreSQL database and HashiCorp
+      Vault are included.  This chart is intended for use with an _existing_ PostgreSQL
+      database and an _existing_ HashiCorp Vault. '
+    digest: 3f61e65e174131a210803b06d1e333eca9fc120ce84025632901a82a622697a8
+    home: https://github.com/eclipse-tractusx/tractusx-edc/tree/main/charts/tractusx-connector
+    name: tractusx-connector
+    sources:
+    - https://github.com/eclipse-tractusx/tractusx-edc/tree/main/charts/tractusx-connector
+    type: application
+    urls:
+    - https://eclipse-tractusx.github.io/tractusx-edc/helm-charts/tractusx-connector-0.13.0-rc2.tgz
+    version: 0.13.0-rc2
+  - apiVersion: v2
     appVersion: 0.13.0-rc1
     created: "2026-04-15T07:59:48.591474648Z"
     dependencies:
@@ -31313,6 +31341,21 @@ entries:
     - https://eclipse-tractusx.github.io/tractusx-edc/helm-charts/tractusx-connector-legacy-0.5.0-rc1.tgz
     version: 0.5.0-rc1
   tractusx-connector-memory:
+  - apiVersion: v2
+    appVersion: 0.13.0-rc2
+    created: "2026-05-22T09:37:38.366602029Z"
+    description: A Helm chart for Tractus-X Eclipse Data Space Connector based on
+      memory. Please only use this for development or testing purposes, never in production
+      workloads!
+    digest: 02d4d2a8c3b1b3a09bf594fd630f143ed480f22ce2559278a347a1cc406dd28d
+    home: https://github.com/eclipse-tractusx/tractusx-edc/tree/main/charts/tractusx-connector-memory
+    name: tractusx-connector-memory
+    sources:
+    - https://github.com/eclipse-tractusx/tractusx-edc/tree/main/charts/tractusx-connector-memory
+    type: application
+    urls:
+    - https://eclipse-tractusx.github.io/tractusx-edc/helm-charts/tractusx-connector-memory-0.13.0-rc2.tgz
+    version: 0.13.0-rc2
   - apiVersion: v2
     appVersion: 0.13.0-rc1
     created: "2026-04-15T07:59:49.162626447Z"
@@ -41229,4 +41272,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2026-05-22T04:50:38.682024292Z"
+generated: "2026-05-23T04:44:10.762671735Z"
