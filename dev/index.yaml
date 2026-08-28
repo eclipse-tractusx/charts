@@ -2904,6 +2904,56 @@ entries:
     version: 0.0.1
   bpdm:
   - apiVersion: v2
+    appVersion: 7.5.0-rc2
+    created: "2026-08-28T02:49:30.801430908Z"
+    dependencies:
+    - alias: bpdm-gate
+      condition: bpdm-gate.enabled
+      name: bpdm-gate
+      repository: ""
+      version: 8.1.0-rc2
+    - alias: bpdm-pool
+      condition: bpdm-pool.enabled
+      name: bpdm-pool
+      repository: ""
+      version: 9.1.0-rc2
+    - alias: bpdm-cleaning-service-dummy
+      condition: bpdm-cleaning-service-dummy.enabled
+      name: bpdm-cleaning-service-dummy
+      repository: ""
+      version: 5.1.0-rc2
+    - alias: bpdm-orchestrator
+      condition: bpdm-orchestrator.enabled
+      name: bpdm-orchestrator
+      repository: ""
+      version: 5.1.0-rc2
+    - name: bpdm-common
+      repository: ""
+      version: 2.0.0
+    - alias: postgres
+      condition: postgres.enabled
+      name: postgres
+      repository: oci://registry-1.docker.io/cloudpirates
+      version: 0.11.0
+    - condition: keycloak.enabled
+      name: keycloak
+      repository: oci://registry-1.docker.io/cloudpirates
+      version: 0.21.10
+    description: 'Deploys the full BPDM application stack as a single release and
+      configures it end to end, showcasing how a golden record process is realized
+      for a single sharing member. '
+    digest: 6fd5c50e6124e5fbbcde7653bc8a2b171a4a0d9a1cbc8752b54775ef1fbd9401
+    home: https://github.com/eclipse-tractusx/bpdm
+    maintainers:
+    - name: Nico Koprowski
+    name: bpdm
+    sources:
+    - https://github.com/eclipse-tractusx/bpdm
+    type: application
+    urls:
+    - https://github.com/eclipse-tractusx/bpdm/releases/download/bpdm-7.1.0-rc2/bpdm-7.1.0-rc2.tgz
+    version: 7.1.0-rc2
+  - apiVersion: v2
     appVersion: 7.5.0-rc1
     created: "2026-08-19T01:28:12.114467105Z"
     dependencies:
@@ -29257,6 +29307,34 @@ entries:
     version: 1.1.0
   tractusx-connector:
   - apiVersion: v2
+    appVersion: 0.13.0
+    created: "2026-08-27T07:59:40.983165519Z"
+    dependencies:
+    - alias: vault
+      condition: install.vault
+      name: vault
+      repository: https://helm.releases.hashicorp.com
+      version: 0.28.0
+    - alias: postgresql
+      condition: install.postgresql
+      name: postgres
+      repository: oci://registry-1.docker.io/cloudpirates
+      version: 0.18.3
+    description: 'A Helm chart for Tractus-X Eclipse Data Space Connector. The connector
+      deployment consists of two runtime consists of a Control Plane and a Data Plane.
+      Note that _no_ external dependencies such as a PostgreSQL database and HashiCorp
+      Vault are included.  This chart is intended for use with an _existing_ PostgreSQL
+      database and an _existing_ HashiCorp Vault. '
+    digest: 8734ca91f4203ba9291a38dec00568216b9051fe330cfd4dbe8e20c851bbec0f
+    home: https://github.com/eclipse-tractusx/tractusx-edc/tree/main/charts/tractusx-connector
+    name: tractusx-connector
+    sources:
+    - https://github.com/eclipse-tractusx/tractusx-edc/tree/main/charts/tractusx-connector
+    type: application
+    urls:
+    - https://eclipse-tractusx.github.io/tractusx-edc/helm-charts/tractusx-connector-0.13.0.tgz
+    version: 0.13.0
+  - apiVersion: v2
     appVersion: 0.13.0-rc4
     created: "2026-08-25T20:34:44.76485559Z"
     dependencies:
@@ -31958,6 +32036,21 @@ entries:
     - https://eclipse-tractusx.github.io/tractusx-edc/helm-charts/tractusx-connector-legacy-0.5.0-rc1.tgz
     version: 0.5.0-rc1
   tractusx-connector-memory:
+  - apiVersion: v2
+    appVersion: 0.13.0
+    created: "2026-08-27T07:59:41.537341044Z"
+    description: A Helm chart for Tractus-X Eclipse Data Space Connector based on
+      memory. Please only use this for development or testing purposes, never in production
+      workloads!
+    digest: 34b5f9b147ee80a1bd23da4a85f5fe4b7079e1a96a9f9854c7d3501496c497e8
+    home: https://github.com/eclipse-tractusx/tractusx-edc/tree/main/charts/tractusx-connector-memory
+    name: tractusx-connector-memory
+    sources:
+    - https://github.com/eclipse-tractusx/tractusx-edc/tree/main/charts/tractusx-connector-memory
+    type: application
+    urls:
+    - https://eclipse-tractusx.github.io/tractusx-edc/helm-charts/tractusx-connector-memory-0.13.0.tgz
+    version: 0.13.0
   - apiVersion: v2
     appVersion: 0.13.0-rc4
     created: "2026-08-25T20:34:45.299968817Z"
@@ -42361,4 +42454,4 @@ entries:
     urls:
     - https://github.com/eclipse-tractusx/vas-country-risk-frontend/releases/download/vas-frontend-2.0.0/vas-frontend-2.0.0.tgz
     version: 2.0.0
-generated: "2026-08-27T05:17:27.704097429Z"
+generated: "2026-08-28T04:27:14.651411944Z"
